@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Subway:  Fichier source de C:/wamp/www/subway/app/views/parcours/V_Parcours.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Subway
+   </div>
+   <div id="projectbrief">Gestion des  parcours patients</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_2b9e166508d09dde5a99a7da5cdd2c5e.html">wamp</a></li><li class="navelem"><a class="el" href="dir_6cec9c0059ae9a8bc4877b04f6d117b9.html">www</a></li><li class="navelem"><a class="el" href="dir_f0e530f514d1f0aa61beab44ff7127ab.html">subway</a></li><li class="navelem"><a class="el" href="dir_43ed1640dde1d74b6c92f680f6c40ceb.html">app</a></li><li class="navelem"><a class="el" href="dir_5433a746074bcb9eb6ae825fd0635362.html">views</a></li><li class="navelem"><a class="el" href="dir_8490dfb1c26d1939763cc788d9a357fe.html">parcours</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">V_Parcours.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_v___parcours_8php.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;container-fluid&quot;</span>&gt;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;jumbotron&quot;</span>&gt;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        &lt;h3&gt; <a class="code" href="class_parcours.html">Parcours</a>-patient au sein de l<span class="stringliteral">&#39;hôpital &lt;/h3&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">        &lt;a href=&quot;&lt;?php echo base_url(&#39;</span><a class="code" href="class_parcours.html">Parcours</a>/ajout/<span class="stringliteral">&#39;) ?&gt;&quot;&gt;Ajouter un parcours patients&lt;/a&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">        &lt;table name=&quot;formu&quot;class=&quot;table table-responsive table-hover&quot;&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">            &lt;thead&gt;         </span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">            &lt;th class=&quot;col-xs-3&quot;&gt;NOM&lt;/th&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">            &lt;!--th class=&quot;col-xs-1&quot;&gt;Objectif&lt;/th--&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">            &lt;th class=&quot;col-xs-1&quot;&gt;Code&lt;/th&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">            &lt;th class=&quot;col-xs-1&quot;&gt;&lt;/th&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">            &lt;/tr&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">            &lt;/thead&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">            &lt;tbody&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">                &lt;?php</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">                foreach ($parcours as $row) {</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">                    ?&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">                    &lt;tr&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">                        &lt;td&gt;&lt;?php echo $row[&quot;nom&quot;] ?&gt;&lt;/td&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">                        &lt;!--td&gt;&lt;?php echo $row[&quot;objectif&quot;] ?&gt;&lt;/td--&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">                        &lt;td&gt;&lt;?php echo $row[&quot;code&quot;] ?&gt;&lt;/td&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral">                        &lt;td&gt;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral">                            &lt;div class=&quot;dropdown&quot;&gt;</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral">                                &lt;button class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">                                    &lt;span class=&quot;glyphicon glyphicon-option-vertical&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">                                &lt;/button&gt;</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="stringliteral"></span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral">                                &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">                                    &lt;li&gt;&lt;a href=&quot;&lt;?php echo base_url(&#39;</span><a class="code" href="class_parcours.html">Parcours</a>/modif/<span class="stringliteral">&#39;) . &#39;</span>/<span class="stringliteral">&#39; . $row[&quot;id_parcours&quot;] ?&gt;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Modifier&lt;/a&gt;&lt;/li&gt;</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">                                    &lt;li&gt;&lt;a href=&quot;&lt;?php echo base_url(); ?&gt;Parcours/supprimer/&lt;?php echo $row[&quot;id_parcours&quot;] ?&gt;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-trash&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Supprimer&lt;/a&gt;&lt;/li&gt;</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral">                                    &lt;li&gt;&lt;a href=&quot;&lt;?php echo base_url(&#39;</span><a class="code" href="class_parcours.html">Parcours</a>/visualiser/<span class="stringliteral">&#39;) . &#39;</span>/<span class="stringliteral">&#39; . $row[&quot;id_parcours&quot;] ?&gt;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-eye-open&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Visualiser&lt;/a&gt;&lt;/li&gt;</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral">                                &lt;/ul&gt;</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">                        &lt;/td&gt;</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral">                    &lt;/tr&gt;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral">                &lt;?php } ?&gt;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"></span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">            &lt;/tbody&gt;</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral">        &lt;/table&gt;</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">    &lt;/div&gt;</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">&lt;/div&gt;</span></div><div class="ttc" id="class_parcours_html"><div class="ttname"><a href="class_parcours.html">Parcours</a></div><div class="ttdef"><b>Definition:</b> <a href="_parcours_8php_source.html#l00013">Parcours.php:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

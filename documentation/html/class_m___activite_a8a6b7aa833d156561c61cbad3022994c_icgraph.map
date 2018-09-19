@@ -1,0 +1,5 @@
+<map id="getActiviteById" name="getActiviteById">
+<area shape="rect" id="node2" href="$class_activites.html#a1bb3614936dab13820600e7d08fbe4d1" title="Méthode permettant d&#39;ajouter ou de modifier une activité dans un parcours. " alt="" coords="161,5,359,32"/>
+<area shape="rect" id="node3" href="$class_activites.html#a295587c8d90d190e24c17e5101cbf144" title="Affichage d&#39;un formulaire pour modifier une acitvité " alt="" coords="207,56,313,83"/>
+<area shape="rect" id="node4" href="$class_planning.html#abe80b5d744db9994200a4f5235ad10db" title="Permet de vérifier les contraintes liés à la planification. " alt="" coords="190,107,330,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="dossier" name="dossier">
+<area shape="rect" id="node2" href="$class_m___dossier_parcours.html#af9468b0b22364e5f9417b89156f4cb21" title="Récupérer les informations sur les dossiers parcours d&#39;un patient. " alt="" coords="117,5,320,47"/>
+<area shape="rect" id="node3" href="$class_m___champ.html#a299a322386b88d4df6927a73cf027eb1" title="Permet de récupérer la liste de tout les types champs. " alt="" coords="125,71,312,98"/>
+</map>

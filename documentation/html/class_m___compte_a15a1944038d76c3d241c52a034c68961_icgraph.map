@@ -1,0 +1,5 @@
+<map id="getMaxIDCompte" name="getMaxIDCompte">
+<area shape="rect" id="node2" href="$class_m___compte.html#adeecadd67f00648685d63cf869f651a4" title="Insére un nouveau compte dans la table compte (compte personnel uniquement) " alt="" coords="176,5,283,32"/>
+<area shape="rect" id="node3" href="$class_m___personnel.html#a069fd02ac8ec4812c903a29ea0754a9c" title="Ajoute une personne. " alt="" coords="331,5,523,32"/>
+<area shape="rect" id="node4" href="$class_personnels.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une personne. " alt="" coords="571,5,735,32"/>
+</map>

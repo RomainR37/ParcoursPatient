@@ -1,0 +1,4 @@
+<map id="solo" name="solo">
+<area shape="rect" id="node2" href="$class_m___ressource.html#ad31b5e02df9e3277895abace771153b8" title="Permet de récuperer les informations sur la planification d&#39;une ressource en fonction d&#39;une date et d..." alt="" coords="100,5,347,32"/>
+<area shape="rect" id="node3" href="$class_m___ressource.html#af4551ebe760a80c8c77a9955a9e9c71f" title="Fonction de récupération du nom d&#39;une ressource en fonction de son id. " alt="" coords="100,56,347,83"/>
+</map>

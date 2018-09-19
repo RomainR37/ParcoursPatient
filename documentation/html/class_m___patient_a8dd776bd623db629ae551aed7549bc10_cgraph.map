@@ -1,0 +1,5 @@
+<map id="ajouterUnPatient" name="ajouterUnPatient">
+<area shape="rect" id="node2" href="$class_m___patient.html#a8e42c94b1b53554e3997318c9d87c625" title="Méthode de création d&#39;un compte. " alt="" coords="174,5,286,32"/>
+<area shape="rect" id="node4" href="$class_m___patient.html#a4122878f31165735a5d841a2efc76126" title="Récupére l&#39;id max des patients. " alt="" coords="172,56,288,83"/>
+<area shape="rect" id="node3" href="$class_m___patient.html#a5851adef5b753f0e84cca091b8e500ce" title="Récupére l&#39;id max des comptes. " alt="" coords="336,5,456,32"/>
+</map>

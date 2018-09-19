@@ -1,0 +1,6 @@
+<map id="addEvent" name="addEvent">
+<area shape="rect" id="node2" href="$class_m___planning.html#a6398d5b1536d74e919b0cd8e9d6a34d0" title="Ajout d&#39;un événement. " alt="" coords="128,64,307,91"/>
+<area shape="rect" id="node3" href="$class_m___planning.html#a9ae8904026c687ff970989580e8353a6" title="Récupére tout les ressource disponible entre deux date. " alt="" coords="355,5,573,32"/>
+<area shape="rect" id="node4" href="$class_m___planning.html#aa317b064d231fbc7daa0dfc5870d3d10" title="Récupére la couleur d&#39;un événement pour un patient. " alt="" coords="370,57,558,98"/>
+<area shape="rect" id="node5" href="$class_m___planning.html#a1132f44f38f7ad8cb12da80a79bc0618" title="Fonction de récupération d&#39;une couleur aléatoire. " alt="" coords="396,122,532,163"/>
+</map>

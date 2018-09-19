@@ -1,0 +1,7 @@
+<map id="getMaxIDRessource" name="getMaxIDRessource">
+<area shape="rect" id="node2" href="$class_m___ressource.html#a3c76b455a1a6e43e472f8156b86d7997" title="Fonction d&#39;insertion d&#39;une nouvelle ressource. " alt="" coords="192,31,315,57"/>
+<area shape="rect" id="node3" href="$class_m___personnel.html#a069fd02ac8ec4812c903a29ea0754a9c" title="Ajoute une personne. " alt="" coords="397,5,589,32"/>
+<area shape="rect" id="node5" href="$class_m___ressources_mat.html#ae5ac59e4d9174e408cbae79e9be4df66" title="Ajoute une ressource matérielle. " alt="" coords="363,56,624,83"/>
+<area shape="rect" id="node4" href="$class_personnels.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une personne. " alt="" coords="685,5,849,32"/>
+<area shape="rect" id="node6" href="$class_ressources_mat.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une ressource matérielle. " alt="" coords="672,56,863,83"/>
+</map>

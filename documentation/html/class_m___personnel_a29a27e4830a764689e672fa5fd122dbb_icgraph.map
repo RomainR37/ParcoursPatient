@@ -1,0 +1,5 @@
+<map id="getAllPersonnes" name="getAllPersonnes">
+<area shape="rect" id="node2" href="$class_personnels.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources humaines. " alt="" coords="171,31,293,57"/>
+<area shape="rect" id="node3" href="$class_personnels.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une personne. " alt="" coords="341,5,505,32"/>
+<area shape="rect" id="node4" href="$class_personnels.html#abf15731568c7bd6ededffdae346f923b" title="Permet de supprimer une personne. " alt="" coords="362,56,485,83"/>
+</map>

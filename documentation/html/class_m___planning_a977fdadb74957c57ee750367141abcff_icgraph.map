@@ -1,0 +1,6 @@
+<map id="getActiviteAplanifier" name="getActiviteAplanifier">
+<area shape="rect" id="node2" href="$class_planning.html#a0537cc53984788c9b1c71af27b126063" title="Permet d&#39;afficher la liste de toutes les activités à plannifier. " alt="" coords="191,5,382,32"/>
+<area shape="rect" id="node3" href="$class_planning.html#abe80b5d744db9994200a4f5235ad10db" title="Permet de vérifier les contraintes liés à la planification. " alt="" coords="217,56,357,83"/>
+<area shape="rect" id="node4" href="$class_m___planning.html#a31cbece8b8df665cfdc475eaaefb30df" title="Récupére la liste des activités à planifier pour une date donné en fonction du nom du patient..." alt="" coords="188,107,385,133"/>
+<area shape="rect" id="node5" href="$class_planning.html#a7536b97f9bf4d02eed5029052cf6dccf" title="Permet d&#39;afficher la liste de toutes les activités à plannifier en recherchant un nom de patient..." alt="" coords="433,99,624,141"/>
+</map>

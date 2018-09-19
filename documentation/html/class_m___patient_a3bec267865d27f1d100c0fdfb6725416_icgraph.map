@@ -1,0 +1,5 @@
+<map id="majDisponibilitePatient" name="majDisponibilitePatient">
+<area shape="rect" id="node2" href="$class_patient.html#aa7a48c3f7417244989cfb77a261d4a44" title="Permet d&#39;ajout un rendez vous (ou disponibilité) à un patient. " alt="" coords="208,5,367,32"/>
+<area shape="rect" id="node3" href="$class_patient.html#a1f89156f301b15c07c9829205768dc88" title="Patient\\majDossier" alt="" coords="221,56,353,83"/>
+<area shape="rect" id="node4" href="$class_patient.html#a7f35bd723ea6b069b83facff747532d5" title="Patient\\ajoutDossier" alt="" coords="218,107,357,133"/>
+</map>

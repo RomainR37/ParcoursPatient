@@ -1,0 +1,4 @@
+<map id="updateEvent" name="updateEvent">
+<area shape="rect" id="node2" href="$class_m___planning.html#a509abf62d814c861bf894d86a9054c38" title="Met à jour un événement de la base de données. " alt="" coords="147,13,312,39"/>
+<area shape="rect" id="node3" href="$class_m___planning.html#ac488e376db834b4389c7490521f0c538" title="Récupére la liste des ressource possible pour une activité d&#39;un événement. " alt="" coords="360,5,584,47"/>
+</map>

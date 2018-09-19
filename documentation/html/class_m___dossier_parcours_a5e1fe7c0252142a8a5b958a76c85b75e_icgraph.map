@@ -1,0 +1,5 @@
+<map id="getMaxIdDossierParcours" name="getMaxIdDossierParcours">
+<area shape="rect" id="node2" href="$class_m___dossier_parcours.html#ae89b2e42fe95aeacb646aa4c96d02eda" title="Permet de créer un nouveau dossier parcours pour un patient. " alt="" coords="224,31,336,57"/>
+<area shape="rect" id="node3" href="$class_patient.html#aa7a48c3f7417244989cfb77a261d4a44" title="Permet d&#39;ajout un rendez vous (ou disponibilité) à un patient. " alt="" coords="384,5,543,32"/>
+<area shape="rect" id="node4" href="$class_patient.html#a7f35bd723ea6b069b83facff747532d5" title="Patient\\ajoutDossier" alt="" coords="394,56,533,83"/>
+</map>

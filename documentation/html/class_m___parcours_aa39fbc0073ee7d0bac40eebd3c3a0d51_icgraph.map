@@ -1,0 +1,9 @@
+<map id="getAllParcours" name="getAllParcours">
+<area shape="rect" id="node2" href="$class_parcours.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher les différentes parcours patients présents dans notre système. " alt="" coords="175,31,284,57"/>
+<area shape="rect" id="node5" href="$class_patient.html#aca640c645d1a718cd594650b4bbcd45a" title="Affiche le formulaire d&#39;ajout d&#39;un rendez vous d&#39;un patient (disponibilité) " alt="" coords="185,81,273,108"/>
+<area shape="rect" id="node6" href="$class_patient.html#a2a9f4e6d35b79f9d80b30f749af2f275" title="Permet de verifier l&#39;ajout d&#39;un patient. " alt="" coords="161,132,297,159"/>
+<area shape="rect" id="node7" href="$class_patient.html#a107dd41a46fdce5ee2970831ff154fb2" title="Patient\\ajouterRDV" alt="" coords="163,183,296,209"/>
+<area shape="rect" id="node8" href="$class_patient.html#af55fcc2544b87346b54bb0c072c82e2b" title="Patient\\modifierRDV" alt="" coords="160,233,299,260"/>
+<area shape="rect" id="node3" href="$class_parcours.html#a9cc402e45a223832c85c7c5044efde95" title="Permet de supprimer un parcours. " alt="" coords="355,5,489,32"/>
+<area shape="rect" id="node4" href="$class_parcours.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier un parcours patient. " alt="" coords="347,56,497,83"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="confirmModif" name="confirmModif">
+<area shape="rect" id="node2" href="$class_m___personnel.html#a069fd02ac8ec4812c903a29ea0754a9c" title="Ajoute une personne. " alt="" coords="148,56,340,83"/>
+<area shape="rect" id="node9" href="$class_m___personnel.html#af30437d8f343103dc66aeaaeb4a4d772" title="Modifie les informations liés à une personne. " alt="" coords="150,5,338,32"/>
+<area shape="rect" id="node10" href="$class_personnels.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources humaines. " alt="" coords="217,132,271,159"/>
+<area shape="rect" id="node3" href="$class_m___type_ressource.html#a5d590065727b7013363596879c16a993" title="Permet d&#39;insérer un nouveau type dans la base de données. " alt="" coords="391,5,592,32"/>
+<area shape="rect" id="node5" href="$class_m___ressource.html#a3c76b455a1a6e43e472f8156b86d7997" title="Fonction d&#39;insertion d&#39;une nouvelle ressource. " alt="" coords="388,56,595,83"/>
+<area shape="rect" id="node7" href="$class_m___compte.html#adeecadd67f00648685d63cf869f651a4" title="Insére un nouveau compte dans la table compte (compte personnel uniquement) " alt="" coords="405,107,578,133"/>
+<area shape="rect" id="node4" href="$class_m___type_ressource.html#aafe9e6971a0d723733000066e3348838" title="Récupére l&#39;id max d&#39;un type ressource. " alt="" coords="659,5,849,32"/>
+<area shape="rect" id="node6" href="$class_m___ressource.html#adc2cfc05fe706be795c834a00e1525c0" title="Fonction de récupération de l&#39;id max des différentes ressources. " alt="" coords="643,56,865,83"/>
+<area shape="rect" id="node8" href="$class_m___compte.html#a15a1944038d76c3d241c52a034c68961" title="Fonction de récupération de l&#39;id max. " alt="" coords="659,107,849,133"/>
+<area shape="rect" id="node11" href="$class_m___personnel.html#a29a27e4830a764689e672fa5fd122dbb" title="Récupère toute la liste du personnel. " alt="" coords="393,157,590,184"/>
+</map>

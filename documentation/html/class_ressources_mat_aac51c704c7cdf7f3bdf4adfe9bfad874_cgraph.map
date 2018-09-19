@@ -1,0 +1,10 @@
+<map id="confirmModif" name="confirmModif">
+<area shape="rect" id="node2" href="$class_m___ressources_mat.html#ae5ac59e4d9174e408cbae79e9be4df66" title="Ajoute une ressource matérielle. " alt="" coords="148,56,409,83"/>
+<area shape="rect" id="node7" href="$class_m___ressources_mat.html#a64239cab19e5d78e967cc0a61f9a9b9b" title="Modifie une ressource matérielle. " alt="" coords="150,5,407,32"/>
+<area shape="rect" id="node8" href="$class_ressources_mat.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources matérielles. " alt="" coords="252,107,305,133"/>
+<area shape="rect" id="node3" href="$class_m___type_ressource.html#a5d590065727b7013363596879c16a993" title="Permet d&#39;insérer un nouveau type dans la base de données. " alt="" coords="486,5,687,32"/>
+<area shape="rect" id="node5" href="$class_m___ressource.html#a3c76b455a1a6e43e472f8156b86d7997" title="Fonction d&#39;insertion d&#39;une nouvelle ressource. " alt="" coords="483,56,690,83"/>
+<area shape="rect" id="node4" href="$class_m___type_ressource.html#aafe9e6971a0d723733000066e3348838" title="Récupére l&#39;id max d&#39;un type ressource. " alt="" coords="781,5,970,32"/>
+<area shape="rect" id="node6" href="$class_m___ressource.html#adc2cfc05fe706be795c834a00e1525c0" title="Fonction de récupération de l&#39;id max des différentes ressources. " alt="" coords="764,56,987,83"/>
+<area shape="rect" id="node9" href="$class_m___ressources_mat.html#a44f4548c4511b9e1ccfcdfd5c08073a5" title="Récupére toute la liste des ressources matérielles. " alt="" coords="457,107,716,133"/>
+</map>

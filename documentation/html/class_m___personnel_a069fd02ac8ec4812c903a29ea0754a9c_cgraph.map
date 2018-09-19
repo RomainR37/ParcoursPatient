@@ -1,0 +1,8 @@
+<map id="ajoutePersonne" name="ajoutePersonne">
+<area shape="rect" id="node2" href="$class_m___type_ressource.html#a5d590065727b7013363596879c16a993" title="Permet d&#39;insérer un nouveau type dans la base de données. " alt="" coords="168,5,369,32"/>
+<area shape="rect" id="node4" href="$class_m___ressource.html#a3c76b455a1a6e43e472f8156b86d7997" title="Fonction d&#39;insertion d&#39;une nouvelle ressource. " alt="" coords="165,56,372,83"/>
+<area shape="rect" id="node6" href="$class_m___compte.html#adeecadd67f00648685d63cf869f651a4" title="Insére un nouveau compte dans la table compte (compte personnel uniquement) " alt="" coords="182,107,355,133"/>
+<area shape="rect" id="node3" href="$class_m___type_ressource.html#aafe9e6971a0d723733000066e3348838" title="Récupére l&#39;id max d&#39;un type ressource. " alt="" coords="437,5,626,32"/>
+<area shape="rect" id="node5" href="$class_m___ressource.html#adc2cfc05fe706be795c834a00e1525c0" title="Fonction de récupération de l&#39;id max des différentes ressources. " alt="" coords="420,56,643,83"/>
+<area shape="rect" id="node7" href="$class_m___compte.html#a15a1944038d76c3d241c52a034c68961" title="Fonction de récupération de l&#39;id max. " alt="" coords="437,107,626,133"/>
+</map>

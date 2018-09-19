@@ -1,0 +1,5 @@
+<map id="getIndispoByIdRessource" name="getIndispoByIdRessource">
+<area shape="rect" id="node2" href="$class_etre_indispo.html#acff090ecac0409b4a70b51ddd7ba3bac" title="Permet d&#39;afficher les différentes indispo d&#39;une ressource. " alt="" coords="251,5,383,32"/>
+<area shape="rect" id="node4" href="$class_etre_indispo.html#ae8d842f7b1ffe5170776798f8d7bdd6b" title="Permet de supprimer une indispo d&#39;une ressource. " alt="" coords="223,56,412,83"/>
+<area shape="rect" id="node3" href="$class_etre_indispo.html#a681647bc6ca4d85ee556fdc382addd15" title="Permet de sauvergarder les changements d&#39;indisponibiltés. " alt="" coords="460,5,627,32"/>
+</map>

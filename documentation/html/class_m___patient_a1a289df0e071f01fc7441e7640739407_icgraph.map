@@ -1,0 +1,5 @@
+<map id="getPatientById" name="getPatientById">
+<area shape="rect" id="node2" href="$class_patient.html#a52c76e3e94eb046ed288f985ae4f9834" title="Afficher un patient en fonction de son id. " alt="" coords="162,5,311,32"/>
+<area shape="rect" id="node3" href="$class_patient.html#a246bf36152132def97ad2c34d3fac239" title="Permet de verifier la modification d&#39;un patient. " alt="" coords="160,56,313,83"/>
+<area shape="rect" id="node4" href="$class_planning.html#abe80b5d744db9994200a4f5235ad10db" title="Permet de vérifier les contraintes liés à la planification. " alt="" coords="167,107,307,133"/>
+</map>

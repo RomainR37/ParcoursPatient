@@ -1,0 +1,4 @@
+<map id="afficheParcours" name="afficheParcours">
+<area shape="rect" id="node2" href="$class_m___plan_parcours.html#a20ef5bd43681f0c4240193b2545c00cc" title="Retourne toutes les informations de tous les parcours. " alt="" coords="195,5,377,47"/>
+<area shape="rect" id="node3" href="$class_m___plan_parcours.html#a66684521c41e323186850b04c283704d" title="Retourne toutes les informations d&#39;un parcours en fonction de son id. " alt="" coords="164,71,408,98"/>
+</map>

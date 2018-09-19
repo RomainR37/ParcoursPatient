@@ -1,0 +1,4 @@
+<map id="ajouteParcours" name="ajouteParcours">
+<area shape="rect" id="node2" href="$class_m___parcours.html#a2801408437c2f7148dc8cc1ca6b965d6" title="Récupère l&#39;id max des parcours. " alt="" coords="182,5,309,32"/>
+<area shape="rect" id="node3" href="$class_m___composer.html#ace062ace4e23335ccf4c98f2e8fac43e" title="Ajoute des liens de précédences entre les activités du parcours en fonction de son id..." alt="" coords="163,56,328,83"/>
+</map>

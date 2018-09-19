@@ -1,0 +1,6 @@
+<map id="ajouteRessourcesMat" name="ajouteRessourcesMat">
+<area shape="rect" id="node2" href="$class_m___type_ressource.html#a5d590065727b7013363596879c16a993" title="Permet d&#39;insérer un nouveau type dans la base de données. " alt="" coords="204,5,405,32"/>
+<area shape="rect" id="node4" href="$class_m___ressource.html#a3c76b455a1a6e43e472f8156b86d7997" title="Fonction d&#39;insertion d&#39;une nouvelle ressource. " alt="" coords="201,56,408,83"/>
+<area shape="rect" id="node3" href="$class_m___type_ressource.html#aafe9e6971a0d723733000066e3348838" title="Récupére l&#39;id max d&#39;un type ressource. " alt="" coords="473,5,662,32"/>
+<area shape="rect" id="node5" href="$class_m___ressource.html#adc2cfc05fe706be795c834a00e1525c0" title="Fonction de récupération de l&#39;id max des différentes ressources. " alt="" coords="456,56,679,83"/>
+</map>

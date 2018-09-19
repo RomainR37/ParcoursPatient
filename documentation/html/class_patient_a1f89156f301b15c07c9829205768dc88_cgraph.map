@@ -1,0 +1,6 @@
+<map id="majDossier" name="majDossier">
+<area shape="rect" id="node2" href="$class_m___patient.html#a3bec267865d27f1d100c0fdfb6725416" title="Mettre à jour les disponibilités d&#39;un patient. " alt="" coords="155,5,331,47"/>
+<area shape="rect" id="node3" href="$class_m___dossier_parcours.html#a77b2dbed98d06081cf6915a157c9f47f" title="M_DossierParcours\\majDossier" alt="" coords="140,71,345,98"/>
+<area shape="rect" id="node4" href="$class_patient.html#a597070fe6821b345bdec5fb30616cf92" title="gererRDV" alt="" coords="203,122,282,149"/>
+<area shape="rect" id="node5" href="$class_m___dossier_parcours.html#af9468b0b22364e5f9417b89156f4cb21" title="Récupérer les informations sur les dossiers parcours d&#39;un patient. " alt="" coords="393,115,596,156"/>
+</map>

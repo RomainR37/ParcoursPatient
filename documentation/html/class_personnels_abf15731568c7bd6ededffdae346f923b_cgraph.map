@@ -1,0 +1,5 @@
+<map id="suppr" name="suppr">
+<area shape="rect" id="node2" href="$class_m___personnel.html#a9ad026ff5cbd3506bae6d695a0b9d37c" title="Supprime une personne. " alt="" coords="108,5,297,32"/>
+<area shape="rect" id="node3" href="$class_personnels.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources humaines. " alt="" coords="176,56,229,83"/>
+<area shape="rect" id="node4" href="$class_m___personnel.html#a29a27e4830a764689e672fa5fd122dbb" title="Récupère toute la liste du personnel. " alt="" coords="345,56,543,83"/>
+</map>

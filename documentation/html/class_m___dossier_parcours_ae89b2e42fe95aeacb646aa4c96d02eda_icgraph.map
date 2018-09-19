@@ -1,0 +1,4 @@
+<map id="nouvelleDossier" name="nouvelleDossier">
+<area shape="rect" id="node2" href="$class_patient.html#aa7a48c3f7417244989cfb77a261d4a44" title="Permet d&#39;ajout un rendez vous (ou disponibilité) à un patient. " alt="" coords="165,5,324,32"/>
+<area shape="rect" id="node3" href="$class_patient.html#a7f35bd723ea6b069b83facff747532d5" title="Patient\\ajoutDossier" alt="" coords="175,56,314,83"/>
+</map>

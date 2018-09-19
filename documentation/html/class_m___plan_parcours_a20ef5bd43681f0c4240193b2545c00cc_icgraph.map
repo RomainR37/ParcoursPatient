@@ -1,0 +1,4 @@
+<map id="getAllPlanParcours" name="getAllPlanParcours">
+<area shape="rect" id="node2" href="$class_plan_parcours.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher la liste de tous les parcours. " alt="" coords="216,5,351,32"/>
+<area shape="rect" id="node3" href="$class_plan_parcours.html#aa26545d0a1a527ff51f1f5ac806b82d4" title="Permet d&#39;afficher la liste d&#39;un parcours de leurs objetifs. " alt="" coords="187,56,380,83"/>
+</map>
