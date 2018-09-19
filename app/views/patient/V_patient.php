@@ -66,7 +66,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
                     <div class="col-md-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">Informations</div>
-                            <div class="panel-body">Les dates de début et fin de chaque activités peuvent être amené à changer.</div>
+                            <div class="panel-body">Les dates de début et fin de chaque activité peuvent être amenées à changer.</div>
                         </div>
                     </div>
                 </div>
