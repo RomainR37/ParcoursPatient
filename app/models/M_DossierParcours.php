@@ -62,6 +62,7 @@ class M_DossierParcours extends CI_Model {
                   
                 $dossier["date_disponible_debut"] = $row->date_disponible_debut;
                 $dossier["date_disponible_fin"] = $row->date_disponible_fin;
+                $dossier["nom_parcours"] = "";
                 
                 $onglet["id_onglet"] = $row->id_onglet;
                 $onglet["txt_onglet"] = $row->txt_onglet;
@@ -100,7 +101,9 @@ class M_DossierParcours extends CI_Model {
                     WHERE D.id_dossierparcours = " . $this->db->escape($row->id_dossierparcours);
                     $query2 = $this->db->query($sql);
                     foreach($query2->result() as $row2){
-                        $dossier["nom_parcours"] = $row2->TXT_NOM;
+                        
+                            $dossier["nom_parcours"] = $row2->TXT_NOM;
+                        
                     }
             $champ = array();
             $champ["id_champ"] = $row->id_champ;

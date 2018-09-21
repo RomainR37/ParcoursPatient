@@ -70,19 +70,32 @@ class M_Personnel extends CI_Model {
      * \param      $id : id de la personne à supprimer
      */
     public function supprPersonne($id) {
-        $txt_sql = "DELETE FROM personnel
-			WHERE id_personnel = " . $id;
-        $txt_sql2 = "DELETE FROM ordonnancer O 
-                        LEFT JOIN personnel P
-                        ON O.ressourceId = P.id_ressource 
-                        WHERE P.ID_PERSONNEL = ". $id;        
-        $txt_sql2 = "DELETE FROM evenement E 
-                        LEFT JOIN personnel P
-                        ON E.ressourceId = P.id_ressource 
-                        WHERE P.ID_PERSONNEL = ". $id;
-        $query = $this->db->query($txt_sql);
-        $query2 = $this->db->query($txt_sql2);
-        $query3 = $this->db->query($txt_sql3);
+        $sql = "SELECT E.end 
+                    FROM evenement E
+                    INNER JOIN personnel P
+                    ON P.id_ressource = E.ressourceId
+                    WHERE P.id_personnel = " . $this->db->escape($id);
+        $query = $this->db->query($sql);
+        $End = array();
+        foreach($query->result() as $row){
+                            if(!empty($row)){
+                            $End["end"] = $row->end;
+                            $sql = "DELETE FROM evenement WHERE evenement.end = ". $this->db->escape($End["end"]);
+                            $query = $this->db->query($sql);
+                            $sql = "DELETE FROM ordonnancer WHERE ordonnancer.end = ". $this->db->escape($End["end"]);
+                            $query = $this->db->query($sql);
+                            }
+                    }
+        
+        $txt_sql = "DELETE P, R
+                        FROM personnel P 
+                        LEFT JOIN ressource R
+                        ON R.id_ressource = P.id_ressource
+			WHERE P.id_personnel = " . $this->db->escape($id);
+        $query = $this->db->query($txt_sql);  
+        
+        
+        
     }
 
     /**

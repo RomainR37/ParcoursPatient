@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-03-08 10:12:53
+-- Generation Time: 2018-03-27 22:00:03
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -54,7 +54,7 @@ INSERT INTO `activite` (`ID_ACTIVITE`, `TXT_NOM`, `INT_DUREE`, `TXT_COMMENTAIRE`
 (10, 'TOGD', 20, NULL),
 (11, 'Bilan anthropométrique', 60, NULL),
 (12, 'Fibroscan', 10, NULL),
-(13, 'Scanner abdo', 20, NULL),
+(13, 'Scanner abdo', 20, ''),
 (14, 'Entretien hépato', 45, NULL),
 (15, 'Traitement Rémicade', 120, NULL),
 (16, 'Ponction Ascite', 180, NULL),
@@ -97,11 +97,15 @@ INSERT INTO `champ` (`ID_CHAMP`, `ID_TYPECHAMP`, `TXT_NOM`) VALUES
 (1, 1, 'Nom'),
 (2, 3, 'Observation'),
 (3, 2, 'Date d''observation'),
-(4, 1, 'Test'),
-(5, 1, 'Tes'),
-(6, 1, 'T'),
-(7, 1, 'ty'),
-(8, 3, 'f');
+(4, 3, 'Attention'),
+(5, 3, 'New'),
+(6, 1, 'Nouveau champ'),
+(7, 4, 'champ1'),
+(8, 1, 'Champ2'),
+(9, 1, 'new'),
+(10, 1, 'champ2'),
+(11, 1, 'CHAMP1'),
+(12, 1, 'NEW');
 
 -- --------------------------------------------------------
 
@@ -140,7 +144,12 @@ INSERT INTO `composer` (`ID_PARCOURS`, `ID_ACTIVITE`, `ID_ACTIVITE_PRECEDENTE`, 
 (1, 31, 2, 0, 130),
 (1, 31, 3, 0, 100),
 (1, 31, 4, 5, 100),
-(1, 31, 5, 0, 90);
+(1, 31, 5, 0, 90),
+(26, 1, 0, 0, 0),
+(26, 13, 1, 5, 15),
+(27, 1, 0, 0, 0),
+(27, 4, 1, 5, 20),
+(27, 13, 4, 10, 15);
 
 -- --------------------------------------------------------
 
@@ -199,7 +208,30 @@ INSERT INTO `compte` (`ID_COMPTE`, `TXT_LOGIN`, `TXT_MOTDEPASSE`, `ID_TYPECOMPTE
 (35, 'pochet', '$21N5YZFMHzG2', 1),
 (36, 'pochet', '$21N5YZFMHzG2', 1),
 (37, 'admin', 'admin', 2),
-(38, 'YANG.Jing', '$2h5ADN5BooAA', 1);
+(38, 'YANG.Jing', '$2h5ADN5BooAA', 1),
+(39, 'YANG.Jing', '$2h5ADN5BooAA', 1),
+(40, 'YANG.J', '$2bk6E2mLJ4Es', 1),
+(41, 'YANG.ying', '$2bk6E2mLJ4Es', 1),
+(42, 'YANG.pateint', '$2bk6E2mLJ4Es', 1),
+(43, 'YANG.pateint', '$2bk6E2mLJ4Es', 1),
+(44, 'YANG.one', '$2bk6E2mLJ4Es', 1),
+(45, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(46, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(47, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(48, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(49, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(50, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(51, 'YANG.Jemika', '$2bk6E2mLJ4Es', 1),
+(52, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(53, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(54, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(55, 'YANG.Jing', '$2bk6E2mLJ4Es', 1),
+(56, 'YANG.Jemika', '$2bk6E2mLJ4Es', 1),
+(57, 'YANG.Jemika', '$2bk6E2mLJ4Es', 1),
+(58, 'YANG.Jing', '$2h5ADN5BooAA', 1),
+(59, 'YANG.Jemika', '$2W.wZ10iVwWo', 1),
+(60, 'YANG.J', '$2bk6E2mLJ4Es', 1),
+(61, 'YANG.ying', '$2bk6E2mLJ4Es', 1);
 
 -- --------------------------------------------------------
 
@@ -212,10 +244,10 @@ CREATE TABLE IF NOT EXISTS `constituerdossier` (
   `ID_ONGLET` bigint(11) NOT NULL,
   `ID_DOSSIERPARCOURS` bigint(11) NOT NULL,
   `TXT_VALEUR` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID_CHAMP`,`ID_DOSSIERPARCOURS`,`ID_ONGLET`),
   KEY `I_FK_CONSTITUERDOSSIER_CHAMP` (`ID_CHAMP`),
   KEY `I_FK_CONSTITUERDOSSIER_DOSSIERPARCOURS` (`ID_DOSSIERPARCOURS`),
-  KEY `I_FK_CONSTITUERDOSSIER_ONGLET` (`ID_ONGLET`)
+  KEY `I_FK_CONSTITUERDOSSIER_ONGLET` (`ID_ONGLET`),
+  KEY `ID_CHAMP` (`ID_CHAMP`,`ID_ONGLET`,`ID_DOSSIERPARCOURS`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -223,36 +255,78 @@ CREATE TABLE IF NOT EXISTS `constituerdossier` (
 --
 
 INSERT INTO `constituerdossier` (`ID_CHAMP`, `ID_ONGLET`, `ID_DOSSIERPARCOURS`, `TXT_VALEUR`) VALUES
-(1, 2, 1, 'Nom prénom'),
-(1, 2, 5, NULL),
-(1, 2, 6, NULL),
-(2, 1, 1, 'Observations'),
-(2, 3, 1, '231'),
-(2, 5, 1, 'entretien hépato !!! '),
-(2, 1, 2, '212'),
-(2, 5, 2, '252'),
-(2, 7, 2, '272'),
-(2, 1, 3, '213'),
-(2, 5, 3, '253'),
-(2, 7, 3, '273'),
+(2, 1, 2, NULL),
+(3, 1, 2, '03/07/2018'),
+(2, 2, 2, NULL),
+(3, 2, 2, NULL),
+(2, 3, 2, NULL),
+(3, 3, 2, NULL),
+(2, 4, 2, NULL),
+(3, 4, 2, NULL),
+(2, 5, 2, NULL),
+(3, 5, 2, NULL),
+(2, 6, 2, NULL),
+(3, 6, 2, NULL),
+(2, 7, 2, NULL),
+(3, 7, 2, NULL),
+(2, 8, 2, NULL),
+(3, 8, 2, NULL),
+(2, 9, 2, NULL),
+(3, 9, 2, NULL),
+(2, 9, 2, NULL),
+(3, 9, 2, NULL),
+(2, 9, 2, NULL),
+(3, 9, 2, NULL),
+(2, 31, 2, NULL),
+(3, 31, 2, NULL),
+(2, 31, 2, NULL),
+(3, 31, 2, NULL),
+(2, 31, 2, NULL),
+(3, 31, 2, NULL),
+(2, 31, 2, NULL),
+(3, 31, 2, NULL),
+(2, 1, 4, NULL),
+(3, 1, 4, NULL),
+(2, 2, 4, NULL),
+(3, 2, 4, NULL),
+(2, 3, 4, NULL),
+(3, 3, 4, NULL),
+(2, 4, 4, NULL),
+(3, 4, 4, NULL),
+(2, 5, 4, NULL),
+(3, 5, 4, NULL),
+(2, 6, 4, NULL),
+(3, 6, 4, NULL),
+(2, 7, 4, NULL),
+(3, 7, 4, NULL),
+(2, 8, 4, NULL),
+(3, 8, 4, NULL),
+(2, 9, 4, NULL),
+(3, 9, 4, NULL),
+(2, 9, 4, NULL),
+(3, 9, 4, NULL),
+(2, 9, 4, NULL),
+(3, 9, 4, NULL),
+(2, 31, 4, NULL),
+(3, 31, 4, NULL),
+(2, 31, 4, NULL),
+(3, 31, 4, NULL),
+(2, 31, 4, NULL),
+(3, 31, 4, NULL),
+(2, 31, 4, NULL),
+(3, 31, 4, NULL),
+(2, 1, 1, NULL),
+(3, 1, 1, ''),
+(2, 13, 1, NULL),
+(3, 13, 1, NULL),
 (2, 1, 5, NULL),
-(2, 3, 5, NULL),
-(2, 5, 5, NULL),
-(2, 1, 6, NULL),
-(2, 3, 6, NULL),
-(2, 5, 6, NULL),
-(3, 1, 1, '2015/11/13 15:30'),
-(3, 4, 1, '03/04/2015'),
-(3, 2, 2, '03/02/2015'),
-(3, 6, 2, '03/06/2015'),
-(3, 2, 3, '03/02/2016'),
-(3, 6, 3, '03/06/2016'),
+(3, 1, 5, NULL),
+(2, 4, 5, NULL),
 (3, 4, 5, NULL),
-(3, 4, 6, NULL),
-(4, 1, 1, 'test'),
-(5, 1, 1, ''),
-(6, 1, 1, ''),
-(7, 1, 1, '');
+(2, 13, 5, NULL),
+(3, 13, 5, NULL),
+(11, 1, 1, 'OK'),
+(12, 1, 2, 'BIEN');
 
 --
 -- 触发器 `constituerdossier`
@@ -282,22 +356,6 @@ CREATE TABLE IF NOT EXISTS `dossiergenerique` (
   KEY `I_FK_DOSSIERGENERIQUE_ACTIVITE` (`ID_ACTIVITE`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- 转存表中的数据 `dossiergenerique`
---
-
-INSERT INTO `dossiergenerique` (`ID_CHAMP`, `ID_ONGLET`, `ID_PARCOURS`, `ID_ACTIVITE`) VALUES
-(1, 2, 1, 3),
-(2, 1, 1, 1),
-(2, 1, 2, 1),
-(2, 3, 1, 4),
-(2, 5, 1, 14),
-(2, 5, 2, 14),
-(2, 7, 2, 32),
-(3, 2, 2, 3),
-(3, 4, 1, 12),
-(3, 6, 2, 15);
-
 -- --------------------------------------------------------
 
 --
@@ -310,6 +368,8 @@ CREATE TABLE IF NOT EXISTS `dossierparcours` (
   `ID_PARCOURS` bigint(11) NOT NULL,
   `DATE_CREATION_DOSSIER` date NOT NULL,
   `DATE_DERNIERE_MODIFICATION` date DEFAULT NULL,
+  `DATE_DISPONIBLE_DEBUT` date DEFAULT NULL,
+  `DATE_DISPONIBLE_FIN` date DEFAULT NULL,
   PRIMARY KEY (`ID_DOSSIERPARCOURS`),
   KEY `I_FK_DOSSIERPARCOURS_PATIENT` (`ID_PATIENT`),
   KEY `I_FK_DOSSIERPARCOURS_PARCOURS` (`ID_PARCOURS`)
@@ -319,13 +379,11 @@ CREATE TABLE IF NOT EXISTS `dossierparcours` (
 -- 转存表中的数据 `dossierparcours`
 --
 
-INSERT INTO `dossierparcours` (`ID_DOSSIERPARCOURS`, `ID_PATIENT`, `ID_PARCOURS`, `DATE_CREATION_DOSSIER`, `DATE_DERNIERE_MODIFICATION`) VALUES
-(1, 1, 5, '2015-11-01', '2015-11-24'),
-(2, 2, 6, '2015-10-28', NULL),
-(3, 2, 6, '2015-10-28', NULL),
-(4, 1, 5, '2015-11-11', NULL),
-(5, 1, 1, '2015-11-11', NULL),
-(6, 4, 1, '2017-04-06', '2017-04-06');
+INSERT INTO `dossierparcours` (`ID_DOSSIERPARCOURS`, `ID_PATIENT`, `ID_PARCOURS`, `DATE_CREATION_DOSSIER`, `DATE_DERNIERE_MODIFICATION`, `DATE_DISPONIBLE_DEBUT`, `DATE_DISPONIBLE_FIN`) VALUES
+(1, 12, 26, '2018-03-27', '2018-03-27', '2018-03-28', '2018-03-28'),
+(2, 12, 1, '2018-03-27', '2018-03-27', '2018-03-31', '2018-03-31'),
+(4, 12, 1, '2018-03-27', '2018-03-27', '2018-04-07', '2018-04-07'),
+(5, 12, 27, '2018-03-27', '2018-03-27', '2018-03-21', '2018-03-21');
 
 --
 -- 触发器 `dossierparcours`
@@ -376,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   KEY `patientId` (`patientId`),
   KEY `parcoursId` (`parcoursId`),
   KEY `activiteId` (`activiteId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=452 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=480 ;
 
 --
 -- 转存表中的数据 `evenement`
@@ -390,7 +448,6 @@ INSERT INTO `evenement` (`id`, `title`, `end`, `start`, `ressourceId`, `patientI
 (331, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 4, 1, 1, 3, '#FF1490'),
 (332, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 19, 1, 1, 3, '#FF1490'),
 (333, 'Martin Simon - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:45:00', 31, 1, 1, 4, '#FF1490'),
-(334, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 2, 1, 1, 5, '#FF1490'),
 (335, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 39, 1, 1, 5, '#FF1490'),
 (336, 'Martin Simon - Collation - Obésité sévère – diagnostique', '2017-04-06 11:55:00', '2017-04-06 11:45:00', 3, 1, 1, 31, '#FF1490'),
 (337, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 5, 1, 1, 6, '#FF1490'),
@@ -401,7 +458,6 @@ INSERT INTO `evenement` (`id`, `title`, `end`, `start`, `ressourceId`, `patientI
 (342, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 24, 1, 1, 8, '#FF1490'),
 (343, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 9, 1, 1, 9, '#FF1490'),
 (344, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 23, 1, 1, 9, '#FF1490'),
-(345, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 2, 2, 1, 1, '#90BC90'),
 (346, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 23, 2, 1, 1, '#90BC90'),
 (347, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 3, 2, 1, 2, '#90BC90'),
 (348, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 17, 2, 1, 2, '#90BC90'),
@@ -435,7 +491,6 @@ INSERT INTO `evenement` (`id`, `title`, `end`, `start`, `ressourceId`, `patientI
 (390, 'Leroy Vincent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:10:00', '2017-04-06 09:55:00', 38, 9, 1, 4, '#FF8C00'),
 (391, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 33, 9, 1, 6, '#FF8C00'),
 (392, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 26, 9, 1, 6, '#FF8C00'),
-(393, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 2, 9, 1, 5, '#FF8C00'),
 (394, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 40, 9, 1, 5, '#FF8C00'),
 (395, 'Leroy Vincent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:55:00', '2017-04-06 10:45:00', 33, 9, 1, 31, '#FF8C00'),
 (396, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 37, 9, 1, 7, '#FF8C00'),
@@ -490,7 +545,11 @@ INSERT INTO `evenement` (`id`, `title`, `end`, `start`, `ressourceId`, `patientI
 (448, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 7, 10, 1, 8, '#9800D8'),
 (449, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 24, 10, 1, 8, '#9800D8'),
 (450, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 9, 10, 1, 9, '#9800D8'),
-(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8');
+(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8'),
+(474, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 3, 12, 1, 2, '#90BC90'),
+(475, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 17, 12, 1, 2, '#90BC90'),
+(478, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 5, 12, 26, 13, '#90BC90'),
+(479, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 27, 12, 26, 13, '#90BC90');
 
 -- --------------------------------------------------------
 
@@ -554,7 +613,9 @@ INSERT INTO `necessiter` (`ID_ACTIVITE`, `ID_TYPERESSOURCE`, `QUANTITE`) VALUES
 (8, 4, 1),
 (8, 43, 1),
 (9, 5, 1),
-(9, 43, 1);
+(9, 43, 1),
+(13, 3, 1),
+(13, 45, 1);
 
 -- --------------------------------------------------------
 
@@ -565,38 +626,49 @@ INSERT INTO `necessiter` (`ID_ACTIVITE`, `ID_TYPERESSOURCE`, `QUANTITE`) VALUES
 CREATE TABLE IF NOT EXISTS `onglet` (
   `ID_ONGLET` bigint(11) NOT NULL,
   `TXT_NOM` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID_ONGLET`)
+  `ID_ACTIVITE` bigint(11) DEFAULT NULL,
+  PRIMARY KEY (`ID_ONGLET`),
+  KEY `FK_ID` (`ID_ACTIVITE`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- 转存表中的数据 `onglet`
 --
 
-INSERT INTO `onglet` (`ID_ONGLET`, `TXT_NOM`) VALUES
-(1, 'RDV paramédical'),
-(2, 'Bilan biologique'),
-(3, 'Echo hépatique'),
-(4, 'Fibroscan'),
-(5, 'Entretien hépato'),
-(6, 'Traitement Rémicade'),
-(7, 'Synthèse'),
-(8, 'ECG'),
-(9, 'Calorimétrie'),
-(10, 'Entretien psy'),
-(11, 'Entretien infirmier'),
-(12, 'Entretien diet'),
-(13, 'TOGD'),
-(14, 'Bilan anthropométrique'),
-(15, 'Scanner abdo'),
-(16, 'Ponction Ascite'),
-(17, 'Soins ponction'),
-(18, 'Injection Ferinject'),
-(19, 'Injection'),
-(20, 'Scintigraphie myocardique'),
-(21, 'Scanner des corronaires'),
-(22, 'Echodoppler TSA et MI'),
-(23, 'Rétinographie'),
-(24, 'Pose Holter');
+INSERT INTO `onglet` (`ID_ONGLET`, `TXT_NOM`, `ID_ACTIVITE`) VALUES
+(0, 'Début', 0),
+(1, 'RDV paramédical', 1),
+(2, 'ECG', 2),
+(3, 'Bilan biologique', 3),
+(4, 'Echo hépatique', 4),
+(5, 'Calorimétrie', 5),
+(6, 'Entretien psy', 6),
+(7, 'Entretien infirmier', 7),
+(8, 'Entretien diet', 8),
+(9, 'synthèse', 9),
+(10, 'TOGD', 10),
+(11, 'Bilan anthropométrique', 11),
+(12, 'Fibroscan', 12),
+(13, 'Scanner abdo', 13),
+(14, 'Entretien hépato', 14),
+(15, 'Traitement Rémicade', 15),
+(16, 'Ponction Ascite', 16),
+(17, 'Soins ponction', 17),
+(18, 'Injection Ferinject', 18),
+(19, 'Injection', 19),
+(20, 'Scintigraphie myocardique', 20),
+(21, 'Scanner des corronaires', 21),
+(22, 'Echodoppler TSA et MI', 22),
+(23, 'Rétinographie', 23),
+(24, 'Pose Holter', 24),
+(25, 'Scanner abdo', 25),
+(26, 'Scanner TMD pied + radios', 26),
+(27, 'Doppler des artères des MI', 27),
+(28, 'Soin, pansement, mesures IPS', 28),
+(29, 'RDV médical', 29),
+(30, 'Prélèvement', 30),
+(31, 'Collation', 31),
+(32, 'Synthèse', 32);
 
 -- --------------------------------------------------------
 
@@ -619,7 +691,7 @@ CREATE TABLE IF NOT EXISTS `ordonnancer` (
   KEY `patientId` (`patientId`),
   KEY `parcoursId` (`parcoursId`),
   KEY `activiteId` (`activiteId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=452 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=480 ;
 
 --
 -- 转存表中的数据 `ordonnancer`
@@ -633,7 +705,6 @@ INSERT INTO `ordonnancer` (`id`, `title`, `end`, `start`, `ressourceId`, `patien
 (331, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 4, 1, 1, 3, '#FF1490'),
 (332, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 19, 1, 1, 3, '#FF1490'),
 (333, 'Martin Simon - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:45:00', 31, 1, 1, 4, '#FF1490'),
-(334, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 2, 1, 1, 5, '#FF1490'),
 (335, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 39, 1, 1, 5, '#FF1490'),
 (336, 'Martin Simon - Collation - Obésité sévère – diagnostique', '2017-04-06 11:55:00', '2017-04-06 11:45:00', 3, 1, 1, 31, '#FF1490'),
 (337, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 5, 1, 1, 6, '#FF1490'),
@@ -644,7 +715,6 @@ INSERT INTO `ordonnancer` (`id`, `title`, `end`, `start`, `ressourceId`, `patien
 (342, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 24, 1, 1, 8, '#FF1490'),
 (343, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 9, 1, 1, 9, '#FF1490'),
 (344, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 23, 1, 1, 9, '#FF1490'),
-(345, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 2, 2, 1, 1, '#90BC90'),
 (346, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 23, 2, 1, 1, '#90BC90'),
 (347, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 3, 2, 1, 2, '#90BC90'),
 (348, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 17, 2, 1, 2, '#90BC90'),
@@ -678,7 +748,6 @@ INSERT INTO `ordonnancer` (`id`, `title`, `end`, `start`, `ressourceId`, `patien
 (390, 'Leroy Vincent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:10:00', '2017-04-06 09:55:00', 38, 9, 1, 4, '#FF8C00'),
 (391, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 33, 9, 1, 6, '#FF8C00'),
 (392, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 26, 9, 1, 6, '#FF8C00'),
-(393, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 2, 9, 1, 5, '#FF8C00'),
 (394, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 40, 9, 1, 5, '#FF8C00'),
 (395, 'Leroy Vincent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:55:00', '2017-04-06 10:45:00', 33, 9, 1, 31, '#FF8C00'),
 (396, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 37, 9, 1, 7, '#FF8C00'),
@@ -733,7 +802,11 @@ INSERT INTO `ordonnancer` (`id`, `title`, `end`, `start`, `ressourceId`, `patien
 (448, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 7, 10, 1, 8, '#9800D8'),
 (449, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 24, 10, 1, 8, '#9800D8'),
 (450, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 9, 10, 1, 9, '#9800D8'),
-(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8');
+(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8'),
+(474, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 3, 12, 1, 2, '#90BC90'),
+(475, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 17, 12, 1, 2, '#90BC90'),
+(478, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 5, 12, 26, 13, '#90BC90'),
+(479, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 27, 12, 26, 13, '#90BC90');
 
 -- --------------------------------------------------------
 
@@ -777,7 +850,9 @@ INSERT INTO `parcours` (`ID_PARCOURS`, `TXT_NOM`, `INT_OBJECTIF`, `TXT_CODE`) VA
 (21, 'AIT ', NULL, NULL),
 (22, 'Bilan troubles cognitifs', NULL, NULL),
 (23, 'Epilepsie', NULL, NULL),
-(24, 'Céphalées sub-aigues', NULL, NULL);
+(24, 'Céphalées sub-aigues', NULL, NULL),
+(26, 'PAR1', NULL, ''),
+(27, 'PAR2', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -813,16 +888,20 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 INSERT INTO `patient` (`ID_PATIENT`, `ID_COMPTE`, `TXT_NOM`, `TXT_PRENOM`, `TXT_ADRESSENUM`, `TXT_ADRESSERUE`, `TXT_ADRESSECODEPOSTAL`, `TXT_ADRESSEVILLE`, `TXT_ADRESSEPAYS`, `TXT_MAIL`, `TXT_TELEPHONEFIXE`, `TXT_TELEPHONEPORTABLE`, `TXT_NUMSECU`, `DATE_NAISSANCE`, `ID_PARCOURS_SUP`, `DATE_DISPONIBLE_DEBUT`, `DATE_DISPONIBLE_FIN`) VALUES
-(1, 1, 'Martin', 'Simon', '20', 'Saint-Martin', '75000', 'Paris', 'France', 'martin.simon@gmail.com', '245', '0753868034', '2545242', '2003-01-01', 1, '2017-04-06 10:00:00', '2017-04-06 18:00:00'),
-(2, 2, 'Bernard', 'Laurent', '15', 'Arbre Sec', '75000', 'Paris', 'France', 'bernard.laurent@gmail.com', '454', '0753868024', '45856', '1990-09-12', 1, '2017-04-06 08:00:00', '2017-04-06 17:00:00'),
-(3, 3, 'Dubois', 'Lefebvre', '6', 'Cambon', '75000', 'Paris', 'France', 'dubois.lefebvre@gmail.com', '144', '0753868029', '444', '1983-10-17', 1, '2017-04-06 10:00:00', '2017-04-06 20:00:00'),
-(4, 4, 'Thomas', 'Michel', '31', 'Saint Honore', '75000', 'Paris', 'France', 'thomas.michel@gmail.com', '2522525', '0753482620', '25435343', '1972-11-05', 1, '2017-04-03 06:00:00', '2017-04-03 23:00:00'),
-(5, 5, 'Robert', 'Garcia', '23', 'Temple', '75000', 'Paris', 'France', 'robert.garcia@gmail.com', '4511513', '0753864952', '3453463', '1984-11-24', 1, '2017-04-06 08:00:00', '2017-04-06 18:00:00'),
-(7, 7, 'Petit', 'Bertrand', '7', 'Duphot', '37000', 'Tours', 'France', 'petit.bertrand@hotmail.com', '44', '0658426125', '533443', '1986-08-12', 1, '2017-02-16 00:00:00', '2017-02-16 00:00:00'),
-(8, 8, 'Durand', 'Rous', '43', 'delperier', '37000', 'Tours', 'France', 'durand.rous@hotmail.com', '585', '0685469256', '785857887', '1995-05-06', 1, '2017-02-16 00:00:00', '2017-02-16 00:00:00'),
-(9, 9, 'Leroy', 'Vincent', '91', 'etranger', '37300', 'Tours', 'France', 'leroy.vincent@gmail.com', '4541212', '0786452156', '543453422', '1983-07-16', 1, '2017-04-06 09:00:00', '2017-04-06 16:00:00'),
-(10, 10, 'Moreau', 'Fournier', '23', 'grapiere', '86420', 'Lille', 'France', 'moreau.fournier@soho.com', NULL, '0753168529', '3654545', '1863-08-08', 1, '2017-03-29 08:00:00', '2017-03-29 17:00:00'),
-(11, 30, 'pochet', 'guillaume', '53', 'avenue de montjoyeux', '37200', 'Tours', 'France', 'guillaume.pochet@gmail.com', '0636777546', '0636777546', '2545242', '1994-04-06', 1, '2017-04-06 08:00:00', '2017-04-06 16:00:00');
+(1, 1, 'Martin', 'Simon', '20', 'Saint-Martin', '75000', 'Paris', 'France', 'martin.simon@gmail.com', '245', '0753868034', '2545242', '2003-01-01', 1, '2018-04-28 07:30:00', '2018-04-28 15:55:00'),
+(2, 2, 'Bernard', 'Laurent', '15', 'Arbre Sec', '75000', 'Paris', 'France', 'bernard.laurent@gmail.com', '454', '0753868024', '45856', '1990-09-12', 25, '2018-03-31 07:35:00', '2018-03-31 13:15:00'),
+(3, 3, 'Dubois', 'Lefebvre', '6', 'Cambon', '75000', 'Paris', 'France', 'dubois.lefebvre@gmail.com', '144', '0753868029', '444', '1983-10-17', 25, '2018-03-31 06:10:00', '2018-03-31 08:45:00'),
+(4, 4, 'Thomas', 'Michel', '31', 'Saint Honore', '75000', 'Paris', 'France', 'thomas.michel@gmail.com', '2522525', '0753482620', '25435343', '1972-11-05', 1, '2018-03-31 06:15:00', '2018-03-31 15:30:00'),
+(5, 5, 'Robert', 'Garcia', '23', 'Temple', '75000', 'Paris', 'France', 'robert.garcia@gmail.com', '4511513', '0753864952', '3453463', '1984-11-24', 1, '2018-03-31 08:40:00', '2018-03-31 19:20:00'),
+(7, 7, 'Petit', 'Bertrand', '7', 'Duphot', '37000', 'Tours', 'France', 'petit.bertrand@hotmail.com', '44', '0658426125', '533443', '1986-08-12', 0, '2018-03-31 06:15:00', '2018-03-31 12:05:00'),
+(8, 8, 'Durand', 'Rous', '43', 'delperier', '37000', 'Tours', 'France', 'durand.rous@hotmail.com', '585', '0685469256', '785857887', '1995-05-06', 25, '2018-03-31 07:00:00', '2018-03-31 16:35:00'),
+(9, 9, 'Leroy', 'Vincent', '91', 'etranger', '37300', 'Tours', 'France', 'leroy.vincent@gmail.com', '4541212', '0786452156', '543453422', '1983-07-16', 25, '2018-03-31 06:25:00', '2018-03-31 11:00:00'),
+(10, 10, 'Moreau', 'Fournier', '23', 'grapiere', '86420', 'Lille', 'France', 'moreau.fournier@soho.com', NULL, '0753168529', '3654545', '1863-08-08', 1, '2018-03-31 06:20:00', '2018-03-31 15:30:00'),
+(11, 30, 'pochet', 'guillaume', '53', 'avenue de montjoyeux', '37200', 'Tours', 'France', 'guillaume.pochet@gmail.com', '0636777546', '0636777546', '2545242', '1994-04-06', 1, '2018-03-31 06:20:00', '2018-03-31 17:25:00'),
+(12, 58, 'YANG', 'Jing', '31', 'richelieu', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212590', '0695212599', '129999', '1990-09-10', 27, '2018-03-21 07:00:00', '2018-03-21 13:40:00'),
+(13, 59, 'YANG', 'Jemika', '99', 'ty', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '90', '1995-04-07', 25, '2018-03-16 08:55:00', '2018-03-16 15:55:00'),
+(14, 60, 'YANG', 'J', '1', 'Q', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '1231', '1996-10-10', NULL, NULL, NULL),
+(15, 61, 'YANG', 'ying', '12', 'qwe', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '132', '1996-10-10', 1, '2018-05-02 06:25:00', '2018-05-02 15:30:00');
 
 -- --------------------------------------------------------
 
@@ -847,7 +926,6 @@ CREATE TABLE IF NOT EXISTS `personnel` (
 
 INSERT INTO `personnel` (`ID_PERSONNEL`, `ID_RESSOURCE`, `ID_COMPTE`, `TXT_NOM`, `TXT_PRENOM`) VALUES
 (1, 1, 11, 'Cheniour', 'Soumaya'),
-(2, 2, 12, 'Verheyde', 'Catherine'),
 (3, 3, 13, 'Attias', 'Elie'),
 (4, 4, 14, 'Cabinet', 'Selarl'),
 (5, 5, 15, 'Pasquet', 'Jean-Pierre'),
@@ -882,71 +960,81 @@ CREATE TABLE IF NOT EXISTS `planparcours` (
 --
 
 INSERT INTO `planparcours` (`ID_PARCOURS`, `ID_JOUR`, `INT_NB_PATIENT`) VALUES
-(1, 1, 3),
+(1, 1, 5),
 (1, 2, 4),
-(1, 3, 4),
-(1, 4, 4),
-(1, 5, 4),
-(2, 1, 9),
-(2, 2, 2),
-(2, 3, 4),
-(2, 4, 1),
-(2, 5, 3),
-(3, 1, 5),
-(3, 2, 5),
-(3, 3, 5),
-(3, 4, 5),
-(3, 5, 5),
-(4, 1, 5),
-(4, 2, 5),
-(4, 3, 5),
-(4, 4, 5),
-(4, 5, 5),
-(5, 1, 5),
-(5, 2, 5),
-(5, 3, 5),
-(5, 4, 5),
-(5, 5, 5),
-(6, 1, 5),
-(6, 2, 5),
-(6, 3, 5),
-(6, 4, 5),
-(6, 5, 5),
-(7, 1, 5),
-(7, 2, 5),
-(7, 3, 5),
-(7, 4, 5),
-(7, 5, 5),
-(8, 1, 5),
-(8, 2, 5),
-(8, 3, 5),
-(8, 4, 5),
-(8, 5, 5),
-(9, 1, 5),
-(9, 2, 5),
-(9, 3, 5),
-(9, 4, 5),
-(9, 5, 5),
-(10, 1, 5),
-(10, 2, 5),
-(10, 3, 5),
-(10, 4, 5),
-(10, 5, 5),
-(11, 1, 5),
-(11, 2, 5),
-(11, 3, 5),
-(11, 4, 5),
-(11, 5, 5),
-(12, 1, 5),
-(12, 2, 5),
-(12, 3, 5),
-(12, 4, 5),
-(12, 5, 5),
-(13, 1, 7),
-(13, 2, 5),
-(13, 3, 5),
-(13, 4, 5),
-(13, 5, 5);
+(1, 3, 6),
+(1, 4, 6),
+(1, 5, 6),
+(2, 1, 10),
+(2, 2, 10),
+(2, 3, 10),
+(2, 4, 10),
+(2, 5, 10),
+(3, 1, 10),
+(3, 2, 10),
+(3, 3, 10),
+(3, 4, 10),
+(3, 5, 10),
+(4, 1, 10),
+(4, 2, 10),
+(4, 3, 10),
+(4, 4, 10),
+(4, 5, 10),
+(5, 1, 10),
+(5, 2, 10),
+(5, 3, 10),
+(5, 4, 10),
+(5, 5, 10),
+(6, 1, 10),
+(6, 2, 10),
+(6, 3, 10),
+(6, 4, 10),
+(6, 5, 10),
+(7, 1, 10),
+(7, 2, 10),
+(7, 3, 10),
+(7, 4, 10),
+(7, 5, 10),
+(8, 1, 10),
+(8, 2, 10),
+(8, 3, 10),
+(8, 4, 10),
+(8, 5, 10),
+(9, 1, 10),
+(9, 2, 10),
+(9, 3, 10),
+(9, 4, 10),
+(9, 5, 10),
+(10, 1, 10),
+(10, 2, 10),
+(10, 3, 10),
+(10, 4, 10),
+(10, 5, 10),
+(11, 1, 10),
+(11, 2, 10),
+(11, 3, 10),
+(11, 4, 10),
+(11, 5, 10),
+(12, 1, 10),
+(12, 2, 10),
+(12, 3, 10),
+(12, 4, 10),
+(12, 5, 10),
+(13, 1, 10),
+(13, 2, 10),
+(13, 3, 10),
+(13, 4, 10),
+(13, 5, 10),
+(26, 1, 5),
+(26, 2, 5),
+(26, 3, 5),
+(26, 4, 5),
+(26, 5, 5),
+(27, 1, 5),
+(27, 2, 5),
+(27, 3, 5),
+(27, 4, 5),
+(27, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -967,7 +1055,6 @@ CREATE TABLE IF NOT EXISTS `ressource` (
 
 INSERT INTO `ressource` (`ID_RESSOURCE`, `ID_TYPERESSOURCE`) VALUES
 (1, 1),
-(2, 1),
 (37, 1),
 (3, 2),
 (4, 2),
@@ -1173,16 +1260,16 @@ ALTER TABLE `compte`
 -- 限制表 `constituerdossier`
 --
 ALTER TABLE `constituerdossier`
-  ADD CONSTRAINT `constituerdossier_ibfk_3` FOREIGN KEY (`ID_ONGLET`) REFERENCES `onglet` (`ID_ONGLET`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `constituerdossier_ibfk_1` FOREIGN KEY (`ID_CHAMP`) REFERENCES `champ` (`ID_CHAMP`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `constituerdossier_ibfk_2` FOREIGN KEY (`ID_DOSSIERPARCOURS`) REFERENCES `dossierparcours` (`ID_DOSSIERPARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `constituerdossier_ibfk_2` FOREIGN KEY (`ID_DOSSIERPARCOURS`) REFERENCES `dossierparcours` (`ID_DOSSIERPARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `constituerdossier_ibfk_3` FOREIGN KEY (`ID_ONGLET`) REFERENCES `onglet` (`ID_ONGLET`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- 限制表 `dossiergenerique`
 --
 ALTER TABLE `dossiergenerique`
-  ADD CONSTRAINT `dossiergenerique_ibfk_2` FOREIGN KEY (`ID_ONGLET`) REFERENCES `onglet` (`ID_ONGLET`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dossiergenerique_ibfk_1` FOREIGN KEY (`ID_CHAMP`) REFERENCES `champ` (`ID_CHAMP`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `dossiergenerique_ibfk_2` FOREIGN KEY (`ID_ONGLET`) REFERENCES `onglet` (`ID_ONGLET`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dossiergenerique_ibfk_3` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dossiergenerique_ibfk_4` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -1203,8 +1290,8 @@ ALTER TABLE `etreindisponible`
 -- 限制表 `evenement`
 --
 ALTER TABLE `evenement`
-  ADD CONSTRAINT `evenement_ibfk_2` FOREIGN KEY (`patientId`) REFERENCES `patient` (`ID_PATIENT`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `evenement_ibfk_1` FOREIGN KEY (`ressourceId`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `evenement_ibfk_2` FOREIGN KEY (`patientId`) REFERENCES `patient` (`ID_PATIENT`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `evenement_ibfk_3` FOREIGN KEY (`parcoursId`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `evenement_ibfk_4` FOREIGN KEY (`activiteId`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -1212,15 +1299,21 @@ ALTER TABLE `evenement`
 -- 限制表 `necessiter`
 --
 ALTER TABLE `necessiter`
-  ADD CONSTRAINT `necessiter_ibfk_2` FOREIGN KEY (`ID_TYPERESSOURCE`) REFERENCES `typeressource` (`ID_TYPERESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `necessiter_ibfk_1` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `necessiter_ibfk_1` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `necessiter_ibfk_2` FOREIGN KEY (`ID_TYPERESSOURCE`) REFERENCES `typeressource` (`ID_TYPERESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- 限制表 `onglet`
+--
+ALTER TABLE `onglet`
+  ADD CONSTRAINT `FK_ID` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- 限制表 `ordonnancer`
 --
 ALTER TABLE `ordonnancer`
-  ADD CONSTRAINT `ordonnancer_ibfk_2` FOREIGN KEY (`patientId`) REFERENCES `patient` (`ID_PATIENT`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ordonnancer_ibfk_1` FOREIGN KEY (`ressourceId`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ordonnancer_ibfk_2` FOREIGN KEY (`patientId`) REFERENCES `patient` (`ID_PATIENT`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ordonnancer_ibfk_3` FOREIGN KEY (`parcoursId`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ordonnancer_ibfk_4` FOREIGN KEY (`activiteId`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -1234,8 +1327,8 @@ ALTER TABLE `personnel`
 -- 限制表 `planparcours`
 --
 ALTER TABLE `planparcours`
-  ADD CONSTRAINT `planparcours_ibfk_2` FOREIGN KEY (`ID_JOUR`) REFERENCES `jour` (`ID_JOUR`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `planparcours_ibfk_1` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `planparcours_ibfk_1` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `planparcours_ibfk_2` FOREIGN KEY (`ID_JOUR`) REFERENCES `jour` (`ID_JOUR`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- 限制表 `salle`
