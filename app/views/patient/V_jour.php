@@ -1,9 +1,9 @@
 <div class="jumbotron"> 	
-    <h3>Disponibilités du patient.</h3>
+    <h3>Disponibilités du patient</h3>
     <br>
     <div class="form-horizontal col-md-12">
         <div class="form-group row ">
-            <label for="parcours" class="col-md-2 control-label">Nom du pacours</label>
+            <label for="parcours" class="col-md-2 control-label">Nom du parcours</label>
             <div class="col-md-10">
                 <select id="parcours" name="parcours" class="form-control" >
                     <?php foreach ($parcours as $p) { ?>
@@ -174,5 +174,3 @@
 
     }
 </script>
-
-<!-- /container -->

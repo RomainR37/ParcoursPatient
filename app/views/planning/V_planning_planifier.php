@@ -12,7 +12,7 @@
             <div style=" margin-top: 20px;width:500px;height:250px;overflow:scroll;overflow-x:hidden;" id='external-events' class="col-md-4">
                 <center><h4>Activités</h4></center>
                 <div class="form-group">
-                    <input type="text" placeholder="Entrer un nom de patient !" id="rechercher" class="form-control left-rounded" oninput="rechercher()">
+                    <input type="text" placeholder="Entrer un nom de patient" id="rechercher" class="form-control left-rounded" oninput="rechercher()">
                 </div>
                 <div id="activites">
 
@@ -36,7 +36,7 @@
                 <span style="display: none" id="idParcours"></span>
                 <span style="display: none" id="idActivite"></span>
                 <p id="eventInfo"></p>
-                <button type="submit" onclick="supprimerActivitesPatient()"class="btn btn-danger">Supprimer toute les activités de ce patient</button>
+                <button type="submit" onclick="supprimerActivitesPatient()"class="btn btn-danger">Supprimer toutes les activités de ce patient</button>
                 <button type="submit" onclick="supprimerActivites()"class="btn btn-success">Supprimer cette activité</button>
             </div>
         </div>
@@ -59,7 +59,7 @@
         </div>        <div class="row"style="margin-top: 20px">
             <div class="panel panel-info" style="width: 800px;">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Infos sur la plannification</h3>
+                    <h3 class="panel-title">Infos sur la planification</h3>
                 </div>
                 <div class="panel-body" style="height:300px;overflow:scroll;overflow-x:hidden;">
                     <div id="constraints">

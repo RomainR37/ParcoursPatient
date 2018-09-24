@@ -35,8 +35,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
                         <ul class="nav navbar-nav navbar-right">
                             <li class=""><a href="<?php echo base_url(); ?>Auth/logout">Déconnexion</a></li>
                         </ul>
-
-                    </div><!--/.nav-collapse -->
+                    </div>
                 </div>
             </nav>
         </div>
@@ -49,7 +48,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
                         <h2>Votre Planning : </h2>
                         <div class="jumbotron"> 
                             <table class="table table-striped">
-                                <th>Nom de l'activité</th><th>Personnel médical</th><th>Heure début prévu</th><th>Heure fin prévu </th>
+                                <th>Nom de l'activité</th><th>Personnel médical</th><th>Heure début prévue</th><th>Heure fin prévue</th>
                                 <?php
                                 foreach ($activites as $row) {
                                     echo "<tr><td>" . $row["TXT_NOM"] . "</td>" .
@@ -66,7 +65,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
                     <div class="col-md-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">Informations</div>
-                            <div class="panel-body">Les dates de début et fin de chaque activités peuvent être amené à changer.</div>
+                            <div class="panel-body">Les dates de début et fin de chaque activité peuvent être amenées à changer.</div>
                         </div>
                     </div>
                 </div>

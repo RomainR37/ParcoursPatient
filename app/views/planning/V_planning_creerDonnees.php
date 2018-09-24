@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">           
-                <a onclick="creerDonnees()"><button type="button" class="btn btn-success">Créer jeux de données</button></a>
+                <a onclick="creerDonnees()"><button type="button" class="btn btn-success">Créer jeu de données</button></a>
             </div>
         </div>
     </div>
