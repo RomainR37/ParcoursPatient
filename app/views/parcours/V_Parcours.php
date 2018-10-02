@@ -1,11 +1,10 @@
 <div class="container-fluid">
     <div class="jumbotron">
         <h3> Parcours-patient au sein de l'hôpital </h3>
-        <a href="<?php echo base_url('Parcours/ajout/') ?>">Ajouter un parcours patients</a>
+        <a href="<?php echo base_url('Parcours/ajout/') ?>">Ajouter un parcours-patient</a>
         <table name="formu"class="table table-responsive table-hover">
             <thead>         
-            <th class="col-xs-3">NOM</th>
-            <!--th class="col-xs-1">Objectif</th-->
+            <th class="col-xs-3">Nom du parcours</th>
             <th class="col-xs-1">Code</th>
             <th class="col-xs-1"></th>
             </tr>

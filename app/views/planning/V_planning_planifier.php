@@ -170,7 +170,7 @@
                         }
             },
             resourceAreaWidth: '25%',
-            resourceLabelText: 'Ressource',
+            resourceLabelText: 'Ressources',
             resourceGroupField: 'type_ressource',
             droppable: true, // this allows things to be dropped onto the calendar
             resources: {

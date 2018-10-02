@@ -12,7 +12,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
         <link rel="icon" href="favicon.ico">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/images/calendar.png"/>
 
-        <title>Gestion Hopital de jour</title>
+        <title>Gestion Hôpital de jour</title>
 
         <!-- for mobile devices like android and iphone -->
         <meta content="True" name="HandheldFriendly" />

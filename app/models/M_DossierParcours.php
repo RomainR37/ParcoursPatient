@@ -248,7 +248,7 @@ class M_DossierParcours extends CI_Model {
         $txt_sql = "UPDATE dossierparcours SET ID_PARCOURS = ". $this->db->escape($idParcours).", DATE_DISPONIBLE_DEBUT = ". $this->db->escape($dateDebut).", DATE_DISPONIBLE_FIN = ". $this->db->escape($dateFin)." 
                         WHERE id_dossierparcours = ". $this->db->escape($idDossier);
         $query = $this->db->query($txt_sql);
-        //supprimer les anciens data de la table constituerdossier lié à l'ancien dossier
+        //supprimer les anciennes données de la table constituerdossier liées à l'ancien dossier
         $sql = "DELETE FROM constituerdossier WHERE ID_DOSSIERPARCOURS = " . $this->db->escape($idDossier);
         $query = $this->db->query($sql);
         //renouveler la table constituerdossier 

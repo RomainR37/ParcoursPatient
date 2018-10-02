@@ -37,7 +37,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planification<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo base_url(); ?>Planning/planifier">Planification</a></li>
-                                <li><a href="<?php echo base_url(); ?>Planning/creerJeuxDeDonnees">Créer jeux de données</a></li>
+                                <li><a href="<?php echo base_url(); ?>Planning/creerJeuxDeDonnees">Créer jeu de données</a></li>
                             </ul>
                         </li>
                     <?php } ?>
