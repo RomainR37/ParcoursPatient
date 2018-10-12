@@ -1,13 +1,12 @@
-
 <div class="container-fluid">
     <div class="jumbotron">
-        <h3> Activités existantes </h3>
+        <h3>Activités existantes</h3>
         <a href="<?php echo base_url('Activites/ajout/') ?>">Ajouter une activite</a>
         <table name="formu"class="table table-responsive table-hover">
             <thead>         
                 <tr>
-                    <th class="col-xs-2">Nom Activite</th>
-                    <th class="col-xs-2">Durée (min)</th>
+                    <th class="col-xs-2">Nom Activité</th>
+                    <th class="col-xs-2">Durée (en minutes)</th>
                     <th class="col-xs-2">Personnels</th>
                     <th class="col-xs-2">Salles</th>
                     <th class="col-xs-3">Commentaires</th>
@@ -42,8 +41,10 @@
                                 </button>
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="<?php echo base_url('Activites/modif/') . '/' . $row["id_activite"] ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier</a></li>
-                                    <li><a href="<?php echo base_url(); ?>Activites/suppr/<?php echo $row["id_activite"] ?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</a></li>
+                                    <li><a href="<?php echo base_url('Activites/modif/') . '/' . $row["id_activite"] ?>">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier</a></li>
+                                    <li><a href="<?php echo base_url(); ?>Activites/suppr/<?php echo $row["id_activite"] ?>" onclick="return confirm('Voulez-vous supprimer cette activité ? Cela peut entraîner des répercussions sur les parcours-patients.');">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</a></li>
                                 </ul>
                             </div>
                         </td>

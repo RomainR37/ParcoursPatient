@@ -70,8 +70,8 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer toute les activites lié à un parcours
-     * \details    Permet de récupérer toute les activites lié à un parcours
+     * \brief      Permet de récupérer toutes les activités liées à un parcours
+     * \details    Permet de récupérer toutes les activités liées à un parcours
      * \param      Aucun
      */
     public function getAllActivites() {

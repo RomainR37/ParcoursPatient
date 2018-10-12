@@ -1,11 +1,11 @@
 <div class="container-fluid" >  
     <div class="jumbotron">	
-        <h3>Recherche d'un patient.</h3>
+        <h3>Recherche d'un patient</h3>
         <br>
         <div class="row">		
             <div class="form-group">
                 <div class="input-group input-group-lg icon-addon addon-lg">
-                    <input type="text" placeholder="Entrez un nom de patient !" name="recherche" id="recherche" class="form-control input-lg">
+                    <input type="text" placeholder="Entrez un nom de patient" name="recherche" id="recherche" class="form-control input-lg">
                     <i class="icon icon-search"></i>
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-inverse">Rechercher</button>
@@ -20,7 +20,7 @@
         <div class="tableRecherche">
 
         </div>
-    </div> 
+    </div>
 </div> <!-- /container -->
 
 

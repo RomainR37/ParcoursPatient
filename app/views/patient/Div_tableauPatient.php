@@ -26,11 +26,16 @@
                                 </button>
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="<?php echo base_url(); ?>Patient/modifierPatient/<?php echo $row["ID_PATIENT"] ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier patient</a></li>
-                                    <li><a href="<?php echo base_url(); ?>Patient/gererRDV/<?php echo $row["ID_PATIENT"] ;?>"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Gérer RDV</a></li>
-                                    <li><a href="<?php echo base_url(); ?>Patient/afficherSejour/<?php echo $row["ID_PATIENT"] ?>"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Afficher planning</a></li>
-                                    <li><a href="<?php echo base_url(); ?>DossierParcours/dossier/<?php echo $row["ID_PATIENT"] ?>"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Consulter Dossier parcours</a></li>
-                                    <li><a href="<?php echo base_url(); ?>Patient/supprimer/<?php echo $row["ID_PATIENT"] ?> "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer patient</a></li>
+                                    <li><a href="<?php echo base_url(); ?>Patient/modifierPatient/<?php echo $row["ID_PATIENT"] ?>">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier patient</a></li>
+                                    <li><a href="<?php echo base_url(); ?>Patient/gererRDV/<?php echo $row["ID_PATIENT"] ;?>">
+                                            <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> Gérer RDV</a></li>
+                                    <li><a href="<?php echo base_url(); ?>Patient/afficherSejour/<?php echo $row["ID_PATIENT"] ?>">
+                                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Afficher planning</a></li>
+                                    <li><a href="<?php echo base_url(); ?>DossierParcours/dossier/<?php echo $row["ID_PATIENT"] ?>">
+                                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Consulter Dossier parcours</a></li>
+                                    <li><a href="<?php echo base_url(); ?>Patient/supprimer/<?php echo $row["ID_PATIENT"] ?> " onclick="return confirm('Voulez-vous supprimer ce patient ? Cela peut entraîner des répercussions sur la planification.');">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer patient</a></li>
                               
                                 </ul>
                         </td>
