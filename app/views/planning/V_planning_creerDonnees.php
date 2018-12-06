@@ -1,6 +1,6 @@
 <div class="container-fluid" >  
     <div class="jumbotron">	
-        <h3>Créer jeux de données</h3>
+        <h3>Créer jeu de données</h3>
         <br>
         <div class="row">
             <div class='col-md-6'>

@@ -359,8 +359,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de supprimer tout les événements liés à un patient pour une date donné
-     * \details    Permet de supprimer tout les événements liés à un patient pour une date donné
+     * \brief      Permet de supprimer tous les événements liés à un patient pour une date donnée
+     * \details    Permet de supprimer tous les événements liés à un patient pour une date donnée
      * \param      Aucun
      */
     public function deleteEventsPatient() {
