@@ -27,7 +27,7 @@
                             <tr>
                                 <th class="col-xs-1">Parcours</th>
                                 <th class="col-xs-1">Jour</th>
-                                <th class="col-xs-1">NB Patient</th>
+                                <th class="col-xs-1">Nb de patients</th>
                             </tr>
                         </thead>
 
@@ -41,7 +41,7 @@
                                         <td><?php echo $row["jour"] ?></td>
                                 <input name="id_parcours[]" type="hidden" value="<?php echo $row["id_parcours"] ?>"/>
                                 <input name="info_jour[]" type="hidden" value="<?php echo $row["jour"] ?>"/>
-                                <td><input name="info_nb[]" type="number" value="<?php echo $row["nb_patient"] ?>" style="width:45px" onchange="$(this).attr('value', validate($(this).val(), 0, 10).toString());$(this).val(validate($(this).val(), 0, 10))" min=0 max=10 /></td>
+                                <td><input name="info_nb[]" type="number" value="<?php echo $row["nb_patient"] ?>" style="width:45px" onchange="$(this).attr('value', validate($(this).val(), 0, 99).toString());$(this).val(validate($(this).val(), 0, 99))" min=0 max=99 /></td>
                                 </tr>
                             <?php } ?>  
                             </tbody>

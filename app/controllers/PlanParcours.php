@@ -51,7 +51,7 @@ class PlanParcours extends CI_Controller {
             $id = $_POST["id"];
         }
 
-        //selectionner les info du parcous choisi dans la BdD
+        //selectionner les info du parcours choisi dans la BdD
         $data['id'] = $id;
         if ($id == 0) {
             $data['planparcours'] = $this->M_PlanParcours->getAllPlanParcours();
@@ -108,7 +108,7 @@ class PlanParcours extends CI_Controller {
         foreach ($data["idparcours"] as $id)
             echo $id . "\n";
 
-        $res = $this->M_PlanParcours->modiferallplanparcours($data);
+        $res = $this->M_PlanParcours->modifierallplanparcours($data);
 
         echo $res;
     }

@@ -20,9 +20,10 @@ class M_PlanParcours extends CI_Model {
      * \param      Aucun
      */
     public function getAllPlanParcours() {
-        $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, ID_JOUR, INT_NB_PATIENT
-			FROM planparcours PL, parcours PA
-			WHERE PL.ID_PARCOURS=PA.ID_PARCOURS
+        $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, TXT_JOUR, INT_NB_PATIENT
+			FROM planparcours PL, parcours PA, jour JO
+			WHERE PL.ID_PARCOURS=PA.ID_PARCOURS AND PL.ID_JOUR=JO.ID_JOUR
+                        ORDER BY PL.ID_PARCOURS;
 			";
         $query = $this->db->query($txt_sql);
         $res = array();
@@ -32,7 +33,7 @@ class M_PlanParcours extends CI_Model {
 
             $restemp["id_parcours"] = $row->ID_PARCOURS;
             $restemp["nom_parcours"] = $row->TXT_NOM;
-            $restemp["jour"] = $row->ID_JOUR;
+            $restemp["jour"] = $row->TXT_JOUR;
             $restemp["nb_patient"] = $row->INT_NB_PATIENT;
             array_push($res, $restemp);
         }
@@ -67,9 +68,10 @@ class M_PlanParcours extends CI_Model {
      * \param      $id : id du parcours
      */
     public function getPlanParcoursById($id) {
-        $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, ID_JOUR, INT_NB_PATIENT
-			FROM planparcours PL, parcours PA
-			WHERE PL.ID_PARCOURS=PA.ID_PARCOURS AND PL.ID_PARCOURS=" . $id;
+        $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, TXT_JOUR, INT_NB_PATIENT
+			FROM planparcours PL, parcours PA, jour JO
+			WHERE PL.ID_PARCOURS=PA.ID_PARCOURS AND PL.ID_JOUR=JO.ID_JOUR 
+                        AND PL.ID_PARCOURS=" . $id;
 
         $query = $this->db->query($txt_sql);
         $res = array();
@@ -77,7 +79,7 @@ class M_PlanParcours extends CI_Model {
         foreach ($query->result() as $row) {
             $restemp["id_parcours"] = $row->ID_PARCOURS;
             $restemp["nom_parcours"] = $row->TXT_NOM;
-            $restemp["jour"] = $row->ID_JOUR;
+            $restemp["jour"] = $row->TXT_JOUR;
             $restemp["nb_patient"] = $row->INT_NB_PATIENT;
             array_push($res, $restemp);
         }
@@ -107,7 +109,7 @@ class M_PlanParcours extends CI_Model {
      * \param      $idParcours : id du parcours
      *             $data : les nouvelles données du parcours
      */
-    public function modiferplanparcours($data, $idparcours) {
+    public function modifierplanparcours($data, $idparcours) {
         $i = 0;
         while ($i < count($data['jour'])) {
             $txt_sql = "UPDATE planparcours
@@ -120,11 +122,11 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Modifie tout les parcours
-     * \details    Modifie tout les parcours
+     * \brief      Modifie tous les parcours
+     * \details    Modifie tous les parcours
      *             $data : les nouvelles données des parcours
      */
-    public function modiferallplanparcours($data) {
+    public function modifierallplanparcours($data) {
         $i = 0;
         while ($i < count($data['jour'])) {
             $txt_sql = "UPDATE planparcours
