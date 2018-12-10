@@ -133,7 +133,6 @@ class Patient extends CI_Controller {
         $this->load->helper('form');
 
         $data['chemin'] = '/patient/V_creation';
-        //$data['pathForm'] = "patient/ajoutPatient";
         $data['pathForm'] = "patient/ajoutPatient";
         $this->load->view('/V_generale', $data);
     }
@@ -260,17 +259,17 @@ class Patient extends CI_Controller {
 
         $this->load->helper('form');
 
-        $this->form_validation->set_rules('nom-patient', 'Nom Patient', 'trim|required|max_length[255]|alpha');
+        $this->form_validation->set_rules('nom-patient', 'Nom', 'trim|required|max_length[255]|alpha');
         $this->form_validation->set_rules('prenom-patient', 'Prénom', 'trim|required|max_length[255]|alpha');
-        $this->form_validation->set_rules('num-add-patient', 'Numéro de rue', 'trim|required|max_length[255]');
+        $this->form_validation->set_rules('num-add-patient', 'Numéro de rue', 'trim|required|max_length[5]|numeric');
         $this->form_validation->set_rules('rue-add-patient', 'Rue', 'trim|required|max_length[255]');
         $this->form_validation->set_rules('cp-add-patient', 'Code postal', 'trim|required|max_length[5]|numeric');
         $this->form_validation->set_rules('ville-add-patient', 'Ville', 'trim|required|max_length[255]|alpha');
         $this->form_validation->set_rules('pays-add-patient', 'Pays', 'trim|required|max_length[255]|alpha');
         $this->form_validation->set_rules('email-patient', 'Email', 'trim|required|max_length[255]|valid_email');
-        $this->form_validation->set_rules('num-fixe-patient', 'Téléphone fixe', 'trim|required|max_length[255]');
-        $this->form_validation->set_rules('tel-port-patient', 'Téléphone portable', 'trim|required|max_length[255]');
-        $this->form_validation->set_rules('num-secu-patient', 'Numéro de sécurité sociale', 'trim|required|max_length[15]|numeric');
+        $this->form_validation->set_rules('num-fixe-patient', 'Téléphone fixe', 'trim|required|exact_length[10]');
+        $this->form_validation->set_rules('tel-port-patient', 'Téléphone portable', 'trim|required|exact_length[10]');
+        $this->form_validation->set_rules('num-secu-patient', 'Numéro de sécurité sociale', 'trim|required|exact_length[15]|numeric');
         $this->form_validation->set_rules('date-naiss-patient', 'Date de naissance', 'trim|required|max_length[255]');
 
         if ($this->form_validation->run() == FALSE) {

@@ -3,9 +3,9 @@
     <div class="jumbotron">	
         <?php
         if ($pathForm == "patient/ajoutPatient") {
-            echo "<h3>Ajout d'un nouveau patient.</h3>";
+            echo "<h3>Ajout d'un nouveau patient</h3>";
         } else {
-            echo "<h3>Modification d'un patient.</h3>";
+            echo "<h3>Modification d'un patient</h3>";
         }
         ?>
 

@@ -97,8 +97,8 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Affiche la liste de tout les patients
-     * \details    Affiche la liste de tout les patients
+     * \brief      Affiche la liste de tous les patients
+     * \details    Affiche la liste de tous les patients
      * \param      Aucun
      */
     public function afficherTousPatient() {
