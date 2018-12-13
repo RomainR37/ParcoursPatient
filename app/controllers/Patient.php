@@ -50,8 +50,8 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récuperer la liste des activitée d'un patient
-     * \details    Récupére la liste des activités planifier d'un patient
+     * \brief      Permet de récuperer la liste des activitées d'un patient
+     * \details    Récupère la liste des activités planifiées d'un patient
      *             Retourne la liste des activités au format JSON
      * \param      $id : identifiant du patient
      */
@@ -66,7 +66,7 @@ class Patient extends CI_Controller {
 
     /**
      * \brief      Permet d'afficher la vue de recherche d'un patient
-     * \details    Récupére la liste des activités planifier d'un patient
+     * \details    Récupère la liste des activités planifiées d'un patient
      * \param      Aucun
      */
     public function rechercher() {
@@ -89,7 +89,7 @@ class Patient extends CI_Controller {
 
     /**
      * \brief      Afficher un patient en fonction de son id
-     * \details    Affiche toutes les informations liés à un patient
+     * \details    Affiche toutes les informations liées à un patient
      * \param      $id : id du patient
      */
     public function afficherPatient($id) {
