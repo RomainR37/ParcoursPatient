@@ -133,6 +133,7 @@
             timezone: 'France/Paris',
             height: "auto",
             contentHeight: "auto",
+            //aspectRatio: 2,
             editable: true, // don't allow event dragging
             eventResourceEditable: true, // except for between resources
             scrollTime: '00:00',
@@ -145,7 +146,7 @@
                 center: 'title',
                 right: 'timelineDay,timelineHour,timetwoHours'
             },
-            defaultView: 'timelineDay',
+            defaultView: 'timelineHour',
             slotDuration: '00:05:00',
             eventConstraint: {
                 start: '08:00',
@@ -172,6 +173,7 @@
             resourceAreaWidth: '25%',
             resourceLabelText: 'Ressources',
             resourceGroupField: 'type_ressource',
+            //filterResourcesWithEvents: true,
             droppable: true, // this allows things to be dropped onto the calendar
             resources: {
                 type: "GET",
@@ -253,7 +255,7 @@
                     url: '<?php echo base_url("Planning/updateEvent"); ?>', //La route
                     dataType: "json", //Le type de donnée de retour
                     success: function (response) {
-                        //console.log('Event update with succes', response);
+                        //console.log('Event update with success', response);
                         //console.log(event);
                         constraints();
                         $('#calendar-holder').fullCalendar('refetchEvents');
@@ -391,7 +393,6 @@
     }
 
     function supprimerActivites() {
-
         var patientId = document.getElementById("id").innerHTML;
         var activiteId = document.getElementById("idActivite").innerHTML;
         var parcoursId = document.getElementById("idParcours").innerHTML;

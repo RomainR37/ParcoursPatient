@@ -21,8 +21,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de plannfication générale
-     * \details    Permet d'afficher la vue de plannfication générale
+     * \brief      Permet d'afficher la vue de planification générale
+     * \details    Permet d'afficher la vue de planification générale
      * \param      Aucun
      */
     public function planifier() {
@@ -45,8 +45,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer la liste de toutes les ressource humaines ou matérielles
-     * \details    Permet de récupérer la liste de toutes les ressource humaines ou matérielles
+     * \brief      Permet de récupérer la liste de toutes les ressources humaines ou matérielles
+     * \details    Permet de récupérer la liste de toutes les ressources humaines ou matérielles
      *             Retourne la liste des ressources au format JSON :
      *             {id: "1", title: "Soumaya Cheniour", type_ressource: "IDE obésité"}
      * \param      Aucun
@@ -60,8 +60,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer la liste de tout les événement à ajouter au planning
-     * \details    Permet de récupérer la liste de tout les événement à ajouter au planning
+     * \brief      Permet de récupérer la liste de tous les événements à ajouter au planning
+     * \details    Permet de récupérer la liste de tous les événements à ajouter au planning
      *             Retourne la liste des événements au format JSON :
       {activiteId:"1",
       activite_precedente:"Début",
@@ -85,8 +85,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de toutes les activités à plannifier
-     * \details    Permet d'afficher la liste de toutes les activités à plannifier pour une date données
+     * \brief      Permet d'afficher la liste de toutes les activités à planifier
+     * \details    Permet d'afficher la liste de toutes les activités à planifier pour une date donnée
      *             Retourne la liste des activités au format JSON :
      *             {activite_id:"1",
       activite_precedente:"Début",
@@ -108,8 +108,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de toutes les activités à plannifier en recherchant un nom de patient
-     * \details    Permet d'afficher la liste de toutes les activités à plannifieren recherchant un nom de patient pour une date données
+     * \brief      Permet d'afficher la liste de toutes les activités à planifier en recherchant un nom de patient
+     * \details    Permet d'afficher la liste de toutes les activités à planifier en recherchant un nom de patient pour une date donnée
      *             Retourne la liste des activités au format JSON :
      *             {activite_id:"1",
       activite_precedente:"Début",
@@ -174,8 +174,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de vérifier les contraintes liés à la planification
-     * \details    Permet de vérifier les contraintes liés à la planification
+     * \brief      Permet de vérifier les contraintes liées à la planification
+     * \details    Permet de vérifier les contraintes liées à la planification
      *             Retourne la liste des contraintes au format JSON :
      * 0:"Toutes les activités ne sont pas planifiées."
       1:"Un patient ne peut pas faire 2 activités à la fois. (Patient : Robert Garcia)"
@@ -183,7 +183,7 @@ class Planning extends CI_Controller {
      * Voici la liste des contraintes à vérifier :
      * 
      * Vérfier fenetre de temps du patient - 1  - FAIT
-     * Delai min et max entre chaque activités d'un même pp - 2 - FAIT
+     * Delai min et max entre chaque activité d'un même pp - 2 - FAIT
      * Précédences dans un pp - 3 - FAIT 
      * Affecter ressources à une activité + vérifier le nombre - 4 -FAIT
      * Toutes les activités sont planifiés - 5- FAIT
@@ -193,7 +193,7 @@ class Planning extends CI_Controller {
      * 1 : gérer avec les contraintes
      * 2 : gérer avec les contraintes
      * 3 : gérer avec les contraintes
-     * 4 : Type ressource affecté gérer avec fullCalenda, vérifier le nombre avec les contraintes
+     * 4 : Type ressource affecté gérer avec fullCalendar, vérifier le nombre avec les contraintes
      * 5 : gérer avec les contraintes
      * 6 : gérer avec fullCalendar
      * 7 : gérer avec les contraintes
@@ -220,7 +220,7 @@ class Planning extends CI_Controller {
 
         foreach ($evenements as $evenement) {
             /*
-             * Vérfier fenetre de temps du patient - 1  - FAIT
+             * Vérifier fenetre de temps du patient - 1  - FAIT
              * Delai min et max entre chaque activités d'un même pp - 2 - FAIT
              * Précédences dans un pp - 3 - FAIT 
              * Affecter ressources à une activité + vérifier le nombre - 4 -FAIT
@@ -231,7 +231,7 @@ class Planning extends CI_Controller {
              * 1 : gérer avec les contraintes
              * 2 : gérer avec les contraintes
              * 3 : gérer avec les contraintes
-             * 4 : Type ressource affecté gérer avec fullCalenda, vérifier le nombre avec les contraintes
+             * 4 : Type ressource affecté gérer avec fullCalendar, vérifier le nombre avec les contraintes
              * 5 : gérer avec les contraintes
              * 6 : gérer avec fullCalendar
              * 7 : gérer avec les contraintes
@@ -248,7 +248,7 @@ class Planning extends CI_Controller {
                 }
             }
 
-            // 1 ressource = 1 acvivités à la fois
+            // 1 ressource = 1 acvivité à la fois
             // 1 patient = 1 activité à la fois
             foreach ($evenements as $evenement2) {
                 if ($evenement['resourceId'] == $evenement2['resourceId'] && $evenement['id'] != $evenement2['id']) {
@@ -282,7 +282,7 @@ class Planning extends CI_Controller {
                     // On récupére la liste des activités précédentes
                     $activitePrecedentes = $this->M_Parcours->getDependancesActivites($act['activiteId']);
                     //print_r($activitePrecedentes);
-                    // pour chaque activite précédentes, on vérifie qu'ils sont planifiées avant
+                    // pour chaque activite précédente, on vérifie qu'ils sont planifiées avant
                     foreach ($activitePrecedentes as $actPrecedentes) {
                         if ($actPrecedentes != 0) {
                             $detail = $this->M_Planning->getDetailEvenement($actPrecedentes['id'], $parcours['parcoursId'], $parcours['patientId'], $date);
@@ -295,7 +295,7 @@ class Planning extends CI_Controller {
                                         array_push($constraints, $activite['nom_activite'] . " ne peut pas être avant " . $activitePrec['nom_activite'] . " (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")");
                                     }
                                 } else {
-                                    // l'activité est bien planifié (précédence)
+                                    // l'activité est bien planifiée (précédence)
                                     // vérification des delai min et max
                                     $end_min = new DateTime($detail[0]['end']);
                                     $end_max = new DateTime($detail[0]['end']);

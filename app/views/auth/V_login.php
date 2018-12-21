@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
 
-        <title>Gestion Hopital de jour</title>
+        <title>Gestion Hôpital de jour</title>
 
         <!-- for mobile devices like android and iphone -->
         <meta content="True" name="HandheldFriendly" />

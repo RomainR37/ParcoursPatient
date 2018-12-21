@@ -12,8 +12,8 @@
 class M_Planning extends CI_Model {
 
     /**
-     * \brief      Récupére toutes les ressource humaines ou matérielles
-     * \details    Récupére toutes les ressource humaines ou matérielles
+     * \brief      Récupère toutes les ressources humaines ou matérielles
+     * \details    Récupère toutes les ressources humaines ou matérielles
      * \param      Aucun
      */
     public function getAllRessource() {
@@ -54,8 +54,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére toutes les activités à planifier en fonctin d'une date donné
-     * \details    Récupére toutes les activités à planifier en fonctin d'une date donné
+     * \brief      Récupère toutes les activités à planifier en fonction d'une date donnée
+     * \details    Récupère toutes les activités à planifier en fonction d'une date donnée
      * \param      $date : la date 
      */
     public function getActiviteAplanifier($date) {
@@ -91,7 +91,7 @@ class M_Planning extends CI_Model {
             array_push($res, $restemp);
         }
 
-        // activité déja planifié
+        // activité déja planifiée
         $txt_sql2 = "SELECT DISTINCT(activite.ID_ACTIVITE) as id_activite, patient.ID_PATIENT as id_patient, parcours.ID_PARCOURS as id_parcours, activite.TXT_NOM as nom_activite, patient.TXT_NOM as nom_patient, patient.TXT_PRENOM as prenom_patient, parcours.TXT_NOM as nom_parcours, activite.INT_DUREE as duree
 					FROM evenement, parcours, activite, patient
                 	WHERE patient.ID_PATIENT = evenement.patientId
@@ -120,10 +120,10 @@ class M_Planning extends CI_Model {
             array_push($res2, $restemp);
         }
 
-        //retiré du tableau les activités déja planifié
+        //retiré du tableau les activités déja planifiées
         foreach ($res as $i => &$value) {
             foreach ($res2 as $j => $value1) {
-                // Si les deux actités, patient, parcours sont identiques alors on supprime cette activité du tableau $res
+                // Si les deux activités, patient, parcours sont identiques alors on supprime cette activité du tableau $res
                 if (($value["activite_id"] == $value1["activite_id"]) && ($value["patient_id"] == $value1["patient_id"]) && ($value["parcours_id"] == $value1["parcours_id"])) {
                     unset($res[$i]);
                 }
@@ -140,7 +140,7 @@ class M_Planning extends CI_Model {
      * \param      $title : titre de l'événement
      *             $end : date et heure de fin de l'événement
      *             $start : date et heure de début
-     *             $ressourceId : ressource lié à l'événement
+     *             $ressourceId : ressource liée à l'événement
      *             $activiteId : id de l'activité lié à l'événement
      *             $patientId : id du patient
      *             $parcoursId : id du parcours
@@ -156,7 +156,7 @@ class M_Planning extends CI_Model {
         $query = $this->db->query($txt_sql);
 
         if ($query->num_rows() >= 1) {
-            //Pour chaque besoins de l'activité, récupérer la première ressource disponible sinon la première
+            //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
             foreach ($query->result() as $row) {
                 $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
                 for ($i = 0; $i < count($idRessource); $i++) {
@@ -209,8 +209,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tout les événement de la base de données
-     * \details    Récupère tout les événement de la base de données
+     * \brief      Récupère tous les événements de la base de données
+     * \details    Récupère tous les événements de la base de données
      * \param      Aucun
      */
     public function getAllEvenement() {
@@ -261,8 +261,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tout les événements d'un parcours pour un patient pout une date données
-     * \details    Récupère tout les événements d'un parcours pour un patient pout une date données
+     * \brief      Récupère tous les événements d'un parcours pour un patient pour une date donnée
+     * \details    Récupère tous les événements d'un parcours pour un patient pour une date donnée
      * \param      $date : date
      *             $patient : l'id du patient
      *             $parcours : id du parcours
@@ -290,8 +290,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tout les événement (juste le parcours) pour une date donné
-     * \details   Récupère tout les événement (juste le parcours) pour une date donné
+     * \brief      Récupère tous les événements (juste le parcours) pour une date donnée
+     * \details   Récupère tous les événements (juste le parcours) pour une date donnée
      * \param      $date : date
      */
     public function getParcoursByDate($date) {
@@ -312,8 +312,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donné
-     * \details    Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donné
+     * \brief      Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donnée
+     * \details    Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donnée
      * \param      $date : date
      *             $idActivite : id de l'activité 
      *             $idParcours : id du parcours
@@ -342,8 +342,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tout les événement (tout les attributs) de la base de données pour une date donné
-     * \details    Récupère tout les événement (tout les attributs) de la base de données pour une date donné
+     * \brief      Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
+     * \details    Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
      * \param      Aucun
      */
     public function getAllEvenementByDate($date) {
@@ -446,8 +446,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére tout les besoins d'un événement en fonction de l'id de son activité
-     * \details    Récupére tout les besoins d'un événement en fonction de l'id de son activité
+     * \brief      Récupére tous les besoins d'un événement en fonction de l'id de son activité
+     * \details    Récupére tous les besoins d'un événement en fonction de l'id de son activité
      * \param      $idActivite : id de l'activité de l'événement
      */
     public function necessite($idActivite) {
@@ -474,8 +474,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére tout les précédences d'une activité d'un événement pour un parcours
-     * \details    Récupére tout les précédences d'une activité d'un événement pour un parcours
+     * \brief      Récupére toutes les précédences d'une activité d'un événement pour un parcours
+     * \details    Récupére toutes les précédences d'une activité d'un événement pour un parcours
      * \param      $idActivite : id de l'activité de l'événement
      *             $idParcours : id du parcours
      */
@@ -505,8 +505,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére tout les ressource disponible entre deux date
-     * \details    Récupére tout les ressource disponible entre deux date
+     * \brief      Récupére toutes les ressources disponibles entre deux dates
+     * \details    Récupére toutes les ressources disponibles entre deux dates
      * \param      $id : id du type de ressource
      *             $quantite : retourne la quantite
      *             $start : date de début
@@ -551,8 +551,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la liste des ressource possible pour une activité d'un événement
-     * \details    Récupére la liste des ressource possible pour une activité d'un événement
+     * \brief      Récupére la liste des ressources possibles pour une activité d'un événement
+     * \details    Récupére la liste des ressources possibles pour une activité d'un événement
      * \param      $idActivite : id de l'activite
      */
     public function getRessourcePossiblePourUneActivite($idActivite) {
@@ -574,8 +574,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la liste des activités à planifier pour une date donné en fonction du nom du patient
-     * \details    Récupére la liste des activités à planifier pour une date donné en fonction du nom du patient
+     * \brief      Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
+     * \details    Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
      * \param      $date : date
      *             $recherche : nom du patient à rechercher
      */
@@ -640,10 +640,10 @@ class M_Planning extends CI_Model {
                 array_push($res2, $restemp);
             }
 
-            //retiré du tableau les activités déja planifié
+            //retiré du tableau les activités déja planifiées
             foreach ($res as $i => &$value) {
                 foreach ($res2 as $j => $value1) {
-                    // Si les deux actités, patient, parcours sont identiques alors on supprime cette activité du tableau $res
+                    // Si les deux activités, patient, parcours sont identiques alors on supprime cette activité du tableau $res
                     if (($value["activite_id"] == $value1["activite_id"]) && ($value["patient_id"] == $value1["patient_id"]) && ($value["parcours_id"] == $value1["parcours_id"])) {
                         unset($res[$i]);
                     }
@@ -690,8 +690,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Fonction de suppression de tout les événement lié à un patient pour une date donné
-     * \details    Fonction de suppression de tout les événement lié à un patient pour une date donné
+     * \brief      Fonction de suppression de tous les événements liés à un patient pour une date donnée
+     * \details    Fonction de suppression de tous les événements liés à un patient pour une date donnée
      * \param      $idPatient : id du patient
      *             $date : date
      */
@@ -719,7 +719,7 @@ class M_Planning extends CI_Model {
 
     /**
      * \brief      Permet de sauvegarder le planning
-     * \details    Sauvegarde le planning (suppresion des événement déha planifié)
+     * \details    Sauvegarde le planning (suppresion des événements déja planifiés)
      * \param      Aucun
      */
     public function sauvegarderPlanning() {
@@ -731,7 +731,7 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Permet de restaurer un planning (chargement de la dernière sauvegarder)
+     * \brief      Permet de restaurer un planning (chargement de la dernière sauvegarde)
      * \details    La restauration d'un planning entraine la suppression des modifications non enregistrés
      * \param      Aucun
      */
