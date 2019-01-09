@@ -38,7 +38,7 @@ class Patient extends CI_Controller {
     /**
      * \brief      Permet d'afficher le planning d'un patient
      * \details    Permet d'afficher le planning d'un patient
-     *             Récupére la liste des activités planifier d'un patient
+     *             Récupére la liste des activités planifiées d'un patient
      * \param      $id : identifiant du patient
      */
     public function afficherSejour($id) {
@@ -267,8 +267,8 @@ class Patient extends CI_Controller {
         $this->form_validation->set_rules('ville-add-patient', 'Ville', 'trim|required|max_length[255]|alpha');
         $this->form_validation->set_rules('pays-add-patient', 'Pays', 'trim|required|max_length[255]|alpha');
         $this->form_validation->set_rules('email-patient', 'Email', 'trim|required|max_length[255]|valid_email');
-        $this->form_validation->set_rules('num-fixe-patient', 'Téléphone fixe', 'trim|required|exact_length[10]');
-        $this->form_validation->set_rules('tel-port-patient', 'Téléphone portable', 'trim|required|exact_length[10]');
+        $this->form_validation->set_rules('num-fixe-patient', 'Téléphone fixe', 'trim|required|exact_length[10]|numeric');
+        $this->form_validation->set_rules('tel-port-patient', 'Téléphone portable', 'trim|required|exact_length[10]|numeric');
         $this->form_validation->set_rules('num-secu-patient', 'Numéro de sécurité sociale', 'trim|required|exact_length[15]|numeric');
         $this->form_validation->set_rules('date-naiss-patient', 'Date de naissance', 'trim|required|max_length[255]');
 
