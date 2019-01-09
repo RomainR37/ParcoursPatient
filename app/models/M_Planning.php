@@ -207,6 +207,56 @@ class M_Planning extends CI_Model {
             }
         }
     }
+    
+    /**
+     * \brief      Ajout d'un événement sans préciser de ressource
+     * \details    Ajout d'un événement dans la base de données
+     * \param      $title : titre de l'événement
+     *             $start : date et heure de début
+     *             $end : date et heure de fin de l'événement
+     *             $activiteId : id de l'activité lié à l'événement
+     *             $patientId : id du patient
+     *             $parcoursId : id du parcours
+     */
+    public function addEvenementNoRessource($title, $start, $end, $activiteId, $patientId, $parcoursId) {
+    
+        // necessite
+        $txt_sql = "SELECT t.ID_TYPERESSOURCE as id, quantite as quantite
+                    FROM typeressource t, activite a, necessiter n
+                    WHERE t.ID_TYPERESSOURCE = n.ID_TYPERESSOURCE
+                    AND n.ID_ACTIVITE = a.ID_ACTIVITE
+                    AND a.ID_ACTIVITE = " . $this->db->escape($activiteId);
+
+        $query = $this->db->query($txt_sql);
+
+        //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
+        foreach ($query->result() as $row) {
+            $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
+            for ($i = 0; $i < count($idRessource); $i++) {
+                if ($this->getCouleurEventPatient($patientId) != NULL) {
+                    $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
+                            . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
+                            . "," . $this->db->escape($title)
+                            . "," . $this->db->escape($patientId)
+                            . "," . $this->db->escape($idRessource[$i])
+                            . "," . $this->db->escape($parcoursId)
+                            . "," . $this->db->escape($activiteId)
+                            . "," . $this->db->escape($this->getCouleurEventPatient($patientId)) . ")";
+                    $this->db->query($txt_sql);
+                } else {
+                    $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
+                            . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
+                            . "," . $this->db->escape($title)
+                            . "," . $this->db->escape($patientId)
+                            . "," . $this->db->escape($idRessource[$i])
+                            . "," . $this->db->escape($parcoursId)
+                            . "," . $this->db->escape($activiteId)
+                            . "," . $this->db->escape($this->couleur_aleatoire()) . ")";
+                    $this->db->query($txt_sql);
+                }
+            }
+        } 
+    }
 
     /**
      * \brief      Récupère tous les événements de la base de données
@@ -532,7 +582,7 @@ class M_Planning extends CI_Model {
             array_push($res, $row->id);
         }
 
-        if ($row == NULL) {
+        if (empty($res)) {
             // sinon la première ressource
             $txt_sql = "SELECT r.ID_RESSOURCE as id
                     FROM ressource r, typeressource t
@@ -732,7 +782,7 @@ class M_Planning extends CI_Model {
 
     /**
      * \brief      Permet de restaurer un planning (chargement de la dernière sauvegarde)
-     * \details    La restauration d'un planning entraine la suppression des modifications non enregistrés
+     * \details    La restauration d'un planning entraîne la suppression des modifications non enregistrées
      * \param      Aucun
      */
     public function restaurerPlanning() {
@@ -743,4 +793,16 @@ class M_Planning extends CI_Model {
         $this->db->query($txt_sql);
     }
 
+    public function planAuto($date) {
+        $activites = $this->getActiviteAplanifier($date);
+        foreach($activites as $value){
+            $start = new DateTime("2019-01-07 11:15:00");
+            $start = $start->format('Y-m-d H:i:s');
+            //$end = date_add($start, date_interval_create_from_date_string($value["duree"]));
+            $end = new DateTime("2019-01-07 12:00:00");
+            $end = $end->format('Y-m-d H:i:s');
+            $this->addEvenementNoRessource($value["nom_activite"], $start, $end, $value["activite_id"], $value["patient_id"], $value["parcours_id"]);
+        }
+        
+    }
 }

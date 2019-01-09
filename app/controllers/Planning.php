@@ -274,7 +274,7 @@ class Planning extends CI_Controller {
         $listeParcours = $this->M_Planning->getParcoursByDate($date);
 
         foreach ($listeParcours as $parcours) {
-            // contraintes de pécedences
+            // contraintes de précedences
             if ($parcours['parcoursId'] != null) {
                 $parcoursPlanifie = $this->M_Planning->getParcoursByDateAndPatient($date, $parcours['patientId'], $parcours['parcoursId']);
                 // pour chaque activitéPlanifié
@@ -296,7 +296,7 @@ class Planning extends CI_Controller {
                                     }
                                 } else {
                                     // l'activité est bien planifiée (précédence)
-                                    // vérification des delai min et max
+                                    // vérification des délais min et max
                                     $end_min = new DateTime($detail[0]['end']);
                                     $end_max = new DateTime($detail[0]['end']);
                                     $delaiMin = $end_min->add(new DateInterval('PT' . $actPrecedentes['delaiMin'] . 'M'));
@@ -396,6 +396,16 @@ class Planning extends CI_Controller {
         $this->planifier();
     }
 
+    public function planAuto(){
+        $this->load->model('M_Planning');
+        $date = new DateTime($this->input->post("date"));
+        $date = $date->format("Y-m-d");
+        $this->M_Planning->planAuto($date);
+     
+        $data["success"] = 'ok';
+        echo json_encode($data);
+    }
+    
 }
 
 ?>
