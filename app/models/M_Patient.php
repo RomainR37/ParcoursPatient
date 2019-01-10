@@ -231,8 +231,8 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Retourne toute les informations d'un patient en fonction de son id
-     * \details    Retourne toute les informations d'un patient en fonction de son id
+     * \brief      Retourne toutes les informations d'un patient en fonction de son id
+     * \details    Retourne toutes les informations d'un patient en fonction de son id
      * \param      $id : id du patient
      */
     public function getPatientById($id) {
@@ -265,7 +265,7 @@ class M_Patient extends CI_Model {
             array_push($res, $restemp);
             
         }
-        return $res;
+        return $res[0];
     }
     
     /**

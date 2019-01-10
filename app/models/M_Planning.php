@@ -795,13 +795,20 @@ class M_Planning extends CI_Model {
 
     public function planAuto($date) {
         $activites = $this->getActiviteAplanifier($date);
+        
+        $this->load->model('M_Patient');
+        
         foreach($activites as $value){
-            $start = new DateTime("2019-01-07 11:15:00");
-            $start = $start->format('Y-m-d H:i:s');
-            //$end = date_add($start, date_interval_create_from_date_string($value["duree"]));
-            $end = new DateTime("2019-01-07 12:00:00");
+            //$start = new DateTime("2019-01-09 11:15:00");
+            //$start = $start->format('Y-m-d H:i:s');
+            
+            $end = new DateTime("2019-01-09 12:00:00");
             $end = $end->format('Y-m-d H:i:s');
-            $this->addEvenementNoRessource($value["nom_activite"], $start, $end, $value["activite_id"], $value["patient_id"], $value["parcours_id"]);
+            
+            
+            $donneesPatient = $this->M_Patient->getPatientById($value["patient_id"]);
+            
+            $this->addEvenementNoRessource($value["nom_activite"], $donneesPatient["DATE_DISPONIBLE_DEBUT"], $end, $value["activite_id"], $value["patient_id"], $value["parcours_id"]);
         }
         
     }

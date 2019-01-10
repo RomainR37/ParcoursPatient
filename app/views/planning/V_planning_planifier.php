@@ -422,7 +422,8 @@
             success: function (data) { //La fonction qui est appelée si la requête a fonctionné.
                 console.log("success");
                 $('#calendar-holder').fullCalendar('refetchEvents');
-                constraints(data);
+                constraints();
+                rechercher();
             },
             error: function (data) {
                 console.log("erreur", data);

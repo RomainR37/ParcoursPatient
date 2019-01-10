@@ -240,15 +240,15 @@ class Planning extends CI_Controller {
             // Verifier fenetre de temps de chaque patient
             if ($evenement['patientId'] != null) {
                 $patient = $this->M_Patient->getPatientById($evenement['patientId']);
-                if ($patient[0]['DATE_DISPONIBLE_DEBUT'] > $evenement['start'] || $patient[0]['DATE_DISPONIBLE_FIN'] < $evenement['end']) {
-                    if (!in_array("Le patient " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . " n'est pas disponible.", $constraints)) {
-                        array_push($constraints, "Le patient " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . " n'est pas disponible.");
-                        array_push($constraints, "Le patient " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . " est disponible de " . date_format(date_create($patient[0]['DATE_DISPONIBLE_DEBUT']), "G:ia") . " à " . date_format(date_create($patient[0]['DATE_DISPONIBLE_FIN']), "G:ia"));
+                if ($patient['DATE_DISPONIBLE_DEBUT'] > $evenement['start'] || $patient['DATE_DISPONIBLE_FIN'] < $evenement['end']) {
+                    if (!in_array("Le patient " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . " n'est pas disponible.", $constraints)) {
+                        array_push($constraints, "Le patient " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . " n'est pas disponible.");
+                        array_push($constraints, "Le patient " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . " est disponible de " . date_format(date_create($patient['DATE_DISPONIBLE_DEBUT']), "G:ia") . " à " . date_format(date_create($patient['DATE_DISPONIBLE_FIN']), "G:ia"));
                     }
                 }
             }
 
-            // 1 ressource = 1 acvivité à la fois
+            // 1 ressource = 1 activité à la fois
             // 1 patient = 1 activité à la fois
             foreach ($evenements as $evenement2) {
                 if ($evenement['resourceId'] == $evenement2['resourceId'] && $evenement['id'] != $evenement2['id']) {
@@ -262,8 +262,8 @@ class Planning extends CI_Controller {
                     if ($evenement['end'] > $evenement2['start'] && $evenement['start'] < $evenement2['end']) {
                         if ($evenement['title'] != $evenement2['title']) {
                             $patient = $this->M_Patient->getPatientById($evenement['patientId']);
-                            if (!in_array("Un patient ne peut pas faire 2 activités à la fois. (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")", $constraints)) {
-                                array_push($constraints, "Un patient ne peut pas faire 2 activités à la fois. (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")");
+                            if (!in_array("Un patient ne peut pas faire 2 activités à la fois. (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")", $constraints)) {
+                                array_push($constraints, "Un patient ne peut pas faire 2 activités à la fois. (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")");
                             }
                         }
                     }
@@ -291,8 +291,8 @@ class Planning extends CI_Controller {
                                     $activite = $this->M_Activite->getActiviteById($act["activiteId"]);
                                     $activitePrec = $this->M_Activite->getActiviteById($detail[0]["activiteId"]);
                                     $patient = $this->M_Patient->getPatientById($parcours['patientId']);
-                                    if (!in_array($activite['nom_activite'] . " ne peut pas être avant " . $activitePrec['nom_activite'] . " (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")", $constraints)) {
-                                        array_push($constraints, $activite['nom_activite'] . " ne peut pas être avant " . $activitePrec['nom_activite'] . " (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")");
+                                    if (!in_array($activite['nom_activite'] . " ne peut pas être avant " . $activitePrec['nom_activite'] . " (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")", $constraints)) {
+                                        array_push($constraints, $activite['nom_activite'] . " ne peut pas être avant " . $activitePrec['nom_activite'] . " (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")");
                                     }
                                 } else {
                                     // l'activité est bien planifiée (précédence)
@@ -307,16 +307,16 @@ class Planning extends CI_Controller {
                                         $activite = $this->M_Activite->getActiviteById($act["activiteId"]);
                                         $activitePrec = $this->M_Activite->getActiviteById($detail[0]["activiteId"]);
                                         $patient = $this->M_Patient->getPatientById($parcours['patientId']);
-                                        if (!in_array("Le delai min entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMin : " . $actPrecedentes['delaiMin'] . "minutes) (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")", $constraints)) {
-                                            array_push($constraints, "Le delai min entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMin : " . $actPrecedentes['delaiMin'] . "minutes) (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")");
+                                        if (!in_array("Le delai min entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMin : " . $actPrecedentes['delaiMin'] . "minutes) (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")", $constraints)) {
+                                            array_push($constraints, "Le delai min entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMin : " . $actPrecedentes['delaiMin'] . "minutes) (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")");
                                         }
                                     }
                                     if ($max < $act['start']) {
                                         $activite = $this->M_Activite->getActiviteById($act["activiteId"]);
                                         $activitePrec = $this->M_Activite->getActiviteById($detail[0]["activiteId"]);
                                         $patient = $this->M_Patient->getPatientById($parcours['patientId']);
-                                        if (!in_array("Le delai max entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMax : " . $actPrecedentes['delaiMax'] . "minutes) (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")", $constraints)) {
-                                            array_push($constraints, "Le delai max entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMax : " . $actPrecedentes['delaiMax'] . "minutes) (Patient : " . $patient[0]["TXT_NOM"] . " " . $patient[0]['TXT_PRENOM'] . ")");
+                                        if (!in_array("Le delai max entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMax : " . $actPrecedentes['delaiMax'] . "minutes) (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")", $constraints)) {
+                                            array_push($constraints, "Le delai max entre " . $activite['nom_activite'] . " et " . $activitePrec['nom_activite'] . " n'est pas respecté (DelaiMax : " . $actPrecedentes['delaiMax'] . "minutes) (Patient : " . $patient["TXT_NOM"] . " " . $patient['TXT_PRENOM'] . ")");
                                         }
                                     }
                                 }
