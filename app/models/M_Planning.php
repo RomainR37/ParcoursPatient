@@ -799,14 +799,16 @@ class M_Planning extends CI_Model {
         $this->load->model('M_Patient');
         
         foreach($activites as $value){
-            //$start = new DateTime("2019-01-09 11:15:00");
-            //$start = $start->format('Y-m-d H:i:s');
-            
-            $end = new DateTime("2019-01-09 12:00:00");
-            $end = $end->format('Y-m-d H:i:s');
-            
             
             $donneesPatient = $this->M_Patient->getPatientById($value["patient_id"]);
+                      
+            $start = DateTime::createFromFormat('Y-m-d H:i:s', $donneesPatient["DATE_DISPONIBLE_DEBUT"]);
+            $dureeActivite = explode(":", $value["duree"]);
+            
+            $end = $start->modify('+'.$dureeActivite[0].' hour');            
+            $end = $start->modify('+'.$dureeActivite[1].' minutes');
+
+            $end = $end->format('Y-m-d H:i:s');
             
             $this->addEvenementNoRessource($value["nom_activite"], $donneesPatient["DATE_DISPONIBLE_DEBUT"], $end, $value["activite_id"], $value["patient_id"], $value["parcours_id"]);
         }
