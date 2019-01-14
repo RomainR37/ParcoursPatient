@@ -37,7 +37,7 @@ class Activites extends CI_Controller {
 
     /**
      * \brief      Affichage d'un formulaire pour ajouter
-     * \details    La méthode afffichage un formulaire vide
+     * \details    La méthode affichage un formulaire vide
      *             d'ajout d'activité
      *             Cette page se charge d'afficher les données
      * \param      Aucun
@@ -69,7 +69,7 @@ class Activites extends CI_Controller {
 
         // on verifie que les champs essentiels sont entrés
         if (isset($_POST["nom"]) && isset($_POST["duree"])) {
-            // on rempli l'objet activite
+            // on remplit l'objet activite
             $activite["id"] = $_POST["id"];
             $activite["nom"] = $_POST["nom"];
             $activite["duree"] = $_POST["duree"];

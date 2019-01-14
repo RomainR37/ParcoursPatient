@@ -10,7 +10,7 @@
  *
  * \details   Controller de gestion des types de ressources
  */
-class DossierParcours extends CI_Controller {
+class TypeRessource extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -21,8 +21,8 @@ class DossierParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de tout les types ressources
-     * \details    Permet d'afficher la liste de tout les types ressources
+     * \brief      Permet d'afficher la liste de tous les types ressources
+     * \details    Permet d'afficher la liste de tous les types ressources
      * \param      Aucun
      */
     public function getAllTypes() {

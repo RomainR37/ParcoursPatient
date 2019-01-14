@@ -38,7 +38,7 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter une ressource matérielles 
+     * \brief      Permet d'ajouter une ressource matérielle
      * \details    Fonction permettant d'afficher la vue d'ajout d'une nouvelle ressource matérielle
      * \param      Aucun
      */
@@ -54,9 +54,9 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de modification de la ressource matérielles
-     * \details    Permet d'afficher la vue de modification d'une personne avec les informations de la ressource matériellese
-     * \param      $id : identifiant de la ressource matérielles à modifier
+     * \brief      Permet d'afficher la vue de modification de la ressource matérielle
+     * \details    Permet d'afficher la vue de modification d'une personne avec les informations de la ressource matérielle
+     * \param      $id : identifiant de la ressource matérielle à modifier
      */
     public function modif($id) {
         $this->load->model('M_RessourcesMat');
@@ -106,8 +106,8 @@ class RessourcesMat extends CI_Controller {
         $this->index();
     }
     /**
-     * \brief      Permet de récupérer la liste de tout les type matérielles présents dans la base de données
-     * \details    Permet de récupérer la liste de tout les type matérielles présents dans la base de données
+     * \brief      Permet de récupérer la liste de tous les types matérielles présents dans la base de données
+     * \details    Permet de récupérer la liste de tous les types matérielles présents dans la base de données
      *             Retourne tout les types au format JSON
      * \param      Aucun
      */
