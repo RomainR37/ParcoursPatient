@@ -251,12 +251,14 @@ class Planning extends CI_Controller {
             // 1 ressource = 1 activité à la fois
             // 1 patient = 1 activité à la fois
             foreach ($evenements as $evenement2) {
-                if ($evenement['resourceId'] == $evenement2['resourceId'] && $evenement['id'] != $evenement2['id']) {
-                    if ($evenement['end'] > $evenement2['start'] && $evenement['start'] < $evenement2['end']) {
-                        if (!in_array("Une ressource ne peut pas faire 2 activités à la fois.", $constraints)) {
-                            array_push($constraints, "Une ressource ne peut pas faire 2 activités à la fois.");
+                if (!($evenement['resourceId'] == 0 || $evenement2['resourceId'] == 0)){
+                    if ($evenement['resourceId'] == $evenement2['resourceId'] && $evenement['id'] != $evenement2['id']) {
+                        if ($evenement['end'] > $evenement2['start'] && $evenement['start'] < $evenement2['end']) {
+                            if (!in_array("Une ressource ne peut pas faire 2 activités à la fois.", $constraints)) {
+                                array_push($constraints, "Une ressource ne peut pas faire 2 activités à la fois.");
+                            }
                         }
-                    }
+                    }                    
                 }
                 if ($evenement['patientId'] == $evenement2['patientId'] && $evenement['id'] != $evenement2['id']) {
                     if ($evenement['end'] > $evenement2['start'] && $evenement['start'] < $evenement2['end']) {
