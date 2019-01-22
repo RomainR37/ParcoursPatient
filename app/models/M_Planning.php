@@ -50,6 +50,16 @@ class M_Planning extends CI_Model {
             array_push($res, $restemp);
         }
 
+        // Ressources hors hôpital
+        
+        $restemp = array();
+        
+        $restemp["id"] = 0;
+        $restemp["title"] = "Autres ressources";
+        $restemp["type_ressource"] = "Autres";
+        
+        array_push($res, $restemp);
+        
         return $res;
     }
 
@@ -146,6 +156,10 @@ class M_Planning extends CI_Model {
      *             $parcoursId : id du parcours
      */
     public function addEvenement($title, $start, $end, $ressourceId, $activiteId, $patientId, $parcoursId) {
+
+        // vérification de la ressource sur laquelle on drop l'event
+        $ressourceDispo = $this->getDisponibiliteRessource($ressourceId, $start, $end);
+        
         // necessite
         $txt_sql = "SELECT t.ID_TYPERESSOURCE as id, quantite as quantite
                     FROM typeressource t, activite a, necessiter n
@@ -154,56 +168,53 @@ class M_Planning extends CI_Model {
                     AND a.ID_ACTIVITE = " . $this->db->escape($activiteId);
 
         $query = $this->db->query($txt_sql);
+        
 
         if ($query->num_rows() >= 1) {
+
+            $typeUtilise = 0;
+        
+            if($ressourceDispo){
+                $txt_sql = "SELECT id_typeressource FROM ressource WHERE id_ressource = ". $ressourceId;
+
+                $queryType = $this->db->query($txt_sql);
+
+                foreach($queryType->result() as $row){
+                    $typeUtilise = $row->id_typeressource;                    
+                }
+            }
+
             //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
             foreach ($query->result() as $row) {
-                $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
-                for ($i = 0; $i < count($idRessource); $i++) {
+                if ($typeUtilise == $row->id){
                     if ($this->getCouleurEventPatient($patientId) != NULL) {
-                        $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                                . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                                . "," . $this->db->escape($title)
-                                . "," . $this->db->escape($patientId)
-                                . "," . $this->db->escape($idRessource[$i])
-                                . "," . $this->db->escape($parcoursId)
-                                . "," . $this->db->escape($activiteId)
-                                . "," . $this->db->escape($this->getCouleurEventPatient($patientId)) . ")";
-                        $this->db->query($txt_sql);
+                        $this->insertEventBDD($start, $end, $title, $patientId, 
+                             $ressourceId, $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
                     } else {
-                        $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                                . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                                . "," . $this->db->escape($title)
-                                . "," . $this->db->escape($patientId)
-                                . "," . $this->db->escape($idRessource[$i])
-                                . "," . $this->db->escape($parcoursId)
-                                . "," . $this->db->escape($activiteId)
-                                . "," . $this->db->escape($this->couleur_aleatoire()) . ")";
-                        $this->db->query($txt_sql);
+                        $this->insertEventBDD($start, $end, $title, $patientId, 
+                            $ressourceId, $parcoursId, $activiteId, $this->couleur_aleatoire());
+                    }                    
+                } else{
+                    $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
+                    for ($i = 0; $i < count($idRessource); $i++) {
+                        if ($this->getCouleurEventPatient($patientId) != NULL) {
+                            $this->insertEventBDD($start, $end, $title, $patientId, 
+                                $idRessource[$i], $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
+                        } else {
+                            $this->insertEventBDD($start, $end, $title, $patientId, 
+                                $idRessource[$i], $parcoursId, $activiteId, $this->couleur_aleatoire());
+                        }
                     }
                 }
             }
         } else {
             if ($this->getCouleurEventPatient($patientId) != NULL) {
-                $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                        . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                        . "," . $this->db->escape($title)
-                        . "," . $this->db->escape($patientId)
-                        . "," . $this->db->escape($ressourceId)
-                        . "," . $this->db->escape($parcoursId)
-                        . "," . $this->db->escape($activiteId)
-                        . "," . $this->db->escape($this->getCouleurEventPatient($patientId)) . ")";
-                $this->db->query($txt_sql);
+                //La ressource avec l'id 0 correspond à la ressource "Autres" sur le calendrier
+                $this->insertEventBDD($start, $end, $title, $patientId, 0, 
+                        $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
             } else {
-                $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                        . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                        . "," . $this->db->escape($title)
-                        . "," . $this->db->escape($patientId)
-                        . "," . $this->db->escape($ressourceId)
-                        . "," . $this->db->escape($parcoursId)
-                        . "," . $this->db->escape($activiteId)
-                        . "," . $this->db->escape($this->couleur_aleatoire()) . ")";
-                $this->db->query($txt_sql);
+                $this->insertEventBDD($start, $end, $title, $patientId, 0, 
+                        $parcoursId, $activiteId, $this->couleur_aleatoire());
             }
         }
     }
@@ -229,35 +240,47 @@ class M_Planning extends CI_Model {
 
         $query = $this->db->query($txt_sql);
 
-        //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
-        foreach ($query->result() as $row) {
-            $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
-            for ($i = 0; $i < count($idRessource); $i++) {
-                if ($this->getCouleurEventPatient($patientId) != NULL) {
-                    $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                            . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                            . "," . $this->db->escape($title)
-                            . "," . $this->db->escape($patientId)
-                            . "," . $this->db->escape($idRessource[$i])
-                            . "," . $this->db->escape($parcoursId)
-                            . "," . $this->db->escape($activiteId)
-                            . "," . $this->db->escape($this->getCouleurEventPatient($patientId)) . ")";
-                    $this->db->query($txt_sql);
-                } else {
-                    $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
-                            . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
-                            . "," . $this->db->escape($title)
-                            . "," . $this->db->escape($patientId)
-                            . "," . $this->db->escape($idRessource[$i])
-                            . "," . $this->db->escape($parcoursId)
-                            . "," . $this->db->escape($activiteId)
-                            . "," . $this->db->escape($this->couleur_aleatoire()) . ")";
-                    $this->db->query($txt_sql);
+        if($query->num_rows() >= 1) {
+            //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
+            foreach ($query->result() as $row) {
+                $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
+                for ($i = 0; $i < count($idRessource); $i++) {
+                    if ($this->getCouleurEventPatient($patientId) != NULL) {
+                        $this->insertEventBDD($start, $end, $title, $patientId, 
+                                $idRessource[$i], $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
+                    } else {
+                        $this->insertEventBDD($start, $end, $title, $patientId, 
+                                $idRessource[$i], $parcoursId, $activiteId, $this->couleur_aleatoire());
+                    }
                 }
+            }             
+        } else {
+            if ($this->getCouleurEventPatient($patientId) != NULL) {
+                //La ressource avec l'id 0 correspond à la ressource "Autres" sur le calendrier
+                $this->insertEventBDD($start, $end, $title, $patientId, 0, 
+                        $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
+            } else {
+                $this->insertEventBDD($start, $end, $title, $patientId, 0, 
+                        $parcoursId, $activiteId, $this->couleur_aleatoire());
             }
-        } 
+        }
+
     }
 
+    public function insertEventBDD($start, $end, $title, $patientId, $ressourceId, $parcoursId, $activiteId, $color) {
+
+        $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
+            . "VALUES (" . $this->db->escape($start) . "," . $this->db->escape($end)
+            . "," . $this->db->escape($title)
+            . "," . $this->db->escape($patientId)
+            . "," . $this->db->escape($ressourceId)
+            . "," . $this->db->escape($parcoursId)
+            . "," . $this->db->escape($activiteId)
+            . "," . $this->db->escape($color) . ")";
+        $this->db->query($txt_sql);
+    }
+    
+    
     /**
      * \brief      Récupère tous les événements de la base de données
      * \details    Récupère tous les événements de la base de données
@@ -478,7 +501,7 @@ class M_Planning extends CI_Model {
 
         foreach ($ressourcePossible as $r) {
             if ($idRessource == $r["id"]) {
-                $possible = true;
+                $possible = $this->getDisponibiliteRessource($idRessource, $start, $end);
             }
         }
 
@@ -528,6 +551,7 @@ class M_Planning extends CI_Model {
      * \details    Récupére toutes les précédences d'une activité d'un événement pour un parcours
      * \param      $idActivite : id de l'activité de l'événement
      *             $idParcours : id du parcours
+     * \return     une chaîne de caractère de la forme "NOM_ACTIVITE1, NOM_ACTIVITE2..."
      */
     public function precedence($idActivite, $idParcours) {
         $txt_sql = "SELECT a.TXT_NOM as precedent
@@ -554,6 +578,31 @@ class M_Planning extends CI_Model {
         return $precedent;
     }
 
+    /**
+     * \brief      Récupére toutes les précédences d'une activité d'un événement pour un parcours
+     * \details    Récupére toutes les précédences d'une activité d'un événement pour un parcours
+     * \param      $idActivite : id de l'activité de l'événement
+     *             $idParcours : id du parcours
+     * \return     un tableau regroupant les id des activités précédentes
+     */
+    public function precedenceId($idActivite, $idParcours) {
+        $txt_sql = "SELECT a.ID_ACTIVITE as precedent
+                    FROM composer c, activite a, parcours p
+                    Where a.ID_ACTIVITE = c.ID_ACTIVITE_PRECEDENTE
+                    and p.ID_PARCOURS = c.ID_PARCOURS
+                    and c.ID_ACTIVITE = " . $idActivite . "
+                    and p.ID_PARCOURS = " . $idParcours;
+
+        $query = $this->db->query($txt_sql);
+        $precedent = array();
+
+        foreach ($query->result() as $row) {
+            $precedent[] = $row->precedent;
+        }
+        
+        return $precedent;
+    }
+    
     /**
      * \brief      Récupére toutes les ressources disponibles entre deux dates
      * \details    Récupére toutes les ressources disponibles entre deux dates
@@ -794,24 +843,89 @@ class M_Planning extends CI_Model {
     }
 
     public function planAuto($date) {
-        $activites = $this->getActiviteAplanifier($date);
-        
         $this->load->model('M_Patient');
-        
-        foreach($activites as $value){
-            
-            $donneesPatient = $this->M_Patient->getPatientById($value["patient_id"]);
-                      
-            $start = DateTime::createFromFormat('Y-m-d H:i:s', $donneesPatient["DATE_DISPONIBLE_DEBUT"]);
-            $dureeActivite = explode(":", $value["duree"]);
-            
-            $end = $start->modify('+'.$dureeActivite[0].' hour');            
-            $end = $start->modify('+'.$dureeActivite[1].' minutes');
+    
+        $activites = $this->getActiviteAplanifier($date);        
 
-            $end = $end->format('Y-m-d H:i:s');
+        $patientIdColumn = array_column($activites, 'patient_id');
+        
+        $patientArray = array_count_values($patientIdColumn);
+        
+        $listeIdPatient = array_keys($patientArray);
+        
+        for($i = 0; $i < count($listeIdPatient); $i++){
+            $activitesPatient = array();
+            foreach ($activites as $value){
+                if ($listeIdPatient[$i]==$value["patient_id"]){
+                   array_push($activitesPatient, $value);
+                }
+            }
             
-            $this->addEvenementNoRessource($value["nom_activite"], $donneesPatient["DATE_DISPONIBLE_DEBUT"], $end, $value["activite_id"], $value["patient_id"], $value["parcours_id"]);
+            reset($activites);
+            
+            $donneesPatient = $this->M_Patient->getPatientById($listeIdPatient[$i]);
+            
+            $start = DateTime::createFromFormat('Y-m-d H:i:s', $donneesPatient["DATE_DISPONIBLE_DEBUT"]);
+            
+            $idTemp = array(0);
+            while(!empty($activitesPatient)){
+                $activitesAAjouter = array();
+                
+                foreach($activitesPatient as $actPatient){
+                    $actPrecPatient = $this->precedenceId($actPatient["activite_id"],
+                            $actPatient["parcours_id"]);
+                    
+                    if (empty(array_diff($actPrecPatient, $idTemp))){
+                        array_push($activitesAAjouter, $actPatient);
+                    }
+                }
+                
+                foreach($activitesAAjouter as $act){
+                    $dureeActivite = explode(":", $act["duree"]);
+
+                    $startTemp = clone($start);
+                    
+                    $end = $start->modify('+'.$dureeActivite[0].' hour');            
+                    $end = $start->modify('+'.$dureeActivite[1].' minutes');
+
+                    $startString = $startTemp->format('Y-m-d H:i:s');
+                    $endString = $end->format('Y-m-d H:i:s');
+
+                    $this->addEvenementNoRessource($act["nom_activite"], 
+                            $startString, $endString, 
+                            $act["activite_id"], $act["patient_id"], $act["parcours_id"]);
+                    array_push($idTemp, $act["activite_id"]);
+                    array_splice($activitesPatient, array_search($act, $activitesPatient), 1);
+                }
+            }
+        }
+    }
+    
+    public function getDisponibiliteRessource($idRessource, $start, $end){
+        
+    //s'il y a une activité sur la ressource dont le début est avant le $end
+    //et dont la fin est après le $start -> return false
+        $txt_sql = "SELECT start, end 
+            FROM evenement 
+            WHERE ressourceId=" . $this->db->escape($idRessource);
+
+        $query = $this->db->query($txt_sql);
+
+        $start = new DateTime($start);
+        $end = new DateTime($end);
+        
+        
+        foreach($query->result() as $row){
+            $startRow = new DateTime($row->start);
+            $endRow = new DateTime($row->end);
+                  
+            if(($start < $endRow && $start >= $startRow) //vrai si $start est inclu dans une activité 
+                    || ($end > $startRow && $end <= $endRow) //vrai si $end est inlu dans une activité
+                    || ($start <= $startRow && $end >= $endRow)){// vrai si une activité existe sur la plage $start-$end
+                return FALSE;
+            }
         }
         
+        return TRUE;
     }
 }
