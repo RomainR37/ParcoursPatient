@@ -182,7 +182,7 @@ class Planning extends CI_Controller {
      * 
      * Voici la liste des contraintes à vérifier :
      * 
-     * Vérfier fenetre de temps du patient - 1  - FAIT
+     * Vérifier fenetre de temps du patient - 1  - FAIT
      * Delai min et max entre chaque activité d'un même pp - 2 - FAIT
      * Précédences dans un pp - 3 - FAIT 
      * Affecter ressources à une activité + vérifier le nombre - 4 -FAIT
@@ -280,8 +280,7 @@ class Planning extends CI_Controller {
                 // pour chaque activitéPlanifié
                 foreach ($parcoursPlanifie as $act) {
                     // On récupére la liste des activités précédentes
-                    $activitePrecedentes = $this->M_Parcours->getDependancesActivites($act['activiteId']);
-                    //print_r($activitePrecedentes);
+                    $activitePrecedentes = $this->M_Parcours->getDependancesActivites($act['activiteId'], $parcours['parcoursId']);
                     // pour chaque activite précédente, on vérifie qu'ils sont planifiées avant
                     foreach ($activitePrecedentes as $actPrecedentes) {
                         if ($actPrecedentes != 0) {

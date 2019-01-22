@@ -622,7 +622,8 @@ class M_Planning extends CI_Model {
                     AND r.ID_RESSOURCE not in (SELECT e.ressourceId 
 							FROM evenement e
                                                         WHERE (e.start >= " . $this->db->escape($start) . " AND e.start < " . $this->db->escape($end) .")
-                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) ."))
+                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) .")
+                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . "))
                     LIMIT " . $quantite;
 
         $query = $this->db->query($txt_sql);
