@@ -35,8 +35,10 @@ and open the template in the editor.
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                     
-                                    <li><a href="<?= base_url()?>Patient/modifierRDV/<?php echo $id_patient;?>/<?php echo $dossier["id_dossierparcours"];?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier</a></li>
-                                    <li><a href="<?= base_url()?>Patient/supprimerRDV/<?php echo $id_patient;?>/<?php echo $dossier["id_dossierparcours"];?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</a></li>
+                                    <li><a href="<?= base_url()?>Patient/modifierRDV/<?php echo $id_patient;?>/<?php echo $dossier["id_dossierparcours"];?>">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modifier</a></li>
+                                    <li><a href="<?= base_url()?>Patient/supprimerRDV/<?php echo $id_patient;?>/<?php echo $dossier["id_dossierparcours"];?>" onclick="return confirm('Voulez-vous supprimer ce rendez-vous ? Cela peut entraîner des répercussions sur la planification.');">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</a></li>
                                  
                                 </ul>
                             </div>
