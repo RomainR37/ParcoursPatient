@@ -229,7 +229,7 @@ class M_Planning extends CI_Model {
      *             $patientId : id du patient
      *             $parcoursId : id du parcours
      */
-    public function addEvenementNoRessource($title, $start, $end, $activiteId, $patientId, $parcoursId) {
+    public function addEvenementAuto($title, $start, $end, $activiteId, $patientId, $parcoursId) {
     
         // necessite
         $txt_sql = "SELECT t.ID_TYPERESSOURCE as id, quantite as quantite
@@ -243,17 +243,22 @@ class M_Planning extends CI_Model {
         if($query->num_rows() >= 1) {
             //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
             foreach ($query->result() as $row) {
-                $idRessource = $this->getRessourceByType($row->id, $row->quantite, $start, $end);
-                for ($i = 0; $i < count($idRessource); $i++) {
+                $ressourceAvailable = $this->getRessourceAvailable($row->id, $row->quantite, $start, $end);
+                
+                // Le -2 permet de récupérer les dates provenant de la méthode getRessourceAvailable
+                $newDate = array_slice($ressourceAvailable, -2);
+                
+                for ($i = 0; $i < count($ressourceAvailable)-2; $i++) {
                     if ($this->getCouleurEventPatient($patientId) != NULL) {
-                        $this->insertEventBDD($start, $end, $title, $patientId, 
-                                $idRessource[$i], $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
+                        $this->insertEventBDD($newDate["Debut"], $newDate["Fin"], $title, $patientId, 
+                                $ressourceAvailable[$i], $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
                     } else {
-                        $this->insertEventBDD($start, $end, $title, $patientId, 
-                                $idRessource[$i], $parcoursId, $activiteId, $this->couleur_aleatoire());
+                        $this->insertEventBDD($newDate["Debut"], $newDate["Fin"], $title, $patientId, 
+                                $ressourceAvailable[$i], $parcoursId, $activiteId, $this->couleur_aleatoire());
                     }
                 }
-            }             
+            }
+            return $newDate;    
         } else {
             if ($this->getCouleurEventPatient($patientId) != NULL) {
                 //La ressource avec l'id 0 correspond à la ressource "Autres" sur le calendrier
@@ -263,8 +268,8 @@ class M_Planning extends CI_Model {
                 $this->insertEventBDD($start, $end, $title, $patientId, 0, 
                         $parcoursId, $activiteId, $this->couleur_aleatoire());
             }
-        }
-
+            return array("Debut" => $start, "Fin" => $end);
+        }      
     }
 
     public function insertEventBDD($start, $end, $title, $patientId, $ressourceId, $parcoursId, $activiteId, $color) {
@@ -651,6 +656,71 @@ class M_Planning extends CI_Model {
     }
 
     /**
+     * \brief      Récupére toutes les ressources disponibles entre deux dates
+     * \details    Récupére toutes les ressources disponibles entre deux dates
+     * \param      $id : id du type de ressource
+     *             $quantite : retourne la quantite
+     *             $start : date de début
+     *             $end : date de fin
+     */
+    public function getRessourceAvailable($id, $quantite, $start, $end) {
+
+        $res = array();
+        // la première ressource disponible
+        $txt_sql = "SELECT r.ID_RESSOURCE as id
+                    FROM ressource r, typeressource tr
+                    WHERE r.ID_TYPERESSOURCE = tr.ID_TYPERESSOURCE
+                    AND tr.ID_TYPERESSOURCE = " . $id . "
+                    AND r.ID_RESSOURCE not in (SELECT e.ressourceId 
+							FROM evenement e
+                                                        WHERE (e.start >= " . $this->db->escape($start) . " AND e.start < " . $this->db->escape($end) .")
+                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) .")
+                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . "))
+                    LIMIT " . $quantite;
+
+        $query = $this->db->query($txt_sql);
+
+        foreach ($query->result() as $row) {
+            array_push($res, $row->id);
+        }
+
+        $startObject = DateTime::createFromFormat('Y-m-d H:i:s', $start);
+        $endObject = DateTime::createFromFormat('Y-m-d H:i:s', $end);
+        
+        while(empty($res)){            
+            $startObject->modify('+5 minutes');
+            $endObject->modify('+5 minutes');
+
+            $start = $startObject->format('Y-m-d H:i:s');
+            $end = $endObject->format('Y-m-d H:i:s');
+                    
+            $txt_sql = "SELECT r.ID_RESSOURCE as id
+                    FROM ressource r, typeressource tr
+                    WHERE r.ID_TYPERESSOURCE = tr.ID_TYPERESSOURCE
+                    AND tr.ID_TYPERESSOURCE = " . $id . "
+                    AND r.ID_RESSOURCE not in (SELECT e.ressourceId 
+							FROM evenement e
+                                                        WHERE (e.start >= " . $this->db->escape($start) . " AND e.start < " . $this->db->escape($end) .")
+                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) .")
+                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . "))
+                    LIMIT " . $quantite;
+                    
+            $query = $this->db->query($txt_sql);
+
+            foreach ($query->result() as $row) {
+                array_push($res, $row->id);
+            }
+        }
+        
+        $newDate = array(
+            "Debut" => $start,
+            "Fin"   => $end
+        );
+        
+        return array_merge($res, $newDate);
+    }
+
+    /**
      * \brief      Récupére la liste des ressources possibles pour une activité d'un événement
      * \details    Récupére la liste des ressources possibles pour une activité d'un événement
      * \param      $idActivite : id de l'activite
@@ -892,9 +962,13 @@ class M_Planning extends CI_Model {
                     $startString = $startTemp->format('Y-m-d H:i:s');
                     $endString = $end->format('Y-m-d H:i:s');
 
-                    $this->addEvenementNoRessource($act["nom_activite"], 
-                            $startString, $endString, 
-                            $act["activite_id"], $act["patient_id"], $act["parcours_id"]);
+                    $newDate = $this->addEvenementAuto($act["nom_activite"], 
+                                $startString, $endString, 
+                                $act["activite_id"], $act["patient_id"], $act["parcours_id"]);
+                    
+                    //Ajuste le prochain début d'activité sur la fin de la dernière
+                    $start = DateTime::createFromFormat('Y-m-d H:i:s', $newDate["Fin"]);
+                    
                     array_push($idTemp, $act["activite_id"]);
                     array_splice($activitesPatient, array_search($act, $activitesPatient), 1);
                 }
@@ -921,7 +995,7 @@ class M_Planning extends CI_Model {
             $endRow = new DateTime($row->end);
                   
             if(($start < $endRow && $start >= $startRow) //vrai si $start est inclu dans une activité 
-                    || ($end > $startRow && $end <= $endRow) //vrai si $end est inlu dans une activité
+                    || ($end > $startRow && $end <= $endRow) //vrai si $end est inclu dans une activité
                     || ($start <= $startRow && $end >= $endRow)){// vrai si une activité existe sur la plage $start-$end
                 return FALSE;
             }
