@@ -91,16 +91,16 @@ class PlanParcours extends CI_Controller {
      */
     public function savechanges() {
 
-        //print_r($_POST);
         $this->load->model('M_PlanParcours');
 
         $data = array();
-        //$idparcours=$_POST["selectedid"];
+        
+        $idJour = $this->M_PlanParcours->getIdJourByJour($_POST["info_jour"]);        
+        
         $data["idparcours"] = $_POST["id_parcours"];
-        $data["jour"] = $_POST["info_jour"];
+        $data["jour"] = $idJour;
         $data["nbr"] = $_POST["info_nb"];
 
-        //echo $idparcours."\n";
         foreach ($data["jour"] as $jour)
             echo $jour . "\n";
         foreach ($data["nbr"] as $nbr)

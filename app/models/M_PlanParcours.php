@@ -138,4 +138,29 @@ class M_PlanParcours extends CI_Model {
         return $txt_sql;
     }
 
+    /**
+     * \brief      Retourne l'id du jour en fonction de son nom
+     * \details    Retourne l'id du jour de la semaine en fonction de son nom
+     * \param      $name : nom du jour
+     */
+    public function getIdJourByJour($name) {
+        $i = 0;
+        
+        $res = array();
+        
+        while($i < count($name)){
+            $txt_sql = "SELECT ID_JOUR
+            FROM jour
+            WHERE TXT_JOUR = " . $this->db->escape($name[$i]);
+
+            $query = $this->db->query($txt_sql);
+            $row = $query->row();
+            $res[] = $row->ID_JOUR;
+            
+            $i++;
+        }
+        
+        return $res;
+    }
+    
 }
