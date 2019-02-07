@@ -65,7 +65,7 @@ class PlanParcours extends CI_Controller {
 				<tr>
 					<th class="col-xs-1">Parcours</th>
 					<th class="col-xs-1">Jour</th>
-					<th class="col-xs-1">NB Patient</th>
+					<th class="col-xs-1">Nb de patients</th>
 				</tr>
 			</thead>';
         echo '<form id="newform" method="POST">';
