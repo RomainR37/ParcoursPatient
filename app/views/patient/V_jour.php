@@ -71,8 +71,8 @@
         $(this).timepicker({
             'timeFormat': 'H:i',
             'step': 5,
-            'minTime': '6:00am',
-            'maxTime': '11:00pm'
+            'minTime': '9:00am',
+            'maxTime': '8:00pm'
         });
     });
 
@@ -80,8 +80,8 @@
         $(this).timepicker({
             'timeFormat': 'H:i',
             'step': 5,
-            'minTime': '6:00am',
-            'maxTime': '10:00pm'
+            'minTime': '8:00am',
+            'maxTime': '7:00pm'
         });
     });
 

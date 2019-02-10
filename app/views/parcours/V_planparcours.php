@@ -104,8 +104,11 @@
                             success: function (data) {
                                 	if (data.length > 0)
                                         	alert("Modifications avec succès.");
-                            }
-                    };
+                            },
+                            error: function (data) {
+                                    console.log("erreur", data);
+                            },
+                        };
             //$("#newform").ajaxSubmit(options);
                     $.ajax(options);
             $("#newform").html(backup);

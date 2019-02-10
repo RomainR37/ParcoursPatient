@@ -98,9 +98,9 @@ class Patient extends CI_Controller {
 
         $this->load->helper('form');
         $this->load->model('M_Patient');
-        $patient = [];
+//        $patient = [];
         $patient = $this->M_Patient->getPatientById($id);
-        $patient = $patient[0];
+//        $patient = $patient[0];
         $_POST["id-patient"] = $patient['ID_PATIENT'];
         $_POST["nom-patient"] = $patient['TXT_NOM'];
         $_POST["prenom-patient"] = $patient['TXT_PRENOM'];
@@ -320,9 +320,9 @@ class Patient extends CI_Controller {
 
         $this->load->helper('form');
         $this->load->model('M_Patient');
-        $patient = [];
+//        $patient = [];
         $patient = $this->M_Patient->getPatientById($id);
-        $patient = $patient[0];
+//        $patient = $patient[0];
         $_POST["id-patient"] = $patient['ID_PATIENT'];
         $_POST["nom-patient"] = $patient['TXT_NOM'];
         $_POST["prenom-patient"] = $patient['TXT_PRENOM'];

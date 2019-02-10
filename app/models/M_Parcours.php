@@ -153,13 +153,14 @@ class M_Parcours extends CI_Model {
      * \brief     Récupére toutes les dépendances entre les activités d'un parcours
      * \details   Récupére toutes les dépendances entre les activités d'un parcours (délai min et délai max)
      *            Retourne les données au format JSON
-     * \param     $id : id du parcours
+     * \param     $idActivite : id de l'activité
+     * \param     $idParcours : id du parcours
      */
-    public function getDependancesActivites($idActivite) {
+    public function getDependancesActivites($idActivite, $idParcours) {
         $res = array();
         $txt_sql2 = "SELECT ID_ACTIVITE_PRECEDENTE as id, INT_DELAIMIN as delaiMin, INT_DELAIMAX as delaiMax
                      from composer
-                     WHERE ID_ACTIVITE = " . $this->db->escape($idActivite);
+                     WHERE ID_ACTIVITE = " . $this->db->escape($idActivite) . "AND ID_PARCOURS = " . $this->db->escape($idParcours);
         $query2 = $this->db->query($txt_sql2);
 
         foreach ($query2->result() as $row2) {

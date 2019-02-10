@@ -6,7 +6,7 @@
         <div class="row">
             <a href="<?php echo base_url("Planning/sauvegarder"); ?>"><button type="button" class="btn btn-success">Sauvegarder</button></a>
             <a href="<?php echo base_url("Planning/restaurer"); ?>"><button style="margin-left: 25px" type="submit" class="btn btn-primary">Restaurer</button></a>
-            <a href="#"><button style="margin-left: 25px" type="submit" class="btn btn-danger">Planifier automatiquement</button></a>
+            <button style="margin-left: 25px" type="submit" class="btn btn-danger" onclick="planificationAuto()">Planifier automatiquement</button>
         </div>
         <div class="row">
             <div style=" margin-top: 20px;width:500px;height:250px;overflow:scroll;overflow-x:hidden;" id='external-events' class="col-md-4">
@@ -267,6 +267,7 @@
             }
         });
     });
+    
     function displayConstraint(liste) {
         var ul = document.getElementById("ul_constraints");
         $('#ul_constraints').empty();
@@ -406,6 +407,27 @@
                 constraints();
                 rechercher();
             }
+        });
+    }
+    
+    function planificationAuto(){
+        var dateF = $('#calendar-holder').fullCalendar('getDate');
+        var date = $.datepicker.formatDate('yy-mm-dd', new Date(dateF));
+        
+        $.ajax({
+            type: "POST",
+            data: {"date": date},
+            url: '<?php echo base_url("Planning/planAuto"); ?>', //La route
+            dataType: "json", //Le type de donnée de retour
+            success: function (data) { //La fonction qui est appelée si la requête a fonctionné.
+                console.log("success");
+                $('#calendar-holder').fullCalendar('refetchEvents');
+                constraints();
+                rechercher();
+            },
+            error: function (data) {
+                console.log("erreur", data);
+            },
         });
     }
 </script>
