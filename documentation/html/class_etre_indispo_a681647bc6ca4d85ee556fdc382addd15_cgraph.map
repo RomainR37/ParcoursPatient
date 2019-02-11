@@ -1,9 +1,0 @@
-<map id="savechanges" name="savechanges">
-<area shape="rect" id="node2" href="$class_m___etre_indispo.html#a2c92224824936fc064da0046d8afd1a2" title="Modifie une indispo d&#39;une resource en fonction de son id. " alt="" coords="151,5,345,32"/>
-<area shape="rect" id="node3" href="$class_etre_indispo.html#abaa8dc9678690c5871347182464e4b7c" title="Permet de formaliser les données sous forme de tableau. " alt="" coords="195,56,301,83"/>
-<area shape="rect" id="node4" href="$class_m___etre_indispo.html#ac211adcb782f2614b98acf8c531345b6" title="Ajoute une indispo à une resource. " alt="" coords="159,107,337,133"/>
-<area shape="rect" id="node6" href="$class_etre_indispo.html#acff090ecac0409b4a70b51ddd7ba3bac" title="Permet d&#39;afficher les différentes indispo d&#39;une ressource. " alt="" coords="217,157,279,184"/>
-<area shape="rect" id="node5" href="$class_m___etre_indispo.html#abf7e167adbc3d71572062f9c3dd8cc91" title="Retourne l&#39;id max des indipos. " alt="" coords="397,107,602,133"/>
-<area shape="rect" id="node7" href="$class_m___etre_indispo.html#aa85cbeefcd752eb9ca9be5817a3fc741" title="Récupère le nom d&#39;une personne en fonction de son id. " alt="" coords="393,157,605,184"/>
-<area shape="rect" id="node8" href="$class_m___etre_indispo.html#aa78040932d953d7f4d73b660f5725d9c" title="Fonction de récupération des indiponibiltés d&#39;une ressource en fonction de son id &#160;Fonction de récupé..." alt="" coords="415,209,583,250"/>
-</map>

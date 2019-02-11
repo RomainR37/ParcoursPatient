@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">315</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-492639156"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-492639156" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Activites.html">Activites</a></li>
+                                                    <li class="class"><a href="../classes/AffichageSejour.html">AffichageSejour</a></li>
+                                                    <li class="class"><a href="../classes/Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/DossierParcours.html">DossierParcours</a></li>
+                                                    <li class="class"><a href="../classes/EtreIndispo.html">EtreIndispo</a></li>
+                                                    <li class="class"><a href="../classes/M_Activite.html">M_Activite</a></li>
+                                                    <li class="class"><a href="../classes/M_Auth.html">M_Auth</a></li>
+                                                    <li class="class"><a href="../classes/M_Champ.html">M_Champ</a></li>
+                                                    <li class="class"><a href="../classes/M_Composer.html">M_Composer</a></li>
+                                                    <li class="class"><a href="../classes/M_Compte.html">M_Compte</a></li>
+                                                    <li class="class"><a href="../classes/M_DossierParcours.html">M_DossierParcours</a></li>
+                                                    <li class="class"><a href="../classes/M_EtreIndispo.html">M_EtreIndispo</a></li>
+                                                    <li class="class"><a href="../classes/M_Necessiter.html">M_Necessiter</a></li>
+                                                    <li class="class"><a href="../classes/M_Onglet.html">M_Onglet</a></li>
+                                                    <li class="class"><a href="../classes/M_Parcours.html">M_Parcours</a></li>
+                                                    <li class="class"><a href="../classes/M_Patient.html">M_Patient</a></li>
+                                                    <li class="class"><a href="../classes/M_Personnel.html">M_Personnel</a></li>
+                                                    <li class="class"><a href="../classes/M_Planning.html">M_Planning</a></li>
+                                                    <li class="class"><a href="../classes/M_PlanParcours.html">M_PlanParcours</a></li>
+                                                    <li class="class"><a href="../classes/M_Ressource.html">M_Ressource</a></li>
+                                                    <li class="class"><a href="../classes/M_RessourcesMat.html">M_RessourcesMat</a></li>
+                                                    <li class="class"><a href="../classes/M_TypeRessource.html">M_TypeRessource</a></li>
+                                                    <li class="class"><a href="../classes/Parcours.html">Parcours</a></li>
+                                                    <li class="class"><a href="../classes/Patient.html">Patient</a></li>
+                                                    <li class="class"><a href="../classes/Personnels.html">Personnels</a></li>
+                                                    <li class="class"><a href="../classes/Planning.html">Planning</a></li>
+                                                    <li class="class"><a href="../classes/PlanParcours.html">PlanParcours</a></li>
+                                                    <li class="class"><a href="../classes/Ressource.html">Ressource</a></li>
+                                                    <li class="class"><a href="../classes/RessourcesMat.html">RessourcesMat</a></li>
+                                                    <li class="class"><a href="../classes/TypeRessource.html">TypeRessource</a></li>
+                                                    <li class="class"><a href="../classes/Welcome.html">Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>M_Planning</h1>
+                    <p><em>\file      M_Planning.php
+\author    Guillaume Pochet
+\version   1.0
+\date      09 Mars 2017
+\brief     Définit les méthodes liées au planning</em></p>
+                    <p>\details   Ce fichier permet de définir les méthodes de gestion du planning (ajout, suppression d'événements)</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/M_Planning.html#method_getAllRessource" class="">getAllRessource()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getActiviteAplanifier" class="">getActiviteAplanifier()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_addEvenement" class="">addEvenement()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_addEvenementAuto" class="">addEvenementAuto()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_insertEventBDD" class="">insertEventBDD()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getAllEvenement" class="">getAllEvenement()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getParcoursByDateAndPatient" class="">getParcoursByDateAndPatient()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getParcoursByDate" class="">getParcoursByDate()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getDetailEvenement" class="">getDetailEvenement()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getAllEvenementByDate" class="">getAllEvenementByDate()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_deleteEvent" class="">deleteEvent()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_updateEvent" class="">updateEvent()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_necessite" class="">necessite()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_precedence" class="">precedence()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_precedenceId" class="">precedenceId()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getRessourceByType" class="">getRessourceByType()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getRessourceAvailable" class="">getRessourceAvailable()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getRessourcePossiblePourUneActivite" class="">getRessourcePossiblePourUneActivite()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getActiviteAplanifierRecherche" class="">getActiviteAplanifierRecherche()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_couleur_aleatoire" class="">couleur_aleatoire()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_deleteAllEventPatient" class="">deleteAllEventPatient()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getCouleurEventPatient" class="">getCouleurEventPatient()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_sauvegarderPlanning" class="">sauvegarderPlanning()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_restaurerPlanning" class="">restaurerPlanning()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_planAuto" class="">planAuto()</a><br />
+                                                                    <a href="../classes/M_Planning.html#method_getDisponibiliteRessource" class="">getDisponibiliteRessource()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/models.M_Planning.html"><div class="path-wrapper">models\M_Planning.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper">\CI_Model</div>
+                                                                                                    <div class="namespace-wrapper">\M_Planning</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAllRessource" name="method_getAllRessource" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAllRessource()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAllRessource() </pre>
+                <p><em>\brief      Récupère toutes les ressources humaines ou matérielles
+\details    Récupère toutes les ressources humaines ou matérielles
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getActiviteAplanifier" name="method_getActiviteAplanifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getActiviteAplanifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getActiviteAplanifier(  <span class="argument">$date</span>) </pre>
+                <p><em>\brief      Récupère toutes les activités à planifier en fonction d&#039;une date donnée
+\details    Récupère toutes les activités à planifier en fonction d&#039;une date donnée
+\param      $date : la date</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addEvenement" name="method_addEvenement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addEvenement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addEvenement(  <span class="argument">$title</span>,   <span class="argument">$start</span>,   <span class="argument">$end</span>,   <span class="argument">$ressourceId</span>,   <span class="argument">$activiteId</span>,   <span class="argument">$patientId</span>,   <span class="argument">$parcoursId</span>) </pre>
+                <p><em>\brief      Ajout d&#039;un événement
+\details    Ajout d&#039;un événement dans la base de données
+\param      $title : titre de l&#039;événement
+            $end : date et heure de fin de l&#039;événement
+            $start : date et heure de début
+            $ressourceId : ressource liée à l&#039;événement
+            $activiteId : id de l&#039;activité lié à l&#039;événement
+            $patientId : id du patient
+            $parcoursId : id du parcours</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$title </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$ressourceId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$activiteId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$patientId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$parcoursId </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addEvenementAuto" name="method_addEvenementAuto" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addEvenementAuto()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addEvenementAuto(  <span class="argument">$title</span>,   <span class="argument">$start</span>,   <span class="argument">$end</span>,   <span class="argument">$activiteId</span>,   <span class="argument">$patientId</span>,   <span class="argument">$parcoursId</span>) </pre>
+                <p><em>\brief      Ajout d&#039;un événement sans préciser de ressource
+\details    Ajout d&#039;un événement dans la base de données
+\param      $title : titre de l&#039;événement
+            $start : date et heure de début
+            $end : date et heure de fin de l&#039;événement
+            $activiteId : id de l&#039;activité lié à l&#039;événement
+            $patientId : id du patient
+            $parcoursId : id du parcours</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$title </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$activiteId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$patientId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$parcoursId </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_insertEventBDD" name="method_insertEventBDD" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">insertEventBDD()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">insertEventBDD(  <span class="argument">$start</span>,   <span class="argument">$end</span>,   <span class="argument">$title</span>,   <span class="argument">$patientId</span>,   <span class="argument">$ressourceId</span>,   <span class="argument">$parcoursId</span>,   <span class="argument">$activiteId</span>,   <span class="argument">$color</span>) </pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$title </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$patientId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$ressourceId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$parcoursId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$activiteId </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$color </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAllEvenement" name="method_getAllEvenement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAllEvenement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAllEvenement() </pre>
+                <p><em>\brief      Récupère tous les événements de la base de données
+\details    Récupère tous les événements de la base de données
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParcoursByDateAndPatient" name="method_getParcoursByDateAndPatient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParcoursByDateAndPatient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParcoursByDateAndPatient(  <span class="argument">$date</span>,   <span class="argument">$patient</span>,   <span class="argument">$parcours</span>) </pre>
+                <p><em>\brief      Récupère tous les événements d&#039;un parcours pour un patient pour une date donnée
+\details    Récupère tous les événements d&#039;un parcours pour un patient pour une date donnée
+\param      $date : date
+            $patient : l&#039;id du patient
+            $parcours : id du parcours</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$patient </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$parcours </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParcoursByDate" name="method_getParcoursByDate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParcoursByDate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParcoursByDate(  <span class="argument">$date</span>) </pre>
+                <p><em>\brief     Récupère tous les événements (juste le parcours) pour une date donnée
+\details   Récupère tous les événements (juste le parcours) pour une date donnée
+\param      $date : date</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDetailEvenement" name="method_getDetailEvenement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDetailEvenement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDetailEvenement(  <span class="argument">$idActivite</span>,   <span class="argument">$idParcours</span>,   <span class="argument">$idPatient</span>,   <span class="argument">$date</span>) </pre>
+                <p><em>\brief      Récupère les détails d&#039;un événement pour une activité, un parcours, un patient et une date donnée
+\details    Récupère les détails d&#039;un événement pour une activité, un parcours, un patient et une date donnée
+\param      $date : date
+            $idActivite : id de l&#039;activité
+            $idParcours : id du parcours
+            $idPatient : id du patient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idParcours </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idPatient </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAllEvenementByDate" name="method_getAllEvenementByDate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAllEvenementByDate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAllEvenementByDate(  <span class="argument">$date</span>) </pre>
+                <p><em>\brief      Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
+\details    Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
+\param      Aucun</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_deleteEvent" name="method_deleteEvent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">deleteEvent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">deleteEvent(  <span class="argument">$idActivite</span>,   <span class="argument">$idPatient</span>,   <span class="argument">$idParcours</span>) </pre>
+                <p><em>\brief      Supprime un événement de la base de données
+\details    Supprime un événement de la base de données en fonction de l&#039;id de son activité, l&#039;id de son patient et l&#039;id de son parcours
+\param      $idActivite : id de l&#039;activité
+            $idPatient : id du patient
+            $idParcours : id du parcours</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idPatient </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idParcours </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateEvent" name="method_updateEvent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateEvent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateEvent(  <span class="argument">$start</span>,   <span class="argument">$end</span>,   <span class="argument">$idRessource</span>,   <span class="argument">$idActivite</span>,   <span class="argument">$idPatient</span>,   <span class="argument">$idParcours</span>,   <span class="argument">$id</span>) </pre>
+                <p><em>\brief      Met à jour un événement de la base de données
+\details    Met à jour un événement de la base de données
+\param      $idActivite : id de l&#039;activité
+            $idPatient : id du patient
+            $idParcours : id du parcours
+            $idRessource : id de la ressource
+            $start : date de début de l&#039;événement
+            $end : date de fin de l&#039;activité
+            $id : id de l&#039;événement à modifier</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idRessource </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idPatient </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idParcours </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$id </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_necessite" name="method_necessite" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">necessite()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">necessite(  <span class="argument">$idActivite</span>) </pre>
+                <p><em>\brief      Récupére tous les besoins d&#039;un événement en fonction de l&#039;id de son activité
+\details    Récupére tous les besoins d&#039;un événement en fonction de l&#039;id de son activité
+\param      $idActivite : id de l&#039;activité de l&#039;événement</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_precedence" name="method_precedence" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">precedence()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">precedence(  <span class="argument">$idActivite</span>,   <span class="argument">$idParcours</span>) </pre>
+                <p><em>\brief      Récupére toutes les précédences d&#039;une activité d&#039;un événement pour un parcours
+\details    Récupére toutes les précédences d&#039;une activité d&#039;un événement pour un parcours
+\param      $idActivite : id de l&#039;activité de l&#039;événement
+            $idParcours : id du parcours
+\return     une chaîne de caractère de la forme &quot;NOM_ACTIVITE1, NOM_ACTIVITE2.</em></p>
+                <p>..&quot;</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idParcours </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_precedenceId" name="method_precedenceId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">precedenceId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">precedenceId(  <span class="argument">$idActivite</span>,   <span class="argument">$idParcours</span>) </pre>
+                <p><em>\brief      Récupére toutes les précédences d&#039;une activité d&#039;un événement pour un parcours
+\details    Récupére toutes les précédences d&#039;une activité d&#039;un événement pour un parcours
+\param      $idActivite : id de l&#039;activité de l&#039;événement
+            $idParcours : id du parcours
+\return     un tableau regroupant les id des activités précédentes</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$idParcours </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRessourceByType" name="method_getRessourceByType" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRessourceByType()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRessourceByType(  <span class="argument">$id</span>,   <span class="argument">$quantite</span>,   <span class="argument">$start</span>,   <span class="argument">$end</span>) </pre>
+                <p><em>\brief      Récupére toutes les ressources disponibles entre deux dates
+\details    Récupére toutes les ressources disponibles entre deux dates
+\param      $id : id du type de ressource
+            $quantite : retourne la quantite
+            $start : date de début
+            $end : date de fin</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$id </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$quantite </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRessourceAvailable" name="method_getRessourceAvailable" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRessourceAvailable()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRessourceAvailable(  <span class="argument">$id</span>, integer  <span class="argument">$quantite</span>, string  <span class="argument">$start</span>, string  <span class="argument">$end</span>) </pre>
+                <p><em>\brief      Récupère toutes les ressources disponibles entre deux dates
+\details    Récupère toutes les ressources disponibles entre deux dates</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$id </td>
+                                <td><p>: id du type de ressource</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$quantite </td>
+                                <td><p>retourne la quantite</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$start </td>
+                                <td><p>date de début</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$end </td>
+                                <td><p>: date de fin</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRessourcePossiblePourUneActivite" name="method_getRessourcePossiblePourUneActivite" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRessourcePossiblePourUneActivite()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRessourcePossiblePourUneActivite(  <span class="argument">$idActivite</span>) </pre>
+                <p><em>\brief      Récupére la liste des ressources possibles pour une activité d&#039;un événement
+\details    Récupére la liste des ressources possibles pour une activité d&#039;un événement
+\param      $idActivite : id de l&#039;activite</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idActivite </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getActiviteAplanifierRecherche" name="method_getActiviteAplanifierRecherche" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getActiviteAplanifierRecherche()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getActiviteAplanifierRecherche(  <span class="argument">$date</span>, string  <span class="argument">$recherche</span>) </pre>
+                <p><em>\brief      Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
+\details    Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
+$param string $date : date</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$recherche </td>
+                                <td><p>nom du patient à rechercher</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_couleur_aleatoire" name="method_couleur_aleatoire" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">couleur_aleatoire()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">couleur_aleatoire() </pre>
+                <p><em>\brief      Fonction de récupération d&#039;une couleur aléatoire
+\details    Fonction de récupération d&#039;une couleur aléatoire</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_deleteAllEventPatient" name="method_deleteAllEventPatient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">deleteAllEventPatient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">deleteAllEventPatient(  <span class="argument">$idPatient</span>,   <span class="argument">$date</span>) </pre>
+                <p><em>\brief      Fonction de suppression de tous les événements liés à un patient pour une date donnée
+\details    Fonction de suppression de tous les événements liés à un patient pour une date donnée
+\param      $idPatient : id du patient
+            $date : date</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idPatient </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCouleurEventPatient" name="method_getCouleurEventPatient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCouleurEventPatient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCouleurEventPatient(  <span class="argument">$idPatient</span>) </pre>
+                <p><em>\brief      Récupére la couleur d&#039;un événement pour un patient
+\details    Récupére la couleur d&#039;un événement pour un patient
+\param      $idPatient : id du patient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idPatient </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sauvegarderPlanning" name="method_sauvegarderPlanning" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">sauvegarderPlanning()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">sauvegarderPlanning() </pre>
+                <p><em>\brief      Permet de sauvegarder le planning
+\details    Sauvegarde le planning (suppresion des événements déja planifiés)</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_restaurerPlanning" name="method_restaurerPlanning" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">restaurerPlanning()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">restaurerPlanning() </pre>
+                <p><em>\brief      Permet de restaurer un planning (chargement de la dernière sauvegarde)
+\details    La restauration d&#039;un planning entraîne la suppression des modifications non enregistrées</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_planAuto" name="method_planAuto" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">planAuto()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">planAuto(  <span class="argument">$date</span>) </pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$date </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDisponibiliteRessource" name="method_getDisponibiliteRessource" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDisponibiliteRessource()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDisponibiliteRessource(  <span class="argument">$idRessource</span>,   <span class="argument">$start</span>,   <span class="argument">$end</span>) </pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$idRessource </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$start </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$end </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">M_Planning.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/models\M_Planning.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 11th, 2019 at 06:00.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

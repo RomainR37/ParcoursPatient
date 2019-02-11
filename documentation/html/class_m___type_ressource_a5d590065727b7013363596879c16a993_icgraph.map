@@ -1,8 +1,0 @@
-<map id="insererType" name="insererType">
-<area shape="rect" id="node2" href="$class_m___personnel.html#af30437d8f343103dc66aeaaeb4a4d772" title="Modifie les informations liés à une personne. " alt="" coords="179,5,367,32"/>
-<area shape="rect" id="node4" href="$class_m___personnel.html#a069fd02ac8ec4812c903a29ea0754a9c" title="Ajoute une personne. " alt="" coords="177,56,369,83"/>
-<area shape="rect" id="node5" href="$class_m___ressources_mat.html#a64239cab19e5d78e967cc0a61f9a9b9b" title="Modifie une ressource matérielle. " alt="" coords="145,107,402,133"/>
-<area shape="rect" id="node7" href="$class_m___ressources_mat.html#ae5ac59e4d9174e408cbae79e9be4df66" title="Ajoute une ressource matérielle. " alt="" coords="143,157,404,184"/>
-<area shape="rect" id="node3" href="$class_personnels.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une personne. " alt="" coords="465,44,629,71"/>
-<area shape="rect" id="node6" href="$class_ressources_mat.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une ressource matérielle. " alt="" coords="452,120,643,147"/>
-</map>

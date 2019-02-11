@@ -1,5 +1,0 @@
-<map id="supprimer" name="supprimer">
-<area shape="rect" id="node2" href="$class_m___parcours.html#afd62f46abbd3f7b1ba84ff6e12efc023" title="Supprime un parcours. " alt="" coords="132,5,337,32"/>
-<area shape="rect" id="node3" href="$class_parcours.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher les différentes parcours patients présents dans notre système. " alt="" coords="208,56,261,83"/>
-<area shape="rect" id="node4" href="$class_m___parcours.html#aa39fbc0073ee7d0bac40eebd3c3a0d51" title="Récupére les informations de tout les parcours. " alt="" coords="385,56,567,83"/>
-</map>

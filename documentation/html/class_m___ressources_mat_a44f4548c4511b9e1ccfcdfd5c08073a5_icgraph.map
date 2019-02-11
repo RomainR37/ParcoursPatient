@@ -1,5 +1,0 @@
-<map id="getAllRessourcesMat" name="getAllRessourcesMat">
-<area shape="rect" id="node2" href="$class_ressources_mat.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources matérielles. " alt="" coords="200,31,348,57"/>
-<area shape="rect" id="node3" href="$class_ressources_mat.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier une ressource matérielle. " alt="" coords="396,5,587,32"/>
-<area shape="rect" id="node4" href="$class_ressources_mat.html#abf15731568c7bd6ededffdae346f923b" title="Permet de supprimer uune ressource matérielle. " alt="" coords="417,56,566,83"/>
-</map>

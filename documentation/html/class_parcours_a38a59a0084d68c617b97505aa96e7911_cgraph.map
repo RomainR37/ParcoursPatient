@@ -1,5 +1,0 @@
-<map id="visualiser" name="visualiser">
-<area shape="rect" id="node2" href="$class_m___parcours.html#acfbdadf43bf0597be92ca240304ff5a0" title="Récupére les informations d&#39;un parcours. " alt="" coords="136,5,328,32"/>
-<area shape="rect" id="node3" href="$class_m___parcours.html#a1fece8bab2f49dfca82b0715e4ea4e78" title="Récupére toutes les activités d&#39;un parcours. " alt="" coords="128,57,336,98"/>
-<area shape="rect" id="node4" href="$class_m___parcours.html#ab69b515427757fe89543aeae2d3b8e19" title="Récupére tout les liens de précécendes entre les activités d&#39;un parcours. " alt="" coords="135,122,329,163"/>
-</map>

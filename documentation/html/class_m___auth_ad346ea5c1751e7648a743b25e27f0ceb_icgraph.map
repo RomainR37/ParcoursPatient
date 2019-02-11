@@ -1,4 +1,0 @@
-<map id="login" name="login">
-<area shape="rect" id="node2" href="$class_auth.html#a149eb92716c1084a935e04a8d95f7347" title="Permet à un utilisateur de se connecter. " alt="" coords="103,5,187,32"/>
-<area shape="rect" id="node3" href="$class_auth.html#a082405d89acd6835c3a7c7a08a7adbab" title="Permet à un utilisateur de se déconnecter. " alt="" coords="235,5,323,32"/>
-</map>

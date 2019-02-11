@@ -21,10 +21,11 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Affichage la liste des différentes activités
-     * \details    La méthode récupérer la liste des activités
-     *             et envoie ces données sur la page V_activite.
-     *             Cette page se charge d'afficher les données
+     * Affichage la liste des différentes activités
+     * 
+     * La méthode récupérer la liste des activités
+     * et envoie ces données sur la page V_activite.
+     * Cette page se charge d'afficher les données
      * \param      Aucun
      */
     public function index() {

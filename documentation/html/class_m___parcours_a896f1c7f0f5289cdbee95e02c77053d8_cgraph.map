@@ -1,4 +1,0 @@
-<map id="modifParcours" name="modifParcours">
-<area shape="rect" id="node2" href="$class_m___composer.html#a093170f2c5c1c2fc5e1605064c73881e" title="Supprime toutes les précédences d&#39;un parcours en fonction de son id. " alt="" coords="159,5,353,32"/>
-<area shape="rect" id="node3" href="$class_m___composer.html#ace062ace4e23335ccf4c98f2e8fac43e" title="Ajoute des liens de précédences entre les activités du parcours en fonction de son id..." alt="" coords="173,56,339,83"/>
-</map>

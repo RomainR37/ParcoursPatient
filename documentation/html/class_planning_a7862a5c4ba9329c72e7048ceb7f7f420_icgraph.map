@@ -1,4 +1,0 @@
-<map id="planifier" name="planifier">
-<area shape="rect" id="node2" href="$class_planning.html#ab113b99b946e7844f2e99d23d13f69ce" title="Permet de sauvegarder le planning. " alt="" coords="120,5,211,32"/>
-<area shape="rect" id="node3" href="$class_planning.html#a84c6478ab3b23a801e023d657167c344" title="Permet de restaurer (reprise de la dernière sauvegarde) le planning. " alt="" coords="129,56,202,83"/>
-</map>

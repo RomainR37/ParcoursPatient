@@ -1,6 +1,0 @@
-<map id="getActiviteAPlanifierRecherche" name="getActiviteAPlanifierRecherche">
-<area shape="rect" id="node2" href="$class_m___planning.html#a31cbece8b8df665cfdc475eaaefb30df" title="Récupére la liste des activités à planifier pour une date donné en fonction du nom du patient..." alt="" coords="252,23,459,65"/>
-<area shape="rect" id="node3" href="$class_m___planning.html#ad0d84cc3e395e29116e890425b04aa72" title="Récupére tout les précédences d&#39;une activité d&#39;un événement pour un parcours. " alt="" coords="761,5,923,32"/>
-<area shape="rect" id="node4" href="$class_m___planning.html#a22afc1365d64da8ffecfde76d46772b8" title="Récupére tout les besoins d&#39;un événement en fonction de l&#39;id de son activité " alt="" coords="767,68,917,95"/>
-<area shape="rect" id="node5" href="$class_m___planning.html#a977fdadb74957c57ee750367141abcff" title="Récupére toutes les activités à planifier en fonctin d&#39;une date donné " alt="" coords="507,31,713,57"/>
-</map>

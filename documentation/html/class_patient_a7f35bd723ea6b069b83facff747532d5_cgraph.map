@@ -1,7 +1,0 @@
-<map id="ajoutDossier" name="ajoutDossier">
-<area shape="rect" id="node2" href="$class_m___patient.html#a3bec267865d27f1d100c0fdfb6725416" title="Mettre à jour les disponibilités d&#39;un patient. " alt="" coords="153,5,329,47"/>
-<area shape="rect" id="node3" href="$class_m___dossier_parcours.html#ae89b2e42fe95aeacb646aa4c96d02eda" title="Permet de créer un nouveau dossier parcours pour un patient. " alt="" coords="148,71,335,112"/>
-<area shape="rect" id="node5" href="$class_patient.html#a597070fe6821b345bdec5fb30616cf92" title="gererRDV" alt="" coords="202,138,281,165"/>
-<area shape="rect" id="node4" href="$class_m___dossier_parcours.html#a5e1fe7c0252142a8a5b958a76c85b75e" title="Obtenir le maxid de le table dossierParcours. " alt="" coords="393,68,575,109"/>
-<area shape="rect" id="node6" href="$class_m___dossier_parcours.html#af9468b0b22364e5f9417b89156f4cb21" title="Récupérer les informations sur les dossiers parcours d&#39;un patient. " alt="" coords="383,133,585,175"/>
-</map>

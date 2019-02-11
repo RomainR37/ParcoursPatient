@@ -1,5 +1,0 @@
-<map id="addCompo" name="addCompo">
-<area shape="rect" id="node2" href="$class_m___parcours.html#a18b905ecc939511cf17850d29f982496" title="Ajoute un parcours ainsi que toutes les activités liées à ce parcours. " alt="" coords="137,5,320,32"/>
-<area shape="rect" id="node4" href="$class_m___parcours.html#a896f1c7f0f5289cdbee95e02c77053d8" title="Permet de modifier un parcours. " alt="" coords="139,56,318,83"/>
-<area shape="rect" id="node3" href="$class_parcours.html#aac51c704c7cdf7f3bdf4adfe9bfad874" title="Permet d&#39;ajouter ou de modifier un parcours patient. " alt="" coords="368,31,519,57"/>
-</map>

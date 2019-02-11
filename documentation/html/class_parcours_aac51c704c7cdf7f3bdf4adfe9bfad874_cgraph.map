@@ -1,9 +1,0 @@
-<map id="confirmModif" name="confirmModif">
-<area shape="rect" id="node2" href="$class_m___parcours.html#a18b905ecc939511cf17850d29f982496" title="Ajoute un parcours ainsi que toutes les activités liées à ce parcours. " alt="" coords="148,56,331,83"/>
-<area shape="rect" id="node5" href="$class_m___parcours.html#a896f1c7f0f5289cdbee95e02c77053d8" title="Permet de modifier un parcours. " alt="" coords="150,107,329,133"/>
-<area shape="rect" id="node7" href="$class_parcours.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher les différentes parcours patients présents dans notre système. " alt="" coords="213,157,266,184"/>
-<area shape="rect" id="node3" href="$class_m___parcours.html#a2801408437c2f7148dc8cc1ca6b965d6" title="Récupère l&#39;id max des parcours. " alt="" coords="379,5,580,32"/>
-<area shape="rect" id="node4" href="$class_m___composer.html#ace062ace4e23335ccf4c98f2e8fac43e" title="Ajoute des liens de précédences entre les activités du parcours en fonction de son id..." alt="" coords="397,56,562,83"/>
-<area shape="rect" id="node6" href="$class_m___composer.html#a093170f2c5c1c2fc5e1605064c73881e" title="Supprime toutes les précédences d&#39;un parcours en fonction de son id. " alt="" coords="382,107,577,133"/>
-<area shape="rect" id="node8" href="$class_m___parcours.html#aa39fbc0073ee7d0bac40eebd3c3a0d51" title="Récupére les informations de tout les parcours. " alt="" coords="389,157,570,184"/>
-</map>

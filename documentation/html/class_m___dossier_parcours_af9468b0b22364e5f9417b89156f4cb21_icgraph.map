@@ -1,9 +1,0 @@
-<map id="getDossierByIdPatient" name="getDossierByIdPatient">
-<area shape="rect" id="node2" href="$class_dossier_parcours.html#aafd4afe437795fa157b45fef63c61fb0" title="Permet d&#39;afficher un dossier parcours. " alt="" coords="214,5,378,32"/>
-<area shape="rect" id="node3" href="$class_dossier_parcours.html#a1beb134616b85b26f48e83ed06c87a6d" title="Permet d&#39;afficher les différentes onglet d&#39;un dossier parcours. " alt="" coords="204,57,388,98"/>
-<area shape="rect" id="node4" href="$class_dossier_parcours.html#ad280d64f30f7bbd08765e181c7dde8e0" title="Permet de modifier un dossier parcours. " alt="" coords="213,122,379,163"/>
-<area shape="rect" id="node5" href="$class_patient.html#a597070fe6821b345bdec5fb30616cf92" title="Patient\\gererRDV" alt="" coords="235,188,357,215"/>
-<area shape="rect" id="node6" href="$class_patient.html#a1f89156f301b15c07c9829205768dc88" title="Patient\\majDossier" alt="" coords="445,137,577,164"/>
-<area shape="rect" id="node7" href="$class_patient.html#a7f35bd723ea6b069b83facff747532d5" title="Patient\\ajoutDossier" alt="" coords="442,188,581,215"/>
-<area shape="rect" id="node8" href="$class_patient.html#a7ac688a8e6e5190e10552c50b0512b45" title="Patient\\supprimerRDV" alt="" coords="436,239,587,265"/>
-</map>

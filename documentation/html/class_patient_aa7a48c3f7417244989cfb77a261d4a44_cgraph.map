@@ -1,5 +1,0 @@
-<map id="majDisponibilite" name="majDisponibilite">
-<area shape="rect" id="node2" href="$class_m___patient.html#a3bec267865d27f1d100c0fdfb6725416" title="Mettre à jour les disponibilités d&#39;un patient. " alt="" coords="172,5,348,47"/>
-<area shape="rect" id="node3" href="$class_m___dossier_parcours.html#ae89b2e42fe95aeacb646aa4c96d02eda" title="Permet de créer un nouveau dossier parcours pour un patient. " alt="" coords="167,71,353,112"/>
-<area shape="rect" id="node4" href="$class_m___dossier_parcours.html#a5e1fe7c0252142a8a5b958a76c85b75e" title="Obtenir le maxid de le table dossierParcours. " alt="" coords="401,71,584,112"/>
-</map>

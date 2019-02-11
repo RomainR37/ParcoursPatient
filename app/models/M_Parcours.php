@@ -18,7 +18,6 @@ class M_Parcours extends CI_Model {
     /**
      * \brief   Récupére les informations de tout les parcours
      * \details    Récupére les informations de tout les parcours
-     * \param      Aucun
      */
     public function getAllParcours() {
        /* $txt_sql = "SELECT id_parcours, txt_nom, int_objectif, txt_code
@@ -34,7 +33,6 @@ class M_Parcours extends CI_Model {
 
             $restemp["id_parcours"] = $row->id_parcours;
             $restemp["nom"] = $row->txt_nom;
-            //$restemp["objectif"] = $row->int_objectif;
             $restemp["code"] = $row->txt_code;
             array_push($res, $restemp);
         }
@@ -49,8 +47,6 @@ class M_Parcours extends CI_Model {
      */
     public function getParcoursById($id) {
         //	On récupère les infos liées au parcours dans la table Parcours
-       /* $txt_sql = "SELECT txt_nom, int_objectif, txt_code
-			FROM parcours WHERE id_parcours =" . $id;*/
         $txt_sql = "SELECT txt_nom, txt_code
 			FROM parcours WHERE id_parcours =" . $id;
         
@@ -60,7 +56,6 @@ class M_Parcours extends CI_Model {
         $row = array();
         $row["id"] = $id;
         $row["nom"] = $res['txt_nom'];
-        //$row["objectif"] = $res['int_objectif'];
         $row["code"] = $res['txt_code'];
 
         // On récupère la liste des activités nécessaires pour le parcours
@@ -86,9 +81,9 @@ class M_Parcours extends CI_Model {
                 $restemp2 = array();
                 $restemp2["id_prec"] = $row3->id_activite_precedente;
                 $restemp2["nom_prec"] = $row3->txt_nom;
-                // on sauvegarde des précédence pour chaque activité
+                // on sauvegarde des précédences pour chaque activité
                 array_push($res, $restemp2);
-                // on sauvegarde les précédence séparément
+                // on sauvegarde les précédences séparément
                 $restemp2["delai_min"] = $row3->int_delaimin;
                 $restemp2["delai_max"] = $row3->int_delaimax;
                 $restemp2["id_act"] = $restemp["id_activite"];
@@ -153,8 +148,8 @@ class M_Parcours extends CI_Model {
      * \brief     Récupére toutes les dépendances entre les activités d'un parcours
      * \details   Récupére toutes les dépendances entre les activités d'un parcours (délai min et délai max)
      *            Retourne les données au format JSON
-     * \param     $idActivite : id de l'activité
-     * \param     $idParcours : id du parcours
+     * @param     $idActivite : id de l'activité
+     * @param     $idParcours : id du parcours
      */
     public function getDependancesActivites($idActivite, $idParcours) {
         $res = array();

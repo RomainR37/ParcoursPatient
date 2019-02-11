@@ -1,5 +1,0 @@
-<map id="suppr" name="suppr">
-<area shape="rect" id="node2" href="$class_m___ressources_mat.html#a8260f045a0e3329d252861ad6f4583a7" title="Supprime la ressource matérielle en fonction de son id. " alt="" coords="108,5,367,32"/>
-<area shape="rect" id="node3" href="$class_ressources_mat.html#a149eb92716c1084a935e04a8d95f7347" title="Permet d&#39;afficher toutes les ressources matérielles. " alt="" coords="211,56,264,83"/>
-<area shape="rect" id="node4" href="$class_m___ressources_mat.html#a44f4548c4511b9e1ccfcdfd5c08073a5" title="Récupére toute la liste des ressources matérielles. " alt="" coords="415,56,673,83"/>
-</map>

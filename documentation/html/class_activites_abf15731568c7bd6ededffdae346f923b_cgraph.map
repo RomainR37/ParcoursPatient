@@ -1,6 +1,0 @@
-<map id="suppr" name="suppr">
-<area shape="rect" id="node2" href="$class_m___necessiter.html#a7d109d3694cf0879f94bb81a951e0886" title="Supprime tout les besoins en type de ressource d&#39;une activité " alt="" coords="108,5,304,32"/>
-<area shape="rect" id="node3" href="$class_m___activite.html#a15ab5635aa709143d47182e51a333e68" title="M_Activite\\supprActivite" alt="" coords="126,56,286,83"/>
-<area shape="rect" id="node4" href="$class_activites.html#a149eb92716c1084a935e04a8d95f7347" title="Affichage la liste des différentes activités. " alt="" coords="179,107,233,133"/>
-<area shape="rect" id="node5" href="$class_m___activite.html#acbc2b4f83ae02502726499f02e6b3bd0" title="M_Activite\\getAllActivites" alt="" coords="352,107,520,133"/>
-</map>

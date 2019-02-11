@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">315</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1153063372"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1153063372" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Activites.html">Activites</a></li>
+                                                    <li class="class"><a href="../classes/AffichageSejour.html">AffichageSejour</a></li>
+                                                    <li class="class"><a href="../classes/Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/DossierParcours.html">DossierParcours</a></li>
+                                                    <li class="class"><a href="../classes/EtreIndispo.html">EtreIndispo</a></li>
+                                                    <li class="class"><a href="../classes/M_Activite.html">M_Activite</a></li>
+                                                    <li class="class"><a href="../classes/M_Auth.html">M_Auth</a></li>
+                                                    <li class="class"><a href="../classes/M_Champ.html">M_Champ</a></li>
+                                                    <li class="class"><a href="../classes/M_Composer.html">M_Composer</a></li>
+                                                    <li class="class"><a href="../classes/M_Compte.html">M_Compte</a></li>
+                                                    <li class="class"><a href="../classes/M_DossierParcours.html">M_DossierParcours</a></li>
+                                                    <li class="class"><a href="../classes/M_EtreIndispo.html">M_EtreIndispo</a></li>
+                                                    <li class="class"><a href="../classes/M_Necessiter.html">M_Necessiter</a></li>
+                                                    <li class="class"><a href="../classes/M_Onglet.html">M_Onglet</a></li>
+                                                    <li class="class"><a href="../classes/M_Parcours.html">M_Parcours</a></li>
+                                                    <li class="class"><a href="../classes/M_Patient.html">M_Patient</a></li>
+                                                    <li class="class"><a href="../classes/M_Personnel.html">M_Personnel</a></li>
+                                                    <li class="class"><a href="../classes/M_Planning.html">M_Planning</a></li>
+                                                    <li class="class"><a href="../classes/M_PlanParcours.html">M_PlanParcours</a></li>
+                                                    <li class="class"><a href="../classes/M_Ressource.html">M_Ressource</a></li>
+                                                    <li class="class"><a href="../classes/M_RessourcesMat.html">M_RessourcesMat</a></li>
+                                                    <li class="class"><a href="../classes/M_TypeRessource.html">M_TypeRessource</a></li>
+                                                    <li class="class"><a href="../classes/Parcours.html">Parcours</a></li>
+                                                    <li class="class"><a href="../classes/Patient.html">Patient</a></li>
+                                                    <li class="class"><a href="../classes/Personnels.html">Personnels</a></li>
+                                                    <li class="class"><a href="../classes/Planning.html">Planning</a></li>
+                                                    <li class="class"><a href="../classes/PlanParcours.html">PlanParcours</a></li>
+                                                    <li class="class"><a href="../classes/Ressource.html">Ressource</a></li>
+                                                    <li class="class"><a href="../classes/RessourcesMat.html">RessourcesMat</a></li>
+                                                    <li class="class"><a href="../classes/TypeRessource.html">TypeRessource</a></li>
+                                                    <li class="class"><a href="../classes/Welcome.html">Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>Planning</h1>
+                    <p><em>\file      Planninf.php
+\author    Guillaume Pochet
+\version   1.0
+\date      09 Mars 2017
+\brief     Controller de la page de plannification</em></p>
+                    <p>\details   Contient les différentes méthodes de gestion du planning</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Planning.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Planning.html#method_planifier" class="">planifier()</a><br />
+                                                                    <a href="../classes/Planning.html#method_creerJeuxDeDonnees" class="">creerJeuxDeDonnees()</a><br />
+                                                                    <a href="../classes/Planning.html#method_creerDonnees" class="">creerDonnees()</a><br />
+                                                                    <a href="../classes/Planning.html#method_getRessources" class="">getRessources()</a><br />
+                                                                    <a href="../classes/Planning.html#method_getEvenement" class="">getEvenement()</a><br />
+                                                                    <a href="../classes/Planning.html#method_getActiviteAPlanifier" class="">getActiviteAPlanifier()</a><br />
+                                                                    <a href="../classes/Planning.html#method_getActiviteAPlanifierRecherche" class="">getActiviteAPlanifierRecherche()</a><br />
+                                                                    <a href="../classes/Planning.html#method_addEvent" class="">addEvent()</a><br />
+                                                                    <a href="../classes/Planning.html#method_deleteEvent" class="">deleteEvent()</a><br />
+                                                                    <a href="../classes/Planning.html#method_constraints" class="">constraints()</a><br />
+                                                                    <a href="../classes/Planning.html#method_updateEvent" class="">updateEvent()</a><br />
+                                                                    <a href="../classes/Planning.html#method_deleteEventsPatient" class="">deleteEventsPatient()</a><br />
+                                                                    <a href="../classes/Planning.html#method_sauvegarder" class="">sauvegarder()</a><br />
+                                                                    <a href="../classes/Planning.html#method_restaurer" class="">restaurer()</a><br />
+                                                                    <a href="../classes/Planning.html#method_planAuto" class="">planAuto()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/controllers.Planning.html"><div class="path-wrapper">controllers\Planning.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper">\CI_Controller</div>
+                                                                                                    <div class="namespace-wrapper">\Planning</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_planifier" name="method_planifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">planifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">planifier() </pre>
+                <p><em>\brief      Permet d&#039;afficher la vue de planification générale
+\details    Permet d&#039;afficher la vue de planification générale
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_creerJeuxDeDonnees" name="method_creerJeuxDeDonnees" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">creerJeuxDeDonnees()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">creerJeuxDeDonnees() </pre>
+                <p><em>\brief      Permet d&#039;afficher la page de création de jeux de données
+\details    Permet d&#039;afficher la page de création de jeux de données
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_creerDonnees" name="method_creerDonnees" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">creerDonnees()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">creerDonnees() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRessources" name="method_getRessources" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRessources()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRessources() </pre>
+                <p><em>\brief      Permet de récupérer la liste de toutes les ressources humaines ou matérielles
+\details    Permet de récupérer la liste de toutes les ressources humaines ou matérielles
+            Retourne la liste des ressources au format JSON :
+            {id: &quot;1&quot;, title: &quot;Soumaya Cheniour&quot;, type_ressource: &quot;IDE obésité&quot;}
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getEvenement" name="method_getEvenement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getEvenement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getEvenement() </pre>
+                <p><em>\brief      Permet de récupérer la liste de tous les événements à ajouter au planning
+\details    Permet de récupérer la liste de tous les événements à ajouter au planning
+            Retourne la liste des événements au format JSON :
+{activiteId:&quot;1&quot;,
+activite_precedente:&quot;Début&quot;,
+color:&quot;#FF1490&quot;,
+end:&quot;2017-03-28 10:20:00&quot;,
+id:&quot;325&quot;,
+necessite:&quot;1 IDE obésité, 1 HDJ obésité&quot;,
+parcoursId:&quot;1&quot;,
+patientId:&quot;1&quot;,
+resourceId:&quot;1&quot;,
+start:&quot;2017-03-28 10:00:00&quot;,
+title:&quot;Martin Simon - RDV paramédical - Obésité sévère – diagnostique}&quot;
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getActiviteAPlanifier" name="method_getActiviteAPlanifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getActiviteAPlanifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getActiviteAPlanifier() </pre>
+                <p><em>\brief      Permet d&#039;afficher la liste de toutes les activités à planifier
+\details    Permet d&#039;afficher la liste de toutes les activités à planifier pour une date donnée
+            Retourne la liste des activités au format JSON :
+            {activite_id:&quot;1&quot;,
+activite_precedente:&quot;Début&quot;,
+duree:&quot;0:20:0&quot;,
+necessite:&quot;1 IDE obésité, 1 HDJ obésité&quot;,
+nom_activite:&quot;pochet guillaume - RDV paramédical - Obésité sévère – diagnostique&quot;,
+parcours_id:&quot;1&quot;,
+patient_id:&quot;11&quot;}
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getActiviteAPlanifierRecherche" name="method_getActiviteAPlanifierRecherche" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getActiviteAPlanifierRecherche()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getActiviteAPlanifierRecherche() </pre>
+                <p><em>\brief      Permet d&#039;afficher la liste de toutes les activités à planifier en recherchant un nom de patient
+\details    Permet d&#039;afficher la liste de toutes les activités à planifier en recherchant un nom de patient pour une date donnée
+            Retourne la liste des activités au format JSON :
+            {activite_id:&quot;1&quot;,
+activite_precedente:&quot;Début&quot;,
+duree:&quot;0:20:0&quot;,
+necessite:&quot;1 IDE obésité, 1 HDJ obésité&quot;,
+nom_activite:&quot;pochet guillaume - RDV paramédical - Obésité sévère – diagnostique&quot;,
+parcours_id:&quot;1&quot;,
+patient_id:&quot;11&quot;}
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addEvent" name="method_addEvent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addEvent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addEvent() </pre>
+                <p><em>\brief      Permet d&#039;ajouter un événement
+\details    Permet d&#039;ajouter un événement
+            Récupére la liste des informations d&#039;un événement et les ajoute en base de données
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_deleteEvent" name="method_deleteEvent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">deleteEvent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">deleteEvent() </pre>
+                <p><em>\brief      Permet de supprimer un événement
+\details    Permet de supprimer un événement de la base de données
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_constraints" name="method_constraints" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">constraints()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">constraints() </pre>
+                <p><em>\brief      Permet de vérifier les contraintes liées à la planification
+\details    Permet de vérifier les contraintes liées à la planification
+            Retourne la liste des contraintes au format JSON :
+0:&quot;Toutes les activités ne sont pas planifiées.&quot;
+1:&quot;Un patient ne peut pas faire 2 activités à la fois. (Patient : Robert Garcia)&quot;</em></p>
+                <p>Voici la liste des contraintes à vérifier :</p>
+<p>Vérifier fenetre de temps du patient - 1  - FAIT
+Delai min et max entre chaque activité d'un même pp - 2 - FAIT
+Précédences dans un pp - 3 - FAIT
+Affecter ressources à une activité + vérifier le nombre - 4 -FAIT
+Toutes les activités sont planifiés - 5- FAIT
+Ressources synchronisés - 6 - FAIT
+1 ressource = 1 activité à la fois - 7 - FAIT</p>
+<p>1 : gérer avec les contraintes
+2 : gérer avec les contraintes
+3 : gérer avec les contraintes
+4 : Type ressource affecté gérer avec fullCalendar, vérifier le nombre avec les contraintes
+5 : gérer avec les contraintes
+6 : gérer avec fullCalendar
+7 : gérer avec les contraintes
+\param      Aucun</p>
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateEvent" name="method_updateEvent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateEvent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateEvent() </pre>
+                <p><em>\brief      Permet de mettre à jour un événement
+\details    Permet de mettre à jour un événement
+            Récupére la liste des informations d&#039;un événement et les met à jour en base de données
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_deleteEventsPatient" name="method_deleteEventsPatient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">deleteEventsPatient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">deleteEventsPatient() </pre>
+                <p><em>\brief      Permet de supprimer tous les événements liés à un patient pour une date donnée
+\details    Permet de supprimer tous les événements liés à un patient pour une date donnée
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sauvegarder" name="method_sauvegarder" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">sauvegarder()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">sauvegarder() </pre>
+                <p><em>\brief      Permet de sauvegarder le planning
+\details    Permet de sauvegarder le planning
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_restaurer" name="method_restaurer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">restaurer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">restaurer() </pre>
+                <p><em>\brief      Permet de restaurer (reprise de la dernière sauvegarde) le planning
+\details    Permet de restaurer (reprise de la dernière sauvegarde) le planning
+\param      Aucun</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_planAuto" name="method_planAuto" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">planAuto()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">planAuto() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Planning.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/controllers\Planning.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 11th, 2019 at 06:00.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

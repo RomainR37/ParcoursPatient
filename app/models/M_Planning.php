@@ -168,7 +168,6 @@ class M_Planning extends CI_Model {
                     AND a.ID_ACTIVITE = " . $this->db->escape($activiteId);
 
         $query = $this->db->query($txt_sql);
-        
 
         if ($query->num_rows() >= 1) {
 
@@ -239,26 +238,40 @@ class M_Planning extends CI_Model {
                     AND a.ID_ACTIVITE = " . $this->db->escape($activiteId);
 
         $query = $this->db->query($txt_sql);
-
+        
         if($query->num_rows() >= 1) {
             //Pour chaque besoin de l'activité, récupérer la première ressource disponible sinon la première
-            foreach ($query->result() as $row) {
-                $ressourceAvailable = $this->getRessourceAvailable($row->id, $row->quantite, $start, $end);
+            $date = array(
+                "Debut" => $start,
+                "Fin" => $end
+            );
+            
+            //Ajustement de la date par rapport à toutes les ressources
+            foreach($query->result() as $row){
+                $ressourceAvailable = $this->getRessourceAvailable($row->id, $row->quantite, $date["Debut"], $date["Fin"]);
                 
                 // Le -2 permet de récupérer les dates provenant de la méthode getRessourceAvailable
                 $newDate = array_slice($ressourceAvailable, -2);
+                if($newDate["Debut"]>$date["Debut"]){
+                    $date["Debut"] = $newDate["Debut"];
+                    $date["Fin"] = $newDate["Fin"];
+                }               
+            }
+            
+            foreach ($query->result() as $row) {
+                $ressourceAvailable = $this->getRessourceAvailable($row->id, $row->quantite, $start, $end);
                 
                 for ($i = 0; $i < count($ressourceAvailable)-2; $i++) {
                     if ($this->getCouleurEventPatient($patientId) != NULL) {
-                        $this->insertEventBDD($newDate["Debut"], $newDate["Fin"], $title, $patientId, 
+                        $this->insertEventBDD($date["Debut"], $date["Fin"], $title, $patientId, 
                                 $ressourceAvailable[$i], $parcoursId, $activiteId, $this->getCouleurEventPatient($patientId));
                     } else {
-                        $this->insertEventBDD($newDate["Debut"], $newDate["Fin"], $title, $patientId, 
+                        $this->insertEventBDD($date["Debut"], $date["Fin"], $title, $patientId, 
                                 $ressourceAvailable[$i], $parcoursId, $activiteId, $this->couleur_aleatoire());
                     }
                 }
             }
-            return $newDate;    
+            return $date["Fin"];
         } else {
             if ($this->getCouleurEventPatient($patientId) != NULL) {
                 //La ressource avec l'id 0 correspond à la ressource "Autres" sur le calendrier
@@ -268,10 +281,16 @@ class M_Planning extends CI_Model {
                 $this->insertEventBDD($start, $end, $title, $patientId, 0, 
                         $parcoursId, $activiteId, $this->couleur_aleatoire());
             }
-            return array("Debut" => $start, "Fin" => $end);
+            return $end;
         }      
     }
 
+    /*
+     * Insertion d'un évènement en base de données
+     * 
+     * Insère un évènement dans la base de données avec les attributs en paramètre
+     * 
+     */
     public function insertEventBDD($start, $end, $title, $patientId, $ressourceId, $parcoursId, $activiteId, $color) {
 
         $txt_sql = "INSERT INTO `evenement`(`start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color`) "
@@ -368,7 +387,7 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tous les événements (juste le parcours) pour une date donnée
+     * \brief     Récupère tous les événements (juste le parcours) pour une date donnée
      * \details   Récupère tous les événements (juste le parcours) pour une date donnée
      * \param      $date : date
      */
@@ -656,12 +675,12 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére toutes les ressources disponibles entre deux dates
-     * \details    Récupére toutes les ressources disponibles entre deux dates
-     * \param      $id : id du type de ressource
-     *             $quantite : retourne la quantite
-     *             $start : date de début
-     *             $end : date de fin
+     * \brief      Récupère toutes les ressources disponibles entre deux dates
+     * \details    Récupère toutes les ressources disponibles entre deux dates
+     * @param      $id : id du type de ressource
+     * @param int $quantite retourne la quantite
+     * @param string $start date de début
+     * @param string $end : date de fin
      */
     public function getRessourceAvailable($id, $quantite, $start, $end) {
 
@@ -673,9 +692,10 @@ class M_Planning extends CI_Model {
                     AND tr.ID_TYPERESSOURCE = " . $id . "
                     AND r.ID_RESSOURCE not in (SELECT e.ressourceId 
 							FROM evenement e
-                                                        WHERE (e.start >= " . $this->db->escape($start) . " AND e.start < " . $this->db->escape($end) .")
-                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) .")
-                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . "))
+                                                        WHERE (e.start > " . $this->db->escape($start) . " AND e.start <= " . $this->db->escape($end) .")
+                                                        OR (e.end >= " . $this->db->escape($start) . " AND e.end < " . $this->db->escape($end) .")
+                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . ")
+                                                        OR (e.start > " . $this->db->escape($start) . " AND e.end < " . $this->db->escape($end) . "))
                     LIMIT " . $quantite;
 
         $query = $this->db->query($txt_sql);
@@ -700,13 +720,13 @@ class M_Planning extends CI_Model {
                     AND tr.ID_TYPERESSOURCE = " . $id . "
                     AND r.ID_RESSOURCE not in (SELECT e.ressourceId 
 							FROM evenement e
-                                                        WHERE (e.start >= " . $this->db->escape($start) . " AND e.start < " . $this->db->escape($end) .")
-                                                        OR (e.end > " . $this->db->escape($start) . " AND e.end <= " . $this->db->escape($end) .")
-                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . "))
+                                                        WHERE (e.start > " . $this->db->escape($start) . " AND e.start <= " . $this->db->escape($end) .")
+                                                        OR (e.end >= " . $this->db->escape($start) . " AND e.end < " . $this->db->escape($end) .")
+                                                        OR (e.start <= " . $this->db->escape($start) . " AND e.end >= " . $this->db->escape($end) . ")
+                                                        OR (e.start > " . $this->db->escape($start) . " AND e.end < " . $this->db->escape($end) . "))
                     LIMIT " . $quantite;
                     
             $query = $this->db->query($txt_sql);
-
             foreach ($query->result() as $row) {
                 array_push($res, $row->id);
             }
@@ -716,7 +736,7 @@ class M_Planning extends CI_Model {
             "Debut" => $start,
             "Fin"   => $end
         );
-        
+ 
         return array_merge($res, $newDate);
     }
 
@@ -746,8 +766,8 @@ class M_Planning extends CI_Model {
     /**
      * \brief      Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
      * \details    Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
-     * \param      $date : date
-     *             $recherche : nom du patient à rechercher
+     * $param string $date : date
+     * @param string $recherche nom du patient à rechercher
      */
     public function getActiviteAplanifierRecherche($date, $recherche) {
         if ($recherche != "") {
@@ -781,7 +801,7 @@ class M_Planning extends CI_Model {
                 array_push($res, $restemp);
             }
 
-            // activité déja planifié
+            // activité déja planifiée
             $txt_sql2 = "SELECT DISTINCT(activite.ID_ACTIVITE) as id_activite, patient.ID_PATIENT as id_patient, parcours.ID_PARCOURS as id_parcours, activite.TXT_NOM as nom_activite, patient.TXT_NOM as nom_patient, patient.TXT_PRENOM as prenom_patient, parcours.TXT_NOM as nom_parcours, activite.INT_DUREE as duree
 					FROM evenement, parcours, activite, patient
                 	WHERE patient.ID_PATIENT = evenement.patientId
@@ -829,7 +849,6 @@ class M_Planning extends CI_Model {
     /**
      * \brief      Fonction de récupération d'une couleur aléatoire
      * \details    Fonction de récupération d'une couleur aléatoire
-     * \param      Aucun
      */
     function couleur_aleatoire() {
         $couleur = array('#FF6633', '#ffcc99', '#99cccc', '#669999', '#CC9999', 'FFCCCC', '99CCCC', '#999999',
@@ -890,7 +909,6 @@ class M_Planning extends CI_Model {
     /**
      * \brief      Permet de sauvegarder le planning
      * \details    Sauvegarde le planning (suppresion des événements déja planifiés)
-     * \param      Aucun
      */
     public function sauvegarderPlanning() {
         $txt_sql = "DELETE FROM ordonnancer";
@@ -903,7 +921,6 @@ class M_Planning extends CI_Model {
     /**
      * \brief      Permet de restaurer un planning (chargement de la dernière sauvegarde)
      * \details    La restauration d'un planning entraîne la suppression des modifications non enregistrées
-     * \param      Aucun
      */
     public function restaurerPlanning() {
         $txt_sql = "DELETE FROM evenement";
@@ -913,6 +930,11 @@ class M_Planning extends CI_Model {
         $this->db->query($txt_sql);
     }
 
+    /*
+     * Planification auto
+     * 
+     * Planification des activités patient par patient
+     */
     public function planAuto($date) {
         $this->load->model('M_Patient');
     
@@ -962,12 +984,12 @@ class M_Planning extends CI_Model {
                     $startString = $startTemp->format('Y-m-d H:i:s');
                     $endString = $end->format('Y-m-d H:i:s');
 
-                    $newDate = $this->addEvenementAuto($act["nom_activite"], 
+                    $endDate = $this->addEvenementAuto($act["nom_activite"], 
                                 $startString, $endString, 
                                 $act["activite_id"], $act["patient_id"], $act["parcours_id"]);
                     
                     //Ajuste le prochain début d'activité sur la fin de la dernière
-                    $start = DateTime::createFromFormat('Y-m-d H:i:s', $newDate["Fin"]);
+                    $start = DateTime::createFromFormat('Y-m-d H:i:s', $endDate);
                     
                     array_push($idTemp, $act["activite_id"]);
                     array_splice($activitesPatient, array_search($act, $activitesPatient), 1);
@@ -976,6 +998,15 @@ class M_Planning extends CI_Model {
         }
     }
     
+    /* Récupération des disponibilités d'une ressource
+     * 
+     * Cette méthode permet d'indiquer si une ressource est disponible dans 
+     * l'intervalle de temps [$start;$end]
+     * 
+     * @param int $idRessource identifiant de la ressource
+     * @param string $start heure de début
+     * @param string $end heure de fin
+     */
     public function getDisponibiliteRessource($idRessource, $start, $end){
         
     //s'il y a une activité sur la ressource dont le début est avant le $end
@@ -987,8 +1018,7 @@ class M_Planning extends CI_Model {
         $query = $this->db->query($txt_sql);
 
         $start = new DateTime($start);
-        $end = new DateTime($end);
-        
+        $end = new DateTime($end);        
         
         foreach($query->result() as $row){
             $startRow = new DateTime($row->start);
