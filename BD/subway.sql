@@ -2,10 +2,10 @@
 -- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 2018-03-27 22:00:03
--- 服务器版本： 5.6.17
--- PHP Version: 5.5.12
+-- Client :  127.0.0.1
+-- Généré le :  Lun 25 Février 2019 à 20:19
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,16 +17,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `subway`
+-- Base de données :  `subway`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `activite`
+-- Structure de la table `activite`
 --
-CREATE DATABASE IF NOT EXISTS `subway` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `subway`;
 
 CREATE TABLE IF NOT EXISTS `activite` (
   `ID_ACTIVITE` bigint(11) NOT NULL,
@@ -37,48 +35,80 @@ CREATE TABLE IF NOT EXISTS `activite` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `activite`
+-- Contenu de la table `activite`
 --
 
 INSERT INTO `activite` (`ID_ACTIVITE`, `TXT_NOM`, `INT_DUREE`, `TXT_COMMENTAIRE`) VALUES
 (0, 'Début', 0, NULL),
-(1, 'RDV paramédical', 20, 'Consultation'),
-(2, 'ECG', 15, NULL),
-(3, 'Bilan biologique', 15, 'Prélèvement à jeun'),
+(1, 'RDV paramédical Obésité', 20, 'Consultation'),
+(2, 'ECG', 15, ''),
+(3, 'Bilan biologique', 20, 'Prélèvement à jeun'),
 (4, 'Echo hépatique', 15, 'A jeun'),
-(5, 'Calorimétrie', 30, NULL),
-(6, 'Entretien psy', 40, NULL),
-(7, 'Entretien infirmier', 30, NULL),
-(8, 'Entretien diet', 60, NULL),
-(9, 'synthèse', 30, NULL),
-(10, 'TOGD', 20, NULL),
-(11, 'Bilan anthropométrique', 60, NULL),
-(12, 'Fibroscan', 10, NULL),
+(5, 'Calorimétrie', 30, ''),
+(6, 'Entretien psy', 40, ''),
+(7, 'Entretien infirmier', 30, ''),
+(8, 'Entretien diet', 60, ''),
+(9, 'Synthèse', 30, ''),
+(10, 'TOGD', 20, ''),
+(11, 'Bilan anthropométrique', 60, ''),
+(12, 'Fibroscan', 10, ''),
 (13, 'Scanner abdo', 20, ''),
-(14, 'Entretien hépato', 45, NULL),
-(15, 'Traitement Rémicade', 120, NULL),
-(16, 'Ponction Ascite', 180, NULL),
-(17, 'Soins ponction', 135, NULL),
-(18, 'Injection Ferinject', 60, NULL),
-(19, 'Injection', 40, NULL),
+(14, 'Entretien hépato', 45, ''),
+(15, 'Traitement Rémicade', 120, ''),
+(16, 'Ponction Ascite', 180, ''),
+(17, 'Soins ponction', 195, ''),
+(18, 'Injection Ferinject', 60, ''),
+(19, 'Injection', 40, ''),
 (20, 'Scintigraphie myocardique', 30, NULL),
 (21, 'Scanner des corronaires', 10, NULL),
 (22, 'Echodoppler TSA et MI', 30, NULL),
-(23, 'Rétinographie', 15, NULL),
-(24, 'Pose Holter', 15, NULL),
-(25, 'Scanner abdo', 30, NULL),
-(26, 'Scanner TMD pied + radios', 40, NULL),
-(27, 'Doppler des artères des MI', 30, NULL),
-(28, 'Soin, pansement, mesures IPS', 40, NULL),
-(29, 'RDV médical', 35, NULL),
-(30, 'Prélèvement', 15, NULL),
-(31, 'Collation', 10, NULL),
-(32, 'Synthèse', 30, NULL);
+(23, 'Rétinographie', 15, ''),
+(24, 'Pose pompe et/ou Holter', 30, ''),
+(26, 'Scanner TMD pied + radios', 40, ''),
+(27, 'Doppler des artères des MI', 30, ''),
+(28, 'Soin, pansement, mesures IPS', 40, ''),
+(29, 'RDV médical', 40, ''),
+(30, 'Prélèvements', 15, ''),
+(31, 'Collation', 15, ''),
+(33, 'RDV Paramédical Hors Obésité', 15, ''),
+(34, 'RDV médical + diet', 55, ''),
+(35, 'OK chimio', 10, ''),
+(36, 'RDV paramédical chimio', 15, ''),
+(37, 'Pose d''aiguille PAC', 15, ''),
+(38, 'Prémédication', 20, ''),
+(39, 'Consultation médicale', 20, ''),
+(40, 'Examens chimio', 20, ''),
+(41, 'OK administration', 10, ''),
+(42, 'Administration chimio', 15, ''),
+(43, 'ETP', 30, ''),
+(44, 'ETP', 0, ''),
+(45, 'Consultation médicale gériatrie', 30, ''),
+(46, 'Soins', 190, ''),
+(47, 'Examens', 60, ''),
+(48, 'Test d''efforts', 25, ''),
+(49, 'Explorations fonctionnelles ou morphologiques', 40, ''),
+(50, 'Bilan cardio', 30, ''),
+(51, 'Test fonctionnel', 20, ''),
+(52, 'IRM', 40, ''),
+(53, 'Echo cardiaque', 20, ''),
+(54, 'Examens cliniques', 30, ''),
+(55, 'Médecine nucléaire', 30, ''),
+(56, 'RDV Accueil', 5, ''),
+(57, 'ARM', 15, ''),
+(58, 'Echodoppler TSA', 20, ''),
+(59, 'ETT', 20, ''),
+(60, 'Holter', 30, ''),
+(61, 'Synthèse neuro', 30, ''),
+(62, 'EEG', 40, ''),
+(63, 'Scintigraphie cérébrale', 40, ''),
+(64, 'Ponction lombaire', 15, ''),
+(65, 'Consultation neuropsy', 180, ''),
+(66, 'Consultation psy', 30, '');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `champ`
+-- Structure de la table `champ`
 --
 
 CREATE TABLE IF NOT EXISTS `champ` (
@@ -90,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `champ` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `champ`
+-- Contenu de la table `champ`
 --
 
 INSERT INTO `champ` (`ID_CHAMP`, `ID_TYPECHAMP`, `TXT_NOM`) VALUES
@@ -105,12 +135,13 @@ INSERT INTO `champ` (`ID_CHAMP`, `ID_TYPECHAMP`, `TXT_NOM`) VALUES
 (9, 1, 'new'),
 (10, 1, 'champ2'),
 (11, 1, 'CHAMP1'),
-(12, 1, 'NEW');
+(12, 1, 'NEW'),
+(13, 1, 'test');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `composer`
+-- Structure de la table `composer`
 --
 
 CREATE TABLE IF NOT EXISTS `composer` (
@@ -126,35 +157,228 @@ CREATE TABLE IF NOT EXISTS `composer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `composer`
+-- Contenu de la table `composer`
 --
 
 INSERT INTO `composer` (`ID_PARCOURS`, `ID_ACTIVITE`, `ID_ACTIVITE_PRECEDENTE`, `INT_DELAIMIN`, `INT_DELAIMAX`) VALUES
 (1, 1, 0, 0, 0),
-(1, 2, 1, 5, 100),
-(1, 3, 1, 10, 60),
-(1, 4, 1, 20, 80),
-(1, 5, 1, 10, 60),
-(1, 6, 31, 0, 60),
-(1, 7, 31, 5, 130),
-(1, 8, 31, 5, 120),
+(1, 2, 1, 0, 90),
+(1, 3, 1, 0, 110),
+(1, 4, 1, 0, 110),
+(1, 5, 1, 0, 110),
+(1, 6, 11, 0, 170),
+(1, 7, 11, 0, 170),
+(1, 8, 11, 0, 170),
 (1, 9, 6, 0, 120),
-(1, 9, 7, 10, 130),
-(1, 9, 8, 5, 120),
-(1, 31, 2, 0, 130),
-(1, 31, 3, 0, 100),
-(1, 31, 4, 5, 100),
-(1, 31, 5, 0, 90),
-(26, 1, 0, 0, 0),
-(26, 13, 1, 5, 15),
-(27, 1, 0, 0, 0),
-(27, 4, 1, 5, 20),
-(27, 13, 4, 10, 15);
+(1, 9, 7, 0, 130),
+(1, 9, 8, 0, 100),
+(1, 11, 31, 0, 30),
+(1, 31, 2, 0, 90),
+(1, 31, 3, 0, 85),
+(1, 31, 4, 0, 90),
+(1, 31, 5, 0, 75),
+(2, 1, 0, 0, 0),
+(2, 3, 1, 0, 135),
+(2, 5, 1, 0, 135),
+(2, 6, 11, 0, 120),
+(2, 7, 11, 0, 130),
+(2, 8, 11, 0, 100),
+(2, 9, 6, 0, 120),
+(2, 9, 7, 0, 130),
+(2, 9, 8, 0, 100),
+(2, 10, 1, 0, 135),
+(2, 11, 31, 0, 30),
+(2, 31, 3, 0, 80),
+(2, 31, 5, 0, 65),
+(2, 31, 10, 0, 75),
+(3, 1, 0, 0, 0),
+(3, 3, 1, 0, 75),
+(3, 4, 1, 0, 75),
+(3, 5, 1, 0, 60),
+(3, 6, 11, 0, 130),
+(3, 6, 12, 0, 180),
+(3, 7, 11, 0, 140),
+(3, 7, 12, 0, 190),
+(3, 8, 11, 0, 110),
+(3, 8, 12, 0, 140),
+(3, 9, 6, 0, 120),
+(3, 9, 7, 0, 130),
+(3, 9, 8, 0, 100),
+(3, 11, 31, 0, 40),
+(3, 12, 31, 0, 90),
+(3, 31, 3, 0, 75),
+(3, 31, 4, 0, 75),
+(3, 31, 5, 0, 60),
+(4, 2, 33, 0, 60),
+(4, 5, 33, 0, 40),
+(4, 7, 11, 0, 120),
+(4, 7, 12, 0, 170),
+(4, 7, 13, 0, 160),
+(4, 8, 11, 0, 60),
+(4, 8, 12, 0, 140),
+(4, 8, 13, 0, 130),
+(4, 9, 7, 0, 90),
+(4, 9, 8, 0, 60),
+(4, 11, 31, 0, 60),
+(4, 12, 31, 0, 110),
+(4, 13, 31, 0, 130),
+(4, 31, 2, 0, 60),
+(4, 31, 5, 0, 40),
+(4, 33, 0, 0, 0),
+(5, 3, 33, 0, 45),
+(5, 4, 33, 0, 45),
+(5, 12, 31, 0, 30),
+(5, 14, 12, 0, 40),
+(5, 31, 3, 0, 45),
+(5, 31, 4, 0, 45),
+(5, 33, 0, 0, 0),
+(6, 3, 33, 0, 30),
+(6, 9, 15, 0, 30),
+(6, 14, 31, 0, 30),
+(6, 15, 14, 0, 30),
+(6, 31, 3, 0, 30),
+(6, 33, 0, 0, 0),
+(7, 3, 33, 0, 30),
+(7, 9, 17, 0, 30),
+(7, 14, 31, 0, 30),
+(7, 16, 14, 0, 30),
+(7, 17, 16, 0, 30),
+(7, 31, 3, 0, 30),
+(7, 33, 0, 0, 0),
+(8, 3, 33, 0, 30),
+(8, 9, 18, 0, 30),
+(8, 14, 31, 0, 30),
+(8, 18, 14, 0, 30),
+(8, 31, 3, 0, 30),
+(8, 33, 0, 0, 0),
+(10, 8, 13, 0, 80),
+(10, 8, 23, 0, 85),
+(10, 13, 31, 0, 45),
+(10, 23, 31, 0, 50),
+(10, 29, 13, 0, 75),
+(10, 29, 23, 0, 80),
+(10, 30, 0, 0, 0),
+(10, 31, 30, 0, 30),
+(11, 26, 31, 0, 100),
+(11, 27, 31, 0, 110),
+(11, 28, 31, 0, 100),
+(11, 29, 26, 0, 100),
+(11, 29, 27, 0, 110),
+(11, 29, 28, 0, 100),
+(11, 30, 0, 0, 0),
+(11, 31, 30, 0, 30),
+(12, 24, 31, 0, 30),
+(12, 30, 0, 0, 0),
+(12, 31, 30, 0, 30),
+(12, 34, 24, 0, 30),
+(16, 35, 0, 0, 0),
+(16, 36, 35, 0, 30),
+(16, 37, 36, 0, 50),
+(16, 38, 37, 0, 30),
+(16, 39, 36, 0, 65),
+(16, 40, 38, 0, 50),
+(16, 40, 39, 0, 65),
+(16, 41, 40, 0, 30),
+(16, 42, 41, 0, 30),
+(16, 43, 0, 0, 0),
+(17, 37, 41, 0, 30),
+(17, 38, 37, 0, 30),
+(17, 39, 0, 0, 0),
+(17, 40, 39, 0, 30),
+(17, 41, 40, 0, 30),
+(17, 42, 38, 0, 30),
+(17, 44, 0, 0, 0),
+(18, 2, 31, 0, 125),
+(18, 3, 0, 0, 0),
+(18, 31, 3, 0, 30),
+(18, 39, 31, 0, 105),
+(18, 48, 31, 0, 110),
+(18, 49, 31, 0, 95),
+(18, 50, 2, 0, 125),
+(18, 50, 39, 0, 105),
+(18, 50, 48, 0, 110),
+(18, 50, 49, 0, 95),
+(19, 2, 31, 0, 195),
+(19, 3, 0, 0, 0),
+(19, 31, 3, 0, 30),
+(19, 43, 31, 0, 175),
+(19, 48, 31, 0, 180),
+(19, 51, 31, 0, 185),
+(19, 52, 31, 0, 165),
+(19, 53, 31, 0, 185),
+(19, 54, 31, 0, 175),
+(20, 2, 31, 0, 130),
+(20, 3, 0, 0, 0),
+(20, 31, 3, 0, 30),
+(20, 49, 31, 0, 100),
+(20, 54, 31, 0, 110),
+(20, 55, 31, 0, 110),
+(21, 2, 31, 0, 180),
+(21, 30, 56, 0, 30),
+(21, 31, 30, 0, 30),
+(21, 50, 31, 0, 170),
+(21, 52, 31, 0, 145),
+(21, 56, 0, 0, 0),
+(21, 57, 31, 0, 175),
+(21, 58, 31, 0, 170),
+(21, 59, 31, 0, 140),
+(21, 60, 31, 0, 160),
+(21, 61, 2, 0, 180),
+(21, 61, 50, 0, 170),
+(21, 61, 52, 0, 145),
+(21, 61, 57, 0, 175),
+(21, 61, 58, 0, 170),
+(21, 61, 59, 0, 140),
+(21, 61, 60, 0, 160),
+(22, 17, 64, 0, 30),
+(22, 19, 31, 0, 305),
+(22, 30, 54, 0, 30),
+(22, 31, 30, 0, 30),
+(22, 52, 31, 0, 315),
+(22, 54, 56, 0, 30),
+(22, 56, 0, 0, 0),
+(22, 61, 65, 0, 30),
+(22, 62, 31, 0, 320),
+(22, 63, 19, 0, 30),
+(22, 64, 31, 0, 205),
+(22, 65, 17, 0, 205),
+(22, 65, 52, 0, 315),
+(22, 65, 62, 0, 320),
+(22, 65, 63, 0, 305),
+(23, 30, 56, 0, 30),
+(23, 31, 30, 0, 30),
+(23, 52, 31, 0, 270),
+(23, 56, 0, 0, 0),
+(23, 61, 52, 0, 270),
+(23, 61, 62, 0, 275),
+(23, 61, 65, 0, 145),
+(23, 61, 66, 0, 295),
+(23, 62, 31, 0, 275),
+(23, 65, 31, 0, 145),
+(23, 66, 31, 0, 295),
+(24, 30, 54, 0, 30),
+(24, 31, 30, 0, 30),
+(24, 52, 31, 0, 90),
+(24, 54, 56, 0, 30),
+(24, 56, 0, 0, 0),
+(24, 58, 31, 0, 115),
+(24, 61, 52, 0, 90),
+(24, 61, 58, 0, 115),
+(24, 61, 62, 0, 95),
+(24, 62, 31, 0, 95),
+(25, 3, 0, 0, 0),
+(25, 45, 3, 0, 30),
+(25, 46, 45, 0, 30),
+(25, 47, 46, 0, 30),
+(26, 3, 0, 0, 0),
+(26, 39, 3, 0, 30),
+(26, 46, 39, 0, 30),
+(26, 47, 46, 0, 30);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `compte`
+-- Structure de la table `compte`
 --
 
 CREATE TABLE IF NOT EXISTS `compte` (
@@ -167,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `compte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `compte`
+-- Contenu de la table `compte`
 --
 
 INSERT INTO `compte` (`ID_COMPTE`, `TXT_LOGIN`, `TXT_MOTDEPASSE`, `ID_TYPECOMPTE`) VALUES
@@ -231,12 +455,51 @@ INSERT INTO `compte` (`ID_COMPTE`, `TXT_LOGIN`, `TXT_MOTDEPASSE`, `ID_TYPECOMPTE
 (58, 'YANG.Jing', '$2h5ADN5BooAA', 1),
 (59, 'YANG.Jemika', '$2W.wZ10iVwWo', 1),
 (60, 'YANG.J', '$2bk6E2mLJ4Es', 1),
-(61, 'YANG.ying', '$2bk6E2mLJ4Es', 1);
+(61, 'YANG.ying', '$2bk6E2mLJ4Es', 1),
+(62, 'aa.aaa', '$2F4KK3Qd9.gY', 1),
+(63, 'Sebastien.Patrick', '$2UmU7LJRude.', 1),
+(64, 'Sebastien.Patrick', '$2UmU7LJRude.', 1),
+(65, 'patseb', 'c''estlafête', 2),
+(66, 'medecinhepato', 'medecinhepato', 2),
+(67, 'jeanorthoptiste', 'jeanotrhoptiste', 2),
+(68, 'micheldiabetologue', 'micheldiabetologue', 2),
+(69, 'idepansement', 'idepansement', 2),
+(70, 'denispodologue', 'denispodologue', 2),
+(71, 'pompeinsuline', 'pompeinsuline', 2),
+(72, 'insulinothérapie', 'insulinothérapie', 2),
+(73, 'josechimio', 'jocechimio', 2),
+(74, 'jeromegeneraliste', 'jeromegeneraliste', 2),
+(75, 'gerardgeriatre', 'gerardgeriatre', 2),
+(76, 'michaelcardiologue', 'michaelcardioologue', 2),
+(77, 'jeankine', 'jeankine', 2),
+(78, 'idecardio', 'idecardio', 2),
+(79, 'agentaccueil', 'agentaccueil', 2),
+(80, 'alphonseneurologue', 'alphonseneurologue', 2),
+(81, 'neuropsychiatre', 'neuropsychiatre', 2),
+(82, 'Un.Numero', '$2FSeMrBqFIJc', 1),
+(83, 'Deux.Numero', '$2uND8MNHHC.2', 1),
+(84, 'Trois.Numero', '$2FSeMrBqFIJc', 1),
+(85, 'Quatre.Numero', '$2dduJUEGC.rM', 1),
+(86, 'Cinq.Numero', '$2UmU7LJRude.', 1),
+(87, 'Six.Numero', '$2UmU7LJRude.', 1),
+(88, 'Sept.Numero', '$2dduJUEGC.rM', 1),
+(89, 'Huit.Numero', '$2dduJUEGC.rM', 1),
+(90, 'Neuf.Numero', '$2QilzLl5Uwts', 1),
+(91, 'ide', 'obesite', 2),
+(92, 'ide', 'chimio', 2),
+(93, 'ide', 'chimio', 2),
+(94, 'interne', 'obesite', 2),
+(95, 'medecin', 'generaliste', 2),
+(96, 'un.Numero', '$2wZocjqVQKp2', 1),
+(97, 'Deux.Numero', '$2QilzLl5Uwts', 1),
+(98, 'Trois.Numero', '$2yg83mefGwzc', 1),
+(99, 'Quatre.Numero', '$2yg83mefGwzc', 1),
+(100, 'Cinq.Numero', '$2QilzLl5Uwts', 1);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `constituerdossier`
+-- Structure de la table `constituerdossier`
 --
 
 CREATE TABLE IF NOT EXISTS `constituerdossier` (
@@ -251,85 +514,141 @@ CREATE TABLE IF NOT EXISTS `constituerdossier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `constituerdossier`
+-- Contenu de la table `constituerdossier`
 --
 
 INSERT INTO `constituerdossier` (`ID_CHAMP`, `ID_ONGLET`, `ID_DOSSIERPARCOURS`, `TXT_VALEUR`) VALUES
-(2, 1, 2, NULL),
-(3, 1, 2, '03/07/2018'),
-(2, 2, 2, NULL),
-(3, 2, 2, NULL),
-(2, 3, 2, NULL),
-(3, 3, 2, NULL),
-(2, 4, 2, NULL),
-(3, 4, 2, NULL),
-(2, 5, 2, NULL),
-(3, 5, 2, NULL),
-(2, 6, 2, NULL),
-(3, 6, 2, NULL),
-(2, 7, 2, NULL),
-(3, 7, 2, NULL),
-(2, 8, 2, NULL),
-(3, 8, 2, NULL),
-(2, 9, 2, NULL),
-(3, 9, 2, NULL),
-(2, 9, 2, NULL),
-(3, 9, 2, NULL),
-(2, 9, 2, NULL),
-(3, 9, 2, NULL),
-(2, 31, 2, NULL),
-(3, 31, 2, NULL),
-(2, 31, 2, NULL),
-(3, 31, 2, NULL),
-(2, 31, 2, NULL),
-(3, 31, 2, NULL),
-(2, 31, 2, NULL),
-(3, 31, 2, NULL),
-(2, 1, 4, NULL),
-(3, 1, 4, NULL),
-(2, 2, 4, NULL),
-(3, 2, 4, NULL),
-(2, 3, 4, NULL),
-(3, 3, 4, NULL),
-(2, 4, 4, NULL),
-(3, 4, 4, NULL),
-(2, 5, 4, NULL),
-(3, 5, 4, NULL),
-(2, 6, 4, NULL),
-(3, 6, 4, NULL),
-(2, 7, 4, NULL),
-(3, 7, 4, NULL),
-(2, 8, 4, NULL),
-(3, 8, 4, NULL),
-(2, 9, 4, NULL),
-(3, 9, 4, NULL),
-(2, 9, 4, NULL),
-(3, 9, 4, NULL),
-(2, 9, 4, NULL),
-(3, 9, 4, NULL),
-(2, 31, 4, NULL),
-(3, 31, 4, NULL),
-(2, 31, 4, NULL),
-(3, 31, 4, NULL),
-(2, 31, 4, NULL),
-(3, 31, 4, NULL),
-(2, 31, 4, NULL),
-(3, 31, 4, NULL),
-(2, 1, 1, NULL),
-(3, 1, 1, ''),
-(2, 13, 1, NULL),
-(3, 13, 1, NULL),
-(2, 1, 5, NULL),
-(3, 1, 5, NULL),
-(2, 4, 5, NULL),
-(3, 4, 5, NULL),
-(2, 13, 5, NULL),
-(3, 13, 5, NULL),
-(11, 1, 1, 'OK'),
-(12, 1, 2, 'BIEN');
+(2, 1, 33, NULL),
+(3, 1, 33, NULL),
+(2, 2, 33, NULL),
+(3, 2, 33, NULL),
+(2, 3, 33, NULL),
+(3, 3, 33, NULL),
+(2, 4, 33, NULL),
+(3, 4, 33, NULL),
+(2, 5, 33, NULL),
+(3, 5, 33, NULL),
+(2, 6, 33, NULL),
+(3, 6, 33, NULL),
+(2, 7, 33, NULL),
+(3, 7, 33, NULL),
+(2, 8, 33, NULL),
+(3, 8, 33, NULL),
+(2, 9, 33, NULL),
+(3, 9, 33, NULL),
+(2, 9, 33, NULL),
+(3, 9, 33, NULL),
+(2, 9, 33, NULL),
+(3, 9, 33, NULL),
+(2, 11, 33, NULL),
+(3, 11, 33, NULL),
+(2, 31, 33, NULL),
+(3, 31, 33, NULL),
+(2, 31, 33, NULL),
+(3, 31, 33, NULL),
+(2, 31, 33, NULL),
+(3, 31, 33, NULL),
+(2, 31, 33, NULL),
+(3, 31, 33, NULL),
+(2, 1, 34, NULL),
+(3, 1, 34, NULL),
+(2, 2, 34, NULL),
+(3, 2, 34, NULL),
+(2, 3, 34, NULL),
+(3, 3, 34, NULL),
+(2, 4, 34, NULL),
+(3, 4, 34, NULL),
+(2, 5, 34, NULL),
+(3, 5, 34, NULL),
+(2, 6, 34, NULL),
+(3, 6, 34, NULL),
+(2, 7, 34, NULL),
+(3, 7, 34, NULL),
+(2, 8, 34, NULL),
+(3, 8, 34, NULL),
+(2, 9, 34, NULL),
+(3, 9, 34, NULL),
+(2, 9, 34, NULL),
+(3, 9, 34, NULL),
+(2, 9, 34, NULL),
+(3, 9, 34, NULL),
+(2, 11, 34, NULL),
+(3, 11, 34, NULL),
+(2, 31, 34, NULL),
+(3, 31, 34, NULL),
+(2, 31, 34, NULL),
+(3, 31, 34, NULL),
+(2, 31, 34, NULL),
+(3, 31, 34, NULL),
+(2, 31, 34, NULL),
+(3, 31, 34, NULL),
+(2, 1, 35, NULL),
+(3, 1, 35, NULL),
+(2, 2, 35, NULL),
+(3, 2, 35, NULL),
+(2, 3, 35, NULL),
+(3, 3, 35, NULL),
+(2, 4, 35, NULL),
+(3, 4, 35, NULL),
+(2, 5, 35, NULL),
+(3, 5, 35, NULL),
+(2, 6, 35, NULL),
+(3, 6, 35, NULL),
+(2, 7, 35, NULL),
+(3, 7, 35, NULL),
+(2, 8, 35, NULL),
+(3, 8, 35, NULL),
+(2, 9, 35, NULL),
+(3, 9, 35, NULL),
+(2, 9, 35, NULL),
+(3, 9, 35, NULL),
+(2, 9, 35, NULL),
+(3, 9, 35, NULL),
+(2, 11, 35, NULL),
+(3, 11, 35, NULL),
+(2, 31, 35, NULL),
+(3, 31, 35, NULL),
+(2, 31, 35, NULL),
+(3, 31, 35, NULL),
+(2, 31, 35, NULL),
+(3, 31, 35, NULL),
+(2, 31, 35, NULL),
+(3, 31, 35, NULL),
+(2, 1, 36, NULL),
+(3, 1, 36, NULL),
+(2, 2, 36, NULL),
+(3, 2, 36, NULL),
+(2, 3, 36, NULL),
+(3, 3, 36, NULL),
+(2, 4, 36, NULL),
+(3, 4, 36, NULL),
+(2, 5, 36, NULL),
+(3, 5, 36, NULL),
+(2, 6, 36, NULL),
+(3, 6, 36, NULL),
+(2, 7, 36, NULL),
+(3, 7, 36, NULL),
+(2, 8, 36, NULL),
+(3, 8, 36, NULL),
+(2, 9, 36, NULL),
+(3, 9, 36, NULL),
+(2, 9, 36, NULL),
+(3, 9, 36, NULL),
+(2, 9, 36, NULL),
+(3, 9, 36, NULL),
+(2, 11, 36, NULL),
+(3, 11, 36, NULL),
+(2, 31, 36, NULL),
+(3, 31, 36, NULL),
+(2, 31, 36, NULL),
+(3, 31, 36, NULL),
+(2, 31, 36, NULL),
+(3, 31, 36, NULL),
+(2, 31, 36, NULL),
+(3, 31, 36, NULL);
 
 --
--- 触发器 `constituerdossier`
+-- Déclencheurs `constituerdossier`
 --
 DROP TRIGGER IF EXISTS `apres_modification_dossier`;
 DELIMITER //
@@ -341,7 +660,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- 表的结构 `dossiergenerique`
+-- Structure de la table `dossiergenerique`
 --
 
 CREATE TABLE IF NOT EXISTS `dossiergenerique` (
@@ -359,7 +678,7 @@ CREATE TABLE IF NOT EXISTS `dossiergenerique` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `dossierparcours`
+-- Structure de la table `dossierparcours`
 --
 
 CREATE TABLE IF NOT EXISTS `dossierparcours` (
@@ -376,17 +695,17 @@ CREATE TABLE IF NOT EXISTS `dossierparcours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `dossierparcours`
+-- Contenu de la table `dossierparcours`
 --
 
 INSERT INTO `dossierparcours` (`ID_DOSSIERPARCOURS`, `ID_PATIENT`, `ID_PARCOURS`, `DATE_CREATION_DOSSIER`, `DATE_DERNIERE_MODIFICATION`, `DATE_DISPONIBLE_DEBUT`, `DATE_DISPONIBLE_FIN`) VALUES
-(1, 12, 26, '2018-03-27', '2018-03-27', '2018-03-28', '2018-03-28'),
-(2, 12, 1, '2018-03-27', '2018-03-27', '2018-03-31', '2018-03-31'),
-(4, 12, 1, '2018-03-27', '2018-03-27', '2018-04-07', '2018-04-07'),
-(5, 12, 27, '2018-03-27', '2018-03-27', '2018-03-21', '2018-03-21');
+(33, 18, 1, '2019-01-22', '2019-01-22', '2019-01-22', '2019-01-22'),
+(34, 2, 1, '2019-02-25', '2019-02-25', '2019-03-30', '2019-03-30'),
+(35, 3, 1, '2019-02-25', '2019-02-25', '2019-03-30', '2019-03-30'),
+(36, 7, 1, '2019-02-25', '2019-02-25', '2019-03-30', '2019-03-30');
 
 --
--- 触发器 `dossierparcours`
+-- Déclencheurs `dossierparcours`
 --
 DROP TRIGGER IF EXISTS `apres_creation_dossier_parcours`;
 DELIMITER //
@@ -401,7 +720,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- 表的结构 `etreindisponible`
+-- Structure de la table `etreindisponible`
 --
 
 CREATE TABLE IF NOT EXISTS `etreindisponible` (
@@ -413,10 +732,18 @@ CREATE TABLE IF NOT EXISTS `etreindisponible` (
   KEY `I_FK_ETREINDISPONIBLE_RESSOURCE` (`ID_RESSOURCE`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `etreindisponible`
+--
+
+INSERT INTO `etreindisponible` (`ID_ETREINDISPONIBLE`, `ID_RESSOURCE`, `DATE_DEBUT`, `DATE_FIN`) VALUES
+(1, 1, '2018-04-13 00:04:00', '2018-04-13 23:53:00'),
+(2, 6, '2018-09-27 00:00:00', '2018-09-30 00:00:00');
+
 -- --------------------------------------------------------
 
 --
--- 表的结构 `evenement`
+-- Structure de la table `evenement`
 --
 
 CREATE TABLE IF NOT EXISTS `evenement` (
@@ -434,127 +761,12 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   KEY `patientId` (`patientId`),
   KEY `parcoursId` (`parcoursId`),
   KEY `activiteId` (`activiteId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=480 ;
-
---
--- 转存表中的数据 `evenement`
---
-
-INSERT INTO `evenement` (`id`, `title`, `end`, `start`, `ressourceId`, `patientId`, `parcoursId`, `activiteId`, `color`) VALUES
-(325, 'Martin Simon - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 10:20:00', '2017-04-06 10:00:00', 1, 1, 1, 1, '#FF1490'),
-(326, 'Martin Simon - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 10:20:00', '2017-04-06 10:00:00', 23, 1, 1, 1, '#FF1490'),
-(329, 'Martin Simon - ECG - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:25:00', 3, 1, 1, 2, '#FF1490'),
-(330, 'Martin Simon - ECG - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:25:00', 17, 1, 1, 2, '#FF1490'),
-(331, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 4, 1, 1, 3, '#FF1490'),
-(332, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 19, 1, 1, 3, '#FF1490'),
-(333, 'Martin Simon - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:45:00', 31, 1, 1, 4, '#FF1490'),
-(335, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 39, 1, 1, 5, '#FF1490'),
-(336, 'Martin Simon - Collation - Obésité sévère – diagnostique', '2017-04-06 11:55:00', '2017-04-06 11:45:00', 3, 1, 1, 31, '#FF1490'),
-(337, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 5, 1, 1, 6, '#FF1490'),
-(338, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 25, 1, 1, 6, '#FF1490'),
-(339, 'Martin Simon - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 14:05:00', '2017-04-06 13:35:00', 1, 1, 1, 7, '#FF1490'),
-(340, 'Martin Simon - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 14:05:00', '2017-04-06 13:35:00', 23, 1, 1, 7, '#FF1490'),
-(341, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 7, 1, 1, 8, '#FF1490'),
-(342, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 24, 1, 1, 8, '#FF1490'),
-(343, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 9, 1, 1, 9, '#FF1490'),
-(344, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 23, 1, 1, 9, '#FF1490'),
-(346, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 23, 2, 1, 1, '#90BC90'),
-(347, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 3, 2, 1, 2, '#90BC90'),
-(348, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 17, 2, 1, 2, '#90BC90'),
-(349, 'Bernard Laurent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:45:00', '2017-04-06 09:30:00', 4, 2, 1, 3, '#90BC90'),
-(350, 'Bernard Laurent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:45:00', '2017-04-06 09:30:00', 19, 2, 1, 3, '#90BC90'),
-(351, 'Bernard Laurent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:00:00', '2017-04-06 09:45:00', 31, 2, 1, 4, '#90BC90'),
-(352, 'Bernard Laurent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 10:00:00', 37, 2, 1, 5, '#90BC90'),
-(353, 'Bernard Laurent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 10:00:00', 24, 2, 1, 5, '#90BC90'),
-(354, 'Bernard Laurent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:25:00', '2017-04-06 10:45:00', 5, 2, 1, 6, '#90BC90'),
-(355, 'Bernard Laurent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:25:00', '2017-04-06 10:45:00', 25, 2, 1, 6, '#90BC90'),
-(356, 'Bernard Laurent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:05:00', '2017-04-06 11:35:00', 1, 2, 1, 7, '#90BC90'),
-(357, 'Bernard Laurent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:05:00', '2017-04-06 11:35:00', 24, 2, 1, 7, '#90BC90'),
-(364, 'Bernard Laurent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:30:00', 6, 2, 1, 31, '#90BC90'),
-(373, 'Bernard Laurent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:05:00', '2017-04-06 12:05:00', 34, 2, 1, 8, '#90BC90'),
-(374, 'Bernard Laurent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:05:00', '2017-04-06 12:05:00', 23, 2, 1, 8, '#90BC90'),
-(375, 'Bernard Laurent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:50:00', '2017-04-06 13:20:00', 10, 2, 1, 9, '#90BC90'),
-(376, 'Bernard Laurent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:50:00', '2017-04-06 13:20:00', 39, 2, 1, 9, '#90BC90'),
-(377, 'Robert Garcia - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 08:20:00', '2017-04-06 08:00:00', 1, 5, 1, 1, '#880088'),
-(378, 'Robert Garcia - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 08:20:00', '2017-04-06 08:00:00', 23, 5, 1, 1, '#880088'),
-(379, 'Robert Garcia - ECG - Obésité sévère – diagnostique', '2017-04-06 08:40:00', '2017-04-06 08:25:00', 3, 5, 1, 2, '#880088'),
-(380, 'Robert Garcia - ECG - Obésité sévère – diagnostique', '2017-04-06 08:40:00', '2017-04-06 08:25:00', 17, 5, 1, 2, '#880088'),
-(381, 'Robert Garcia - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 08:55:00', '2017-04-06 08:40:00', 4, 5, 1, 3, '#880088'),
-(382, 'Robert Garcia - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 08:55:00', '2017-04-06 08:40:00', 19, 5, 1, 3, '#880088'),
-(383, 'Robert Garcia - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:55:00', 31, 5, 1, 4, '#880088'),
-(384, 'Leroy Vincent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:20:00', '2017-04-06 09:00:00', 1, 9, 1, 1, '#FF8C00'),
-(385, 'Leroy Vincent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:20:00', '2017-04-06 09:00:00', 24, 9, 1, 1, '#FF8C00'),
-(386, 'Leroy Vincent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:25:00', 32, 9, 1, 2, '#FF8C00'),
-(387, 'Leroy Vincent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:25:00', 18, 9, 1, 2, '#FF8C00'),
-(388, 'Leroy Vincent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:55:00', '2017-04-06 09:40:00', 36, 9, 1, 3, '#FF8C00'),
-(389, 'Leroy Vincent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:55:00', '2017-04-06 09:40:00', 20, 9, 1, 3, '#FF8C00'),
-(390, 'Leroy Vincent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:10:00', '2017-04-06 09:55:00', 38, 9, 1, 4, '#FF8C00'),
-(391, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 33, 9, 1, 6, '#FF8C00'),
-(392, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 26, 9, 1, 6, '#FF8C00'),
-(394, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 40, 9, 1, 5, '#FF8C00'),
-(395, 'Leroy Vincent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:55:00', '2017-04-06 10:45:00', 33, 9, 1, 31, '#FF8C00'),
-(396, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 37, 9, 1, 7, '#FF8C00'),
-(397, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 40, 9, 1, 7, '#FF8C00'),
-(398, 'Leroy Vincent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:10:00', '2017-04-06 12:10:00', 8, 9, 1, 8, '#FF8C00'),
-(399, 'Leroy Vincent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:10:00', '2017-04-06 12:10:00', 39, 9, 1, 8, '#FF8C00'),
-(400, 'Leroy Vincent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:45:00', '2017-04-06 13:15:00', 9, 9, 1, 9, '#FF8C00'),
-(401, 'Leroy Vincent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:45:00', '2017-04-06 13:15:00', 40, 9, 1, 9, '#FF8C00'),
-(402, 'Robert Garcia - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:10:00', 37, 5, 1, 5, '#880088'),
-(403, 'Robert Garcia - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:10:00', 39, 5, 1, 5, '#880088'),
-(404, 'Robert Garcia - Collation - Obésité sévère – diagnostique', '2017-04-06 09:50:00', '2017-04-06 09:40:00', 35, 5, 1, 31, '#880088'),
-(405, 'Robert Garcia - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 09:50:00', 5, 5, 1, 6, '#880088'),
-(406, 'Robert Garcia - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 09:50:00', 25, 5, 1, 6, '#880088'),
-(407, 'Robert Garcia - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:30:00', 1, 5, 1, 7, '#880088'),
-(408, 'Robert Garcia - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:30:00', 39, 5, 1, 7, '#880088'),
-(409, 'Robert Garcia - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 12:00:00', '2017-04-06 11:00:00', 7, 5, 1, 8, '#880088'),
-(410, 'Robert Garcia - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 12:00:00', '2017-04-06 11:00:00', 23, 5, 1, 8, '#880088'),
-(411, 'Robert Garcia - synthèse - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 12:05:00', 35, 5, 1, 9, '#880088'),
-(412, 'Robert Garcia - synthèse - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 12:05:00', 24, 5, 1, 9, '#880088'),
-(413, 'Dubois Lefebvre - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 14:50:00', '2017-04-06 14:30:00', 1, 3, 1, 1, '#008C90'),
-(414, 'Dubois Lefebvre - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 14:50:00', '2017-04-06 14:30:00', 24, 3, 1, 1, '#008C90'),
-(415, 'Dubois Lefebvre - ECG - Obésité sévère – diagnostique', '2017-04-06 15:35:00', '2017-04-06 15:20:00', 3, 3, 1, 2, '#008C90'),
-(416, 'Dubois Lefebvre - ECG - Obésité sévère – diagnostique', '2017-04-06 15:35:00', '2017-04-06 15:20:00', 17, 3, 1, 2, '#008C90'),
-(417, 'Dubois Lefebvre - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 15:15:00', '2017-04-06 15:00:00', 4, 3, 1, 3, '#008C90'),
-(418, 'Dubois Lefebvre - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 15:15:00', '2017-04-06 15:00:00', 19, 3, 1, 3, '#008C90'),
-(419, 'Dubois Lefebvre - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 16:20:00', '2017-04-06 16:05:00', 31, 3, 1, 4, '#008C90'),
-(420, 'Dubois Lefebvre - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 16:05:00', '2017-04-06 15:35:00', 1, 3, 1, 5, '#008C90'),
-(421, 'Dubois Lefebvre - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 16:05:00', '2017-04-06 15:35:00', 23, 3, 1, 5, '#008C90'),
-(422, 'Dubois Lefebvre - Collation - Obésité sévère – diagnostique', '2017-04-06 16:40:00', '2017-04-06 16:30:00', 5, 3, 1, 31, '#008C90'),
-(423, 'Dubois Lefebvre - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 17:55:00', '2017-04-06 17:15:00', 6, 3, 1, 6, '#008C90'),
-(424, 'Dubois Lefebvre - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 17:55:00', '2017-04-06 17:15:00', 25, 3, 1, 6, '#008C90'),
-(425, 'Dubois Lefebvre - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 17:15:00', '2017-04-06 16:45:00', 1, 3, 1, 7, '#008C90'),
-(426, 'Dubois Lefebvre - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 17:15:00', '2017-04-06 16:45:00', 23, 3, 1, 7, '#008C90'),
-(427, 'Dubois Lefebvre - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 18:55:00', '2017-04-06 17:55:00', 7, 3, 1, 8, '#008C90'),
-(428, 'Dubois Lefebvre - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 18:55:00', '2017-04-06 17:55:00', 24, 3, 1, 8, '#008C90'),
-(429, 'Dubois Lefebvre - synthèse - Obésité sévère – diagnostique', '2017-04-06 19:30:00', '2017-04-06 19:00:00', 9, 3, 1, 9, '#008C90'),
-(430, 'Dubois Lefebvre - synthèse - Obésité sévère – diagnostique', '2017-04-06 19:30:00', '2017-04-06 19:00:00', 23, 3, 1, 9, '#008C90'),
-(434, 'Moreau Fournier - RDV paramédical - Obésité sévère – diagnostique', '2017-03-29 08:20:00', '2017-03-29 08:00:00', 1, 10, 1, 1, '#9800D8'),
-(435, 'Moreau Fournier - RDV paramédical - Obésité sévère – diagnostique', '2017-03-29 08:20:00', '2017-03-29 08:00:00', 23, 10, 1, 1, '#9800D8'),
-(436, 'Moreau Fournier - ECG - Obésité sévère – diagnostique', '2017-03-29 08:40:00', '2017-03-29 08:25:00', 3, 10, 1, 2, '#9800D8'),
-(437, 'Moreau Fournier - ECG - Obésité sévère – diagnostique', '2017-03-29 08:40:00', '2017-03-29 08:25:00', 17, 10, 1, 2, '#9800D8'),
-(438, 'Moreau Fournier - Bilan biologique - Obésité sévère – diagnostique', '2017-03-29 08:55:00', '2017-03-29 08:40:00', 4, 10, 1, 3, '#9800D8'),
-(439, 'Moreau Fournier - Bilan biologique - Obésité sévère – diagnostique', '2017-03-29 08:55:00', '2017-03-29 08:40:00', 19, 10, 1, 3, '#9800D8'),
-(440, 'Moreau Fournier - Echo hépatique - Obésité sévère – diagnostique', '2017-03-29 09:10:00', '2017-03-29 08:55:00', 31, 10, 1, 4, '#9800D8'),
-(441, 'Moreau Fournier - Calorimétrie - Obésité sévère – diagnostique', '2017-03-29 09:45:00', '2017-03-29 09:15:00', 1, 10, 1, 5, '#9800D8'),
-(442, 'Moreau Fournier - Calorimétrie - Obésité sévère – diagnostique', '2017-03-29 09:45:00', '2017-03-29 09:15:00', 23, 10, 1, 5, '#9800D8'),
-(443, 'Moreau Fournier - Collation - Obésité sévère – diagnostique', '2017-03-29 09:55:00', '2017-03-29 09:45:00', 37, 10, 1, 31, '#9800D8'),
-(444, 'Moreau Fournier - Entretien psy - Obésité sévère – diagnostique', '2017-03-29 10:40:00', '2017-03-29 10:00:00', 5, 10, 1, 6, '#9800D8'),
-(445, 'Moreau Fournier - Entretien psy - Obésité sévère – diagnostique', '2017-03-29 10:40:00', '2017-03-29 10:00:00', 25, 10, 1, 6, '#9800D8'),
-(446, 'Moreau Fournier - Entretien infirmier - Obésité sévère – diagnostique', '2017-03-29 11:20:00', '2017-03-29 10:50:00', 1, 10, 1, 7, '#9800D8'),
-(447, 'Moreau Fournier - Entretien infirmier - Obésité sévère – diagnostique', '2017-03-29 11:20:00', '2017-03-29 10:50:00', 23, 10, 1, 7, '#9800D8'),
-(448, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 7, 10, 1, 8, '#9800D8'),
-(449, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 24, 10, 1, 8, '#9800D8'),
-(450, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 9, 10, 1, 9, '#9800D8'),
-(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8'),
-(474, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 3, 12, 1, 2, '#90BC90'),
-(475, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 17, 12, 1, 2, '#90BC90'),
-(478, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 5, 12, 26, 13, '#90BC90'),
-(479, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 27, 12, 26, 13, '#90BC90');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1660 ;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `jour`
+-- Structure de la table `jour`
 --
 
 CREATE TABLE IF NOT EXISTS `jour` (
@@ -565,7 +777,7 @@ CREATE TABLE IF NOT EXISTS `jour` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `jour`
+-- Contenu de la table `jour`
 --
 
 INSERT INTO `jour` (`ID_JOUR`, `TXT_JOUR`, `INT_JOUR_SQL`) VALUES
@@ -580,7 +792,7 @@ INSERT INTO `jour` (`ID_JOUR`, `TXT_JOUR`, `INT_JOUR_SQL`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `necessiter`
+-- Structure de la table `necessiter`
 --
 
 CREATE TABLE IF NOT EXISTS `necessiter` (
@@ -593,34 +805,111 @@ CREATE TABLE IF NOT EXISTS `necessiter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `necessiter`
+-- Contenu de la table `necessiter`
 --
 
 INSERT INTO `necessiter` (`ID_ACTIVITE`, `ID_TYPERESSOURCE`, `QUANTITE`) VALUES
 (1, 1, 1),
-(1, 43, 1),
+(1, 44, 1),
 (2, 2, 1),
-(2, 40, 1),
+(2, 41, 1),
 (3, 2, 1),
 (3, 41, 1),
-(4, 42, 1),
 (5, 1, 1),
 (5, 43, 1),
 (6, 3, 1),
 (6, 44, 1),
 (7, 1, 1),
-(7, 43, 1),
+(7, 44, 1),
 (8, 4, 1),
-(8, 43, 1),
+(8, 44, 1),
 (9, 5, 1),
-(9, 43, 1),
-(13, 3, 1),
-(13, 45, 1);
+(9, 44, 1),
+(11, 44, 1),
+(11, 55, 1),
+(12, 43, 1),
+(12, 56, 1),
+(13, 42, 1),
+(14, 44, 1),
+(14, 56, 1),
+(15, 45, 1),
+(16, 55, 1),
+(16, 58, 1),
+(17, 2, 1),
+(17, 58, 1),
+(18, 2, 1),
+(18, 57, 1),
+(19, 42, 1),
+(23, 44, 1),
+(23, 59, 1),
+(24, 44, 1),
+(24, 60, 1),
+(24, 63, 1),
+(26, 42, 1),
+(27, 42, 1),
+(28, 46, 1),
+(28, 60, 1),
+(28, 61, 1),
+(28, 62, 1),
+(29, 44, 1),
+(29, 60, 1),
+(30, 2, 1),
+(30, 41, 1),
+(33, 2, 1),
+(33, 44, 1),
+(34, 4, 1),
+(34, 44, 1),
+(34, 60, 1),
+(34, 64, 1),
+(36, 44, 1),
+(36, 65, 1),
+(37, 57, 1),
+(37, 65, 1),
+(38, 57, 1),
+(38, 65, 1),
+(39, 44, 1),
+(39, 66, 1),
+(40, 2, 1),
+(40, 58, 1),
+(42, 57, 1),
+(42, 65, 1),
+(43, 58, 1),
+(43, 70, 1),
+(45, 44, 1),
+(45, 67, 1),
+(46, 2, 1),
+(46, 57, 1),
+(47, 58, 1),
+(49, 42, 1),
+(50, 44, 1),
+(50, 68, 1),
+(51, 44, 1),
+(51, 69, 1),
+(52, 42, 1),
+(53, 42, 1),
+(54, 44, 1),
+(54, 68, 1),
+(55, 42, 1),
+(56, 71, 1),
+(58, 42, 1),
+(59, 42, 1),
+(59, 72, 1),
+(60, 58, 1),
+(60, 70, 1),
+(61, 44, 1),
+(61, 72, 1),
+(62, 42, 1),
+(64, 58, 1),
+(64, 72, 1),
+(65, 44, 1),
+(65, 73, 1),
+(66, 3, 1),
+(66, 44, 1);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `onglet`
+-- Structure de la table `onglet`
 --
 
 CREATE TABLE IF NOT EXISTS `onglet` (
@@ -632,7 +921,7 @@ CREATE TABLE IF NOT EXISTS `onglet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `onglet`
+-- Contenu de la table `onglet`
 --
 
 INSERT INTO `onglet` (`ID_ONGLET`, `TXT_NOM`, `ID_ACTIVITE`) VALUES
@@ -661,19 +950,51 @@ INSERT INTO `onglet` (`ID_ONGLET`, `TXT_NOM`, `ID_ACTIVITE`) VALUES
 (22, 'Echodoppler TSA et MI', 22),
 (23, 'Rétinographie', 23),
 (24, 'Pose Holter', 24),
-(25, 'Scanner abdo', 25),
 (26, 'Scanner TMD pied + radios', 26),
 (27, 'Doppler des artères des MI', 27),
 (28, 'Soin, pansement, mesures IPS', 28),
 (29, 'RDV médical', 29),
 (30, 'Prélèvement', 30),
 (31, 'Collation', 31),
-(32, 'Synthèse', 32);
+(33, 'RDV Paramédical', 33),
+(34, 'RDV médical + diet', 34),
+(35, 'OK chimio', 35),
+(36, 'RDV paramédical chimio', 36),
+(37, 'Pose d''aiguille PAC', 37),
+(38, 'Prémédication', 38),
+(39, 'Consultation médicale', 39),
+(40, 'Examens', 40),
+(41, 'OK administration', 41),
+(42, 'Administration chimio', 42),
+(43, 'ETP', 43),
+(44, 'ETP', 44),
+(45, 'Consultation médiacle gériatrie', 45),
+(46, 'Soins', 46),
+(47, 'Examens', 47),
+(48, 'Test d''efforts', 48),
+(49, 'Explorations fonctionnelles ou morphologiques', 49),
+(50, 'Bilan cardio', 50),
+(51, 'Test fonctionnel', 51),
+(52, 'IRM', 52),
+(53, 'Echo cardiaque', 53),
+(54, 'Examens cliniques', 54),
+(55, 'Médecine nucléaire', 55),
+(56, 'RDV Accueil', 56),
+(57, 'ARM', 57),
+(58, 'Echodoppler TSA', 58),
+(59, 'ETT', 59),
+(60, 'Holter', 60),
+(61, 'Synthèse neuro', 61),
+(62, 'EEG', 62),
+(63, 'Scintigraphie cérébrale', 63),
+(64, 'Ponction lombaire', 64),
+(65, 'Consultation neuropsy', 65),
+(66, 'Consultation psy', 66);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ordonnancer`
+-- Structure de la table `ordonnancer`
 --
 
 CREATE TABLE IF NOT EXISTS `ordonnancer` (
@@ -691,127 +1012,12 @@ CREATE TABLE IF NOT EXISTS `ordonnancer` (
   KEY `patientId` (`patientId`),
   KEY `parcoursId` (`parcoursId`),
   KEY `activiteId` (`activiteId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=480 ;
-
---
--- 转存表中的数据 `ordonnancer`
---
-
-INSERT INTO `ordonnancer` (`id`, `title`, `end`, `start`, `ressourceId`, `patientId`, `parcoursId`, `activiteId`, `color`) VALUES
-(325, 'Martin Simon - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 10:20:00', '2017-04-06 10:00:00', 1, 1, 1, 1, '#FF1490'),
-(326, 'Martin Simon - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 10:20:00', '2017-04-06 10:00:00', 23, 1, 1, 1, '#FF1490'),
-(329, 'Martin Simon - ECG - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:25:00', 3, 1, 1, 2, '#FF1490'),
-(330, 'Martin Simon - ECG - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:25:00', 17, 1, 1, 2, '#FF1490'),
-(331, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 4, 1, 1, 3, '#FF1490'),
-(332, 'Martin Simon - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 11:15:00', '2017-04-06 11:00:00', 19, 1, 1, 3, '#FF1490'),
-(333, 'Martin Simon - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:45:00', 31, 1, 1, 4, '#FF1490'),
-(335, 'Martin Simon - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 11:45:00', '2017-04-06 11:15:00', 39, 1, 1, 5, '#FF1490'),
-(336, 'Martin Simon - Collation - Obésité sévère – diagnostique', '2017-04-06 11:55:00', '2017-04-06 11:45:00', 3, 1, 1, 31, '#FF1490'),
-(337, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 5, 1, 1, 6, '#FF1490'),
-(338, 'Martin Simon - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 11:55:00', 25, 1, 1, 6, '#FF1490'),
-(339, 'Martin Simon - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 14:05:00', '2017-04-06 13:35:00', 1, 1, 1, 7, '#FF1490'),
-(340, 'Martin Simon - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 14:05:00', '2017-04-06 13:35:00', 23, 1, 1, 7, '#FF1490'),
-(341, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 7, 1, 1, 8, '#FF1490'),
-(342, 'Martin Simon - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:35:00', '2017-04-06 12:35:00', 24, 1, 1, 8, '#FF1490'),
-(343, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 9, 1, 1, 9, '#FF1490'),
-(344, 'Martin Simon - synthèse - Obésité sévère – diagnostique', '2017-04-06 14:45:00', '2017-04-06 14:15:00', 23, 1, 1, 9, '#FF1490'),
-(346, 'Bernard Laurent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:50:00', 23, 2, 1, 1, '#90BC90'),
-(347, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 3, 2, 1, 2, '#90BC90'),
-(348, 'Bernard Laurent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:30:00', '2017-04-06 09:15:00', 17, 2, 1, 2, '#90BC90'),
-(349, 'Bernard Laurent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:45:00', '2017-04-06 09:30:00', 4, 2, 1, 3, '#90BC90'),
-(350, 'Bernard Laurent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:45:00', '2017-04-06 09:30:00', 19, 2, 1, 3, '#90BC90'),
-(351, 'Bernard Laurent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:00:00', '2017-04-06 09:45:00', 31, 2, 1, 4, '#90BC90'),
-(352, 'Bernard Laurent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 10:00:00', 37, 2, 1, 5, '#90BC90'),
-(353, 'Bernard Laurent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 10:00:00', 24, 2, 1, 5, '#90BC90'),
-(354, 'Bernard Laurent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:25:00', '2017-04-06 10:45:00', 5, 2, 1, 6, '#90BC90'),
-(355, 'Bernard Laurent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:25:00', '2017-04-06 10:45:00', 25, 2, 1, 6, '#90BC90'),
-(356, 'Bernard Laurent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:05:00', '2017-04-06 11:35:00', 1, 2, 1, 7, '#90BC90'),
-(357, 'Bernard Laurent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:05:00', '2017-04-06 11:35:00', 24, 2, 1, 7, '#90BC90'),
-(364, 'Bernard Laurent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:40:00', '2017-04-06 10:30:00', 6, 2, 1, 31, '#90BC90'),
-(373, 'Bernard Laurent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:05:00', '2017-04-06 12:05:00', 34, 2, 1, 8, '#90BC90'),
-(374, 'Bernard Laurent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:05:00', '2017-04-06 12:05:00', 23, 2, 1, 8, '#90BC90'),
-(375, 'Bernard Laurent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:50:00', '2017-04-06 13:20:00', 10, 2, 1, 9, '#90BC90'),
-(376, 'Bernard Laurent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:50:00', '2017-04-06 13:20:00', 39, 2, 1, 9, '#90BC90'),
-(377, 'Robert Garcia - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 08:20:00', '2017-04-06 08:00:00', 1, 5, 1, 1, '#880088'),
-(378, 'Robert Garcia - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 08:20:00', '2017-04-06 08:00:00', 23, 5, 1, 1, '#880088'),
-(379, 'Robert Garcia - ECG - Obésité sévère – diagnostique', '2017-04-06 08:40:00', '2017-04-06 08:25:00', 3, 5, 1, 2, '#880088'),
-(380, 'Robert Garcia - ECG - Obésité sévère – diagnostique', '2017-04-06 08:40:00', '2017-04-06 08:25:00', 17, 5, 1, 2, '#880088'),
-(381, 'Robert Garcia - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 08:55:00', '2017-04-06 08:40:00', 4, 5, 1, 3, '#880088'),
-(382, 'Robert Garcia - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 08:55:00', '2017-04-06 08:40:00', 19, 5, 1, 3, '#880088'),
-(383, 'Robert Garcia - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 09:10:00', '2017-04-06 08:55:00', 31, 5, 1, 4, '#880088'),
-(384, 'Leroy Vincent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:20:00', '2017-04-06 09:00:00', 1, 9, 1, 1, '#FF8C00'),
-(385, 'Leroy Vincent - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 09:20:00', '2017-04-06 09:00:00', 24, 9, 1, 1, '#FF8C00'),
-(386, 'Leroy Vincent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:25:00', 32, 9, 1, 2, '#FF8C00'),
-(387, 'Leroy Vincent - ECG - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:25:00', 18, 9, 1, 2, '#FF8C00'),
-(388, 'Leroy Vincent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:55:00', '2017-04-06 09:40:00', 36, 9, 1, 3, '#FF8C00'),
-(389, 'Leroy Vincent - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 09:55:00', '2017-04-06 09:40:00', 20, 9, 1, 3, '#FF8C00'),
-(390, 'Leroy Vincent - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 10:10:00', '2017-04-06 09:55:00', 38, 9, 1, 4, '#FF8C00'),
-(391, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 33, 9, 1, 6, '#FF8C00'),
-(392, 'Leroy Vincent - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 11:35:00', '2017-04-06 10:55:00', 26, 9, 1, 6, '#FF8C00'),
-(394, 'Leroy Vincent - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 10:45:00', '2017-04-06 10:15:00', 40, 9, 1, 5, '#FF8C00'),
-(395, 'Leroy Vincent - Collation - Obésité sévère – diagnostique', '2017-04-06 10:55:00', '2017-04-06 10:45:00', 33, 9, 1, 31, '#FF8C00'),
-(396, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 37, 9, 1, 7, '#FF8C00'),
-(397, 'Leroy Vincent - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 12:10:00', '2017-04-06 11:40:00', 40, 9, 1, 7, '#FF8C00'),
-(398, 'Leroy Vincent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:10:00', '2017-04-06 12:10:00', 8, 9, 1, 8, '#FF8C00'),
-(399, 'Leroy Vincent - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 13:10:00', '2017-04-06 12:10:00', 39, 9, 1, 8, '#FF8C00'),
-(400, 'Leroy Vincent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:45:00', '2017-04-06 13:15:00', 9, 9, 1, 9, '#FF8C00'),
-(401, 'Leroy Vincent - synthèse - Obésité sévère – diagnostique', '2017-04-06 13:45:00', '2017-04-06 13:15:00', 40, 9, 1, 9, '#FF8C00'),
-(402, 'Robert Garcia - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:10:00', 37, 5, 1, 5, '#880088'),
-(403, 'Robert Garcia - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 09:40:00', '2017-04-06 09:10:00', 39, 5, 1, 5, '#880088'),
-(404, 'Robert Garcia - Collation - Obésité sévère – diagnostique', '2017-04-06 09:50:00', '2017-04-06 09:40:00', 35, 5, 1, 31, '#880088'),
-(405, 'Robert Garcia - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 09:50:00', 5, 5, 1, 6, '#880088'),
-(406, 'Robert Garcia - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 10:30:00', '2017-04-06 09:50:00', 25, 5, 1, 6, '#880088'),
-(407, 'Robert Garcia - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:30:00', 1, 5, 1, 7, '#880088'),
-(408, 'Robert Garcia - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 11:00:00', '2017-04-06 10:30:00', 39, 5, 1, 7, '#880088'),
-(409, 'Robert Garcia - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 12:00:00', '2017-04-06 11:00:00', 7, 5, 1, 8, '#880088'),
-(410, 'Robert Garcia - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 12:00:00', '2017-04-06 11:00:00', 23, 5, 1, 8, '#880088'),
-(411, 'Robert Garcia - synthèse - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 12:05:00', 35, 5, 1, 9, '#880088'),
-(412, 'Robert Garcia - synthèse - Obésité sévère – diagnostique', '2017-04-06 12:35:00', '2017-04-06 12:05:00', 24, 5, 1, 9, '#880088'),
-(413, 'Dubois Lefebvre - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 14:50:00', '2017-04-06 14:30:00', 1, 3, 1, 1, '#008C90'),
-(414, 'Dubois Lefebvre - RDV paramédical - Obésité sévère – diagnostique', '2017-04-06 14:50:00', '2017-04-06 14:30:00', 24, 3, 1, 1, '#008C90'),
-(415, 'Dubois Lefebvre - ECG - Obésité sévère – diagnostique', '2017-04-06 15:35:00', '2017-04-06 15:20:00', 3, 3, 1, 2, '#008C90'),
-(416, 'Dubois Lefebvre - ECG - Obésité sévère – diagnostique', '2017-04-06 15:35:00', '2017-04-06 15:20:00', 17, 3, 1, 2, '#008C90'),
-(417, 'Dubois Lefebvre - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 15:15:00', '2017-04-06 15:00:00', 4, 3, 1, 3, '#008C90'),
-(418, 'Dubois Lefebvre - Bilan biologique - Obésité sévère – diagnostique', '2017-04-06 15:15:00', '2017-04-06 15:00:00', 19, 3, 1, 3, '#008C90'),
-(419, 'Dubois Lefebvre - Echo hépatique - Obésité sévère – diagnostique', '2017-04-06 16:20:00', '2017-04-06 16:05:00', 31, 3, 1, 4, '#008C90'),
-(420, 'Dubois Lefebvre - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 16:05:00', '2017-04-06 15:35:00', 1, 3, 1, 5, '#008C90'),
-(421, 'Dubois Lefebvre - Calorimétrie - Obésité sévère – diagnostique', '2017-04-06 16:05:00', '2017-04-06 15:35:00', 23, 3, 1, 5, '#008C90'),
-(422, 'Dubois Lefebvre - Collation - Obésité sévère – diagnostique', '2017-04-06 16:40:00', '2017-04-06 16:30:00', 5, 3, 1, 31, '#008C90'),
-(423, 'Dubois Lefebvre - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 17:55:00', '2017-04-06 17:15:00', 6, 3, 1, 6, '#008C90'),
-(424, 'Dubois Lefebvre - Entretien psy - Obésité sévère – diagnostique', '2017-04-06 17:55:00', '2017-04-06 17:15:00', 25, 3, 1, 6, '#008C90'),
-(425, 'Dubois Lefebvre - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 17:15:00', '2017-04-06 16:45:00', 1, 3, 1, 7, '#008C90'),
-(426, 'Dubois Lefebvre - Entretien infirmier - Obésité sévère – diagnostique', '2017-04-06 17:15:00', '2017-04-06 16:45:00', 23, 3, 1, 7, '#008C90'),
-(427, 'Dubois Lefebvre - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 18:55:00', '2017-04-06 17:55:00', 7, 3, 1, 8, '#008C90'),
-(428, 'Dubois Lefebvre - Entretien diet - Obésité sévère – diagnostique', '2017-04-06 18:55:00', '2017-04-06 17:55:00', 24, 3, 1, 8, '#008C90'),
-(429, 'Dubois Lefebvre - synthèse - Obésité sévère – diagnostique', '2017-04-06 19:30:00', '2017-04-06 19:00:00', 9, 3, 1, 9, '#008C90'),
-(430, 'Dubois Lefebvre - synthèse - Obésité sévère – diagnostique', '2017-04-06 19:30:00', '2017-04-06 19:00:00', 23, 3, 1, 9, '#008C90'),
-(434, 'Moreau Fournier - RDV paramédical - Obésité sévère – diagnostique', '2017-03-29 08:20:00', '2017-03-29 08:00:00', 1, 10, 1, 1, '#9800D8'),
-(435, 'Moreau Fournier - RDV paramédical - Obésité sévère – diagnostique', '2017-03-29 08:20:00', '2017-03-29 08:00:00', 23, 10, 1, 1, '#9800D8'),
-(436, 'Moreau Fournier - ECG - Obésité sévère – diagnostique', '2017-03-29 08:40:00', '2017-03-29 08:25:00', 3, 10, 1, 2, '#9800D8'),
-(437, 'Moreau Fournier - ECG - Obésité sévère – diagnostique', '2017-03-29 08:40:00', '2017-03-29 08:25:00', 17, 10, 1, 2, '#9800D8'),
-(438, 'Moreau Fournier - Bilan biologique - Obésité sévère – diagnostique', '2017-03-29 08:55:00', '2017-03-29 08:40:00', 4, 10, 1, 3, '#9800D8'),
-(439, 'Moreau Fournier - Bilan biologique - Obésité sévère – diagnostique', '2017-03-29 08:55:00', '2017-03-29 08:40:00', 19, 10, 1, 3, '#9800D8'),
-(440, 'Moreau Fournier - Echo hépatique - Obésité sévère – diagnostique', '2017-03-29 09:10:00', '2017-03-29 08:55:00', 31, 10, 1, 4, '#9800D8'),
-(441, 'Moreau Fournier - Calorimétrie - Obésité sévère – diagnostique', '2017-03-29 09:45:00', '2017-03-29 09:15:00', 1, 10, 1, 5, '#9800D8'),
-(442, 'Moreau Fournier - Calorimétrie - Obésité sévère – diagnostique', '2017-03-29 09:45:00', '2017-03-29 09:15:00', 23, 10, 1, 5, '#9800D8'),
-(443, 'Moreau Fournier - Collation - Obésité sévère – diagnostique', '2017-03-29 09:55:00', '2017-03-29 09:45:00', 37, 10, 1, 31, '#9800D8'),
-(444, 'Moreau Fournier - Entretien psy - Obésité sévère – diagnostique', '2017-03-29 10:40:00', '2017-03-29 10:00:00', 5, 10, 1, 6, '#9800D8'),
-(445, 'Moreau Fournier - Entretien psy - Obésité sévère – diagnostique', '2017-03-29 10:40:00', '2017-03-29 10:00:00', 25, 10, 1, 6, '#9800D8'),
-(446, 'Moreau Fournier - Entretien infirmier - Obésité sévère – diagnostique', '2017-03-29 11:20:00', '2017-03-29 10:50:00', 1, 10, 1, 7, '#9800D8'),
-(447, 'Moreau Fournier - Entretien infirmier - Obésité sévère – diagnostique', '2017-03-29 11:20:00', '2017-03-29 10:50:00', 23, 10, 1, 7, '#9800D8'),
-(448, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 7, 10, 1, 8, '#9800D8'),
-(449, 'Moreau Fournier - Entretien diet - Obésité sévère – diagnostique', '2017-03-29 12:20:00', '2017-03-29 11:20:00', 24, 10, 1, 8, '#9800D8'),
-(450, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 9, 10, 1, 9, '#9800D8'),
-(451, 'Moreau Fournier - synthèse - Obésité sévère – diagnostique', '2017-03-29 12:55:00', '2017-03-29 12:25:00', 23, 10, 1, 9, '#9800D8'),
-(474, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 3, 12, 1, 2, '#90BC90'),
-(475, 'YANG Jing - ECG - Obésité sévère – diagnostique', '2018-03-16 08:40:00', '2018-03-16 08:25:00', 17, 12, 1, 2, '#90BC90'),
-(478, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 5, 12, 26, 13, '#90BC90'),
-(479, 'YANG Jing - Scanner abdo - PAR1', '2018-03-26 09:50:00', '2018-03-26 09:30:00', 27, 12, 26, 13, '#90BC90');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1600 ;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `parcours`
+-- Structure de la table `parcours`
 --
 
 CREATE TABLE IF NOT EXISTS `parcours` (
@@ -823,41 +1029,38 @@ CREATE TABLE IF NOT EXISTS `parcours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `parcours`
+-- Contenu de la table `parcours`
 --
 
 INSERT INTO `parcours` (`ID_PARCOURS`, `TXT_NOM`, `INT_OBJECTIF`, `TXT_CODE`) VALUES
-(1, 'Obésité sévère – diagnostique', NULL, ''),
-(2, 'Obésité sévère – Post-op', NULL, NULL),
-(3, 'Obésité sévère – J+1an', NULL, NULL),
-(4, 'Bilan nutritionnel hors obésité sévère', NULL, NULL),
-(5, 'Dépistage des maladies du foie', 3, 'P5'),
-(6, 'Biothérapies (dont MICI)', 3, 'P6'),
-(7, 'Ponction ascite', NULL, NULL),
-(8, 'Injection de fer', NULL, NULL),
-(9, 'Bilan des complications du diabète', NULL, NULL),
-(10, 'Bilan diagnostic étiologique et/ou décompensation d''un diabète avec initiation de la prise en charge', NULL, NULL),
-(11, 'Traitement du pied diabétique', NULL, NULL),
-(12, 'ETP diabétique', NULL, NULL),
-(13, 'HDJ nuit : Diagnostic nuit', NULL, NULL),
-(14, 'HDJ Jour Diagnostic jour', NULL, NULL),
-(15, 'HDJ jour : Thérapeutique', NULL, NULL),
-(16, 'Chimio - Avec OK chimio', NULL, NULL),
-(17, 'Chimio - sans OK chimio', NULL, NULL),
-(18, 'Cardio – explorations de la maladie coronaire', NULL, NULL),
-(19, 'Cardio – insuffisance cardiaque', NULL, NULL),
-(20, 'Cardio – onco', NULL, NULL),
-(21, 'AIT ', NULL, NULL),
-(22, 'Bilan troubles cognitifs', NULL, NULL),
-(23, 'Epilepsie', NULL, NULL),
-(24, 'Céphalées sub-aigues', NULL, NULL),
-(26, 'PAR1', NULL, ''),
-(27, 'PAR2', NULL, '');
+(1, 'Obésité sévère – diagnostique', NULL, 'P1'),
+(2, 'Obésité sévère – Post-op', NULL, 'P2'),
+(3, 'Obésité sévère – J+1an', NULL, 'P3'),
+(4, 'Bilan nutritionnel hors obésité sévère', NULL, 'P4'),
+(5, 'Dépistage des maladies du foie', NULL, 'P5'),
+(6, 'Biothérapies (dont MICI)', NULL, 'P6'),
+(7, 'Ponction ascite', NULL, 'P8'),
+(8, 'Injection de fer', NULL, 'P9'),
+(9, 'Bilan des complications du diabète', NULL, 'P10'),
+(10, 'Bilan diagnostic étiologique et/ou décompensation d''un diabète avec initiation de la prise en charge', NULL, 'P11'),
+(11, 'Traitement du pied diabétique', NULL, 'P12'),
+(12, 'ETP diabétique', NULL, 'P13'),
+(16, 'Chimio - Avec OK chimio', NULL, 'P17'),
+(17, 'Chimio - sans OK chimio', NULL, 'P17'),
+(18, 'Cardio – explorations de la maladie coronaire', NULL, 'P20'),
+(19, 'Cardio – insuffisance cardiaque', NULL, 'P21'),
+(20, 'Cardio – onco', NULL, 'P22'),
+(21, 'AIT ', NULL, 'P23'),
+(22, 'Bilan troubles cognitifs', NULL, 'P24'),
+(23, 'Epilepsie', NULL, 'P25'),
+(24, 'Céphalées sub-aigues', NULL, 'P26'),
+(25, 'Gériatrie', NULL, 'P18'),
+(26, 'Parcours long médecine', NULL, 'P19');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `patient`
+-- Structure de la table `patient`
 --
 
 CREATE TABLE IF NOT EXISTS `patient` (
@@ -884,29 +1087,19 @@ CREATE TABLE IF NOT EXISTS `patient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `patient`
+-- Contenu de la table `patient`
 --
 
 INSERT INTO `patient` (`ID_PATIENT`, `ID_COMPTE`, `TXT_NOM`, `TXT_PRENOM`, `TXT_ADRESSENUM`, `TXT_ADRESSERUE`, `TXT_ADRESSECODEPOSTAL`, `TXT_ADRESSEVILLE`, `TXT_ADRESSEPAYS`, `TXT_MAIL`, `TXT_TELEPHONEFIXE`, `TXT_TELEPHONEPORTABLE`, `TXT_NUMSECU`, `DATE_NAISSANCE`, `ID_PARCOURS_SUP`, `DATE_DISPONIBLE_DEBUT`, `DATE_DISPONIBLE_FIN`) VALUES
-(1, 1, 'Martin', 'Simon', '20', 'Saint-Martin', '75000', 'Paris', 'France', 'martin.simon@gmail.com', '245', '0753868034', '2545242', '2003-01-01', 1, '2018-04-28 07:30:00', '2018-04-28 15:55:00'),
-(2, 2, 'Bernard', 'Laurent', '15', 'Arbre Sec', '75000', 'Paris', 'France', 'bernard.laurent@gmail.com', '454', '0753868024', '45856', '1990-09-12', 25, '2018-03-31 07:35:00', '2018-03-31 13:15:00'),
-(3, 3, 'Dubois', 'Lefebvre', '6', 'Cambon', '75000', 'Paris', 'France', 'dubois.lefebvre@gmail.com', '144', '0753868029', '444', '1983-10-17', 25, '2018-03-31 06:10:00', '2018-03-31 08:45:00'),
-(4, 4, 'Thomas', 'Michel', '31', 'Saint Honore', '75000', 'Paris', 'France', 'thomas.michel@gmail.com', '2522525', '0753482620', '25435343', '1972-11-05', 1, '2018-03-31 06:15:00', '2018-03-31 15:30:00'),
-(5, 5, 'Robert', 'Garcia', '23', 'Temple', '75000', 'Paris', 'France', 'robert.garcia@gmail.com', '4511513', '0753864952', '3453463', '1984-11-24', 1, '2018-03-31 08:40:00', '2018-03-31 19:20:00'),
-(7, 7, 'Petit', 'Bertrand', '7', 'Duphot', '37000', 'Tours', 'France', 'petit.bertrand@hotmail.com', '44', '0658426125', '533443', '1986-08-12', 0, '2018-03-31 06:15:00', '2018-03-31 12:05:00'),
-(8, 8, 'Durand', 'Rous', '43', 'delperier', '37000', 'Tours', 'France', 'durand.rous@hotmail.com', '585', '0685469256', '785857887', '1995-05-06', 25, '2018-03-31 07:00:00', '2018-03-31 16:35:00'),
-(9, 9, 'Leroy', 'Vincent', '91', 'etranger', '37300', 'Tours', 'France', 'leroy.vincent@gmail.com', '4541212', '0786452156', '543453422', '1983-07-16', 25, '2018-03-31 06:25:00', '2018-03-31 11:00:00'),
-(10, 10, 'Moreau', 'Fournier', '23', 'grapiere', '86420', 'Lille', 'France', 'moreau.fournier@soho.com', NULL, '0753168529', '3654545', '1863-08-08', 1, '2018-03-31 06:20:00', '2018-03-31 15:30:00'),
-(11, 30, 'pochet', 'guillaume', '53', 'avenue de montjoyeux', '37200', 'Tours', 'France', 'guillaume.pochet@gmail.com', '0636777546', '0636777546', '2545242', '1994-04-06', 1, '2018-03-31 06:20:00', '2018-03-31 17:25:00'),
-(12, 58, 'YANG', 'Jing', '31', 'richelieu', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212590', '0695212599', '129999', '1990-09-10', 27, '2018-03-21 07:00:00', '2018-03-21 13:40:00'),
-(13, 59, 'YANG', 'Jemika', '99', 'ty', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '90', '1995-04-07', 25, '2018-03-16 08:55:00', '2018-03-16 15:55:00'),
-(14, 60, 'YANG', 'J', '1', 'Q', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '1231', '1996-10-10', NULL, NULL, NULL),
-(15, 61, 'YANG', 'ying', '12', 'qwe', '37000', 'TOURS', 'FRANCE', 'yangjingaimer@163.com', '0695212599', '0695212599', '132', '1996-10-10', 1, '2018-05-02 06:25:00', '2018-05-02 15:30:00');
+(2, 2, 'Bernard', 'Laurent', '15', 'Arbre Sec', '75000', 'Paris', 'France', 'bernard.laurent@gmail.com', '0123456789', '0753868024', '123456789012345', '1990-09-12', 1, '2019-03-30 08:30:00', '2019-03-30 19:05:00'),
+(3, 3, 'Dubois', 'Lefebvre', '6', 'Cambon', '75000', 'Paris', 'France', 'dubois.lefebvre@gmail.com', '0123456789', '0753868029', '123456789012345', '1983-10-17', 1, '2019-03-30 08:30:00', '2019-03-30 19:30:00'),
+(7, 7, 'Petit', 'Bertrand', '7', 'Duphot', '37000', 'Tours', 'France', 'petit.bertrand@hotmail.com', '0123456789', '0658426125', '123456789012345', '1986-08-12', 1, '2019-03-30 08:20:00', '2019-03-30 19:50:00'),
+(18, 64, 'Sebastien', 'Patrick', '25', 'Avenue de la fête', '75000', 'Paris', 'France', 'patseb@mail.fr', '02555841564564564589654', '844159865946194619461', '447974516816', '1950-04-24', 1, '2019-01-22 09:00:00', '2019-01-22 19:00:00');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `personnel`
+-- Structure de la table `personnel`
 --
 
 CREATE TABLE IF NOT EXISTS `personnel` (
@@ -921,7 +1114,7 @@ CREATE TABLE IF NOT EXISTS `personnel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `personnel`
+-- Contenu de la table `personnel`
 --
 
 INSERT INTO `personnel` (`ID_PERSONNEL`, `ID_RESSOURCE`, `ID_COMPTE`, `TXT_NOM`, `TXT_PRENOM`) VALUES
@@ -935,16 +1128,34 @@ INSERT INTO `personnel` (`ID_PERSONNEL`, `ID_RESSOURCE`, `ID_COMPTE`, `TXT_NOM`,
 (9, 9, 19, 'Teboul', 'Patrick'),
 (10, 10, 20, 'Belhadj', 'Karim'),
 (32, 32, 22, 'Jean', 'Roche'),
-(33, 33, 23, 'Mélanie', 'Fontaine'),
 (34, 34, 24, 'Pierre', 'Marie'),
 (35, 35, 25, 'Jacques', 'Simon'),
 (36, 36, 26, 'Delo', 'Marie'),
-(37, 37, 27, 'Ruit', 'Pauine');
+(37, 37, 27, 'Ruit', 'Pauline'),
+(41, 41, 65, 'Sébastien', 'Patrick'),
+(42, 42, 66, 'Hépato', 'Médecin'),
+(46, 46, 67, 'Orthoptiste', 'Jean'),
+(47, 47, 68, 'Diabétologue', 'Michel'),
+(48, 48, 69, 'Pansement', 'IDE'),
+(49, 49, 70, 'Podologue', 'Denis'),
+(50, 50, 71, 'Insuline', 'Pompe'),
+(51, 51, 72, 'Thérapie', 'Insulino'),
+(52, 52, 73, 'Chimio', 'infirmier'),
+(53, 53, 74, 'Généraliste', 'Jérôme'),
+(54, 54, 75, 'Gériatre', 'Gérard'),
+(55, 55, 76, 'Cardiologue', 'Michael'),
+(56, 56, 77, 'Kiné', 'Jean'),
+(57, 57, 78, 'Cardio', 'Infirmier'),
+(59, 59, 80, 'Neurologue', 'Alphonse'),
+(60, 60, 81, 'Psychiatre', 'Neuro'),
+(65, 65, 92, 'Chimios', 'IDE'),
+(67, 67, 94, 'Interne', 'Obesite'),
+(68, 68, 95, 'Medecin', 'Generaliste');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `planparcours`
+-- Structure de la table `planparcours`
 --
 
 CREATE TABLE IF NOT EXISTS `planparcours` (
@@ -956,13 +1167,13 @@ CREATE TABLE IF NOT EXISTS `planparcours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='le nombre de patient qui exécutent ce parcours à ce jour';
 
 --
--- 转存表中的数据 `planparcours`
+-- Contenu de la table `planparcours`
 --
 
 INSERT INTO `planparcours` (`ID_PARCOURS`, `ID_JOUR`, `INT_NB_PATIENT`) VALUES
-(1, 1, 5),
+(1, 1, 24),
 (1, 2, 4),
-(1, 3, 6),
+(1, 3, 8),
 (1, 4, 6),
 (1, 5, 6),
 (2, 1, 10),
@@ -1015,31 +1226,26 @@ INSERT INTO `planparcours` (`ID_PARCOURS`, `ID_JOUR`, `INT_NB_PATIENT`) VALUES
 (11, 3, 10),
 (11, 4, 10),
 (11, 5, 10),
-(12, 1, 10),
-(12, 2, 10),
+(12, 1, 6),
+(12, 2, 4),
 (12, 3, 10),
 (12, 4, 10),
 (12, 5, 10),
-(13, 1, 10),
-(13, 2, 10),
-(13, 3, 10),
-(13, 4, 10),
-(13, 5, 10),
+(25, 1, 5),
+(25, 2, 5),
+(25, 3, 5),
+(25, 4, 5),
+(25, 5, 5),
 (26, 1, 5),
 (26, 2, 5),
 (26, 3, 5),
 (26, 4, 5),
-(26, 5, 5),
-(27, 1, 5),
-(27, 2, 5),
-(27, 3, 5),
-(27, 4, 5),
-(27, 5, 5);
+(26, 5, 5);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ressource`
+-- Structure de la table `ressource`
 --
 
 CREATE TABLE IF NOT EXISTS `ressource` (
@@ -1050,10 +1256,11 @@ CREATE TABLE IF NOT EXISTS `ressource` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `ressource`
+-- Contenu de la table `ressource`
 --
 
 INSERT INTO `ressource` (`ID_RESSOURCE`, `ID_TYPERESSOURCE`) VALUES
+(0, 0),
 (1, 1),
 (37, 1),
 (3, 2),
@@ -1062,7 +1269,6 @@ INSERT INTO `ressource` (`ID_RESSOURCE`, `ID_TYPERESSOURCE`) VALUES
 (36, 2),
 (5, 3),
 (6, 3),
-(33, 3),
 (7, 4),
 (8, 4),
 (34, 4),
@@ -1075,27 +1281,45 @@ INSERT INTO `ressource` (`ID_RESSOURCE`, `ID_TYPERESSOURCE`) VALUES
 (14, 7),
 (15, 8),
 (16, 8),
-(17, 40),
-(18, 40),
 (19, 41),
 (20, 41),
-(31, 42),
-(38, 42),
 (23, 43),
 (24, 43),
 (39, 43),
-(40, 43),
 (25, 44),
 (26, 44),
-(27, 45),
+(61, 44),
 (28, 45),
 (29, 46),
-(30, 46);
+(30, 46),
+(41, 55),
+(67, 55),
+(42, 56),
+(27, 57),
+(43, 57),
+(44, 57),
+(45, 58),
+(46, 59),
+(47, 60),
+(48, 61),
+(49, 62),
+(50, 63),
+(51, 64),
+(52, 65),
+(65, 65),
+(53, 66),
+(68, 66),
+(54, 67),
+(55, 68),
+(56, 69),
+(57, 70),
+(59, 72),
+(60, 73);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `salle`
+-- Structure de la table `salle`
 --
 
 CREATE TABLE IF NOT EXISTS `salle` (
@@ -1107,31 +1331,30 @@ CREATE TABLE IF NOT EXISTS `salle` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `salle`
+-- Contenu de la table `salle`
 --
 
 INSERT INTO `salle` (`ID_SALLE`, `ID_RESSOURCE`, `TXT_NOM`) VALUES
-(1, 17, 'Box 1'),
-(2, 18, 'Box 2'),
 (3, 19, 'Box prélèvement 1'),
 (4, 20, 'Box prélèvement 2'),
 (5, 23, 'HDJ obésité 1'),
 (6, 24, 'HDJ obésité 2'),
 (7, 25, 'Bureau CS 1'),
 (8, 26, 'Bureau CS 2'),
-(9, 27, 'Box soin 1'),
+(9, 27, 'Box soin commun 3'),
 (10, 28, 'Box soin 2'),
 (11, 29, 'Salle pansement 1'),
 (12, 30, 'Salle pansement 2'),
-(13, 31, 'Hors HDJ 1'),
-(38, 38, 'Hors HDJ 2'),
 (39, 39, 'HDJ obésité 3'),
-(40, 40, 'HDJ obésité 4');
+(43, 43, 'Box soin commun 1'),
+(44, 44, 'Box Soin Commun 2'),
+(45, 45, 'Box soin individuel 1'),
+(61, 61, 'Bureau CS 3');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `typechamp`
+-- Structure de la table `typechamp`
 --
 
 CREATE TABLE IF NOT EXISTS `typechamp` (
@@ -1142,7 +1365,7 @@ CREATE TABLE IF NOT EXISTS `typechamp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `typechamp`
+-- Contenu de la table `typechamp`
 --
 
 INSERT INTO `typechamp` (`ID_TYPECHAMP`, `TXT_LIBELLE`, `TXT_VALEUR`) VALUES
@@ -1154,7 +1377,7 @@ INSERT INTO `typechamp` (`ID_TYPECHAMP`, `TXT_LIBELLE`, `TXT_VALEUR`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `typecompte`
+-- Structure de la table `typecompte`
 --
 
 CREATE TABLE IF NOT EXISTS `typecompte` (
@@ -1165,7 +1388,7 @@ CREATE TABLE IF NOT EXISTS `typecompte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `typecompte`
+-- Contenu de la table `typecompte`
 --
 
 INSERT INTO `typecompte` (`ID_TYPECOMPTE`, `TXT_NOM`, `INT_NIVEAU`) VALUES
@@ -1177,7 +1400,7 @@ INSERT INTO `typecompte` (`ID_TYPECOMPTE`, `TXT_NOM`, `INT_NIVEAU`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `typeressource`
+-- Structure de la table `typeressource`
 --
 
 CREATE TABLE IF NOT EXISTS `typeressource` (
@@ -1187,10 +1410,11 @@ CREATE TABLE IF NOT EXISTS `typeressource` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `typeressource`
+-- Contenu de la table `typeressource`
 --
 
 INSERT INTO `typeressource` (`ID_TYPERESSOURCE`, `TXT_NOM`) VALUES
+(0, 'Autres'),
 (1, 'IDE obésité'),
 (2, 'IDE'),
 (3, 'Psychologue'),
@@ -1230,20 +1454,39 @@ INSERT INTO `typeressource` (`ID_TYPERESSOURCE`, `TXT_NOM`) VALUES
 (51, 'f'),
 (52, 'a'),
 (53, 'a'),
-(54, 'f');
+(54, 'f'),
+(55, 'Interne obésité'),
+(56, 'Médecin Hépato'),
+(57, 'Box Soin Commun'),
+(58, 'Box Soin Individuel'),
+(59, 'Orthoptiste'),
+(60, 'Diabétologue'),
+(61, 'IDE Pansement'),
+(62, 'Podologue'),
+(63, 'IDE pompe insuline'),
+(64, 'IDE insulinothérapie'),
+(65, 'IDE chimio'),
+(66, 'Généraliste'),
+(67, 'Gériatre'),
+(68, 'Cardiologue'),
+(69, 'Kinésithérapeute'),
+(70, 'IDE Cardio'),
+(71, 'Agent Accueil'),
+(72, 'Neurologue'),
+(73, 'Neuropsychiatre');
 
 --
--- 限制导出的表
+-- Contraintes pour les tables exportées
 --
 
 --
--- 限制表 `champ`
+-- Contraintes pour la table `champ`
 --
 ALTER TABLE `champ`
   ADD CONSTRAINT `champ_ibfk_1` FOREIGN KEY (`ID_TYPECHAMP`) REFERENCES `typechamp` (`ID_TYPECHAMP`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `composer`
+-- Contraintes pour la table `composer`
 --
 ALTER TABLE `composer`
   ADD CONSTRAINT `composer_ibfk_1` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1251,13 +1494,13 @@ ALTER TABLE `composer`
   ADD CONSTRAINT `composer_ibfk_3` FOREIGN KEY (`ID_ACTIVITE_PRECEDENTE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `compte`
+-- Contraintes pour la table `compte`
 --
 ALTER TABLE `compte`
   ADD CONSTRAINT `compte_ibfk_1` FOREIGN KEY (`ID_TYPECOMPTE`) REFERENCES `typecompte` (`ID_TYPECOMPTE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `constituerdossier`
+-- Contraintes pour la table `constituerdossier`
 --
 ALTER TABLE `constituerdossier`
   ADD CONSTRAINT `constituerdossier_ibfk_1` FOREIGN KEY (`ID_CHAMP`) REFERENCES `champ` (`ID_CHAMP`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1265,7 +1508,7 @@ ALTER TABLE `constituerdossier`
   ADD CONSTRAINT `constituerdossier_ibfk_3` FOREIGN KEY (`ID_ONGLET`) REFERENCES `onglet` (`ID_ONGLET`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `dossiergenerique`
+-- Contraintes pour la table `dossiergenerique`
 --
 ALTER TABLE `dossiergenerique`
   ADD CONSTRAINT `dossiergenerique_ibfk_1` FOREIGN KEY (`ID_CHAMP`) REFERENCES `champ` (`ID_CHAMP`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1274,20 +1517,20 @@ ALTER TABLE `dossiergenerique`
   ADD CONSTRAINT `dossiergenerique_ibfk_4` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `dossierparcours`
+-- Contraintes pour la table `dossierparcours`
 --
 ALTER TABLE `dossierparcours`
   ADD CONSTRAINT `dossierparcours_ibfk_1` FOREIGN KEY (`ID_PATIENT`) REFERENCES `patient` (`ID_PATIENT`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dossierparcours_ibfk_2` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `etreindisponible`
+-- Contraintes pour la table `etreindisponible`
 --
 ALTER TABLE `etreindisponible`
   ADD CONSTRAINT `etreindisponible_ibfk_1` FOREIGN KEY (`ID_RESSOURCE`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `evenement`
+-- Contraintes pour la table `evenement`
 --
 ALTER TABLE `evenement`
   ADD CONSTRAINT `evenement_ibfk_1` FOREIGN KEY (`ressourceId`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1296,20 +1539,20 @@ ALTER TABLE `evenement`
   ADD CONSTRAINT `evenement_ibfk_4` FOREIGN KEY (`activiteId`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `necessiter`
+-- Contraintes pour la table `necessiter`
 --
 ALTER TABLE `necessiter`
   ADD CONSTRAINT `necessiter_ibfk_1` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `necessiter_ibfk_2` FOREIGN KEY (`ID_TYPERESSOURCE`) REFERENCES `typeressource` (`ID_TYPERESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `onglet`
+-- Contraintes pour la table `onglet`
 --
 ALTER TABLE `onglet`
   ADD CONSTRAINT `FK_ID` FOREIGN KEY (`ID_ACTIVITE`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `ordonnancer`
+-- Contraintes pour la table `ordonnancer`
 --
 ALTER TABLE `ordonnancer`
   ADD CONSTRAINT `ordonnancer_ibfk_1` FOREIGN KEY (`ressourceId`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1318,20 +1561,20 @@ ALTER TABLE `ordonnancer`
   ADD CONSTRAINT `ordonnancer_ibfk_4` FOREIGN KEY (`activiteId`) REFERENCES `activite` (`ID_ACTIVITE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `personnel`
+-- Contraintes pour la table `personnel`
 --
 ALTER TABLE `personnel`
   ADD CONSTRAINT `personnel_ibfk_1` FOREIGN KEY (`ID_RESSOURCE`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `planparcours`
+-- Contraintes pour la table `planparcours`
 --
 ALTER TABLE `planparcours`
   ADD CONSTRAINT `planparcours_ibfk_1` FOREIGN KEY (`ID_PARCOURS`) REFERENCES `parcours` (`ID_PARCOURS`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `planparcours_ibfk_2` FOREIGN KEY (`ID_JOUR`) REFERENCES `jour` (`ID_JOUR`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `salle`
+-- Contraintes pour la table `salle`
 --
 ALTER TABLE `salle`
   ADD CONSTRAINT `salle_ibfk_1` FOREIGN KEY (`ID_RESSOURCE`) REFERENCES `ressource` (`ID_RESSOURCE`) ON DELETE CASCADE ON UPDATE CASCADE;
