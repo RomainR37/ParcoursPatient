@@ -4,20 +4,18 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_Personnel.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux personnels 
- *
- * \details   Ce fichier permet de définir les méthodes de gestion du personnel
+ * Définit les méthodes liées aux personnels
+ * 
+ * Ce fichier permet de définir les méthodes de gestion du personnel
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Personnel extends CI_Model {
 
     /**
-     * \brief      Récupère toute la liste du personnel
-     * \details    Récupère toute la liste du personnel
-     * \param      Aucun
+     * Récupère toute la liste du personnel
      */
     public function getAllPersonnes() {
         //	On simule l'envoi d'une requête
@@ -41,9 +39,7 @@ class M_Personnel extends CI_Model {
     }
 
     /**
-     * \brief      Récupère toute la liste des types de personnel
-     * \details    Récupère toute la liste des types de personnel
-     * \param      Aucun
+     * Récupère toute la liste des types de personnel
      */
     public function getAllTypePersonnes() {
         //	On simule l'envoi d'une requête
@@ -65,9 +61,8 @@ class M_Personnel extends CI_Model {
     }
 
     /**
-     * \brief      Supprime une personne
-     * \details    Supprimer une persone
-     * \param      $id : id de la personne à supprimer
+     * Supprime une personne
+     * @param $id : id de la personne à supprimer
      */
     public function supprPersonne($id) {
         $sql = "SELECT E.end 
@@ -99,9 +94,8 @@ class M_Personnel extends CI_Model {
     }
 
     /**
-     * \brief      Récupère les infos d'une personne en fonction de son id
-     * \details    Récupère les infos d'une personne en fonction de son id
-     * \param      $id : id de la personne
+     * Récupère les infos d'une personne en fonction de son id
+     * @param $id : id de la personne
      */
     public function getPersonneById($id) {
         //	On simule l'envoi d'une requête
@@ -117,9 +111,9 @@ class M_Personnel extends CI_Model {
     }
 
     /**
-     * \brief      Modifie les informations liés à une personne
-     * \details    Modifie les informations liés à une personne
-     * \param      $personne : contient les nouvelles informations de la personne ainsi que son id
+     * Modifie les informations liées à une personne
+     * @param $personne : contient les nouvelles informations de la personne 
+     * ainsi que son id
      */
     public function ModifPersonne($personne) {
         //	On simule l'envoi d'une requête
@@ -141,9 +135,8 @@ class M_Personnel extends CI_Model {
     }
 
     /**
-     * \brief      Ajoute une personne
-     * \details    Ajoute une personne
-     * \param      $personne : contient les informations de la personne à ajouter
+     * Ajoute une personne
+     * @param $personne : contient les informations de la personne à ajouter
      */
     public function ajoutePersonne($personne) {
         $this->load->model('M_TypeRessource');

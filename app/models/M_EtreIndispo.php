@@ -4,20 +4,21 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_EtreinIndispo.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux différentes indisponibilités des ressources humaines
- *
- * \details   Ce fichier permet de définir les méthodes de gestion d'indiponibilités des ressources humaines
+ * Définit les méthodes liées aux différentes indisponibilités des ressources 
+ * humaines.
+ * 
+ * Ce fichier permet de définir les méthodes de gestion d'indiponibilités des 
+ * ressources humaines.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_EtreIndispo extends CI_Model {
 
     /**
-     * \brief      Fonction de récupération des indiponibiltés d'une ressource en fonction de son id
-     * \detail     Fonction de récupération des indiponibiltés d'une ressource en fonction de son id
-     * \param      $id : id de la ressource
+     * Fonction de récupération des indiponibiltés d'une ressource en fonction de son id
+     * @param $id : id de la ressource
      */
     public function getIndispoByIdRessource($id) {
         $txt_sql = "SELECT ID_ETREINDISPONIBLE, DATE_DEBUT, DATE_FIN
@@ -37,9 +38,8 @@ class M_EtreIndispo extends CI_Model {
     }
 
     /**
-     * \brief      Récupère le nom d'une personne en fonction de son id
-     * \details    Récupère le nom d'une personne en fonction de son id
-     * \param      $id : id de la personne
+     * Récupère le nom d'une personne en fonction de son id
+     * @param $id : id de la personne
      */
     public function getNomPersonnel($id) {
         $txt_sql = "
@@ -57,9 +57,8 @@ class M_EtreIndispo extends CI_Model {
     }
 
     /**
-     * \brief      Supprime une indispo d'une resource en fonction de son id
-     * \details    Supprime une indispo d'une resource en fonction de son id
-     * \param      $id : id de la personne
+     * Supprime une indispo d'une resource en fonction de son id
+     * @param $id : id de la personne
      */
     public function supprimerIndispoById($id) {
         $txt_sql = "
@@ -70,9 +69,9 @@ class M_EtreIndispo extends CI_Model {
     }
 
     /**
-     * \brief      Modifie une indispo d'une resource en fonction de son id
-     * \details    Modifie une indispo d'une resource en fonction de son id
-     * \param      $id : id de la personne
+     * Modifie une indisponibilité d'une ressource 
+     * @param $data : tableau avec la date de début, de fin et l'identifiant de 
+     * la ressource à modifier
      */
     public function modifierIndispo($data) {
         $i = 0;
@@ -87,9 +86,8 @@ class M_EtreIndispo extends CI_Model {
     }
 
     /**
-     * \brief      Ajoute une indispo à une resource
-     * \details    Ajoute une indispo à une resource
-     * \param      $data : contient les données à ajouter ainsi que l'id de ressource
+     * Ajoute une indispo à une resource
+     * @param $data : contient les données à ajouter ainsi que l'id de ressource
      */
     public function ajoutIndispo($data) {
         $i = 0;
@@ -104,9 +102,7 @@ class M_EtreIndispo extends CI_Model {
     }
 
     /**
-     * \brief      Retourne l'id max des indipos
-     * \details    Retourne l'id max des indipos
-     * \param      Aucun
+     * Retourne l'id max des indipos
      */
     public function getMaxIDIndispo() {
         $txt_sql = "SELECT MAX(ID_ETREINDISPONIBLE) as id

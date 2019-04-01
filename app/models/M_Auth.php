@@ -4,22 +4,24 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_Auth.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées à l'authentification
- *
- * \details   Ce fichier permet de définir la méthode d'authentification
+ * Définit les méthodes liées à l'authentification
+ * 
+ * Ce fichier permet de définir la méthode d'authentification
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Auth extends CI_Model {
 
     /**
-     * \brief      Fonction de vérification du couple passord login
-     * \details    Fonction de vérification du couple passord login
-     *             Retourne le type de compte de l'utilisateur
-     * \param      $pseudo : login
-     *             $password : mot de passe
+     * Fonction de vérification du couple password login
+     * 
+     * Fonction de vérification du couple password login. Retourne le type de 
+     * compte de l'utilisateur
+     * 
+     * @param $pseudo : login
+     * @param $password : mot de passe
      */
     function login($pseudo, $password) {
         $txt_sql = "SELECT c.ID_TYPECOMPTE, c.ID_COMPTE, tc.INT_NIVEAU from compte c, typecompte tc WHERE c.ID_TYPECOMPTE = tc.ID_TYPECOMPTE AND TXT_LOGIN = " . $this->db->escape($pseudo) . " AND TXT_MOTDEPASSE = " . $this->db->escape($password);

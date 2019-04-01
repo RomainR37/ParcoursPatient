@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Output | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li class="active"><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Output</h1>
+
+
+	<div class="description">
+	
+<p>Output Class</p>
+
+<p>Responsible for sending final output to the browser.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Output<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/output.html">http://codeigniter.com/user_guide/libraries/output.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Output.html#40-800" title="Go to source code">sys/core/Output.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Output.html#125-145" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+<p>Determines whether zLib output compression will be used.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_output" id="_get_output">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_output">#</a>
+		<code><a href="source-class-CI_Output.html#149-159" title="Go to source code">get_output</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Output</p>
+
+<p>Returns the current output string.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_output" id="_set_output">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_output">#</a>
+		<code><a href="source-class-CI_Output.html#163-175" title="Go to source code">set_output</a>( <span>string <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Output</p>
+
+<p>Sets the output string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$output</var></dt>
+					<dd><code>string</code><br>$output Output data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="append_output" id="_append_output">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_append_output">#</a>
+		<code><a href="source-class-CI_Output.html#179-191" title="Go to source code">append_output</a>( <span>string <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Append Output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Append Output</p>
+
+<p>Appends data onto the output string.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$output</var></dt>
+					<dd><code>string</code><br>$output Data to append</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_header" id="_set_header">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_header">#</a>
+		<code><a href="source-class-CI_Output.html#195-220" title="Go to source code">set_header</a>( <span>string <var>$header</var></span>, <span>boolean <var>$replace</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Header</p>
+
+<p>Lets you set a server header which will be sent with the final output.</p>
+
+<p>Note: If a file is cached, headers will not be sent.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header Header</dd>
+					<dt><var>$replace</var></dt>
+					<dd><code>boolean</code><br>$replace Whether to replace the old header value, if already set</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_content_type" id="_set_content_type">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_content_type">#</a>
+		<code><a href="source-class-CI_Output.html#224-261" title="Go to source code">set_content_type</a>( <span>string <var>$mime_type</var></span>, <span>string <var>$charset</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Content-Type Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Content-Type Header</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mime_type</var></dt>
+					<dd><code>string</code><br>$mime_type Extension of the file we're outputting</dd>
+					<dt><var>$charset</var></dt>
+					<dd><code>string</code><br>$charset Character set (default: NULL)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_content_type" id="_get_content_type">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_content_type">#</a>
+		<code><a href="source-class-CI_Output.html#265-281" title="Go to source code">get_content_type</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Current Content-Type Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Current Content-Type Header</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>'text/html', if not already set<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_header" id="_get_header">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_header">#</a>
+		<code><a href="source-class-CI_Output.html#285-314" title="Go to source code">get_header</a>( <span>string <var>$header</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Header</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_status_header" id="_set_status_header">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_status_header">#</a>
+		<code><a href="source-class-CI_Output.html#318-332" title="Go to source code">set_status_header</a>( <span>integer <var>$code</var> = <span class="php-num">200</span></span>, <span>string <var>$text</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set HTTP Status Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set HTTP Status Header</p>
+
+<p>As of version 1.7.2, this is an alias for common function
+set_status_header().</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd><code>integer</code><br>$code Status code (default: 200)</dd>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text Optional message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enable_profiler" id="_enable_profiler">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enable_profiler">#</a>
+		<code><a href="source-class-CI_Output.html#336-346" title="Go to source code">enable_profiler</a>( <span>boolean <var>$val</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enable/disable Profiler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enable/disable Profiler</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$val</var></dt>
+					<dd><code>boolean</code><br>$val TRUE to enable or FALSE to disable</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_profiler_sections" id="_set_profiler_sections">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_profiler_sections">#</a>
+		<code><a href="source-class-CI_Output.html#350-373" title="Go to source code">set_profiler_sections</a>( <span>array <var>$sections</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Profiler Sections</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Profiler Sections</p>
+
+<p>Allows override of default/config settings for Profiler section display.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sections</var></dt>
+					<dd><code>array</code><br>$sections Profiler sections</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache" id="_cache">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Output.html">CI_Output</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache">#</a>
+		<code><a href="source-class-CI_Output.html#377-387" title="Go to source code">cache</a>( <span>integer <var>$time</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>integer</code><br>$time Cache expiration time in seconds</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Output.html">CI_Output</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_display" id="__display">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__display">#</a>
+		<code><a href="source-class-CI_Output.html#391-533" title="Go to source code">_display</a>( <span>string <var>$output</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Display Output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display Output</p>
+
+<p>Processes and sends finalized output data to the browser along with any
+server headers and profile data. It also stops benchmark timers so the page
+rendering speed and memory usage can be shown.</p>
+
+<p>Note: All "view" data is automatically put into $this-&gt;final_output by
+controller class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$output</var></dt>
+					<dd><code>string</code><br>$output Output data override</dd>
+				</dl></div>
+
+
+
+				<h4>Uses</h4>
+				<div class="list">
+						<code><code><a href="class-CI_Output.html#$final_output">CI_Output::<var>$final_output</var></a></code></code> <br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_write_cache" id="__write_cache">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__write_cache">#</a>
+		<code><a href="source-class-CI_Output.html#537-635" title="Go to source code">_write_cache</a>( <span>string <var>$output</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Write Cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write Cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$output</var></dt>
+					<dd><code>string</code><br>$output Output data to cache</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_display_cache" id="__display_cache">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__display_cache">#</a>
+		<code><a href="source-class-CI_Output.html#639-717" title="Go to source code">_display_cache</a>( <span>object <var>&amp; $CFG</var></span>, <span>object <var>&amp; $URI</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Update/serve cached output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Update/serve cached output</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$CFG</var></dt>
+					<dd><code>object</code><br>&amp;$CFG CI_Config class instance</dd>
+					<dt><var>$URI</var></dt>
+					<dd><code>object</code><br>&amp;$URI CI_URI class instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>TRUE on success or FALSE on failure<br />
+				</div>
+
+
+				<h4>Uses</h4>
+				<div class="list">
+						<code><code><a href="class-CI_Config.html">CI_Config</a></code></code> <br />
+						<code><code><a href="class-CI_URI.html">CI_URI</a></code></code> <br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete_cache" id="_delete_cache">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete_cache">#</a>
+		<code><a href="source-class-CI_Output.html#721-768" title="Go to source code">delete_cache</a>( <span>string <var>$uri</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uri</var></dt>
+					<dd><code>string</code><br>$uri URI string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_cache_header" id="_set_cache_header">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_cache_header">#</a>
+		<code><a href="source-class-CI_Output.html#772-798" title="Go to source code">set_cache_header</a>( <span>integer <var>$last_modified</var></span>, <span>integer <var>$expiration</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Cache Header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Cache Header</p>
+
+<p>Set the HTTP headers to match the server-side file cache settings in order to
+reduce bandwidth.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$last_modified</var></dt>
+					<dd><code>integer</code><br>$last_modified Timestamp of when the page was last modified</dd>
+					<dt><var>$expiration</var></dt>
+					<dd><code>integer</code><br>$expiration Timestamp of when should the requested page expire from cache</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="final_output" id="$final_output">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#53-58" title="Go to source code"><var>$final_output</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$final_output" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Final output string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Final output string</p>
+
+
+					<h4>Used by</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Output.html#__display">CI_Output::_display()</a></code></code> <br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_expiration" id="$cache_expiration">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#60-65" title="Go to source code"><var>$cache_expiration</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$cache_expiration" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache expiration time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache expiration time</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="headers" id="$headers">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#67-72" title="Go to source code"><var>$headers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of server headers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of server headers</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="mimes" id="$mimes">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#74-79" title="Go to source code"><var>$mimes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$mimes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of mime types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of mime types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="mime_type" id="$mime_type">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#81-86" title="Go to source code"><var>$mime_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'text/html'</span></code></td>
+		<td class="description"><div>
+			<a href="#$mime_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Mime-type for the current page</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Mime-type for the current page</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="enable_profiler" id="$enable_profiler">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#88-93" title="Go to source code"><var>$enable_profiler</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$enable_profiler" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Enable Profiler flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Enable Profiler flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_zlib_oc" id="$_zlib_oc">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#95-100" title="Go to source code"><var>$_zlib_oc</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_zlib_oc" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>php.ini zlib.output_compression flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>php.ini zlib.output_compression flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_compress_output" id="$_compress_output">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#102-107" title="Go to source code"><var>$_compress_output</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_compress_output" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CI output compression flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CI output compression flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_profiler_sections" id="$_profiler_sections">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#109-114" title="Go to source code"><var>$_profiler_sections</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_profiler_sections" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of profiler sections</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of profiler sections</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse_exec_vars" id="$parse_exec_vars">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Output.html#116-123" title="Go to source code"><var>$parse_exec_vars</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$parse_exec_vars" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Parse markers flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse markers flag</p>
+
+<p>Whether or not to parse variables like {elapsed_time} and {memory_usage}.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

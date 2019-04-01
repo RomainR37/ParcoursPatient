@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Upload | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li class="active"><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Upload</h1>
+
+
+	<div class="description">
+	
+<p>File Uploading Class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Uploads<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/file_uploading.html">http://codeigniter.com/user_guide/libraries/file_uploading.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Upload.html#40-1308" title="Go to source code">sys/libraries/Upload.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Upload.html#286-300" title="Go to source code">__construct</a>( <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code>array</code><br>$props</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-CI_Upload.html#304-364" title="Go to source code">initialize</a>( <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$reset</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize preferences</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize preferences</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code>array</code><br>$config</dd>
+					<dt><var>$reset</var></dt>
+					<dd><code>boolean</code><br>$reset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="do_upload" id="_do_upload">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_do_upload">#</a>
+		<code><a href="source-class-CI_Upload.html#368-578" title="Go to source code">do_upload</a>( <span>string <var>$field</var> = <span class="php-quote">'userfile'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Perform the file upload</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Perform the file upload</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="data" id="_data">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_data">#</a>
+		<code><a href="source-class-CI_Upload.html#582-616" title="Go to source code">data</a>( <span>string <var>$index</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Finalized Data Array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finalized Data Array</p>
+
+<p>Returns an associative array containing all of the information related to the
+upload, allowing the developer easy access in one array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>string</code><br>$index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_upload_path" id="_set_upload_path">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_upload_path">#</a>
+		<code><a href="source-class-CI_Upload.html#620-631" title="Go to source code">set_upload_path</a>( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Upload Path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Upload Path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_filename" id="_set_filename">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_filename">#</a>
+		<code><a href="source-class-CI_Upload.html#635-679" title="Go to source code">set_filename</a>( <span>string <var>$path</var></span>, <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the file name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the file name</p>
+
+<p>This function takes a filename/path as input and looks for the existence of a
+file with the same name. If found, it will append a number to the end of the
+filename to avoid overwriting a pre-existing file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path</dd>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_max_filesize" id="_set_max_filesize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_max_filesize">#</a>
+		<code><a href="source-class-CI_Upload.html#683-693" title="Go to source code">set_max_filesize</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Maximum File Size</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Maximum File Size</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_max_size" id="_set_max_size">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_max_size">#</a>
+		<code><a href="source-class-CI_Upload.html#697-709" title="Go to source code">set_max_size</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Maximum File Size</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Maximum File Size</p>
+
+<p>An internal alias to set_max_filesize() to help with configuration as
+initialize() will look for a set_&lt;property_name&gt;() method ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_max_filename" id="_set_max_filename">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_max_filename">#</a>
+		<code><a href="source-class-CI_Upload.html#713-723" title="Go to source code">set_max_filename</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Maximum File Name Length</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Maximum File Name Length</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_max_width" id="_set_max_width">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_max_width">#</a>
+		<code><a href="source-class-CI_Upload.html#727-737" title="Go to source code">set_max_width</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Maximum Image Width</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Maximum Image Width</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_max_height" id="_set_max_height">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_max_height">#</a>
+		<code><a href="source-class-CI_Upload.html#741-751" title="Go to source code">set_max_height</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Maximum Image Height</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Maximum Image Height</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_min_width" id="_set_min_width">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_min_width">#</a>
+		<code><a href="source-class-CI_Upload.html#755-765" title="Go to source code">set_min_width</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set minimum image width</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set minimum image width</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_min_height" id="_set_min_height">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_min_height">#</a>
+		<code><a href="source-class-CI_Upload.html#769-779" title="Go to source code">set_min_height</a>( <span>integer <var>$n</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set minimum image height</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set minimum image height</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code><br>$n</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_allowed_types" id="_set_allowed_types">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_allowed_types">#</a>
+		<code><a href="source-class-CI_Upload.html#783-795" title="Go to source code">set_allowed_types</a>( <span>mixed <var>$types</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Allowed File Types</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Allowed File Types</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$types</var></dt>
+					<dd><code>mixed</code><br>$types</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_image_properties" id="_set_image_properties">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_image_properties">#</a>
+		<code><a href="source-class-CI_Upload.html#799-823" title="Go to source code">set_image_properties</a>( <span>string <var>$path</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Image Properties</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Image Properties</p>
+
+<p>Uses GD to determine the width/height/type of image</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_xss_clean" id="_set_xss_clean">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_xss_clean">#</a>
+		<code><a href="source-class-CI_Upload.html#827-840" title="Go to source code">set_xss_clean</a>( <span>boolean <var>$flag</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set XSS Clean</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set XSS Clean</p>
+
+<p>Enables the XSS flag so that the file that was uploaded will be run through
+the XSS filter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$flag</var></dt>
+					<dd><code>boolean</code><br>$flag</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_image" id="_is_image">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_image">#</a>
+		<code><a href="source-class-CI_Upload.html#844-869" title="Go to source code">is_image</a>( )</code>
+
+		<div class="description short">
+			
+<p>Validate the image</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate the image</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_allowed_filetype" id="_is_allowed_filetype">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_allowed_filetype">#</a>
+		<code><a href="source-class-CI_Upload.html#873-918" title="Go to source code">is_allowed_filetype</a>( <span>boolean <var>$ignore_mime</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Verify that the filetype is allowed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Verify that the filetype is allowed</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ignore_mime</var></dt>
+					<dd><code>boolean</code><br>$ignore_mime</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_allowed_filesize" id="_is_allowed_filesize">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_allowed_filesize">#</a>
+		<code><a href="source-class-CI_Upload.html#922-930" title="Go to source code">is_allowed_filesize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Verify that the file is within the allowed size</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Verify that the file is within the allowed size</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_allowed_dimensions" id="_is_allowed_dimensions">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_allowed_dimensions">#</a>
+		<code><a href="source-class-CI_Upload.html#934-972" title="Go to source code">is_allowed_dimensions</a>( )</code>
+
+		<div class="description short">
+			
+<p>Verify that the image is within the allowed width/height</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Verify that the image is within the allowed width/height</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_upload_path" id="_validate_upload_path">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_upload_path">#</a>
+		<code><a href="source-class-CI_Upload.html#976-1010" title="Go to source code">validate_upload_path</a>( )</code>
+
+		<div class="description short">
+			
+<p>Validate Upload Path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate Upload Path</p>
+
+<p>Verifies that it is a valid upload path with proper permissions.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_extension" id="_get_extension">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_extension">#</a>
+		<code><a href="source-class-CI_Upload.html#1014-1031" title="Go to source code">get_extension</a>( <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Extract the file extension</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Extract the file extension</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="limit_filename_length" id="_limit_filename_length">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_limit_filename_length">#</a>
+		<code><a href="source-class-CI_Upload.html#1035-1058" title="Go to source code">limit_filename_length</a>( <span>string <var>$filename</var></span>, <span>integer <var>$length</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Limit the File Name Length</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Limit the File Name Length</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="do_xss_clean" id="_do_xss_clean">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_do_xss_clean">#</a>
+		<code><a href="source-class-CI_Upload.html#1062-1124" title="Go to source code">do_xss_clean</a>( )</code>
+
+		<div class="description short">
+			
+<p>Runs the file through the XSS clean function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs the file through the XSS clean function</p>
+
+<p>This prevents people from embedding malicious code in their files. I'm not
+sure that it won't negatively affect certain files in unexpected ways, but so
+far I haven't found that it causes trouble.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_error" id="_set_error">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Upload.html">CI_Upload</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_error">#</a>
+		<code><a href="source-class-CI_Upload.html#1128-1147" title="Go to source code">set_error</a>( <span>string <var>$msg</var></span>, <span>mixed <var>$log_level</var> = <span class="php-quote">'error'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set an error message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set an error message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg</dd>
+					<dt><var>$log_level</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Upload.html">CI_Upload</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_errors" id="_display_errors">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display_errors">#</a>
+		<code><a href="source-class-CI_Upload.html#1151-1161" title="Go to source code">display_errors</a>( <span>string <var>$open</var> = <span class="php-quote">'&lt;p&gt;'</span></span>, <span>string <var>$close</var> = <span class="php-quote">'&lt;/p&gt;'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Display the error message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display the error message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$open</var></dt>
+					<dd><code>string</code><br>$open</dd>
+					<dt><var>$close</var></dt>
+					<dd><code>string</code><br>$close</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_prep_filename" id="__prep_filename">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__prep_filename">#</a>
+		<code><a href="source-class-CI_Upload.html#1165-1186" title="Go to source code">_prep_filename</a>( <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Prep Filename</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prep Filename</p>
+
+<p>Prevents possible script execution from Apache's handling of files' multiple
+extensions.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://httpd.apache.org/docs/1.3/mod/mod_mime.html#multipleext">http://httpd.apache.org/docs/1.3/mod/mod_mime.html#multipleext</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_file_mime_type" id="__file_mime_type">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__file_mime_type">#</a>
+		<code><a href="source-class-CI_Upload.html#1190-1306" title="Go to source code">_file_mime_type</a>( <span>array <var>$file</var></span> )</code>
+
+		<div class="description short">
+			
+<p>File MIME type</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>File MIME type</p>
+
+<p>Detects the (actual) MIME type of the uploaded file, if possible. The input
+array is expected to be $_FILES[$field]</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>array</code><br>$file</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="max_size" id="$max_size">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#51-56" title="Go to source code"><var>$max_size</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$max_size" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum file size</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum file size</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="max_width" id="$max_width">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#58-63" title="Go to source code"><var>$max_width</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$max_width" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum image width</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum image width</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="max_height" id="$max_height">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#65-70" title="Go to source code"><var>$max_height</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$max_height" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum image height</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum image height</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="min_width" id="$min_width">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#72-77" title="Go to source code"><var>$min_width</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$min_width" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Minimum image width</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Minimum image width</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="min_height" id="$min_height">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#79-84" title="Go to source code"><var>$min_height</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$min_height" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Minimum image height</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Minimum image height</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="max_filename" id="$max_filename">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#86-91" title="Go to source code"><var>$max_filename</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$max_filename" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum filename length</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum filename length</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="max_filename_increment" id="$max_filename_increment">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#93-98" title="Go to source code"><var>$max_filename_increment</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">100</span></code></td>
+		<td class="description"><div>
+			<a href="#$max_filename_increment" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Maximum duplicate filename increment ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Maximum duplicate filename increment ID</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="allowed_types" id="$allowed_types">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#100-105" title="Go to source code"><var>$allowed_types</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$allowed_types" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Allowed file types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Allowed file types</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_temp" id="$file_temp">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#107-112" title="Go to source code"><var>$file_temp</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_temp" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Temporary filename</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Temporary filename</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_name" id="$file_name">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#114-119" title="Go to source code"><var>$file_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Filename</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Filename</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="orig_name" id="$orig_name">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#121-126" title="Go to source code"><var>$orig_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$orig_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Original filename</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Original filename</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_type" id="$file_type">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#128-133" title="Go to source code"><var>$file_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File type</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_size" id="$file_size">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#135-140" title="Go to source code"><var>$file_size</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">NULL</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_size" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File size</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File size</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_ext" id="$file_ext">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#142-147" title="Go to source code"><var>$file_ext</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_ext" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Filename extension</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Filename extension</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="file_ext_tolower" id="$file_ext_tolower">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#149-154" title="Go to source code"><var>$file_ext_tolower</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$file_ext_tolower" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Force filename extension to lowercase</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Force filename extension to lowercase</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="upload_path" id="$upload_path">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#156-161" title="Go to source code"><var>$upload_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$upload_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Upload path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Upload path</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="overwrite" id="$overwrite">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#163-168" title="Go to source code"><var>$overwrite</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$overwrite" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Overwrite flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Overwrite flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="encrypt_name" id="$encrypt_name">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#170-175" title="Go to source code"><var>$encrypt_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$encrypt_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Obfuscate filename flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Obfuscate filename flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_image" id="$is_image">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#177-182" title="Go to source code"><var>$is_image</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$is_image" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Is image flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Is image flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="image_width" id="$image_width">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#184-189" title="Go to source code"><var>$image_width</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">NULL</span></code></td>
+		<td class="description"><div>
+			<a href="#$image_width" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Image width</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Image width</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="image_height" id="$image_height">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#191-196" title="Go to source code"><var>$image_height</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">NULL</span></code></td>
+		<td class="description"><div>
+			<a href="#$image_height" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Image height</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Image height</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="image_type" id="$image_type">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#198-203" title="Go to source code"><var>$image_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$image_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Image type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Image type</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="image_size_str" id="$image_size_str">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#205-210" title="Go to source code"><var>$image_size_str</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$image_size_str" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Image size string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Image size string</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="error_msg" id="$error_msg">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#212-217" title="Go to source code"><var>$error_msg</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$error_msg" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Error messages list</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Error messages list</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove_spaces" id="$remove_spaces">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#219-224" title="Go to source code"><var>$remove_spaces</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$remove_spaces" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Remove spaces flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Remove spaces flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="detect_mime" id="$detect_mime">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#226-231" title="Go to source code"><var>$detect_mime</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$detect_mime" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>MIME detection flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>MIME detection flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="xss_clean" id="$xss_clean">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#233-238" title="Go to source code"><var>$xss_clean</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$xss_clean" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>XSS filter flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>XSS filter flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="mod_mime_fix" id="$mod_mime_fix">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#240-245" title="Go to source code"><var>$mod_mime_fix</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$mod_mime_fix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Apache mod_mime fix flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Apache mod_mime fix flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="temp_prefix" id="$temp_prefix">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#247-252" title="Go to source code"><var>$temp_prefix</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'temp_file_'</span></code></td>
+		<td class="description"><div>
+			<a href="#$temp_prefix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Temporary filename prefix</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Temporary filename prefix</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="client_name" id="$client_name">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#254-259" title="Go to source code"><var>$client_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$client_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Filename sent by the client</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Filename sent by the client</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_file_name_override" id="$_file_name_override">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#263-268" title="Go to source code"><var>$_file_name_override</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_file_name_override" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Filename override</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Filename override</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mimes" id="$_mimes">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#270-275" title="Go to source code"><var>$_mimes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_mimes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>MIME types list</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>MIME types list</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_CI" id="$_CI">
+		<td class="attributes"><code>
+			protected  
+			object
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Upload.html#277-282" title="Go to source code"><var>$_CI</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_CI" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CI Singleton</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CI Singleton</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,15 +1,13 @@
 <?php
 
 /**
- * \file      PlanParcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller de gestion des plan parcours
- *            
- *
- * \details   Controller de gestion des plan parcours
- *            Nombre de clients attendus par jour pour un parcours donné
+ * Contrôleur de gestion des plan parcours
+ * 
+ * Les plans parcours sont les représenatations du nombre de patient 
+ * attendus par jour pour un parcours donné
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017  
  */
 class PlanParcours extends CI_Controller {
 
@@ -22,9 +20,10 @@ class PlanParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de tous les parcours
-     * \details    Permet d'afficher la liste de tous les parcours et de tout leur nombre de patients attendus pour une semaine
-     * \param      Aucun
+     * Permet d'afficher la liste de tous les parcours
+     * 
+     * Permet d'afficher la liste de tous les parcours et de tout leur nombre 
+     * de patients attendus pour une semaine
      */
     public function index() {
 
@@ -37,9 +36,10 @@ class PlanParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste d'un parcours de leurs objetifs
-     * \details    cette fonction prend le ID du parcours choisi et construit un nouveau tableau qui contient que les infos du parcours choisi
-     * \param      Aucun
+     * Permet d'afficher la liste d'un parcours de leurs objetifs
+     * 
+     * Cette fonction prend le ID du parcours choisi et construit un nouveau 
+     * tableau qui contient que les infos du parcours choisi
      */
     public function afficheParcours() {
         $this->load->model('M_PlanParcours');
@@ -85,9 +85,7 @@ class PlanParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'enregistrer les modifications sur les plan parcours
-     * \details    Permet d'enregistrer les modifications sur les plan parcours dans la base de données
-     * \param      Aucun
+     * Permet d'enregistrer les modifications sur les plan parcours
      */
     public function savechanges() {
 

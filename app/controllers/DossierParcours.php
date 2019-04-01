@@ -1,15 +1,14 @@
 <?php
 
 /**
- * \file      DossierParcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'affichage d'un dossier parcours
- *            
+ * Contrôleur d'affichage d'un dossier parcours
  *
- * \details   Contient les différentes méthodes de gestion Controller d'affichage d'un dossier parcours
- *            (Dossier parcours = remarques sur une activité d'un patient)
+ * Contient les différentes méthodes de gestion des dossiers parcours
+ * (Dossier parcours = remarques sur une activité d'un patient)
+ *  
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class DossierParcours extends CI_Controller {
 
@@ -21,14 +20,13 @@ class DossierParcours extends CI_Controller {
             redirect('/AffichageSejour', 'refresh');
     }
 
-    public function index() {
-        
-    }
-
     /**
-     * \brief      Permet d'afficher un dossier parcours 
-     * \details    La méthode permet de charger le dossier du patient avec identifiant en paramètre
-     * \param      $idPatient :  identifiant du patient
+     * Permet d'afficher un dossier parcours 
+     * 
+     * La méthode permet de charger le dossier du patient avec 
+     * identifiant en paramètre
+     * 
+     * @param $idPatient : identifiant du patient
      */
     public function dossier($idPatient) {
         $this->load->model('M_DossierParcours');
@@ -44,9 +42,10 @@ class DossierParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher les différentes onglet d'un dossier parcours
-     * \details    La méthode permet de charger les différentes onglets d'un dossier parcours du patient avec identifiant en paramètre
-     * \param      Aucun
+     * Permet d'afficher les différents onglets d'un dossier parcours
+     * 
+     * La méthode permet de charger les différents onglets d'un dossier
+     * parcours du patient avec identifiant en paramètre
      */
     public function loadOngletAndDossier() {
         if (isset($_POST['idOnglet']) && isset($_POST['idDossierParcours']) && isset($_POST['idPatient'])) {
@@ -58,9 +57,9 @@ class DossierParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de modifier un dossier parcours
-     * \details    La méthode permet de modifier un dossier parcours d'un patient
-     * \param      Aucun
+     * Permet de modifier un dossier parcours
+     * 
+     * La méthode permet de modifier un dossier parcours d'un patient
      */
     public function modifierValeurs() {
         $data = array();
@@ -74,9 +73,9 @@ class DossierParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récuperer la liste des champs lié à chaque onglet
-     * \details    La méthode permet de récuperer la liste des champs lié à chaque onglet
-     * \param      Aucun
+     * Permet de récuperer la liste des champs liée à chaque onglet
+     * 
+     * La méthode permet de récuperer la liste des champs liée à chaque onglet
      */
     public function getChamp() {
         if (isset($_GET['term'])) {
@@ -88,9 +87,9 @@ class DossierParcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter un nouveau champ à un dossier parcours
-     * \details    La méthode permet d'ajouter un nouveau champ à un dossier parcours
-     * \param      Aucun
+     * Permet d'ajouter un nouveau champ à un dossier parcours
+     * 
+     * La méthode permet d'ajouter un nouveau champ à un dossier parcours
      */
     public function ajoutChampDossier() {
         $idOnglet = $_POST["idOnglet"];

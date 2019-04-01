@@ -1,14 +1,14 @@
 <?php
 
 /**
- * \file      Ressource.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'une ressource humaine ou matérielles
- *            
- *
- * \details   Contient les différentes méthodes de gestion du personnels et des matériaux (salles, objets, etc)
+ * Contrôleur d'une ressource humaine ou matérielle
+ * 
+ * Contient les différentes méthodes de gestion du personnels et 
+ * des matériaux (salles, objets, etc)
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class Ressource extends CI_Controller {
 
@@ -21,10 +21,11 @@ class Ressource extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher toutes les ressources humaines et matérielles
-     * \details    Méthode permettant la liaison entre la vue ressource et le modèle ressource
-     *             Récupére toutes les ressources et les envoie à la vue qui se charge de les afficher
-     * \param      Aucun
+     * Permet d'afficher toutes les ressources humaines et matérielles
+     * 
+     * Méthode permettant la liaison entre la vue Ressource et le modèle 
+     * Ressource. Récupère toutes les ressources et les envoie à la vue qui 
+     * se charge de les afficher
      */
     public function index() {
 
@@ -34,9 +35,10 @@ class Ressource extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter une ressource 
-     * \details    Fonction permettant d'afficher la vue d'ajout d'une nouvelle ressource (humaine ou matérielle)
-     * \param      Aucun
+     * Permet d'ajouter une ressource 
+     * 
+     * Fonction permettant d'afficher la vue d'ajout d'une nouvelle 
+     * ressource (humaine ou matérielle)
      */
     public function ajout() {
 
@@ -47,10 +49,13 @@ class Ressource extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher le planning d'une ressource 
-     * \details    Affichage de l'emploi du temps d'une ressource
-     * \param      $id : identifiant de la ressource
-      $week : entier relatif égal à la différence de semaine entre la semaine actuelle et celle qu'on veut visualiser (exemple : semaine précédente = -1)
+     * Permet d'afficher le planning d'une ressource 
+     * 
+     * Affichage de l'emploi du temps d'une ressource
+     * @param $id : identifiant de la ressource
+     * @param $week : entier relatif égal à la différence de semaine entre 
+     * la semaine actuelle et celle qu'on veut visualiser 
+     * (exemple : semaine précédente = -1)
      */
     public function solo($id = 0, $week = 0) {
         // Le personnel médical n'a pas accès aux autres emplois du temps

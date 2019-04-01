@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Pagination | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li class="active"><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Pagination</h1>
+
+
+	<div class="description">
+	
+<p>Pagination Class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Pagination<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/pagination.html">http://codeigniter.com/user_guide/libraries/pagination.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Pagination.html#40-697" title="Go to source code">sys/libraries/Pagination.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Pagination.html#324-344" title="Go to source code">__construct</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Initialization parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Pagination.html">CI_Pagination</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-CI_Pagination.html#348-390" title="Go to source code">initialize</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize Preferences</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize Preferences</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Initialization parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Pagination.html">CI_Pagination</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create_links" id="_create_links">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create_links">#</a>
+		<code><a href="source-class-CI_Pagination.html#394-652" title="Go to source code">create_links</a>( )</code>
+
+		<div class="description short">
+			
+<p>Generate the pagination links</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate the pagination links</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_parse_attributes" id="__parse_attributes">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__parse_attributes">#</a>
+		<code><a href="source-class-CI_Pagination.html#656-675" title="Go to source code">_parse_attributes</a>( <span>array <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Parse attributes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse attributes</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd><code>array</code><br>$attributes</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_attr_rel" id="__attr_rel">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__attr_rel">#</a>
+		<code><a href="source-class-CI_Pagination.html#679-695" title="Go to source code">_attr_rel</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add "rel" attribute</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add "rel" attribute</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://www.w3.org/TR/html5/links.html#linkTypes">http://www.w3.org/TR/html5/links.html#linkTypes</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="base_url" id="$base_url">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#51-58" title="Go to source code"><var>$base_url</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$base_url" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Base URL</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Base URL</p>
+
+<p>The page that we're linking to</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="prefix" id="$prefix">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#60-65" title="Go to source code"><var>$prefix</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$prefix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Prefix</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prefix</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="suffix" id="$suffix">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#67-72" title="Go to source code"><var>$suffix</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$suffix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Suffix</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Suffix</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="total_rows" id="$total_rows">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#74-79" title="Go to source code"><var>$total_rows</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$total_rows" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Total number of items</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Total number of items</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="num_links" id="$num_links">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#81-89" title="Go to source code"><var>$num_links</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#$num_links" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Number of links to show</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Number of links to show</p>
+
+<p>Relates to "digit" type links shown before/after the currently viewed
+page.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="per_page" id="$per_page">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#91-96" title="Go to source code"><var>$per_page</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">10</span></code></td>
+		<td class="description"><div>
+			<a href="#$per_page" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Items per page</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Items per page</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cur_page" id="$cur_page">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#98-103" title="Go to source code"><var>$cur_page</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$cur_page" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current page</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current page</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="use_page_numbers" id="$use_page_numbers">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#105-112" title="Go to source code"><var>$use_page_numbers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$use_page_numbers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Use page numbers flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Use page numbers flag</p>
+
+<p>Whether to use actual page numbers instead of an offset</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="first_link" id="$first_link">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#114-119" title="Go to source code"><var>$first_link</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&amp;lsaquo; First'</span></code></td>
+		<td class="description"><div>
+			<a href="#$first_link" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>First link</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>First link</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="next_link" id="$next_link">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#121-126" title="Go to source code"><var>$next_link</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&amp;gt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$next_link" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Next link</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Next link</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="prev_link" id="$prev_link">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#128-133" title="Go to source code"><var>$prev_link</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&amp;lt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$prev_link" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Previous link</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Previous link</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_link" id="$last_link">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#135-140" title="Go to source code"><var>$last_link</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'Last &amp;rsaquo;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$last_link" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Last link</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Last link</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="uri_segment" id="$uri_segment">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#142-147" title="Go to source code"><var>$uri_segment</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$uri_segment" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>URI Segment</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>URI Segment</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="full_tag_open" id="$full_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#149-154" title="Go to source code"><var>$full_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$full_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Full tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Full tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="full_tag_close" id="$full_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#156-161" title="Go to source code"><var>$full_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$full_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Full tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Full tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="first_tag_open" id="$first_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#163-168" title="Go to source code"><var>$first_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$first_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>First tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>First tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="first_tag_close" id="$first_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#170-175" title="Go to source code"><var>$first_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$first_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>First tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>First tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_tag_open" id="$last_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#177-182" title="Go to source code"><var>$last_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$last_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Last tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Last tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_tag_close" id="$last_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#184-189" title="Go to source code"><var>$last_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$last_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Last tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Last tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="first_url" id="$first_url">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#191-198" title="Go to source code"><var>$first_url</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$first_url" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>First URL</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>First URL</p>
+
+<p>An alternative URL for the first page</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cur_tag_open" id="$cur_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#200-205" title="Go to source code"><var>$cur_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&lt;strong&gt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$cur_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cur_tag_close" id="$cur_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#207-212" title="Go to source code"><var>$cur_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&lt;/strong&gt;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$cur_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="next_tag_open" id="$next_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#214-219" title="Go to source code"><var>$next_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$next_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Next tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Next tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="next_tag_close" id="$next_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#221-226" title="Go to source code"><var>$next_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$next_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Next tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Next tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="prev_tag_open" id="$prev_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#228-233" title="Go to source code"><var>$prev_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$prev_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Previous tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Previous tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="prev_tag_close" id="$prev_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#235-240" title="Go to source code"><var>$prev_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$prev_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Previous tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Previous tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="num_tag_open" id="$num_tag_open">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#242-247" title="Go to source code"><var>$num_tag_open</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$num_tag_open" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Number tag open</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Number tag open</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="num_tag_close" id="$num_tag_close">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#249-254" title="Go to source code"><var>$num_tag_close</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$num_tag_close" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Number tag close</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Number tag close</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="page_query_string" id="$page_query_string">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#256-261" title="Go to source code"><var>$page_query_string</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$page_query_string" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Page query string flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Page query string flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="query_string_segment" id="$query_string_segment">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#263-268" title="Go to source code"><var>$query_string_segment</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'per_page'</span></code></td>
+		<td class="description"><div>
+			<a href="#$query_string_segment" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Query string segment</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Query string segment</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_pages" id="$display_pages">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#270-275" title="Go to source code"><var>$display_pages</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$display_pages" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Display pages flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Display pages flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_attributes" id="$_attributes">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#277-282" title="Go to source code"><var>$_attributes</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_attributes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attributes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attributes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_link_types" id="$_link_types">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#284-292" title="Go to source code"><var>$_link_types</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_link_types" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Link types</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Link types</p>
+
+<p>"rel" attribute</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Pagination.html#__attr_rel">CI_Pagination::_attr_rel()</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="reuse_query_string" id="$reuse_query_string">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#294-299" title="Go to source code"><var>$reuse_query_string</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$reuse_query_string" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Reuse query string flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reuse query string flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="use_global_url_suffix" id="$use_global_url_suffix">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#301-306" title="Go to source code"><var>$use_global_url_suffix</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$use_global_url_suffix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Use global URL suffix flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Use global URL suffix flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="data_page_attr" id="$data_page_attr">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#308-313" title="Go to source code"><var>$data_page_attr</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'data-ci-pagination-page'</span></code></td>
+		<td class="description"><div>
+			<a href="#$data_page_attr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Data page attribute</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Data page attribute</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CI" id="$CI">
+		<td class="attributes"><code>
+			protected  
+			object
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Pagination.html#315-320" title="Go to source code"><var>$CI</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$CI" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CI Singleton</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CI Singleton</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

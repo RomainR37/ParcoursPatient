@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File app/controllers/Ressource.php | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Activites.html">Activites</a></li>
+				<li><a href="class-AffichageSejour.html">AffichageSejour</a></li>
+				<li><a href="class-Auth.html">Auth</a></li>
+				<li><a href="class-DossierParcours.html">DossierParcours</a></li>
+				<li><a href="class-EtreIndispo.html">EtreIndispo</a></li>
+				<li><a href="class-M_Activite.html">M_Activite</a></li>
+				<li><a href="class-M_Auth.html">M_Auth</a></li>
+				<li><a href="class-M_Champ.html">M_Champ</a></li>
+				<li><a href="class-M_Composer.html">M_Composer</a></li>
+				<li><a href="class-M_Compte.html">M_Compte</a></li>
+				<li><a href="class-M_DossierParcours.html">M_DossierParcours</a></li>
+				<li><a href="class-M_EtreIndispo.html">M_EtreIndispo</a></li>
+				<li><a href="class-M_Necessiter.html">M_Necessiter</a></li>
+				<li><a href="class-M_Onglet.html">M_Onglet</a></li>
+				<li><a href="class-M_Parcours.html">M_Parcours</a></li>
+				<li><a href="class-M_Patient.html">M_Patient</a></li>
+				<li><a href="class-M_Personnel.html">M_Personnel</a></li>
+				<li><a href="class-M_Planning.html">M_Planning</a></li>
+				<li><a href="class-M_PlanParcours.html">M_PlanParcours</a></li>
+				<li><a href="class-M_Ressource.html">M_Ressource</a></li>
+				<li><a href="class-M_RessourcesMat.html">M_RessourcesMat</a></li>
+				<li><a href="class-M_TypeRessource.html">M_TypeRessource</a></li>
+				<li><a href="class-Parcours.html">Parcours</a></li>
+				<li><a href="class-Patient.html">Patient</a></li>
+				<li><a href="class-Personnels.html">Personnels</a></li>
+				<li><a href="class-Planning.html">Planning</a></li>
+				<li><a href="class-PlanParcours.html">PlanParcours</a></li>
+				<li class="active"><a href="class-Ressource.html">Ressource</a></li>
+				<li><a href="class-RessourcesMat.html">RessourcesMat</a></li>
+				<li><a href="class-TypeRessource.html">TypeRessource</a></li>
+				<li><a href="class-Welcome.html">Welcome</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-None.html" title="Summary of None"><span>Package</span></a>
+			</li>
+			<li>
+				<a href="class-Ressource.html" title="Summary of Ressource"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * Contrôleur d'une ressource humaine ou matérielle
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * 
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * Contient les différentes méthodes de gestion du personnels et 
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> * des matériaux (salles, objets, etc)
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> * 
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> * @author    Guillaume Pochet
+</span></span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment"> * @version   1.0
+</span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> * @since     09 Mars 2017
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> */</span>
+</span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-keyword1">class</span> <a id="Ressource" href="#Ressource">Ressource</a> <span class="php-keyword1">extends</span> CI_Controller {
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>    <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>() {
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>        parent::__construct();
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;session-&gt;userdata(<span class="php-quote">&quot;username&quot;</span>) === <span class="php-keyword1">null</span>)
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>            redirect(<span class="php-quote">'/Auth'</span>, <span class="php-quote">'refresh'</span>);
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;session-&gt;userdata(<span class="php-quote">&quot;level&quot;</span>) === <span class="php-quote">&quot;1&quot;</span>)
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>            redirect(<span class="php-quote">'/AffichageSejour'</span>, <span class="php-quote">'refresh'</span>);
+</span><span id="21" class="l"><a class="l" href="#21">21: </a>    }
+</span><span id="22" class="l"><a class="l" href="#22">22: </a>
+</span><span id="23" class="l"><a class="l" href="#23">23: </a>    <span class="php-comment">/**
+</span></span><span id="24" class="l"><a class="l" href="#24">24: </a><span class="php-comment">     * Permet d'afficher toutes les ressources humaines et matérielles
+</span></span><span id="25" class="l"><a class="l" href="#25">25: </a><span class="php-comment">     * 
+</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment">     * Méthode permettant la liaison entre la vue Ressource et le modèle 
+</span></span><span id="27" class="l"><a class="l" href="#27">27: </a><span class="php-comment">     * Ressource. Récupère toutes les ressources et les envoie à la vue qui 
+</span></span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-comment">     * se charge de les afficher
+</span></span><span id="29" class="l"><a class="l" href="#29">29: </a><span class="php-comment">     */</span>
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_index" href="#_index">index</a>() {
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>        <span class="php-var">$data</span>[<span class="php-quote">'chemin'</span>] = <span class="php-quote">'/ressource/ressource'</span>;
+</span><span id="34" class="l"><a class="l" href="#34">34: </a>        <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'/V_generale'</span>, <span class="php-var">$data</span>);
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>    }
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>    <span class="php-comment">/**
+</span></span><span id="38" class="l"><a class="l" href="#38">38: </a><span class="php-comment">     * Permet d'ajouter une ressource 
+</span></span><span id="39" class="l"><a class="l" href="#39">39: </a><span class="php-comment">     * 
+</span></span><span id="40" class="l"><a class="l" href="#40">40: </a><span class="php-comment">     * Fonction permettant d'afficher la vue d'ajout d'une nouvelle 
+</span></span><span id="41" class="l"><a class="l" href="#41">41: </a><span class="php-comment">     * ressource (humaine ou matérielle)
+</span></span><span id="42" class="l"><a class="l" href="#42">42: </a><span class="php-comment">     */</span>
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_ajout" href="#_ajout">ajout</a>() {
+</span><span id="44" class="l"><a class="l" href="#44">44: </a>
+</span><span id="45" class="l"><a class="l" href="#45">45: </a>        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>        <span class="php-var">$data</span>[<span class="php-quote">'chemin'</span>] = <span class="php-quote">'/ressource/formAjout'</span>;
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>
+</span><span id="48" class="l"><a class="l" href="#48">48: </a>        <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'/V_generale'</span>, <span class="php-var">$data</span>);
+</span><span id="49" class="l"><a class="l" href="#49">49: </a>    }
+</span><span id="50" class="l"><a class="l" href="#50">50: </a>
+</span><span id="51" class="l"><a class="l" href="#51">51: </a>    <span class="php-comment">/**
+</span></span><span id="52" class="l"><a class="l" href="#52">52: </a><span class="php-comment">     * Permet d'afficher le planning d'une ressource 
+</span></span><span id="53" class="l"><a class="l" href="#53">53: </a><span class="php-comment">     * 
+</span></span><span id="54" class="l"><a class="l" href="#54">54: </a><span class="php-comment">     * Affichage de l'emploi du temps d'une ressource
+</span></span><span id="55" class="l"><a class="l" href="#55">55: </a><span class="php-comment">     * @param $id : identifiant de la ressource
+</span></span><span id="56" class="l"><a class="l" href="#56">56: </a><span class="php-comment">     * @param $week : entier relatif égal à la différence de semaine entre 
+</span></span><span id="57" class="l"><a class="l" href="#57">57: </a><span class="php-comment">     * la semaine actuelle et celle qu'on veut visualiser 
+</span></span><span id="58" class="l"><a class="l" href="#58">58: </a><span class="php-comment">     * (exemple : semaine précédente = -1)
+</span></span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-comment">     */</span>
+</span><span id="60" class="l"><a class="l" href="#60">60: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_solo" href="#_solo">solo</a>(<span class="php-var">$id</span> = <span class="php-num">0</span>, <span class="php-var">$week</span> = <span class="php-num">0</span>) {
+</span><span id="61" class="l"><a class="l" href="#61">61: </a>        <span class="php-comment">// Le personnel médical n'a pas accès aux autres emplois du temps</span>
+</span><span id="62" class="l"><a class="l" href="#62">62: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;session-&gt;userdata(<span class="php-quote">&quot;level&quot;</span>) === <span class="php-quote">&quot;2&quot;</span>)
+</span><span id="63" class="l"><a class="l" href="#63">63: </a>            <span class="php-var">$id</span> = <span class="php-var">$this</span>-&gt;session-&gt;userdata(<span class="php-quote">&quot;id_individu&quot;</span>);
+</span><span id="64" class="l"><a class="l" href="#64">64: </a>
+</span><span id="65" class="l"><a class="l" href="#65">65: </a>        <span class="php-var">$this</span>-&gt;load-&gt;model(<span class="php-quote">'M_Ressource'</span>);
+</span><span id="66" class="l"><a class="l" href="#66">66: </a>        <span class="php-var">$data</span> = <span class="php-keyword1">array</span>();
+</span><span id="67" class="l"><a class="l" href="#67">67: </a>        <span class="php-var">$data</span>[<span class="php-quote">'chemin'</span>] = <span class="php-quote">'/ressource/ressourceSolo'</span>;
+</span><span id="68" class="l"><a class="l" href="#68">68: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">intval</span>(<span class="php-var">$id</span>) != <span class="php-num">0</span>) {
+</span><span id="69" class="l"><a class="l" href="#69">69: </a>            <span class="php-var">$data</span>[<span class="php-quote">'id'</span>] = <span class="php-keyword2">intval</span>(<span class="php-var">$id</span>);
+</span><span id="70" class="l"><a class="l" href="#70">70: </a>            <span class="php-var">$data</span>[<span class="php-quote">'week'</span>] = <span class="php-keyword2">intval</span>(<span class="php-var">$week</span>);
+</span><span id="71" class="l"><a class="l" href="#71">71: </a>
+</span><span id="72" class="l"><a class="l" href="#72">72: </a>            <span class="php-var">$data</span>[<span class="php-quote">'activity'</span>] = <span class="php-var">$this</span>-&gt;M_Ressource-&gt;getWeekByIdRessource(<span class="php-var">$data</span>[<span class="php-quote">'id'</span>], <span class="php-keyword2">date</span>(<span class="php-quote">&quot;Y-m-d&quot;</span>, <span class="php-keyword2">strtotime</span>(<span class="php-quote">&quot;last Monday&quot;</span>, <span class="php-keyword2">strtotime</span>(<span class="php-var">$data</span>[<span class="php-quote">'week'</span>] . <span class="php-quote">' weeks'</span>))));
+</span><span id="73" class="l"><a class="l" href="#73">73: </a>            <span class="php-var">$data</span>[<span class="php-quote">'nom_res'</span>] = <span class="php-var">$this</span>-&gt;M_Ressource-&gt;getNameByIdRessource(<span class="php-var">$data</span>[<span class="php-quote">'id'</span>]);
+</span><span id="74" class="l"><a class="l" href="#74">74: </a>            <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'/V_generale'</span>, <span class="php-var">$data</span>);
+</span><span id="75" class="l"><a class="l" href="#75">75: </a>        } <span class="php-keyword1">else</span> {
+</span><span id="76" class="l"><a class="l" href="#76">76: </a>            <span class="php-var">$data</span>[<span class="php-quote">&quot;heading&quot;</span>] = <span class="php-quote">&quot;Erreur&quot;</span>;
+</span><span id="77" class="l"><a class="l" href="#77">77: </a>            <span class="php-var">$data</span>[<span class="php-quote">&quot;message&quot;</span>] = <span class="php-quote">&quot;L'identifiant de la ressource n'est pas reconnu.&quot;</span>;
+</span><span id="78" class="l"><a class="l" href="#78">78: </a>
+</span><span id="79" class="l"><a class="l" href="#79">79: </a>            <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'/errors/html/error_general'</span>, <span class="php-var">$data</span>);
+</span><span id="80" class="l"><a class="l" href="#80">80: </a>        }
+</span><span id="81" class="l"><a class="l" href="#81">81: </a>    }
+</span><span id="82" class="l"><a class="l" href="#82">82: </a>
+</span><span id="83" class="l"><a class="l" href="#83">83: </a>}
+</span><span id="84" class="l"><a class="l" href="#84">84: </a>
+</span><span id="85" class="l"><a class="l" href="#85">85: </a></span><span class="xlang">?&gt;</span></code></pre>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

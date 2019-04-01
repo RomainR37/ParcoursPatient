@@ -3,20 +3,21 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * \file      M_Ressource.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux ressources de manière générale (humaine et matérielle)
+ * Définit les méthodes liées aux ressources de manière générale (humaine et 
+ * matérielle)
  *
- * \details   Ce fichier permet de définir les méthodes d'insertion, de récupération, d'affichage de planning, etc)
+ * Ce fichier permet de définir les méthodes d'insertion, de récupération, 
+ * d'affichage de planning, etc)
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Ressource extends CI_Model {
 
     /**
-     * \brief      Fonction de génération de couleur
-     * \details    Fonction de génération de couleur, cette couleur sera utilisé pour l'affichage du planning des ressources
-     * \param      Aucun
+     * Fonction de génération de couleur, cette couleur sera utilisée pour 
+     * l'affichage du planning des ressources.
      */
     function random_color() {
         mt_srand((double) microtime() * 1000000);
@@ -28,10 +29,10 @@ class M_Ressource extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récuperer les informations sur la planification d'une ressource en fonction d'une date et de son id
-     * \details    Permet de récuperer les informations sur la planification d'une ressource en fonction d'une date et de son id
-     * \param      $id_ressource : id de la ressource
-     *             $date : date
+     * Permet de récupérer les informations sur la planification d'une 
+     * ressource en fonction d'une date et de son id.
+     * @param $id_ressource : id de la ressource
+     * @param $date : date
      */
     function getWeekByIdRessource($id_ressource, $date) {
         $query = $this->db->query("SELECT 
@@ -72,9 +73,7 @@ class M_Ressource extends CI_Model {
     }
 
     /**
-     * \brief      Fonction de récupération de l'id max des différentes ressources
-     * \details    Fonction de récupération de l'id max des différentes ressources
-     * \param      Aucun
+     * Fonction de récupération de l'id max des différentes ressources
      */
     public function getMaxIDRessource() {
         $txt_sql = "SELECT MAX(id_ressource) as id
@@ -86,9 +85,8 @@ class M_Ressource extends CI_Model {
     }
 
     /**
-     * \brief      Fonction de récupération du nom d'une ressource en fonction de son id
-     * \details    Fonction de récupération du nom d'une ressource en fonction de son id
-     * \param      îd : id de la ressource
+     * Fonction de récupération du nom d'une ressource en fonction de son id
+     * @param $id : id de la ressource
      */
     public function getNameByIdRessource($id) {
         $txt_sql = "SELECT TXT_NOM, TXT_PRENOM FROM personnel WHERE ID_RESSOURCE = " . $this->db->escape($id);
@@ -98,10 +96,8 @@ class M_Ressource extends CI_Model {
     }
 
     /**
-     * \brief      Fonction d'insertion d'une nouvelle ressource
-     * \details    Fonction d'insertion d'une nouvelle ressource,
-     *             humaine ou matérielle
-     * \param      $idType, type de la ressource à ajouter
+     * Fonction d'insertion d'une nouvelle ressource, humaine ou matérielle.
+     * @param $idType : type de la ressource à ajouter
      */
     public function insererRessource($idType) {
         $id = $this->getMaxIDRessource();

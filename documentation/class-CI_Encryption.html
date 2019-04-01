@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Encryption | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li class="active"><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Encryption</h1>
+
+
+	<div class="description">
+	
+<p>CodeIgniter Encryption Class</p>
+
+<p>Provides two-way keyed encryption via PHP's MCrypt and/or OpenSSL
+extensions.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Libraries<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				Andrey Andreev<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/encryption.html">http://codeigniter.com/user_guide/libraries/encryption.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Encryption.html#40-926" title="Go to source code">sys/libraries/Encryption.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Encryption.html#146-175" title="Go to source code">__construct</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Configuration parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Encryption.html">CI_Encryption</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-CI_Encryption.html#179-219" title="Go to source code">initialize</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Configuration parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Encryption.html">CI_Encryption</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mcrypt_initialize" id="__mcrypt_initialize">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mcrypt_initialize">#</a>
+		<code><a href="source-class-CI_Encryption.html#223-278" title="Go to source code">_mcrypt_initialize</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize MCrypt</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize MCrypt</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Configuration parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_openssl_initialize" id="__openssl_initialize">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__openssl_initialize">#</a>
+		<code><a href="source-class-CI_Encryption.html#282-328" title="Go to source code">_openssl_initialize</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize OpenSSL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize OpenSSL</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Configuration parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create_key" id="_create_key">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create_key">#</a>
+		<code><a href="source-class-CI_Encryption.html#332-343" title="Go to source code">create_key</a>( <span>integer <var>$length</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a random key</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a random key</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length Output length</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encrypt" id="_encrypt">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#347-377" title="Go to source code">encrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Encrypt</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encrypt</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Input data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mcrypt_encrypt" id="__mcrypt_encrypt">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mcrypt_encrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#381-442" title="Go to source code">_mcrypt_encrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encrypt via MCrypt</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encrypt via MCrypt</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Input data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_openssl_encrypt" id="__openssl_encrypt">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__openssl_encrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#446-478" title="Go to source code">_openssl_encrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encrypt via OpenSSL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encrypt via OpenSSL</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Input data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="decrypt" id="_decrypt">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#482-536" title="Go to source code">decrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Decrypt</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decrypt</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Encrypted data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mcrypt_decrypt" id="__mcrypt_decrypt">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mcrypt_decrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#540-598" title="Go to source code">_mcrypt_decrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decrypt via MCrypt</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decrypt via MCrypt</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Encrypted data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_openssl_decrypt" id="__openssl_decrypt">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__openssl_decrypt">#</a>
+		<code><a href="source-class-CI_Encryption.html#602-630" title="Go to source code">_openssl_decrypt</a>( <span>string <var>$data</var></span>, <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decrypt via OpenSSL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decrypt via OpenSSL</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data Encrypted data</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_params" id="__get_params">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_params">#</a>
+		<code><a href="source-class-CI_Encryption.html#634-714" title="Go to source code">_get_params</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get params</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get params</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Input parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mcrypt_get_handle" id="__mcrypt_get_handle">
+
+		<td class="attributes"><code>
+			 protected 
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mcrypt_get_handle">#</a>
+		<code><a href="source-class-CI_Encryption.html#718-728" title="Go to source code">_mcrypt_get_handle</a>( <span>string <var>$cipher</var></span>, <span>string <var>$mode</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get MCrypt handle</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get MCrypt handle</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cipher</var></dt>
+					<dd><code>string</code><br>$cipher Cipher name</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>string</code><br>$mode Encryption mode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>resource</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_openssl_get_handle" id="__openssl_get_handle">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__openssl_get_handle">#</a>
+		<code><a href="source-class-CI_Encryption.html#732-745" title="Go to source code">_openssl_get_handle</a>( <span>string <var>$cipher</var></span>, <span>string <var>$mode</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get OpenSSL handle</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get OpenSSL handle</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cipher</var></dt>
+					<dd><code>string</code><br>$cipher Cipher name</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>string</code><br>$mode Encryption mode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_cipher_alias" id="__cipher_alias">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__cipher_alias">#</a>
+		<code><a href="source-class-CI_Encryption.html#749-820" title="Go to source code">_cipher_alias</a>( <span>string <var>&amp; $cipher</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cipher alias</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cipher alias</p>
+
+<p>Tries to translate cipher names between MCrypt and OpenSSL's "dialects".</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cipher</var></dt>
+					<dd><code>string</code><br>$cipher Cipher name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hkdf" id="_hkdf">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hkdf">#</a>
+		<code><a href="source-class-CI_Encryption.html#824-862" title="Go to source code">hkdf</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$digest</var> = <span class="php-quote">'sha512'</span></span>, <span>mixed <var>$salt</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$length</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$info</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>HKDF</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HKDF</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Input key</dd>
+					<dt><var>$digest</var></dt>
+					<dd><code>mixed</code><br>$digest A SHA-2 hashing algorithm</dd>
+					<dt><var>$salt</var></dt>
+					<dd><code>mixed</code><br>$salt Optional salt</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>mixed</code><br>$length Output length (defaults to the selected digest size)</dd>
+					<dt><var>$info</var></dt>
+					<dd><code>mixed</code><br>$info Optional context/application-specific info</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>A pseudo-random key<br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="https://tools.ietf.org/rfc/rfc5869.txt">https://tools.ietf.org/rfc/rfc5869.txt</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-CI_Encryption.html#866-885" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>__get() magic</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>__get() magic</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="strlen" id="_strlen">
+
+		<td class="attributes"><code>
+			 protected static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_strlen">#</a>
+		<code><a href="source-class-CI_Encryption.html#889-900" title="Go to source code">strlen</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Byte-safe strlen()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Byte-safe strlen()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="substr" id="_substr">
+
+		<td class="attributes"><code>
+			 protected static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_substr">#</a>
+		<code><a href="source-class-CI_Encryption.html#904-925" title="Go to source code">substr</a>( <span>string <var>$str</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$length</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Byte-safe substr()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Byte-safe substr()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str</dd>
+					<dt><var>$start</var></dt>
+					<dd><code>integer</code><br>$start</dd>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_cipher" id="$_cipher">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#53-58" title="Go to source code"><var>$_cipher</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'aes-128'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_cipher" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Encryption cipher</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Encryption cipher</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mode" id="$_mode">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#60-65" title="Go to source code"><var>$_mode</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'cbc'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_mode" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cipher mode</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cipher mode</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_handle" id="$_handle">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#67-72" title="Go to source code"><var>$_handle</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_handle" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cipher handle</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cipher handle</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_key" id="$_key">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#74-79" title="Go to source code"><var>$_key</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_key" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Encryption key</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Encryption key</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_driver" id="$_driver">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#81-86" title="Go to source code"><var>$_driver</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_driver" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>PHP extension to be used</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>PHP extension to be used</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_drivers" id="$_drivers">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#88-93" title="Go to source code"><var>$_drivers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_drivers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of usable drivers (PHP extensions)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of usable drivers (PHP extensions)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_modes" id="$_modes">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#95-121" title="Go to source code"><var>$_modes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'mcrypt'</span> =&gt; <span class="php-keyword1">array</span>(
+		<span class="php-quote">'cbc'</span> =&gt; <span class="php-quote">'cbc'</span>,
+		<span class="php-quote">'ecb'</span> =&gt; <span class="php-quote">'ecb'</span>,
+		<span class="php-quote">'ofb'</span> =&gt; <span class="php-quote">'nofb'</span>,
+		<span class="php-quote">'ofb8'</span> =&gt; <span class="php-quote">'ofb'</span>,
+		<span class="php-quote">'cfb'</span> =&gt; <span class="php-quote">'ncfb'</span>,
+		<span class="php-quote">'cfb8'</span> =&gt; <span class="php-quote">'cfb'</span>,
+		<span class="php-quote">'ctr'</span> =&gt; <span class="php-quote">'ctr'</span>,
+		<span class="php-quote">'stream'</span> =&gt; <span class="php-quote">'stream'</span>
+	),
+	<span class="php-quote">'openssl'</span> =&gt; <span class="php-keyword1">array</span>(
+		<span class="php-quote">'cbc'</span> =&gt; <span class="php-quote">'cbc'</span>,
+		<span class="php-quote">'ecb'</span> =&gt; <span class="php-quote">'ecb'</span>,
+		<span class="php-quote">'ofb'</span> =&gt; <span class="php-quote">'ofb'</span>,
+		<span class="php-quote">'cfb'</span> =&gt; <span class="php-quote">'cfb'</span>,
+		<span class="php-quote">'cfb8'</span> =&gt; <span class="php-quote">'cfb8'</span>,
+		<span class="php-quote">'ctr'</span> =&gt; <span class="php-quote">'ctr'</span>,
+		<span class="php-quote">'stream'</span> =&gt; <span class="php-quote">''</span>,
+		<span class="php-quote">'xts'</span> =&gt; <span class="php-quote">'xts'</span>
+	)
+)</code></td>
+		<td class="description"><div>
+			<a href="#$_modes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of available modes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of available modes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_digests" id="$_digests">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#123-135" title="Go to source code"><var>$_digests</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'sha224'</span> =&gt; <span class="php-num">28</span>,
+	<span class="php-quote">'sha256'</span> =&gt; <span class="php-num">32</span>,
+	<span class="php-quote">'sha384'</span> =&gt; <span class="php-num">48</span>,
+	<span class="php-quote">'sha512'</span> =&gt; <span class="php-num">64</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$_digests" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of supported HMAC algorithms</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of supported HMAC algorithms</p>
+
+<p>name =&gt; digest size pairs</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="func_override" id="$func_override">
+		<td class="attributes"><code>
+			protected static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Encryption.html#137-142" title="Go to source code"><var>$func_override</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$func_override" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>mbstring.func_override flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>mbstring.func_override flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Session | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li class="active"><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Session</h1>
+
+
+	<div class="description">
+	
+<p>CodeIgniter Session Class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Sessions<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				Andrey Andreev<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/sessions.html">http://codeigniter.com/user_guide/libraries/sessions.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Session.html#40-890" title="Go to source code">sys/libraries/Session/Session.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Session.html#63-174" title="Go to source code">__construct</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Configuration parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_ci_load_classes" id="__ci_load_classes">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__ci_load_classes">#</a>
+		<code><a href="source-class-CI_Session.html#178-248" title="Go to source code">_ci_load_classes</a>( <span>string <var>$driver</var></span> )</code>
+
+		<div class="description short">
+			
+<p>CI Load Classes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>CI Load Classes</p>
+
+<p>An internal method to load all possible dependency and extension classes. It
+kind of emulates the CI_Driver library, but is self-sufficient.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$driver</var></dt>
+					<dd><code>string</code><br>$driver Driver name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Driver class name<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_configure" id="__configure">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__configure">#</a>
+		<code><a href="source-class-CI_Session.html#252-319" title="Go to source code">_configure</a>( <span>array <var>&amp; $params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Configuration</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Configuration</p>
+
+<p>Handle input parameters and configuration defaults</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>&amp;$params Input parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_ci_init_vars" id="__ci_init_vars">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__ci_init_vars">#</a>
+		<code><a href="source-class-CI_Session.html#323-358" title="Go to source code">_ci_init_vars</a>( )</code>
+
+		<div class="description short">
+			
+<p>Handle temporary variables</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handle temporary variables</p>
+
+<p>Clears old "flash" data, marks the new one for deletion and handles "temp"
+data deletion.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mark_as_flash" id="_mark_as_flash">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mark_as_flash">#</a>
+		<code><a href="source-class-CI_Session.html#362-396" title="Go to source code">mark_as_flash</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Mark as flash</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Mark as flash</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Session data key(s)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_flash_keys" id="_get_flash_keys">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_flash_keys">#</a>
+		<code><a href="source-class-CI_Session.html#400-419" title="Go to source code">get_flash_keys</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get flash keys</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get flash keys</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unmark_flash" id="_unmark_flash">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unmark_flash">#</a>
+		<code><a href="source-class-CI_Session.html#423-450" title="Go to source code">unmark_flash</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unmark flash</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unmark flash</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Session data key(s)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mark_as_temp" id="_mark_as_temp">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mark_as_temp">#</a>
+		<code><a href="source-class-CI_Session.html#454-504" title="Go to source code">mark_as_temp</a>( <span>mixed <var>$key</var></span>, <span>integer <var>$ttl</var> = <span class="php-num">300</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Mark as temp</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Mark as temp</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Session data key(s)</dd>
+					<dt><var>$ttl</var></dt>
+					<dd><code>integer</code><br>$ttl Time-to-live in seconds</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_temp_keys" id="_get_temp_keys">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_temp_keys">#</a>
+		<code><a href="source-class-CI_Session.html#508-527" title="Go to source code">get_temp_keys</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get temp keys</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get temp keys</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unmark_temp" id="_unmark_temp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unmark_temp">#</a>
+		<code><a href="source-class-CI_Session.html#531-558" title="Go to source code">unmark_temp</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unmark flash</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unmark flash</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Session data key(s)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-CI_Session.html#562-582" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>__get()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>__get()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key 'session_id' or a session data key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code><a href="source-class-CI_Session.html#586-596" title="Go to source code">__set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>__set()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>__set()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Session data key</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value Session data value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sess_destroy" id="_sess_destroy">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sess_destroy">#</a>
+		<code><a href="source-class-CI_Session.html#600-610" title="Go to source code">sess_destroy</a>( )</code>
+
+		<div class="description short">
+			
+<p>Session destroy</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Session destroy</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sess_regenerate" id="_sess_regenerate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sess_regenerate">#</a>
+		<code><a href="source-class-CI_Session.html#614-626" title="Go to source code">sess_regenerate</a>( <span>boolean <var>$destroy</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Session regenerate</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Session regenerate</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$destroy</var></dt>
+					<dd><code>boolean</code><br>$destroy Destroy old session data flag</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_userdata" id="_get_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#630-640" title="Go to source code">get_userdata</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get userdata reference</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get userdata reference</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+						array<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="userdata" id="_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#644-679" title="Go to source code">userdata</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Userdata (fetch)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Userdata (fetch)</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Session data key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Session data value or NULL if not found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_userdata" id="_set_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#683-705" title="Go to source code">set_userdata</a>( <span>mixed <var>$data</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set userdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set userdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code><br>$data Session data key or an associative array</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value Value to store</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_userdata" id="_unset_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#709-730" title="Go to source code">unset_userdata</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unset userdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unset userdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$data Session data key(s)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="all_userdata" id="_all_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_all_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#734-744" title="Go to source code">all_userdata</a>( )</code>
+
+		<div class="description short">
+			
+<p>All userdata (fetch)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>All userdata (fetch)</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>$_SESSION, excluding flash data items<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_userdata" id="_has_userdata">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_userdata">#</a>
+		<code><a href="source-class-CI_Session.html#748-759" title="Go to source code">has_userdata</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Has userdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Has userdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Session data key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flashdata" id="_flashdata">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flashdata">#</a>
+		<code><a href="source-class-CI_Session.html#763-791" title="Go to source code">flashdata</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Flashdata (fetch)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Flashdata (fetch)</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Session data key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Session data value or NULL if not found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_flashdata" id="_set_flashdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_flashdata">#</a>
+		<code><a href="source-class-CI_Session.html#795-808" title="Go to source code">set_flashdata</a>( <span>mixed <var>$data</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set flashdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set flashdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code><br>$data Session data key or an associative array</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value Value to store</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="keep_flashdata" id="_keep_flashdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_keep_flashdata">#</a>
+		<code><a href="source-class-CI_Session.html#812-823" title="Go to source code">keep_flashdata</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Keep flashdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Keep flashdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$key Session data key(s)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tempdata" id="_tempdata">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tempdata">#</a>
+		<code><a href="source-class-CI_Session.html#827-855" title="Go to source code">tempdata</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Temp data (fetch)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Temp data (fetch)</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>$key Session data key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Session data value or NULL if not found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_tempdata" id="_set_tempdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_tempdata">#</a>
+		<code><a href="source-class-CI_Session.html#859-873" title="Go to source code">set_tempdata</a>( <span>mixed <var>$data</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">300</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set tempdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set tempdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code><br>$data Session data key or an associative array of items</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>$value Value to store</dd>
+					<dt><var>$ttl</var></dt>
+					<dd><code>integer</code><br>$ttl Time-to-live in seconds</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_tempdata" id="_unset_tempdata">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_tempdata">#</a>
+		<code><a href="source-class-CI_Session.html#877-888" title="Go to source code">unset_tempdata</a>( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unset tempdata</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unset tempdata</p>
+
+<p>Legacy CI_Session compatibility method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>$data Session data key(s)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="userdata" id="$userdata">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Session.html#51-56" title="Go to source code"><var>$userdata</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$userdata" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Userdata array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Userdata array</p>
+
+<p>Just a reference to $_SESSION, for BC purposes.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_driver" id="$_driver">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Session.html#58" title="Go to source code"><var>$_driver</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'files'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_driver" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_config" id="$_config">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Session.html#59" title="Go to source code"><var>$_config</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_config" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -4,20 +4,19 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_TypeRessource.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux différents types de ressources
- *
- * \details   Ce fichier permet de définir les méthodes de gestion des types de ressources
+ * Définit les méthodes liées aux différents types de ressources.
+ * 
+ * Ce fichier permet de définir les méthodes de gestion des types de ressources.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_TypeRessource extends CI_Model {
 
     /**
-     * \brief      Permet de récupérer l'id d'un type de ressource en fonction de son nom
-     * \details    Permet de récupérer l'id d'un type de ressource en fonction de son nom
-     * \param      $nomtype : nom du type de ressource
+     * Permet de récupérer l'id d'un type de ressource en fonction de son nom.
+     * @param $nomType : nom du type de ressource
      */
     public function getIdType($nomType) {
         $this->db->select('id_typeressource');
@@ -32,9 +31,9 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer les types de ressources humaines en fonction du type d'une ressource
-     * \details    Permet de récupérer les types de ressources humaines en fonction du type d'une ressource
-     * \param      $nom : nom du type de ressource
+     * Permet de récupérer les types de ressources humaines en fonction du type 
+     * d'une ressource.
+     * @param $nom : nom du type de ressource
      */
     public function getTypesPersonnels($nom) {
         $txt_sql = "SELECT TR.id_typeressource, TR.txt_nom
@@ -57,9 +56,9 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer les types de ressources matérielles en fonction du type d'une ressource
-     * \details    Permet de récupérer les types de ressources matérielles en fonction du type d'une ressource
-     * \param      $nom : nom du type de ressource
+     * Permet de récupérer les types de ressources matérielles en fonction du 
+     * type d'une ressource
+     * @param $nom : nom du type de ressource
      */
     public function getTypesRessourcesMat($nom) {
         $txt_sql = "SELECT TR.id_typeressource, TR.txt_nom
@@ -82,9 +81,9 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer les types de ressources humaines liées aux différentes activités en fonction du type d'une ressource
-     * \details    Permet de récupérer les types de ressources humaines liées aux différentes activités en fonction du type d'une ressource
-     * \param      $nom : nom du type de ressource
+     * Permet de récupérer les types de ressources humaines liées aux 
+     * différentes activités en fonction du type d'une ressource
+     * @param $nom : nom du type de ressource
      */
     public function getTypesPersonnelsActivite($nom) {
         $txt_sql = "SELECT TR.id_typeressource, TR.txt_nom
@@ -103,9 +102,9 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer les types de ressources matérielles liées aux différentes activités en fonction du type d'une ressource
-     * \details    Permet de récupérer les types de ressources matérielles liées aux différentes activités en fonction du type d'une ressource
-     * \param      $nom : nom du type de ressource
+     * Permet de récupérer les types de ressources matérielles liées aux 
+     * différentes activités en fonction du type d'une ressource
+     * @param $nom : nom du type de ressource
      */
     public function getTypesRessourcesMatActivite($nom) {
         $txt_sql = "SELECT TR.id_typeressource, TR.txt_nom
@@ -124,9 +123,8 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Permet d'insérer un nouveau type dans la base de données
-     * \details    Permet d'insérer un nouveau type dans la base de données
-     * \param      $nomType : nom du type de ressource à insérer
+     * Permet d'insérer un nouveau type dans la base de données
+     * @param $nomType : nom du type de ressource à insérer
      */
     public function insererType($nomType) {
         $id = $this->getMaxID();
@@ -136,9 +134,7 @@ class M_TypeRessource extends CI_Model {
     }
 
     /**
-     * \brief      Récupére l'id max d'un type ressource
-     * \details    Récupére l'id max d'un type ressource
-     * \param      Aucun
+     * Récupère l'id max d'un type ressource
      */
     public function getMaxID() {
         $txt_sql = "SELECT MAX(id_typeressource) as id

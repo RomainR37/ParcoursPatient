@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Router | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li class="active"><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Router</h1>
+
+
+	<div class="description">
+	
+<p>Router Class</p>
+
+<p>Parses URIs and determines routing</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Libraries<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/general/routing.html">http://codeigniter.com/user_guide/general/routing.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Router.html#40-532" title="Go to source code">sys/core/Router.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Router.html#116-142" title="Go to source code">__construct</a>( <span>mixed <var>$routing</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+<p>Runs the route mapping function.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_routing" id="__set_routing">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_routing">#</a>
+		<code><a href="source-class-CI_Router.html#146-231" title="Go to source code">_set_routing</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set route mapping</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set route mapping</p>
+
+<p>Determines what should be served based on the URI request, as well as any
+"routes" that have been set in the routing config file.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_request" id="__set_request">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_request">#</a>
+		<code><a href="source-class-CI_Router.html#235-278" title="Go to source code">_set_request</a>( <span>array <var>$segments</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Set request route</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set request route</p>
+
+<p>Takes an array of URI segments as input and sets the class/method to be
+called.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$segments</var></dt>
+					<dd><code>array</code><br>$segments URI segments</dd>
+				</dl></div>
+
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Router::_parse_routes()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_default_controller" id="__set_default_controller">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_default_controller">#</a>
+		<code><a href="source-class-CI_Router.html#282-316" title="Go to source code">_set_default_controller</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set default controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set default controller</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_validate_request" id="__validate_request">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__validate_request">#</a>
+		<code><a href="source-class-CI_Router.html#320-355" title="Go to source code">_validate_request</a>( <span>array <var>$segments</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate request</p>
+
+<p>Attempts validate the URI request and determine the controller path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$segments</var></dt>
+					<dd><code>array</code><br>$segments URI segments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>URI segments<br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Router::_set_request()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_parse_routes" id="__parse_routes">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__parse_routes">#</a>
+		<code><a href="source-class-CI_Router.html#359-441" title="Go to source code">_parse_routes</a>( )</code>
+
+		<div class="description short">
+			
+<p>Parse Routes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse Routes</p>
+
+<p>Matches any routes that may exist in the config/routes.php file against the
+URI to determine if the class/method need to be remapped.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_class" id="_set_class">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_class">#</a>
+		<code><a href="source-class-CI_Router.html#445-454" title="Go to source code">set_class</a>( <span>string <var>$class</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set class name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set class name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd><code>string</code><br>$class Class name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_method" id="_set_method">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_method">#</a>
+		<code><a href="source-class-CI_Router.html#471-480" title="Go to source code">set_method</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set method name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set method name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>$method Method name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_directory" id="_set_directory">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_directory">#</a>
+		<code><a href="source-class-CI_Router.html#497-514" title="Go to source code">set_directory</a>( <span>string <var>$dir</var></span>, <span>boolean <var>$append</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set directory name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set directory name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dir</var></dt>
+					<dd><code>string</code><br>$dir Directory name</dd>
+					<dt><var>$append</var></dt>
+					<dd><code>boolean</code><br>$append Whether we're appending rather than setting the full value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="config" id="$config">
+		<td class="attributes"><code>
+			public  
+			object
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#53-58" title="Go to source code"><var>$config</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$config" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CI_Config class object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CI_Config class object</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="routes" id="$routes">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#60-65" title="Go to source code"><var>$routes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$routes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of routes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of routes</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="class" id="$class">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#67-72" title="Go to source code"><var>$class</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$class" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current class name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current class name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="method" id="$method">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#74-79" title="Go to source code"><var>$method</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'index'</span></code></td>
+		<td class="description"><div>
+			<a href="#$method" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current method name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current method name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="directory" id="$directory">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#81-86" title="Go to source code"><var>$directory</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$directory" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Sub-directory that contains the requested controller class</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sub-directory that contains the requested controller class</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_controller" id="$default_controller">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#88-93" title="Go to source code"><var>$default_controller</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$default_controller" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Default controller (and method if specific)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Default controller (and method if specific)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="translate_uri_dashes" id="$translate_uri_dashes">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#95-103" title="Go to source code"><var>$translate_uri_dashes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$translate_uri_dashes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Translate URI dashes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Translate URI dashes</p>
+
+<p>Determines whether dashes in controller &amp; method segments should be
+automatically replaced by underscores.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="enable_query_strings" id="$enable_query_strings">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Router.html#105-112" title="Go to source code"><var>$enable_query_strings</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$enable_query_strings" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Enable query strings flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Enable query strings flag</p>
+
+<p>Determines whether to use GET parameters or segment URIs</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

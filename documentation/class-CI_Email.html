@@ -1,0 +1,3753 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Email | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li class="active"><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Email</h1>
+
+
+	<div class="description">
+	
+<p>CodeIgniter Email Class</p>
+
+<p>Permits email to be sent using Mail, Sendmail, or SMTP.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Libraries<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/email.html">http://codeigniter.com/user_guide/libraries/email.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Email.html#40-2305" title="Go to source code">sys/libraries/Email.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Email.html#400-425" title="Go to source code">__construct</a>( <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor - Sets Email Preferences</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor - Sets Email Preferences</p>
+
+<p>The constructor can be passed an array of config values</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code>array</code><br>$config = array()</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-CI_Email.html#429-440" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Destructor - Releases Resources</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Destructor - Releases Resources</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-CI_Email.html#444-473" title="Go to source code">initialize</a>( <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize preferences</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize preferences</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-CI_Email.html#477-505" title="Go to source code">clear</a>( <span>boolean <var>$clear_attachments</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Initialize the Email Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize the Email Data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clear_attachments</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="from" id="_from">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_from">#</a>
+		<code><a href="source-class-CI_Email.html#509-554" title="Go to source code">from</a>( <span>string <var>$from</var></span>, <span>string <var>$name</var> = <span class="php-quote">''</span></span>, <span>string <var>$return_path</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set FROM</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set FROM</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$from</var></dt>
+					<dd><code>string</code><br>$from</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$return_path</var></dt>
+					<dd><code>string</code><br>$return_path = NULL Return-Path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reply_to" id="_reply_to">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reply_to">#</a>
+		<code><a href="source-class-CI_Email.html#558-591" title="Go to source code">reply_to</a>( <span>string <var>$replyto</var></span>, <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Reply-to</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Reply-to</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$replyto</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="to" id="_to">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_to">#</a>
+		<code><a href="source-class-CI_Email.html#595-619" title="Go to source code">to</a>( <span>string <var>$to</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Recipients</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Recipients</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$to</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cc" id="_cc">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cc">#</a>
+		<code><a href="source-class-CI_Email.html#623-646" title="Go to source code">cc</a>( <span>string <var>$cc</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set CC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set CC</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cc</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bcc" id="_bcc">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bcc">#</a>
+		<code><a href="source-class-CI_Email.html#650-682" title="Go to source code">bcc</a>( <span>string <var>$bcc</var></span>, <span>string <var>$limit</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set BCC</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set BCC</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$bcc</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="subject" id="_subject">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_subject">#</a>
+		<code><a href="source-class-CI_Email.html#686-697" title="Go to source code">subject</a>( <span>string <var>$subject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Email Subject</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Email Subject</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="message" id="_message">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_message">#</a>
+		<code><a href="source-class-CI_Email.html#701-723" title="Go to source code">message</a>( <span>string <var>$body</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Body</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Body</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$body</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attach" id="_attach">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attach">#</a>
+		<code><a href="source-class-CI_Email.html#727-769" title="Go to source code">attach</a>( <span>string <var>$file</var></span>, <span>string <var>$disposition</var> = <span class="php-quote">''</span></span>, <span>string <var>$newname</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$mime</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Assign file attachments</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Assign file attachments</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file Can be local path, URL or buffered content</dd>
+					<dt><var>$disposition</var></dt>
+					<dd><code>string</code><br>$disposition = 'attachment'</dd>
+					<dt><var>$newname</var></dt>
+					<dd><code>string</code><br>$newname = NULL</dd>
+					<dt><var>$mime</var></dt>
+					<dd><code>string</code><br>$mime = ''</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attachment_cid" id="_attachment_cid">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attachment_cid">#</a>
+		<code><a href="source-class-CI_Email.html#773-798" title="Go to source code">attachment_cid</a>( <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set and return attachment Content-ID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set and return attachment Content-ID</p>
+
+<p>Useful for attached inline pictures</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_header" id="_set_header">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_header">#</a>
+		<code><a href="source-class-CI_Email.html#802-813" title="Go to source code">set_header</a>( <span>string <var>$header</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add a Header Item</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add a Header Item</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_str_to_array" id="__str_to_array">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__str_to_array">#</a>
+		<code><a href="source-class-CI_Email.html#817-833" title="Go to source code">_str_to_array</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert a String to an Array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert a String to an Array</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_alt_message" id="_set_alt_message">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_alt_message">#</a>
+		<code><a href="source-class-CI_Email.html#837-847" title="Go to source code">set_alt_message</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Multipart Value</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Multipart Value</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_mailtype" id="_set_mailtype">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_mailtype">#</a>
+		<code><a href="source-class-CI_Email.html#851-861" title="Go to source code">set_mailtype</a>( <span>string <var>$type</var> = <span class="php-quote">'text'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Mailtype</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Mailtype</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_wordwrap" id="_set_wordwrap">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_wordwrap">#</a>
+		<code><a href="source-class-CI_Email.html#865-875" title="Go to source code">set_wordwrap</a>( <span>boolean <var>$wordwrap</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Wordwrap</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Wordwrap</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$wordwrap</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_protocol" id="_set_protocol">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_protocol">#</a>
+		<code><a href="source-class-CI_Email.html#879-889" title="Go to source code">set_protocol</a>( <span>string <var>$protocol</var> = <span class="php-quote">'mail'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Protocol</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Protocol</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$protocol</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_priority" id="_set_priority">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_priority">#</a>
+		<code><a href="source-class-CI_Email.html#893-903" title="Go to source code">set_priority</a>( <span>integer <var>$n</var> = <span class="php-num">3</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Priority</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Priority</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_newline" id="_set_newline">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_newline">#</a>
+		<code><a href="source-class-CI_Email.html#907-917" title="Go to source code">set_newline</a>( <span>string <var>$newline</var> = <span class="php-quote">&quot;\n&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Newline Character</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Newline Character</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$newline</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_crlf" id="_set_crlf">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Email.html">CI_Email</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_crlf">#</a>
+		<code><a href="source-class-CI_Email.html#921-931" title="Go to source code">set_crlf</a>( <span>string <var>$crlf</var> = <span class="php-quote">&quot;\n&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set CRLF</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set CRLF</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$crlf</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Email.html">CI_Email</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_boundaries" id="__set_boundaries">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_boundaries">#</a>
+		<code><a href="source-class-CI_Email.html#935-944" title="Go to source code">_set_boundaries</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set Message Boundary</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Message Boundary</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_message_id" id="__get_message_id">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_message_id">#</a>
+		<code><a href="source-class-CI_Email.html#948-957" title="Go to source code">_get_message_id</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the Message ID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the Message ID</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_protocol" id="__get_protocol">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_protocol">#</a>
+		<code><a href="source-class-CI_Email.html#961-976" title="Go to source code">_get_protocol</a>( <span>boolean <var>$return</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get Mail Protocol</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Mail Protocol</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$return</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_encoding" id="__get_encoding">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_encoding">#</a>
+		<code><a href="source-class-CI_Email.html#980-1002" title="Go to source code">_get_encoding</a>( <span>boolean <var>$return</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get Mail Encoding</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Mail Encoding</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$return</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_content_type" id="__get_content_type">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_content_type">#</a>
+		<code><a href="source-class-CI_Email.html#1006-1025" title="Go to source code">_get_content_type</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get content type (text/html/attachment)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get content type (text/html/attachment)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_date" id="__set_date">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_date">#</a>
+		<code><a href="source-class-CI_Email.html#1029-1042" title="Go to source code">_set_date</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set RFC 822 Date</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set RFC 822 Date</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_mime_message" id="__get_mime_message">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_mime_message">#</a>
+		<code><a href="source-class-CI_Email.html#1046-1054" title="Go to source code">_get_mime_message</a>( )</code>
+
+		<div class="description short">
+			
+<p>Mime message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Mime message</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_email" id="_validate_email">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_email">#</a>
+		<code><a href="source-class-CI_Email.html#1058-1082" title="Go to source code">validate_email</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate Email Address</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate Email Address</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="valid_email" id="_valid_email">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_valid_email">#</a>
+		<code><a href="source-class-CI_Email.html#1086-1100" title="Go to source code">valid_email</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Email Validation</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Email Validation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clean_email" id="_clean_email">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clean_email">#</a>
+		<code><a href="source-class-CI_Email.html#1104-1125" title="Go to source code">clean_email</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Clean Extended Email Address: Joe Smith &lt;<a
+href="mailto:joe&#64;smith.com">joe&#64;<!---->smith.com</a>&gt;</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clean Extended Email Address: Joe Smith &lt;<a
+href="mailto:joe&#64;smith.com">joe&#64;<!---->smith.com</a>&gt;</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_alt_message" id="__get_alt_message">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_alt_message">#</a>
+		<code><a href="source-class-CI_Email.html#1129-1162" title="Go to source code">_get_alt_message</a>( )</code>
+
+		<div class="description short">
+			
+<p>Build alternative plain text message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Build alternative plain text message</p>
+
+<p>Provides the raw message for use in plain-text headers of HTML-formatted
+emails. If the user hasn't specified his own alternative message it creates one
+by stripping the HTML</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="word_wrap" id="_word_wrap">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_word_wrap">#</a>
+		<code><a href="source-class-CI_Email.html#1166-1254" title="Go to source code">word_wrap</a>( <span>string <var>$str</var></span>, <span>integer <var>$charlim</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Word Wrap</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Word Wrap</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$charlim</var></dt>
+					<dd><code>integer</code><br>line-length limit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_build_headers" id="__build_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__build_headers">#</a>
+		<code><a href="source-class-CI_Email.html#1258-1270" title="Go to source code">_build_headers</a>( )</code>
+
+		<div class="description short">
+			
+<p>Build final headers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Build final headers</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_write_headers" id="__write_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__write_headers">#</a>
+		<code><a href="source-class-CI_Email.html#1274-1307" title="Go to source code">_write_headers</a>( )</code>
+
+		<div class="description short">
+			
+<p>Write Headers as a string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write Headers as a string</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_build_message" id="__build_message">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__build_message">#</a>
+		<code><a href="source-class-CI_Email.html#1311-1457" title="Go to source code">_build_message</a>( )</code>
+
+		<div class="description short">
+			
+<p>Build Final Body and attachments</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Build Final Body and attachments</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_prep_quoted_printable" id="__prep_quoted_printable">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__prep_quoted_printable">#</a>
+		<code><a href="source-class-CI_Email.html#1461-1546" title="Go to source code">_prep_quoted_printable</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Prep Quoted Printable</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prep Quoted Printable</p>
+
+<p>Prepares string for Quoted-Printable Content-Transfer-Encoding Refer to RFC
+2045 <a
+href="http://www.ietf.org/rfc/rfc2045.txt">http://www.ietf.org/rfc/rfc2045.txt</a></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_prep_q_encoding" id="__prep_q_encoding">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__prep_q_encoding">#</a>
+		<code><a href="source-class-CI_Email.html#1550-1622" title="Go to source code">_prep_q_encoding</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Prep Q Encoding</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prep Q Encoding</p>
+
+<p>Performs "Q Encoding" on a string for use in email headers. It's related but
+not identical to quoted-printable, so it has its own method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="send" id="_send">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_send">#</a>
+		<code><a href="source-class-CI_Email.html#1626-1680" title="Go to source code">send</a>( <span>boolean <var>$auto_clear</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send Email</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send Email</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$auto_clear</var></dt>
+					<dd><code>boolean</code><br>$auto_clear = TRUE</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="batch_bcc_send" id="_batch_bcc_send">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_batch_bcc_send">#</a>
+		<code><a href="source-class-CI_Email.html#1684-1737" title="Go to source code">batch_bcc_send</a>( )</code>
+
+		<div class="description short">
+			
+<p>Batch Bcc Send. Sends groups of BCCs in batches</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Batch Bcc Send. Sends groups of BCCs in batches</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_unwrap_specials" id="__unwrap_specials">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__unwrap_specials">#</a>
+		<code><a href="source-class-CI_Email.html#1741-1749" title="Go to source code">_unwrap_specials</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unwrap special elements</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unwrap special elements</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_remove_nl_callback" id="__remove_nl_callback">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__remove_nl_callback">#</a>
+		<code><a href="source-class-CI_Email.html#1753-1767" title="Go to source code">_remove_nl_callback</a>( <span>string <var>$matches</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Strip line-breaks via callback</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Strip line-breaks via callback</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matches</var></dt>
+					<dd><code>string</code><br>$matches</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_spool_email" id="__spool_email">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__spool_email">#</a>
+		<code><a href="source-class-CI_Email.html#1771-1789" title="Go to source code">_spool_email</a>( )</code>
+
+		<div class="description short">
+			
+<p>Spool mail to the mail server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Spool mail to the mail server</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_send_with_mail" id="__send_with_mail">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__send_with_mail">#</a>
+		<code><a href="source-class-CI_Email.html#1793-1815" title="Go to source code">_send_with_mail</a>( )</code>
+
+		<div class="description short">
+			
+<p>Send using mail()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send using mail()</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_send_with_sendmail" id="__send_with_sendmail">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__send_with_sendmail">#</a>
+		<code><a href="source-class-CI_Email.html#1819-1850" title="Go to source code">_send_with_sendmail</a>( )</code>
+
+		<div class="description short">
+			
+<p>Send using Sendmail</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send using Sendmail</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_send_with_smtp" id="__send_with_smtp">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__send_with_smtp">#</a>
+		<code><a href="source-class-CI_Email.html#1854-1928" title="Go to source code">_send_with_smtp</a>( )</code>
+
+		<div class="description short">
+			
+<p>Send using SMTP</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send using SMTP</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_smtp_connect" id="__smtp_connect">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__smtp_connect">#</a>
+		<code><a href="source-class-CI_Email.html#1932-1976" title="Go to source code">_smtp_connect</a>( )</code>
+
+		<div class="description short">
+			
+<p>SMTP Connect</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SMTP Connect</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_send_command" id="__send_command">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__send_command">#</a>
+		<code><a href="source-class-CI_Email.html#1980-2060" title="Go to source code">_send_command</a>( <span>string <var>$cmd</var></span>, <span>string <var>$data</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send SMTP command</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send SMTP command</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cmd</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_smtp_authenticate" id="__smtp_authenticate">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__smtp_authenticate">#</a>
+		<code><a href="source-class-CI_Email.html#2064-2117" title="Go to source code">_smtp_authenticate</a>( )</code>
+
+		<div class="description short">
+			
+<p>SMTP Authenticate</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SMTP Authenticate</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_send_data" id="__send_data">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__send_data">#</a>
+		<code><a href="source-class-CI_Email.html#2121-2165" title="Go to source code">_send_data</a>( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Send SMTP data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send SMTP data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_smtp_data" id="__get_smtp_data">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_smtp_data">#</a>
+		<code><a href="source-class-CI_Email.html#2169-2189" title="Go to source code">_get_smtp_data</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get SMTP data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get SMTP data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_hostname" id="__get_hostname">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_hostname">#</a>
+		<code><a href="source-class-CI_Email.html#2193-2212" title="Go to source code">_get_hostname</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Hostname</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Hostname</p>
+
+<p>There are only two legal types of hostname - either a fully qualified domain
+name (eg: "mail.example.com") or an IP literal (eg: "[1.2.3.4]").</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="https://tools.ietf.org/html/rfc5321#section-2.3.5">https://tools.ietf.org/html/rfc5321#section-2.3.5</a><br />
+						<a href="http://cbl.abuseat.org/namingproblems.html">http://cbl.abuseat.org/namingproblems.html</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="print_debugger" id="_print_debugger">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_print_debugger">#</a>
+		<code><a href="source-class-CI_Email.html#2216-2255" title="Go to source code">print_debugger</a>( <span>array <var>$include</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'headers'</span>, <span class="php-quote">'subject'</span>, <span class="php-quote">'body'</span>)</span> )</code>
+
+		<div class="description short">
+			
+<p>Get Debug Message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Debug Message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$include</var></dt>
+					<dd><code>array</code><br>$include List of raw data chunks to include in the output Valid options are:
+'headers', 'subject', 'body'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_error_message" id="__set_error_message">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_error_message">#</a>
+		<code><a href="source-class-CI_Email.html#2259-2279" title="Go to source code">_set_error_message</a>( <span>string <var>$msg</var></span>, <span>string <var>$val</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg</dd>
+					<dt><var>$val</var></dt>
+					<dd><code>string</code><br>$val = ''</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mime_types" id="__mime_types">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mime_types">#</a>
+		<code><a href="source-class-CI_Email.html#2283-2303" title="Go to source code">_mime_types</a>( <span>string <var>$ext</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Mime Types</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Mime Types</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ext</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="useragent" id="$useragent">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#53-58" title="Go to source code"><var>$useragent</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'CodeIgniter'</span></code></td>
+		<td class="description"><div>
+			<a href="#$useragent" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Used as the User-Agent and X-Mailer headers' value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Used as the User-Agent and X-Mailer headers' value.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="mailpath" id="$mailpath">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#60-65" title="Go to source code"><var>$mailpath</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'/usr/sbin/sendmail'</span></code></td>
+		<td class="description"><div>
+			<a href="#$mailpath" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Path to the Sendmail binary.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Path to the Sendmail binary.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="protocol" id="$protocol">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#67-72" title="Go to source code"><var>$protocol</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'mail'</span></code></td>
+		<td class="description"><div>
+			<a href="#$protocol" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Which method to use for sending e-mails.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Which method to use for sending e-mails.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_host" id="$smtp_host">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#74-79" title="Go to source code"><var>$smtp_host</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_host" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>STMP Server host</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>STMP Server host</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_user" id="$smtp_user">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#81-86" title="Go to source code"><var>$smtp_user</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_user" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP Username</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP Username</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_pass" id="$smtp_pass">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#88-93" title="Go to source code"><var>$smtp_pass</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_pass" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP Password</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP Password</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_port" id="$smtp_port">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#95-100" title="Go to source code"><var>$smtp_port</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">25</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_port" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP Server port</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP Server port</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_timeout" id="$smtp_timeout">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#102-107" title="Go to source code"><var>$smtp_timeout</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">5</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_timeout" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP connection timeout in seconds</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP connection timeout in seconds</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_keepalive" id="$smtp_keepalive">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#109-114" title="Go to source code"><var>$smtp_keepalive</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_keepalive" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP persistent connection</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP persistent connection</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="smtp_crypto" id="$smtp_crypto">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#116-121" title="Go to source code"><var>$smtp_crypto</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$smtp_crypto" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP Encryption</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP Encryption</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="wordwrap" id="$wordwrap">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#123-128" title="Go to source code"><var>$wordwrap</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$wordwrap" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to apply word-wrapping to the message body.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to apply word-wrapping to the message body.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="wrapchars" id="$wrapchars">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#130-136" title="Go to source code"><var>$wrapchars</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">76</span></code></td>
+		<td class="description"><div>
+			<a href="#$wrapchars" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Number of characters to wrap at.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Number of characters to wrap at.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Email.html#$wordwrap">CI_Email::<var>$wordwrap</var></a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="mailtype" id="$mailtype">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#138-143" title="Go to source code"><var>$mailtype</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'text'</span></code></td>
+		<td class="description"><div>
+			<a href="#$mailtype" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Message format.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Message format.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="charset" id="$charset">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#145-150" title="Go to source code"><var>$charset</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'utf-8'</span></code></td>
+		<td class="description"><div>
+			<a href="#$charset" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Character set (default: utf-8)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Character set (default: utf-8)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="multipart" id="$multipart">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#152-157" title="Go to source code"><var>$multipart</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'mixed'</span></code></td>
+		<td class="description"><div>
+			<a href="#$multipart" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Multipart message</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Multipart message</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="alt_message" id="$alt_message">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#159-164" title="Go to source code"><var>$alt_message</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$alt_message" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Alternative message (for HTML messages only)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Alternative message (for HTML messages only)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="$validate">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#166-171" title="Go to source code"><var>$validate</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$validate" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to validate e-mail addresses.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to validate e-mail addresses.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="priority" id="$priority">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#173-178" title="Go to source code"><var>$priority</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">3</span></code></td>
+		<td class="description"><div>
+			<a href="#$priority" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>X-Priority header value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>X-Priority header value.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="newline" id="$newline">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#180-187" title="Go to source code"><var>$newline</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;\n&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$newline" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Newline character sequence. Use "\r\n" to comply with RFC 822.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Newline character sequence. Use "\r\n" to comply with RFC 822.</p>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://www.ietf.org/rfc/rfc822.txt">http://www.ietf.org/rfc/rfc822.txt</a><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="crlf" id="$crlf">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#189-201" title="Go to source code"><var>$crlf</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot;\n&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$crlf" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CRLF character sequence</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CRLF character sequence</p>
+
+<p>RFC 2045 specifies that for 'quoted-printable' encoding, "\r\n" must be used.
+However, it appears that some servers (even on the receiving end) don't handle
+it properly and switching to "\n", while improper, is the only solution that
+seems to work for all environments.</p>
+
+
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://www.ietf.org/rfc/rfc822.txt">http://www.ietf.org/rfc/rfc822.txt</a><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dsn" id="$dsn">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#203-208" title="Go to source code"><var>$dsn</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$dsn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to use Delivery Status Notification.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to use Delivery Status Notification.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="send_multipart" id="$send_multipart">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#210-216" title="Go to source code"><var>$send_multipart</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$send_multipart" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to send multipart alternatives. Yahoo! doesn't seem to like
+these.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to send multipart alternatives. Yahoo! doesn't seem to like
+these.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bcc_batch_mode" id="$bcc_batch_mode">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#218-223" title="Go to source code"><var>$bcc_batch_mode</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$bcc_batch_mode" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to send messages to BCC recipients in batches.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to send messages to BCC recipients in batches.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bcc_batch_size" id="$bcc_batch_size">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#225-231" title="Go to source code"><var>$bcc_batch_size</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">200</span></code></td>
+		<td class="description"><div>
+			<a href="#$bcc_batch_size" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>BCC Batch max number size.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>BCC Batch max number size.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Email.html#$bcc_batch_mode">CI_Email::<var>$bcc_batch_mode</var></a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_safe_mode" id="$_safe_mode">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#235-240" title="Go to source code"><var>$_safe_mode</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_safe_mode" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether PHP is running in safe mode. Initialized by the class
+constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether PHP is running in safe mode. Initialized by the class
+constructor.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_subject" id="$_subject">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#242-247" title="Go to source code"><var>$_subject</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_subject" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Subject header</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Subject header</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_body" id="$_body">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#249-254" title="Go to source code"><var>$_body</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_body" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Message body</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Message body</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_finalbody" id="$_finalbody">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#256-261" title="Go to source code"><var>$_finalbody</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_finalbody" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Final message body to be sent.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Final message body to be sent.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_alt_boundary" id="$_alt_boundary">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#263-268" title="Go to source code"><var>$_alt_boundary</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_alt_boundary" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>multipart/alternative boundary</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>multipart/alternative boundary</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_atc_boundary" id="$_atc_boundary">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#270-275" title="Go to source code"><var>$_atc_boundary</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_atc_boundary" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attachment boundary</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attachment boundary</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_header_str" id="$_header_str">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#277-282" title="Go to source code"><var>$_header_str</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_header_str" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Final headers to send</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Final headers to send</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_smtp_connect" id="$_smtp_connect">
+		<td class="attributes"><code>
+			protected  
+			resource
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#284-289" title="Go to source code"><var>$_smtp_connect</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$_smtp_connect" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>SMTP Connection socket placeholder</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>SMTP Connection socket placeholder</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_encoding" id="$_encoding">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#291-296" title="Go to source code"><var>$_encoding</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'8bit'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_encoding" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Mail encoding</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Mail encoding</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_smtp_auth" id="$_smtp_auth">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#298-303" title="Go to source code"><var>$_smtp_auth</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_smtp_auth" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to perform SMTP authentication</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to perform SMTP authentication</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_replyto_flag" id="$_replyto_flag">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#305-310" title="Go to source code"><var>$_replyto_flag</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_replyto_flag" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether to send a Reply-To header</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether to send a Reply-To header</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_debug_msg" id="$_debug_msg">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#312-318" title="Go to source code"><var>$_debug_msg</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_debug_msg" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Debug messages</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Debug messages</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Email.html#_print_debugger">CI_Email::print_debugger()</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_recipients" id="$_recipients">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#320-325" title="Go to source code"><var>$_recipients</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_recipients" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Recipients</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Recipients</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_cc_array" id="$_cc_array">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#327-332" title="Go to source code"><var>$_cc_array</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_cc_array" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CC Recipients</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CC Recipients</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_bcc_array" id="$_bcc_array">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#334-339" title="Go to source code"><var>$_bcc_array</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_bcc_array" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>BCC Recipients</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>BCC Recipients</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_headers" id="$_headers">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#341-346" title="Go to source code"><var>$_headers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Message headers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Message headers</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_attachments" id="$_attachments">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#348-353" title="Go to source code"><var>$_attachments</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_attachments" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attachment data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attachment data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_protocols" id="$_protocols">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#355-361" title="Go to source code"><var>$_protocols</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'mail'</span>, <span class="php-quote">'sendmail'</span>, <span class="php-quote">'smtp'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$_protocols" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Valid $protocol values</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Valid $protocol values</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Email.html#$protocol">CI_Email::<var>$protocol</var></a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_base_charsets" id="$_base_charsets">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#363-371" title="Go to source code"><var>$_base_charsets</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'us-ascii'</span>, <span class="php-quote">'iso-2022-'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$_base_charsets" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Base charsets</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Base charsets</p>
+
+<p>Character sets valid for 7-bit encoding, excluding language suffix.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_bit_depths" id="$_bit_depths">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#373-381" title="Go to source code"><var>$_bit_depths</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'7bit'</span>, <span class="php-quote">'8bit'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$_bit_depths" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Bit depths</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Bit depths</p>
+
+<p>Valid mail encodings</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_Email.html#$_encoding">CI_Email::<var>$_encoding</var></a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_priorities" id="$_priorities">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Email.html#383-396" title="Go to source code"><var>$_priorities</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-num">1</span> =&gt; <span class="php-quote">'1 (Highest)'</span>,
+	<span class="php-num">2</span> =&gt; <span class="php-quote">'2 (High)'</span>,
+	<span class="php-num">3</span> =&gt; <span class="php-quote">'3 (Normal)'</span>,
+	<span class="php-num">4</span> =&gt; <span class="php-quote">'4 (Low)'</span>,
+	<span class="php-num">5</span> =&gt; <span class="php-quote">'5 (Lowest)'</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$_priorities" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>$priority translations</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>$priority translations</p>
+
+<p>Actual values to send with the X-Priority header</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

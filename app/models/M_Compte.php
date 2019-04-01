@@ -3,20 +3,19 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * \file      M_Compte.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées à a gestion des comptes utilisateurs
- *
- * \details   Ce fichier permet de définir la méthode d'insertion des comptes utilisateurs
+ * Définit les méthodes liées à la gestion des comptes utilisateurs
+ * 
+ * Ce fichier permet de définir la méthode d'insertion des comptes utilisateurs.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Compte extends CI_Model {
 
     /**
-     * \brief      Fonction de récupération de l'id max
-     * \details    Fonction de récupération de l'id max
-     *             Retourne l'id maximum de la table compte
+     * Fonction de récupération de l'id max. Retourne l'id maximum de la table 
+     * Compte.
      */
     public function getMaxIDCompte() {
         $txt_sql = "SELECT MAX(id_compte) as id
@@ -28,10 +27,10 @@ class M_Compte extends CI_Model {
     }
 
     /**
-     * \brief      Insére un nouveau compte dans la table compte (compte personnel uniquement)
-     * \details    Insére un nouveau compte dans la table compte (compte personnel uniquement)
-     *             Retourne l'id du compte
-     * \param      $login : login, $password : mot de passe
+     * Insère un nouveau compte dans la table compte (compte personnel 
+     * uniquement). Retourne l'id du compte.
+     * @param $login : login 
+     * @param $password : mot de passe
      */
     public function insererCompte($login, $password) {
         $id = $this->getMaxIDCompte();

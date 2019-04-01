@@ -5,20 +5,19 @@ if (!defined('BASEPATH')) {
 }
 
 /**
- * \file      M_RessourcesMat.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux ressources matérielles
- *
- * \details   Ce fichier permet de définir les méthodes de gestion des ressources matérielles (ajout, modification, suppression)
+ * Définit les méthodes liées aux ressources matérielles.
+ * 
+ * Ce fichier permet de définir les méthodes de gestion des ressources 
+ * matérielles (ajout, modification, suppression).
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_RessourcesMat extends CI_Model {
 
     /**
-     * \brief      Récupére toute la liste des ressources matérielles
-     * \details    Récupére toute la liste des ressources matérielles
-     * \param      Aucun
+     * Récupère la liste des ressources matérielles
      */
     public function getAllRessourcesMat() {
         $txt_sql = "SELECT S.id_salle,S.txt_nom, TR.txt_nom as Type_nom
@@ -40,9 +39,7 @@ class M_RessourcesMat extends CI_Model {
     }
 
     /**
-     * \brief      Récupére toute la liste des types de ressources matérielles
-     * \details    Récupére toute la liste des types de ressources matérielles
-     * \param      Aucun
+     * Récupère la liste des types de ressources matérielles
      */
     public function getAllTypeRessourcesMat() {
         //	On simule l'envoi d'une requête
@@ -64,9 +61,8 @@ class M_RessourcesMat extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la ressource matérielle en fonction de son id
-     * \details    Récupére la ressource matérielle en fonction de son id
-     * \param      $id : id de la ressource matérielle
+     * Récupère la ressource matérielle en fonction de son id
+     * @param $id : id de la ressource matérielle
      */
     public function getRessourcesMatById($id) {
         $txt_sql = "SELECT S.id_salle,S.txt_nom, TR.txt_nom as Type_nom, S.id_ressource, TR.id_typeressource as id_type
@@ -80,9 +76,8 @@ class M_RessourcesMat extends CI_Model {
     }
 
     /**
-     * \brief      Supprime la ressource matérielle en fonction de son id
-     * \details    Supprime la ressource matérielle en fonction de son id
-     * \param      $id : id de la ressource matérielle à supprimer
+     * Supprime la ressource matérielle en fonction de son id
+     * @param $id : id de la ressource matérielle à supprimer
      */
     public function supprRessourcesMat($id) {
         $sql = "SELECT E.end 
@@ -115,9 +110,8 @@ class M_RessourcesMat extends CI_Model {
     }
 
     /**
-     * \brief      Modifie une ressource matérielle
-     * \details    Modifie une ressource matérielle
-     * \param      $salle : nouveau nom de la ressource
+     * Modifie une ressource matérielle
+     * @param $salle : nouveau nom de la ressource
      */
     public function ModifRessourcesMat($salle) {
         //	On simule l'envoi d'une requête
@@ -139,9 +133,8 @@ class M_RessourcesMat extends CI_Model {
     }
 
     /**
-     * \brief      Ajoute une ressource matérielle
-     * \details    Ajoute une ressource matérielle
-     * \param      $salle : nom de la ressource à ajouter
+     * Ajoute une ressource matérielle
+     * @param $salle : nom de la ressource à ajouter
      */
     public function ajouteRessourcesMat($salle) {
         $this->load->model('M_TypeRessource');

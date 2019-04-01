@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_Security | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li class="active"><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_Benchmark.html">CI_Benchmark</a></li>
+				<li><a href="class-CI_Cache.html">CI_Cache</a></li>
+				<li><a href="class-CI_Cache_apc.html">CI_Cache_apc</a></li>
+				<li><a href="class-CI_Cache_dummy.html">CI_Cache_dummy</a></li>
+				<li><a href="class-CI_Cache_file.html">CI_Cache_file</a></li>
+				<li><a href="class-CI_Cache_memcached.html">CI_Cache_memcached</a></li>
+				<li><a href="class-CI_Cache_redis.html">CI_Cache_redis</a></li>
+				<li><a href="class-CI_Cache_wincache.html">CI_Cache_wincache</a></li>
+				<li><a href="class-CI_Calendar.html">CI_Calendar</a></li>
+				<li><a href="class-CI_Config.html">CI_Config</a></li>
+				<li><a href="class-CI_Controller.html">CI_Controller</a></li>
+				<li><a href="class-CI_Driver.html">CI_Driver</a></li>
+				<li><a href="class-CI_Driver_Library.html">CI_Driver_Library</a></li>
+				<li><a href="class-CI_Email.html">CI_Email</a></li>
+				<li><a href="class-CI_Encrypt.html">CI_Encrypt</a></li>
+				<li><a href="class-CI_Encryption.html">CI_Encryption</a></li>
+				<li><a href="class-CI_Exceptions.html">CI_Exceptions</a></li>
+				<li><a href="class-CI_Form_validation.html">CI_Form_validation</a></li>
+				<li><a href="class-CI_FTP.html">CI_FTP</a></li>
+				<li><a href="class-CI_Hooks.html">CI_Hooks</a></li>
+				<li><a href="class-CI_Image_lib.html">CI_Image_lib</a></li>
+				<li><a href="class-CI_Input.html">CI_Input</a></li>
+				<li><a href="class-CI_Jquery.html">CI_Jquery</a></li>
+				<li><a href="class-CI_Lang.html">CI_Lang</a></li>
+				<li><a href="class-CI_Loader.html">CI_Loader</a></li>
+				<li><a href="class-CI_Log.html">CI_Log</a></li>
+				<li><a href="class-CI_Migration.html">CI_Migration</a></li>
+				<li><a href="class-CI_Model.html">CI_Model</a></li>
+				<li><a href="class-CI_Output.html">CI_Output</a></li>
+				<li><a href="class-CI_Pagination.html">CI_Pagination</a></li>
+				<li><a href="class-CI_Parser.html">CI_Parser</a></li>
+				<li><a href="class-CI_Profiler.html">CI_Profiler</a></li>
+				<li><a href="class-CI_Router.html">CI_Router</a></li>
+				<li class="active"><a href="class-CI_Security.html">CI_Security</a></li>
+				<li><a href="class-CI_Session.html">CI_Session</a></li>
+				<li><a href="class-CI_Session_database_driver.html">CI_Session_database_driver</a></li>
+				<li><a href="class-CI_Session_driver.html">CI_Session_driver</a></li>
+				<li><a href="class-CI_Session_files_driver.html">CI_Session_files_driver</a></li>
+				<li><a href="class-CI_Session_memcached_driver.html">CI_Session_memcached_driver</a></li>
+				<li><a href="class-CI_Session_redis_driver.html">CI_Session_redis_driver</a></li>
+				<li><a href="class-CI_Table.html">CI_Table</a></li>
+				<li><a href="class-CI_Trackback.html">CI_Trackback</a></li>
+				<li><a href="class-CI_Typography.html">CI_Typography</a></li>
+				<li><a href="class-CI_Unit_test.html">CI_Unit_test</a></li>
+				<li><a href="class-CI_Upload.html">CI_Upload</a></li>
+				<li><a href="class-CI_URI.html">CI_URI</a></li>
+				<li><a href="class-CI_User_agent.html">CI_User_agent</a></li>
+				<li><a href="class-CI_Utf8.html">CI_Utf8</a></li>
+				<li><a href="class-CI_Xmlrpc.html">CI_Xmlrpc</a></li>
+				<li><a href="class-CI_Xmlrpcs.html">CI_Xmlrpcs</a></li>
+				<li><a href="class-CI_Zip.html">CI_Zip</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-SessionHandlerInterface.html">SessionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Libraries.html" title="Summary of CodeIgniter\Libraries"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_Security</h1>
+
+
+	<div class="description">
+	
+<p>Security Class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Libraries.html">Libraries</a><br />
+
+				<b>Category:</b>
+				Security<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/libraries/security.html">http://codeigniter.com/user_guide/libraries/security.html</a><br />
+		<b>Located at</b> <a href="source-class-CI_Security.html#40-984" title="Go to source code">sys/core/Security.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_Security.html#164-196" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="csrf_verify" id="_csrf_verify">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Security.html">CI_Security</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_csrf_verify">#</a>
+		<code><a href="source-class-CI_Security.html#200-249" title="Go to source code">csrf_verify</a>( )</code>
+
+		<div class="description short">
+			
+<p>CSRF Verify</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>CSRF Verify</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Security.html">CI_Security</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="csrf_set_cookie" id="_csrf_set_cookie">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-CI_Security.html">CI_Security</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_csrf_set_cookie">#</a>
+		<code><a href="source-class-CI_Security.html#253-281" title="Go to source code">csrf_set_cookie</a>( )</code>
+
+		<div class="description short">
+			
+<p>CSRF Set Cookie</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>CSRF Set Cookie</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-CI_Security.html">CI_Security</a></code></code><br />
+				</div>
+
+
+				<h4>CodeCoverageIgnore</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="csrf_show_error" id="_csrf_show_error">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_csrf_show_error">#</a>
+		<code><a href="source-class-CI_Security.html#285-293" title="Go to source code">csrf_show_error</a>( )</code>
+
+		<div class="description short">
+			
+<p>Show CSRF Error</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Show CSRF Error</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_csrf_hash" id="_get_csrf_hash">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_csrf_hash">#</a>
+		<code><a href="source-class-CI_Security.html#297-306" title="Go to source code">get_csrf_hash</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get CSRF Hash</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get CSRF Hash</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>CSRF hash<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-CI_Security.html#$_csrf_hash">CI_Security::<var>$_csrf_hash</var></a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_csrf_token_name" id="_get_csrf_token_name">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_csrf_token_name">#</a>
+		<code><a href="source-class-CI_Security.html#310-319" title="Go to source code">get_csrf_token_name</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get CSRF Token Name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get CSRF Token Name</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>CSRF token name<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-CI_Security.html#$_csrf_token_name">CI_Security::<var>$_csrf_token_name</var></a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="xss_clean" id="_xss_clean">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_xss_clean">#</a>
+		<code><a href="source-class-CI_Security.html#323-537" title="Go to source code">xss_clean</a>( <span>string|string[] <var>$str</var></span>, <span>boolean <var>$is_image</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>XSS Clean</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>XSS Clean</p>
+
+<p>Sanitizes data so that Cross Site Scripting Hacks can be prevented. This
+method does a fair amount of work but it is extremely thorough, designed to
+prevent even the most obscure XSS attempts. Nothing is ever 100% foolproof, of
+course, but I haven't been able to get anything passed the filter.</p>
+
+<p>Note: Should only be used to deal with data upon submission. It's not
+something that should be used for general runtime processing.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string|string[]</code><br>$str Input data</dd>
+					<dt><var>$is_image</var></dt>
+					<dd><code>boolean</code><br>$is_image Whether the input is an image</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://channel.bitflux.ch/wiki/XSS_Prevention">Based in part on some code and ideas from Bitflux.</a><br />
+						<a href="http://ha.ckers.org/xss.html">To help develop this script I used this great list of
+	vulnerabilities along with a few other hacks I&#039;ve
+	harvested from examining vulnerabilities in other programs.</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="xss_hash" id="_xss_hash">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_xss_hash">#</a>
+		<code><a href="source-class-CI_Security.html#541-560" title="Go to source code">xss_hash</a>( )</code>
+
+		<div class="description short">
+			
+<p>XSS Hash</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>XSS Hash</p>
+
+<p>Generates the XSS hash if needed and returns it.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>XSS hash<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-CI_Security.html#$_xss_hash">CI_Security::<var>$_xss_hash</var></a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_random_bytes" id="_get_random_bytes">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_random_bytes">#</a>
+		<code><a href="source-class-CI_Security.html#564-602" title="Go to source code">get_random_bytes</a>( <span>integer <var>$length</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get random bytes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get random bytes</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length Output length</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="entity_decode" id="_entity_decode">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_entity_decode">#</a>
+		<code><a href="source-class-CI_Security.html#606-687" title="Go to source code">entity_decode</a>( <span>string <var>$str</var></span>, <span>string <var>$charset</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>HTML Entities Decode</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HTML Entities Decode</p>
+
+<p>A replacement for html_entity_decode()</p>
+
+<p>The reason we are not using html_entity_decode() by itself is because while
+it is not technically correct to leave out the semicolon at the end of an entity
+most browsers will still interpret the entity correctly. html_entity_decode()
+does not convert entities without semicolons, so we are left with our own little
+solution here. Bummer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str Input</dd>
+					<dt><var>$charset</var></dt>
+					<dd><code>string</code><br>$charset Character set</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/html-entity-decode">http://php.net/html-entity-decode</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sanitize_filename" id="_sanitize_filename">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sanitize_filename">#</a>
+		<code><a href="source-class-CI_Security.html#691-718" title="Go to source code">sanitize_filename</a>( <span>string <var>$str</var></span>, <span>boolean <var>$relative_path</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sanitize Filename</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sanitize Filename</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str Input file name</dd>
+					<dt><var>$relative_path</var></dt>
+					<dd><code>boolean</code><br>$relative_path Whether to preserve paths</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="strip_image_tags" id="_strip_image_tags">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_strip_image_tags">#</a>
+		<code><a href="source-class-CI_Security.html#722-731" title="Go to source code">strip_image_tags</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Strip Image Tags</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Strip Image Tags</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_compact_exploded_words" id="__compact_exploded_words">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__compact_exploded_words">#</a>
+		<code><a href="source-class-CI_Security.html#735-748" title="Go to source code">_compact_exploded_words</a>( <span>array <var>$matches</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compact Exploded Words</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compact Exploded Words</p>
+
+<p>Callback method for xss_clean() to remove whitespace from things like 'j a v
+a s c r i p t'.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matches</var></dt>
+					<dd><code>array</code><br>$matches</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_remove_evil_attributes" id="__remove_evil_attributes">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__remove_evil_attributes">#</a>
+		<code><a href="source-class-CI_Security.html#752-800" title="Go to source code">_remove_evil_attributes</a>( <span>string <var>$str</var></span>, <span>boolean <var>$is_image</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove Evil HTML Attributes (like event handlers and style)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove Evil HTML Attributes (like event handlers and style)</p>
+
+<p>It removes the evil attribute and either:<br />
+- Everything up until a space. For example, everything between the pipes:</p>
+
+<pre>
+&lt;a |style=document.write(<span
+class="php-quote">'hello'</span>);alert(<span
+class="php-quote">'world'</span>);| <span
+class="php-keyword1">class</span>=<span
+class="php-keyword2">link</span>&gt;
+</pre>
+
+<p>- Everything inside the quotes. For example, everything between the
+pipes:</p>
+
+<pre>
+&lt;a |style=<span
+class="php-quote">&quot;document.write('hello'); alert('world');&quot;</span>| <span
+class="php-keyword1">class</span>=<span
+class="php-quote">&quot;link&quot;</span>&gt;
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str The string to check</dd>
+					<dt><var>$is_image</var></dt>
+					<dd><code>boolean</code><br>$is_image Whether the input is an image</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The string with the evil attributes removed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_sanitize_naughty_html" id="__sanitize_naughty_html">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__sanitize_naughty_html">#</a>
+		<code><a href="source-class-CI_Security.html#804-818" title="Go to source code">_sanitize_naughty_html</a>( <span>array <var>$matches</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sanitize Naughty HTML</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sanitize Naughty HTML</p>
+
+<p>Callback method for xss_clean() to remove naughty HTML elements.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matches</var></dt>
+					<dd><code>array</code><br>$matches</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_js_link_removal" id="__js_link_removal">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__js_link_removal">#</a>
+		<code><a href="source-class-CI_Security.html#822-843" title="Go to source code">_js_link_removal</a>( <span>array <var>$match</var></span> )</code>
+
+		<div class="description short">
+			
+<p>JS Link Removal</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>JS Link Removal</p>
+
+<p>Callback method for xss_clean() to sanitize links.</p>
+
+<p>This limits the PCRE backtracks, making it more performance friendly and
+prevents PREG_BACKTRACK_LIMIT_ERROR from being triggered in PHP 5.2+ on
+link-heavy strings.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$match</var></dt>
+					<dd><code>array</code><br>$match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_js_img_removal" id="__js_img_removal">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__js_img_removal">#</a>
+		<code><a href="source-class-CI_Security.html#847-868" title="Go to source code">_js_img_removal</a>( <span>array <var>$match</var></span> )</code>
+
+		<div class="description short">
+			
+<p>JS Image Removal</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>JS Image Removal</p>
+
+<p>Callback method for xss_clean() to sanitize image tags.</p>
+
+<p>This limits the PCRE backtracks, making it more performance friendly and
+prevents PREG_BACKTRACK_LIMIT_ERROR from being triggered in PHP 5.2+ on image
+tag heavy strings.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$match</var></dt>
+					<dd><code>array</code><br>$match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_convert_attribute" id="__convert_attribute">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__convert_attribute">#</a>
+		<code><a href="source-class-CI_Security.html#872-882" title="Go to source code">_convert_attribute</a>( <span>array <var>$match</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Attribute Conversion</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attribute Conversion</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$match</var></dt>
+					<dd><code>array</code><br>$match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_filter_attributes" id="__filter_attributes">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__filter_attributes">#</a>
+		<code><a href="source-class-CI_Security.html#886-908" title="Go to source code">_filter_attributes</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Filter Attributes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Filter Attributes</p>
+
+<p>Filters tag attributes for consistency and safety.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::_js_img_removal()<br />
+						CI_Security::_js_link_removal()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_decode_entity" id="__decode_entity">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__decode_entity">#</a>
+		<code><a href="source-class-CI_Security.html#912-931" title="Go to source code">_decode_entity</a>( <span>array <var>$match</var></span> )</code>
+
+		<div class="description short">
+			
+<p>HTML Entity Decode Callback</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HTML Entity Decode Callback</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$match</var></dt>
+					<dd><code>array</code><br>$match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_do_never_allowed" id="__do_never_allowed">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__do_never_allowed">#</a>
+		<code><a href="source-class-CI_Security.html#935-952" title="Go to source code">_do_never_allowed</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Do Never Allowed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Do Never Allowed</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Used-by</h4>
+				<div class="list">
+						CI_Security::xss_clean()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_csrf_set_hash" id="__csrf_set_hash">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__csrf_set_hash">#</a>
+		<code><a href="source-class-CI_Security.html#956-982" title="Go to source code">_csrf_set_hash</a>( )</code>
+
+		<div class="description short">
+			
+<p>Set CSRF Hash and Cookie</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set CSRF Hash and Cookie</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="filename_bad_chars" id="$filename_bad_chars">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#51-73" title="Go to source code"><var>$filename_bad_chars</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'../'</span>, <span class="php-quote">'&lt;!--'</span>, <span class="php-quote">'--&gt;'</span>, <span class="php-quote">'&lt;'</span>, <span class="php-quote">'&gt;'</span>,
+	<span class="php-quote">&quot;'&quot;</span>, <span class="php-quote">'&quot;'</span>, <span class="php-quote">'&amp;'</span>, <span class="php-quote">'$'</span>, <span class="php-quote">'#'</span>,
+	<span class="php-quote">'{'</span>, <span class="php-quote">'}'</span>, <span class="php-quote">'['</span>, <span class="php-quote">']'</span>, <span class="php-quote">'='</span>,
+	<span class="php-quote">';'</span>, <span class="php-quote">'?'</span>, <span class="php-quote">'%20'</span>, <span class="php-quote">'%22'</span>,
+	<span class="php-quote">'%3c'</span>,		<span class="php-comment">// &lt;</span>
+	<span class="php-quote">'%253c'</span>,	<span class="php-comment">// &lt;</span>
+	<span class="php-quote">'%3e'</span>,		<span class="php-comment">// &gt;</span>
+	<span class="php-quote">'%0e'</span>,		<span class="php-comment">// &gt;</span>
+	<span class="php-quote">'%28'</span>,		<span class="php-comment">// (</span>
+	<span class="php-quote">'%29'</span>,		<span class="php-comment">// )</span>
+	<span class="php-quote">'%2528'</span>,	<span class="php-comment">// (</span>
+	<span class="php-quote">'%26'</span>,		<span class="php-comment">// &amp;</span>
+	<span class="php-quote">'%24'</span>,		<span class="php-comment">// $</span>
+	<span class="php-quote">'%3f'</span>,		<span class="php-comment">// ?</span>
+	<span class="php-quote">'%3b'</span>,		<span class="php-comment">// ;</span>
+	<span class="php-quote">'%3d'</span>		<span class="php-comment">// =</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$filename_bad_chars" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of sanitize filename strings</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of sanitize filename strings</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="charset" id="$charset">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#75-82" title="Go to source code"><var>$charset</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'UTF-8'</span></code></td>
+		<td class="description"><div>
+			<a href="#$charset" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Character set</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Character set</p>
+
+<p>Will be overridden by the constructor.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_xss_hash" id="$_xss_hash">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#84-91" title="Go to source code"><var>$_xss_hash</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_xss_hash" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>XSS Hash</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>XSS Hash</p>
+
+<p>Random Hash for protecting URLs.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_csrf_hash" id="$_csrf_hash">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#93-100" title="Go to source code"><var>$_csrf_hash</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_csrf_hash" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CSRF Hash</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CSRF Hash</p>
+
+<p>Random hash for Cross Site Request Forgery protection cookie</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_csrf_expire" id="$_csrf_expire">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#102-110" title="Go to source code"><var>$_csrf_expire</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">7200</span></code></td>
+		<td class="description"><div>
+			<a href="#$_csrf_expire" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CSRF Expire time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CSRF Expire time</p>
+
+<p>Expiration time for Cross Site Request Forgery protection cookie. Defaults to
+two hours (in seconds).</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_csrf_token_name" id="$_csrf_token_name">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#112-119" title="Go to source code"><var>$_csrf_token_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'ci_csrf_token'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_csrf_token_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CSRF Token name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CSRF Token name</p>
+
+<p>Token name for Cross Site Request Forgery protection cookie.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_csrf_cookie_name" id="$_csrf_cookie_name">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#121-128" title="Go to source code"><var>$_csrf_cookie_name</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'ci_csrf_token'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_csrf_cookie_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CSRF Cookie name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>CSRF Cookie name</p>
+
+<p>Cookie name for Cross Site Request Forgery protection cookie.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_never_allowed_str" id="$_never_allowed_str">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#130-145" title="Go to source code"><var>$_never_allowed_str</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'document.cookie'</span>	=&gt; <span class="php-quote">'[removed]'</span>,
+	<span class="php-quote">'document.write'</span>	=&gt; <span class="php-quote">'[removed]'</span>,
+	<span class="php-quote">'.parentNode'</span>		=&gt; <span class="php-quote">'[removed]'</span>,
+	<span class="php-quote">'.innerHTML'</span>		=&gt; <span class="php-quote">'[removed]'</span>,
+	<span class="php-quote">'-moz-binding'</span>		=&gt; <span class="php-quote">'[removed]'</span>,
+	<span class="php-quote">'&lt;!--'</span>				=&gt; <span class="php-quote">'&amp;lt;!--'</span>,
+	<span class="php-quote">'--&gt;'</span>				=&gt; <span class="php-quote">'--&amp;gt;'</span>,
+	<span class="php-quote">'&lt;![CDATA['</span>			=&gt; <span class="php-quote">'&amp;lt;![CDATA['</span>,
+	<span class="php-quote">'&lt;comment&gt;'</span>			=&gt; <span class="php-quote">'&amp;lt;comment&amp;gt;'</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$_never_allowed_str" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of never allowed strings</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of never allowed strings</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_never_allowed_regex" id="$_never_allowed_regex">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_Security.html#147-162" title="Go to source code"><var>$_never_allowed_regex</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'javascript\s*:'</span>,
+	<span class="php-quote">'(document|(document\.)?window)\.(location|on\w*)'</span>,
+	<span class="php-quote">'expression\s*(\(|&amp;\#40;)'</span>, <span class="php-comment">// CSS and IE</span>
+	<span class="php-quote">'vbscript\s*:'</span>, <span class="php-comment">// IE, surprise!</span>
+	<span class="php-quote">'wscript\s*:'</span>, <span class="php-comment">// IE</span>
+	<span class="php-quote">'jscript\s*:'</span>, <span class="php-comment">// IE</span>
+	<span class="php-quote">'vbs\s*:'</span>, <span class="php-comment">// IE</span>
+	<span class="php-quote">'Redirect\s+30\d'</span>,
+	<span class="php-quote">&quot;([\&quot;'])?data\s*:[^\\1]*?base64[^\\1]*?,[^\\1]*?\\1?&quot;</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$_never_allowed_regex" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of never allowed regex replacements</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of never allowed regex replacements</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

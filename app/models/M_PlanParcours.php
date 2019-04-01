@@ -4,20 +4,18 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_PlanParcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux nombre maximum de patients qu'un parcours peut accueillir par jour
- *
- * \details   Ce fichier permet de définir la méthode d'authentification
+ * Définit les méthodes liées aux nombre maximum de patients qu'un parcours 
+ * peut accueillir par jour
+ * 
+ * Ce fichier permet de définir la méthode d'authentification
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_PlanParcours extends CI_Model {
 
     /**
-     * \brief      Retourne toutes les informations de tous les parcours
-     * \details    Retourne toutes les informations de tous les parcours
-     * \param      Aucun
+     * Retourne toutes les informations de tous les parcours
      */
     public function getAllPlanParcours() {
         $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, TXT_JOUR, INT_NB_PATIENT
@@ -41,9 +39,7 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Retourne le nom de tous les parcours
-     * \details    Retourne le nom de tous les parcours
-     * \param      Aucun
+     * Retourne le nom de tous les parcours
      */
     public function getNomParcours() {
         $txt_sql = "SELECT DISTINCT PL.ID_PARCOURS, TXT_NOM
@@ -63,9 +59,8 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Retourne toutes les informations d'un parcours en fonction de son id
-     * \details    Retourne toutes les informations d'un parcours en fonction de son id
-     * \param      $id : id du parcours
+     * Retourne toutes les informations d'un parcours en fonction de son id
+     * @param $id : id du parcours
      */
     public function getPlanParcoursById($id) {
         $txt_sql = "SELECT PL.ID_PARCOURS, TXT_NOM, TXT_JOUR, INT_NB_PATIENT
@@ -87,9 +82,8 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Retourne le nom d'un parcours en fonction de son id
-     * \details    Retourne le nom d'un parcours en fonction de son id
-     * \param      $id : id du parcours
+     * Retourne le nom d'un parcours en fonction de son id
+     * @param $id : id du parcours
      */
     public function getNomParcoursById($id) {
         $txt_sql = "SELECT TXT_NOM
@@ -104,10 +98,9 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Modifie un parcours en fonction de son id
-     * \details    Modifie un parcours en fonction de son id
-     * \param      $idParcours : id du parcours
-     *             $data : les nouvelles données du parcours
+     * Modifie un parcours en fonction de son id
+     * @param $data : les nouvelles données du parcours
+     * @param $idparcours : id du parcours
      */
     public function modifierplanparcours($data, $idparcours) {
         $i = 0;
@@ -122,9 +115,8 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Modifie tous les parcours
-     * \details    Modifie tous les parcours
-     *             $data : les nouvelles données des parcours
+     * Modifie tous les parcours
+     * @param $data : les nouvelles données des parcours
      */
     public function modifierallplanparcours($data) {
         $i = 0;
@@ -139,9 +131,8 @@ class M_PlanParcours extends CI_Model {
     }
 
     /**
-     * \brief      Retourne l'id du jour en fonction de son nom
-     * \details    Retourne l'id du jour de la semaine en fonction de son nom
-     * \param      $name : nom du jour
+     * Retourne l'id du jour de la semaine en fonction de son nom
+     * @param $name : nom du jour
      */
     public function getIdJourByJour($name) {
         $i = 0;

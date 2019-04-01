@@ -2,14 +2,13 @@
 
 defined('BASEPATH') || exit('No direct script access allowed');
 /**
- * \file      Welcome.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'affichage de la page principale
- *            
- *
- * \details   Affiche la page d'accueuil apres connexion d'un utilisateur
+ * Contrôleur d'affichage de la page principale
+ * 
+ * Affiche la page d'accueil après connexion d'un utilisateur
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class Welcome extends CI_Controller {
 
@@ -23,9 +22,7 @@ class Welcome extends CI_Controller {
         }
     }
     /**
-     * \brief      Permet d'afficher la page d'accueil
-     * \details    Permet d'afficher la page d'accueil
-     * \param      Aucun
+     * Permet d'afficher la page d'accueil
      */
     public function index() {
         $data = array();

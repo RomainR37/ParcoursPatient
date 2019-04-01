@@ -1,20 +1,20 @@
 <?php
 
 /**
- * \file      M_Planning.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées au planning
- *
- * \details   Ce fichier permet de définir les méthodes de gestion du planning (ajout, suppression d'événements)
+ * Définit les méthodes liées au planning
+ * 
+ * Ce fichier permet de définir les méthodes de gestion du planning 
+ * (ajout, suppression d'événements)
+ * 
+ * @author    Guillaume Pochet
+ * @author    Romain Rousseau
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Planning extends CI_Model {
 
     /**
-     * \brief      Récupère toutes les ressources humaines ou matérielles
-     * \details    Récupère toutes les ressources humaines ou matérielles
-     * \param      Aucun
+     * Récupère toutes les ressources humaines ou matérielles
      */
     public function getAllRessource() {
         // le personnel
@@ -64,12 +64,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère toutes les activités à planifier en fonction d'une date donnée
-     * \details    Récupère toutes les activités à planifier en fonction d'une date donnée
-     * \param      $date : la date 
+     * Récupère toutes les activités à planifier en fonction d'une date donnée
+     * @param $date : la date 
      */
     public function getActiviteAplanifier($date) {
-
 
         // activité à planifier (rendez vous dans la table patient )
         $txt_sql = "SELECT DISTINCT(A.ID_ACTIVITE) as id_activite, Pat.ID_PATIENT as id_patient, Par.ID_PARCOURS as id_parcours, A.TXT_NOM as nom_activite, Pat.TXT_NOM as nom_patient, Pat.TXT_PRENOM as prenom_patient, Par.TXT_NOM as nom_parcours, A.INT_DUREE as duree
@@ -145,15 +143,15 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Ajout d'un événement
-     * \details    Ajout d'un événement dans la base de données
-     * \param      $title : titre de l'événement
-     *             $end : date et heure de fin de l'événement
-     *             $start : date et heure de début
-     *             $ressourceId : ressource liée à l'événement
-     *             $activiteId : id de l'activité lié à l'événement
-     *             $patientId : id du patient
-     *             $parcoursId : id du parcours
+     * Ajout d'un événement dans la base de données
+     * 
+     * @param $title : titre de l'événement
+     * @param $start : date et heure de début
+     * @param $end : date et heure de fin de l'événement
+     * @param $ressourceId : ressource liée à l'événement
+     * @param $activiteId : id de l'activité lié à l'événement
+     * @param $patientId : id du patient
+     * @param $parcoursId : id du parcours
      */
     public function addEvenement($title, $start, $end, $ressourceId, $activiteId, $patientId, $parcoursId) {
 
@@ -219,14 +217,19 @@ class M_Planning extends CI_Model {
     }
     
     /**
-     * \brief      Ajout d'un événement sans préciser de ressource
-     * \details    Ajout d'un événement dans la base de données
-     * \param      $title : titre de l'événement
-     *             $start : date et heure de début
-     *             $end : date et heure de fin de l'événement
-     *             $activiteId : id de l'activité lié à l'événement
-     *             $patientId : id du patient
-     *             $parcoursId : id du parcours
+     * Ajout d'un événement en base sans préciser de ressource à 
+     * attribuer.
+     * 
+     * Cette méthode est utilisée notamment pour la planification automatique 
+     * car les ressources ne sont pas allouées de façon manuelle dans ce cas. 
+     * Les ressources doivent donc être attribuées à la volée. 
+     * 
+     * @param $title : titre de l'événement
+     * @param $start : date et heure de début
+     * @param $end : date et heure de fin de l'événement
+     * @param $activiteId : id de l'activité lié à l'événement
+     * @param $patientId : id du patient
+     * @param $parcoursId : id du parcours
      */
     public function addEvenementAuto($title, $start, $end, $activiteId, $patientId, $parcoursId) {
     
@@ -246,7 +249,7 @@ class M_Planning extends CI_Model {
                 "Fin" => $end
             );
             
-            //Ajustement de la date par rapport à toutes les ressources
+            // Ajustement de la date par rapport à toutes les ressources
             foreach($query->result() as $row){
                 $ressourceAvailable = $this->getRessourceAvailable($row->id, $row->quantite, $date["Debut"], $date["Fin"]);
                 
@@ -284,12 +287,21 @@ class M_Planning extends CI_Model {
             return $end;
         }      
     }
-
-    /*
+    
+    /**
      * Insertion d'un évènement en base de données
      * 
-     * Insère un évènement dans la base de données avec les attributs en paramètre
+     * Insère un évènement dans la base de données avec les attributs en 
+     * paramètre.
      * 
+     * @param $start : date et heure de début de l'évènement
+     * @param $end : date et heure de fin de l'évènement
+     * @param $title : nom de l'évènement
+     * @param $patientId : id du patient
+     * @param $ressourceId : id de la ressource
+     * @param $parcoursId : id du parcours
+     * @param $activiteId : id de l'activité
+     * @param $color : couleur associée à l'évènement sur le calendrier
      */
     public function insertEventBDD($start, $end, $title, $patientId, $ressourceId, $parcoursId, $activiteId, $color) {
 
@@ -306,9 +318,7 @@ class M_Planning extends CI_Model {
     
     
     /**
-     * \brief      Récupère tous les événements de la base de données
-     * \details    Récupère tous les événements de la base de données
-     * \param      Aucun
+     * Récupère tous les événements de la base de données
      */
     public function getAllEvenement() {
 
@@ -358,11 +368,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tous les événements d'un parcours pour un patient pour une date donnée
-     * \details    Récupère tous les événements d'un parcours pour un patient pour une date donnée
-     * \param      $date : date
-     *             $patient : l'id du patient
-     *             $parcours : id du parcours
+     * Récupère tous les événements d'un parcours pour un patient pour une date donnée
+     * @param $date : date
+     * @param $patient : id du patient
+     * @param $parcours : id du parcours
      */
     public function getParcoursByDateAndPatient($date, $patient, $parcours) {
         $txt_sql = "select id, title, end, start, ressourceId, patientId, parcoursId, activiteId, color from evenement
@@ -387,9 +396,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief     Récupère tous les événements (juste le parcours) pour une date donnée
-     * \details   Récupère tous les événements (juste le parcours) pour une date donnée
-     * \param      $date : date
+     * Récupère tous les événements (juste le parcours) pour une date donnée
+     * @param $date : date
      */
     public function getParcoursByDate($date) {
         $txt_sql = "SELECT DISTINCT parcoursId, patientId
@@ -409,12 +417,13 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donnée
-     * \details    Récupère les détails d'un événement pour une activité, un parcours, un patient et une date donnée
-     * \param      $date : date
-     *             $idActivite : id de l'activité 
-     *             $idParcours : id du parcours
-     *             $idPatient : id du patient
+     * Récupère les détails d'un événement pour une activité, un parcours, un 
+     * patient et une date donnée
+     * 
+     * @param $idActivite : id de l'activité 
+     * @param $idParcours : id du parcours
+     * @param $idPatient : id du patient
+     * @param $date : date
      */
     public function getDetailEvenement($idActivite, $idParcours, $idPatient, $date) {
         $txt_sql = "select id, title, end, start, activiteId from evenement
@@ -439,13 +448,12 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
-     * \details    Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
-     * \param      Aucun
+     * Récupère tous les événements (tous les attributs) de la base de données pour une date donnée
      */
     public function getAllEvenementByDate($date) {
 
-        $txt_sql = "SELECT `id`, `start`, `end`, `title`, `patientId`, `ressourceId`, `parcoursId`, `activiteId`, `color` FROM `evenement` WHERE date(start)=" . $this->db->escape($date);
+        $txt_sql = "SELECT `id`, `start`, `end`, `title`, `patientId`, `ressourceId`, "
+                . "`parcoursId`, `activiteId`, `color` FROM `evenement` WHERE date(start)=" . $this->db->escape($date);
         $query = $this->db->query($txt_sql);
         $res = array();
 
@@ -492,11 +500,11 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Supprime un événement de la base de données
-     * \details    Supprime un événement de la base de données en fonction de l'id de son activité, l'id de son patient et l'id de son parcours
-     * \param      $idActivite : id de l'activité
-     *             $idPatient : id du patient
-     *             $idParcours : id du parcours
+     * Supprime un évènement de la base de données en fonction de l'id de son 
+     * activité, l'id de son patient et l'id de son parcours
+     * @param $idActivite : id de l'activité
+     * @param $idPatient : id du patient
+     * @param $idParcours : id du parcours
      */
     public function deleteEvent($idActivite, $idPatient, $idParcours) {
         $txt_sql = "DELETE FROM evenement WHERE activiteId=" . $this->db->escape($idActivite) . " AND patientId=" . $this->db->escape($idPatient) . "AND parcoursId=" . $this->db->escape($idParcours);
@@ -504,15 +512,14 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Met à jour un événement de la base de données
-     * \details    Met à jour un événement de la base de données
-     * \param      $idActivite : id de l'activité
-     *             $idPatient : id du patient
-     *             $idParcours : id du parcours
-     *             $idRessource : id de la ressource
-     *             $start : date de début de l'événement
-     *             $end : date de fin de l'activité
-     *             $id : id de l'événement à modifier
+     * Met à jour un événement de la base de données
+     * @param $start : date de début de l'événement
+     * @param $end : date de fin de l'activité
+     * @param $idRessource : id de la ressource
+     * @param $idActivite : id de l'activité
+     * @param $idPatient : id du patient
+     * @param $idParcours : id du parcours
+     * @param $id : id de l'événement à modifier
      */
     public function updateEvent($start, $end, $idRessource, $idActivite, $idPatient, $idParcours, $id) {
 
@@ -543,9 +550,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére tous les besoins d'un événement en fonction de l'id de son activité
-     * \details    Récupére tous les besoins d'un événement en fonction de l'id de son activité
-     * \param      $idActivite : id de l'activité de l'événement
+     * Récupére tous les besoins d'un événement en fonction de l'id de son activité
+     * @param $idActivite : id de l'activité de l'événement
      */
     public function necessite($idActivite) {
         $txt_sql = "SELECT n.QUANTITE as quantite, t.TXT_NOM as nom
@@ -571,11 +577,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére toutes les précédences d'une activité d'un événement pour un parcours
-     * \details    Récupére toutes les précédences d'une activité d'un événement pour un parcours
-     * \param      $idActivite : id de l'activité de l'événement
-     *             $idParcours : id du parcours
-     * \return     une chaîne de caractère de la forme "NOM_ACTIVITE1, NOM_ACTIVITE2..."
+     * Récupére toutes les précédences d'une activité d'un événement pour un parcours
+     * @param $idActivite : id de l'activité de l'événement
+     * @param $idParcours : id du parcours
+     * @return une chaîne de caractère de la forme "NOM_ACTIVITE1, NOM_ACTIVITE2..."
      */
     public function precedence($idActivite, $idParcours) {
         $txt_sql = "SELECT a.TXT_NOM as precedent
@@ -603,11 +608,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére toutes les précédences d'une activité d'un événement pour un parcours
-     * \details    Récupére toutes les précédences d'une activité d'un événement pour un parcours
-     * \param      $idActivite : id de l'activité de l'événement
-     *             $idParcours : id du parcours
-     * \return     un tableau regroupant les id des activités précédentes
+     * Récupère toutes les précédences d'une activité d'un événement pour un parcours
+     * @param $idActivite : id de l'activité de l'événement
+     * @param $idParcours : id du parcours
+     * @return un tableau regroupant les id des activités précédentes
      */
     public function precedenceId($idActivite, $idParcours) {
         $txt_sql = "SELECT a.ID_ACTIVITE as precedent
@@ -628,12 +632,12 @@ class M_Planning extends CI_Model {
     }
     
     /**
-     * \brief      Récupére toutes les ressources disponibles entre deux dates
-     * \details    Récupére toutes les ressources disponibles entre deux dates
-     * \param      $id : id du type de ressource
-     *             $quantite : retourne la quantite
-     *             $start : date de début
-     *             $end : date de fin
+     * Récupère toutes les ressources disponibles entre deux dates
+     * 
+     * @param $id : id du type de ressource
+     * @param $quantite : quantite de ressource nécessaire
+     * @param $start : date de début
+     * @param $end : date de fin
      */
     public function getRessourceByType($id, $quantite, $start, $end) {
 
@@ -675,11 +679,11 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupère toutes les ressources disponibles entre deux dates
-     * \details    Récupère toutes les ressources disponibles entre deux dates
-     * @param      $id : id du type de ressource
-     * @param int $quantite retourne la quantite
-     * @param string $start date de début
+     * Récupère toutes les ressources disponibles entre deux dates
+     * 
+     * @param $id : id du type de ressource
+     * @param int $quantite : la quantite
+     * @param string $start : date de début
      * @param string $end : date de fin
      */
     public function getRessourceAvailable($id, $quantite, $start, $end) {
@@ -741,9 +745,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la liste des ressources possibles pour une activité d'un événement
-     * \details    Récupére la liste des ressources possibles pour une activité d'un événement
-     * \param      $idActivite : id de l'activite
+     * Récupère la liste des ressources possibles pour une activité d'un événement
+     * @param $idActivite : id de l'activite
      */
     public function getRessourcePossiblePourUneActivite($idActivite) {
         $txt_sql = "SELECT r.ID_RESSOURCE as id
@@ -764,10 +767,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
-     * \details    Récupére la liste des activités à planifier pour une date donnée en fonction du nom du patient
-     * $param string $date : date
-     * @param string $recherche nom du patient à rechercher
+     * Récupère la liste des activités à planifier pour une date donnée en 
+     * fonction du nom du patient
+     * @param string $date : date
+     * @param string $recherche : nom du patient à rechercher
      */
     public function getActiviteAplanifierRecherche($date, $recherche) {
         if ($recherche != "") {
@@ -847,8 +850,7 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Fonction de récupération d'une couleur aléatoire
-     * \details    Fonction de récupération d'une couleur aléatoire
+     * Fonction de récupération d'une couleur aléatoire
      */
     function couleur_aleatoire() {
         $couleur = array('#FF6633', '#ffcc99', '#99cccc', '#669999', '#CC9999', 'FFCCCC', '99CCCC', '#999999',
@@ -879,10 +881,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Fonction de suppression de tous les événements liés à un patient pour une date donnée
-     * \details    Fonction de suppression de tous les événements liés à un patient pour une date donnée
-     * \param      $idPatient : id du patient
-     *             $date : date
+     * Fonction de suppression de tous les événements liés à un patient pour 
+     * une date donnée
+     * @param $idPatient : id du patient
+     * @param $date : date
      */
     function deleteAllEventPatient($idPatient, $date) {
         $txt_sql = "DELETE FROM evenement WHERE patientId=" . $this->db->escape($idPatient) . " AND DATE(start) =" . $this->db->escape($date);
@@ -890,9 +892,8 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Récupére la couleur d'un événement pour un patient
-     * \details    Récupére la couleur d'un événement pour un patient
-     * \param      $idPatient : id du patient
+     * Récupère la couleur d'un évènement pour un patient
+     * @param $idPatient : id du patient
      */
     public function getCouleurEventPatient($idPatient) {
         $txt_sql = "SELECT color as couleur
@@ -907,8 +908,7 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Permet de sauvegarder le planning
-     * \details    Sauvegarde le planning (suppresion des événements déja planifiés)
+     * Sauvegarde le planning (suppression des événements déja planifiés)
      */
     public function sauvegarderPlanning() {
         $txt_sql = "DELETE FROM ordonnancer";
@@ -919,8 +919,10 @@ class M_Planning extends CI_Model {
     }
 
     /**
-     * \brief      Permet de restaurer un planning (chargement de la dernière sauvegarde)
-     * \details    La restauration d'un planning entraîne la suppression des modifications non enregistrées
+     * Permet de restaurer un planning (chargement de la dernière sauvegarde).
+     * 
+     * La restauration d'un planning entraîne la suppression des modifications 
+     * non enregistrées.
      */
     public function restaurerPlanning() {
         $txt_sql = "DELETE FROM evenement";
@@ -930,10 +932,13 @@ class M_Planning extends CI_Model {
         $this->db->query($txt_sql);
     }
 
-    /*
-     * Planification auto
+    /**
+     * Méthode de planification automatique des évènements selon une date donnée.
      * 
-     * Planification des activités patient par patient
+     * La planification des activités se fait ici patient par patient par ordre 
+     * d'id.
+     * 
+     * @param $date : jour que l'on souhaite planifier
      */
     public function planAuto($date) {
         $this->load->model('M_Patient');
@@ -998,7 +1003,8 @@ class M_Planning extends CI_Model {
         }
     }
     
-    /* Récupération des disponibilités d'une ressource
+    /**
+     * Récupération des disponibilités d'une ressource
      * 
      * Cette méthode permet d'indiquer si une ressource est disponible dans 
      * l'intervalle de temps [$start;$end]
@@ -1024,8 +1030,8 @@ class M_Planning extends CI_Model {
             $startRow = new DateTime($row->start);
             $endRow = new DateTime($row->end);
                   
-            if(($start < $endRow && $start >= $startRow) //vrai si $start est inclu dans une activité 
-                    || ($end > $startRow && $end <= $endRow) //vrai si $end est inclu dans une activité
+            if(($start < $endRow && $start >= $startRow) //vrai si $start est inclue dans une activité 
+                    || ($end > $startRow && $end <= $endRow) //vrai si $end est inclue dans une activité
                     || ($start <= $startRow && $end >= $endRow)){// vrai si une activité existe sur la plage $start-$end
                 return FALSE;
             }

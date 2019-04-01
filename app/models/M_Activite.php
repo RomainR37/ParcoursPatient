@@ -5,17 +5,23 @@ if (!defined('BASEPATH')) {
 }
 
 /**
- * \file      M_Activites.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux activités
- *
- * \details   Ce fichier permet de définir les méthodes d'ajout, 
- *              de suppression et de modification lié aux activités
+ * Définit les méthodes liées aux activités.
+ * 
+ * Ce fichier permet de définir les méthodes d'ajout, de suppression et de 
+ * modification liées aux activités
+ * 
+ * @author    Guillaume Pochet
+ * @author    Romain Rousseau
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Activite extends CI_Model {
 
+    /**
+     * Méthode qui récupère les activités enregistrées en base.
+     * 
+     * @return la liste des activités
+     */
     public function getAllActivites() {
         //	On simule l'envoi d'une requête
         $txt_sql = "SELECT A.id_activite, A.txt_nom, A.txt_commentaire, A.int_duree
@@ -30,7 +36,7 @@ class M_Activite extends CI_Model {
             $restemp["nom_activite"] = $row->txt_nom;
             $restemp["commentaire"] = $row->txt_commentaire;
             $restemp["duree"] = $row->int_duree;
-            // On liste les ressources Humaines
+            // On liste les ressources humaines
             $txt_sql2 = "SELECT N.quantite, TR.txt_nom
 						FROM necessiter N, typeressource TR
 						WHERE N.id_activite = " . $restemp["id_activite"] .
@@ -71,6 +77,12 @@ class M_Activite extends CI_Model {
         return $res;
     }
 
+    /**
+     * Méthode qui récupère la liste des activités selon le nom d'activité.
+     * 
+     * @param string $val : le nom de l'activité
+     * @return la liste des activités recherchées
+     */
     public function getListeActivites($val) {
         //	On simule l'envoi d'une requête
         $txt_sql = "SELECT id_activite, txt_nom
@@ -93,6 +105,11 @@ class M_Activite extends CI_Model {
         return $res;
     }
 
+    /**
+     * Méthode de suppression d'une activité en base selon son id
+     * 
+     * @param int $id
+     */
     public function supprActivite($id) {
         $txt_sql = "DELETE FROM activite 
 			WHERE id_activite = " . $id;
@@ -102,6 +119,12 @@ class M_Activite extends CI_Model {
         $query = $this->db->query($sql);
     }
 
+    /**
+     * Méthode pour récupérer une activité en base selon son identifiant
+     * 
+     * @param int $id : l'identifiant de l'activité recherchée
+     * @return l'activité recherché
+     */
     public function getActiviteById($id) {
         //	On récupère les infos liées à l'activité dans la table Activite
         $txt_sql = "SELECT id_activite, txt_nom, txt_commentaire, int_duree
@@ -157,6 +180,12 @@ class M_Activite extends CI_Model {
         return $row;
     }
 
+    /**
+     * Méthode de modification d'une activité
+     * 
+     * @param $activite : l'activité avec les modifications nécessaires
+     * @return l'activité modifiée
+     */
     public function modifActivite($activite) {
         $this->load->model("M_Necessiter");
 
@@ -174,6 +203,12 @@ class M_Activite extends CI_Model {
         return $activite;
     }
 
+    /**
+     * Méthode d'ajout d'une activité en base.
+     * 
+     * @param array $activite : l'activité à ajouter
+     * @return l'activité ajoutée en base
+     */
     public function ajouteActivite($activite) {
         $this->load->model("M_Necessiter");
         $activite['id'] = $this->getMaxIdActivite();
@@ -197,6 +232,12 @@ class M_Activite extends CI_Model {
         return $activite;
     }
 
+    /**
+     * Méthode pour récupérer le numéro d'identifiant maximum enregistré en 
+     * base
+     * 
+     * @return l'identifiant maximum
+     */
     public function getMaxIdActivite() {
         $txt_sql = "SELECT MAX(id_activite) as id
                     FROM activite";

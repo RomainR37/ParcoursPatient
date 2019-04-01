@@ -1,14 +1,14 @@
 <?php
 
 /**
- * \file      Patient.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'un patient
- *            
- *
- * \details   Contient les différentes méthodes de gestion des patients
+ * Contrôleur d'un patient
+ * 
+ * Contient les différentes méthodes de gestion des patients
+ * 
+ * @author    Guillaume Pochet
+ * @author    Romain Rousseau
+ * @version   1.0
+ * @since     09 Mars 2017  
  */
 class Patient extends CI_Controller {
 
@@ -23,10 +23,12 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste des différents patients
-     * \details    Méthode permettant la liaison entre la vue des patients et le modèle patient
-     *             Récupére tous les patients et les envoie à la vue qui se charge de les afficher
-     * \param      Aucun
+     * Permet d'afficher la liste des différents patients
+     * 
+     * Méthode permettant la liaison entre la vue des patients et le modèle 
+     * patient
+     * Récupére tous les patients et les envoie à la vue qui se charge de les 
+     * afficher
      */
     function index() {
         $data = array();
@@ -36,10 +38,10 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher le planning d'un patient
-     * \details    Permet d'afficher le planning d'un patient
-     *             Récupére la liste des activités planifiées d'un patient
-     * \param      $id : identifiant du patient
+     * Permet d'afficher le planning d'un patient
+     * 
+     * Récupére la liste des activités planifiées d'un patient
+     * @param $id : identifiant du patient
      */
     public function afficherSejour($id) {
         $this->load->model('M_Patient');
@@ -50,10 +52,11 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récuperer la liste des activitées d'un patient
-     * \details    Récupère la liste des activités planifiées d'un patient
-     *             Retourne la liste des activités au format JSON
-     * \param      $id : identifiant du patient
+     * Permet de récuperer la liste des activitées d'un patient
+     * 
+     * Récupère la liste des activités planifiées d'un patient
+     * Retourne la liste des activités au format JSON
+     * @param $id : identifiant du patient
      */
     public function getAllActivites($id) {
         $this->load->model('M_Patient');
@@ -65,20 +68,17 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de recherche d'un patient
-     * \details    Récupère la liste des activités planifiées d'un patient
-     * \param      Aucun
+     * Permet d'afficher la vue de recherche d'un patient
+     * 
+     * Récupère la liste des activités planifiées d'un patient
      */
     public function rechercher() {
-
-        $data['chemin'] = '/patient/V_rechercher';
-        $this->load->view('/V_generale', $data);
+       $data['chemin'] = '/patient/V_rechercher';
+       $this->load->view('/V_generale', $data);
     }
 
     /**
-     * \brief      Permet de rechercher un patient
-     * \details    Permet de rechercher un patient
-     * \param      Aucun
+     * Permet de rechercher un patient
      */
     public function faireRecherche() {
         $this->load->model('M_Patient');
@@ -88,9 +88,10 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Afficher un patient en fonction de son id
-     * \details    Affiche toutes les informations liées à un patient
-     * \param      $id : id du patient
+     * Afficher un patient en fonction de son id
+     * 
+     * Affiche toutes les informations liées à un patient
+     * @param $id : id du patient
      */
     public function afficherPatient($id) {
 
@@ -122,9 +123,7 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Affiche le formulaire d'ajout d'un patient
-     * \details    Affiche le formulaire d'ajout d'un patient
-     * \param      Aucun
+     * Affiche le formulaire d'ajout d'un patient
      */
     public function creation() {
 
@@ -138,9 +137,8 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Affiche le formulaire d'ajout d'un rendez vous d'un patient (disponibilité)
-     * \details    Affiche le formulaire d'ajout d'un rendez vous d'un patient (disponibilité)
-     * \param      Aucun
+     * Affiche le formulaire d'ajout d'un rendez-vous d'un patient 
+     * (disponibilité)
      */
     public function jour() {
 
@@ -152,9 +150,10 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer le nombre de patient planifié
-     * \details    Permet de récupérer le nombre de patient planifié en fonction du jour et du parcours
-     * \param      Aucun
+     * Permet de récupérer le nombre de patient planifié pour une journée
+     *
+     * Permet de récupérer le nombre de patient planifié en fonction du jour 
+     * et du parcours
      */
     public function getNbByDay() {
         $this->load->model('M_Patient');
@@ -164,9 +163,7 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajout un rendez vous (ou disponibilité) à un patient
-     * \details    Permet d'ajout un rendez vous (ou disponibilité) à un patient
-     * \param      Aucun
+     * Permet d'ajout un rendez-vous (ou disponibilité) à un patient
      */
     public function majDisponibilite() {
         $this->load->model('M_Patient');
@@ -182,9 +179,7 @@ class Patient extends CI_Controller {
     }
 
     /**
-     * \brief       Permet de modifier un patient
-     * \details     permet de renouvler les infos sur un patient
-     * \param       Aucun
+     * Permet de modifier un patient
      */
     public function majPatient(){
         $this->load->model("M_Patient");
@@ -208,12 +203,11 @@ class Patient extends CI_Controller {
     }
     
     /*
-     * \brief permet de modifier un dossier
-     * \details permet de vérifier le renouvellement d'un dossier
-     *          renouveler le parcours affecté au dossier
-     *          renouveler la date début et fin de nouveau RDV
-     * \param aucun
+     * Permet de modifier un dossier
      * 
+     * Cette méthode permet de vérifier le renouvellement d'un dossier, de 
+     * renouveler le parcours affecté au dossier et de renouveler la date début 
+     * et fin de nouveau RDV
      */
     public function majDossier(){
         $this->load->model('M_Patient');
@@ -230,9 +224,7 @@ class Patient extends CI_Controller {
     }
     
     /*
-     * \brief permet d'ajouter un nouveau dossier
-     * \details permet d'ajouter un nouveau dossier dans la base de donnée 
-     * \param aucun
+     * Permet d'ajouter un nouveau dossier en base
      */
     public function ajoutDossier(){
         $this->load->model('M_Patient');
@@ -247,12 +239,11 @@ class Patient extends CI_Controller {
     }
     
     /**
-     * \brief      Permet de verifier l'ajout d'un patient
-     * \details    Permet de verifier l'ajout d'un patient à l'aide de form_validation
-     *             Vérifier l'intégrité des données saisies à l'aide du formulaire d'ajout
-     * \param      Aucun
+     * Permet de vérifier l'ajout d'un patient
+     * 
+     * Permet de verifier l'ajout d'un patient à l'aide de form_validation
+     * Vérifier l'intégrité des données saisies à l'aide du formulaire d'ajout
      */
-    
     public function ajoutPatient() {
 
         $this->load->library('form_validation');
@@ -308,21 +299,19 @@ class Patient extends CI_Controller {
     
      
     /**
-     * \brief      Permet de verifier la modification d'un patient
-     * \details    Permet de verifier la modification d'un patient à l'aide de form_validation
-     *             Vérifier l'intégrité des données saisies à l'aide du formulaire de modification
-     * \param      Aucun
+     * Permet de vérifier la modification d'un patient
+     * 
+     * Permet de vérifier la modification d'un patient à l'aide de 
+     * form_validation et de vérifier l'intégrité des données saisies à 
+     * l'aide du formulaire de modification
      */
-    
     public function modifierPatient($id) {
 
         $this->load->library('form_validation');
 
         $this->load->helper('form');
         $this->load->model('M_Patient');
-//        $patient = [];
         $patient = $this->M_Patient->getPatientById($id);
-//        $patient = $patient[0];
         $_POST["id-patient"] = $patient['ID_PATIENT'];
         $_POST["nom-patient"] = $patient['TXT_NOM'];
         $_POST["prenom-patient"] = $patient['TXT_PRENOM'];
@@ -345,9 +334,10 @@ class Patient extends CI_Controller {
     }
     
     /**
-     * \brief      Permet de verifier la validité d'une date
-     * \details    Permet de verifier la validité d'une date à l'aide des expressions régulières
-     * \param      Aucun
+     * Permet de vérifier la validité d'une date
+     * 
+     * Permet de vérifier la validité d'une date à l'aide des expressions 
+     * régulières
      */
     public function _dateRegex($date) {
 
@@ -361,9 +351,10 @@ class Patient extends CI_Controller {
     }
     
     /**
-     * \brief      Permet de supprimer un PATIENT
-     * \details    Fonction permettant la suppression d'un patient en fonction de son id
-     * \param      $id : id du patient à supprimer
+     * Permet de supprimer un enregistrement de patient
+     * 
+     * Fonction permettant la suppression d'un patient en fonction de son id
+     * @param $id : id du patient à supprimer
      */
     public function supprimer($id) {
         $this->load->model('M_Patient');
@@ -372,9 +363,7 @@ class Patient extends CI_Controller {
     }
     
     /*
-     * \brief Permet d'ajouter un RDV pour un patient
-     * \details permet d'ajouter un nouveau rdv pour un patinet
-     * \param aucun
+     * Permet d'ajouter un RDV pour un patient
      */
     public function ajouterRDV(){
         $this->load->model('M_Parcours');
@@ -392,11 +381,10 @@ class Patient extends CI_Controller {
     }
     
     /*
-     * \brief Permet de modifier un RDV pour un patient
-     * \details permet de modifier un RDV pour un patient
-     *          renouvler le parcours affecté
-     *          renouver la date début et fin de RDV
-     * \param aucun
+     * Permet de modifier un RDV pour un patient
+     * 
+     * Permet de modifier un RDV pour un patient, le parcours affecté ainsi que 
+     * la date début et fin de RDV
      */
     public function modifierRDV(){
         $this->load->model('M_Parcours');
@@ -415,22 +403,19 @@ class Patient extends CI_Controller {
     }
     
     /*
-     * \brief Permet de supprimer un RDV d'un patinet
-     * \param aucun
+     * Permet de supprimer un RDV d'un patinet
      */
     public function supprimerRDV(){
         $this->load->model('M_DossierParcours');
         $id_patient = $this->uri->segment(3);
         $id_dossierparcours = $this->uri->segment(4);
         $this->M_DossierParcours->supprimerDossier($id_dossierparcours);
-        //$id_patient = $this->M_DossierParcours->findPatientByIdDossier($id_dossierParcours);
-        $this->gererRDV($id_patient);
-        
+        $this->gererRDV($id_patient);   
     }
     
     /*
-     * \brief Permet de gérer les RDVs d'un patient
-     * \param $id l'id de patient
+     * Permet de gérer les RDVs d'un patient selon son identifiant
+     * @param $id l'id de patient
      */
     public function gererRDV($id){
         $this->load->library('form_validation');

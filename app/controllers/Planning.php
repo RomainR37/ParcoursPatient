@@ -1,14 +1,13 @@
 <?php
 
 /**
- * \file      Planninf.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller de la page de plannification
- *            
- *
- * \details   Contient les différentes méthodes de gestion du planning
+ * Contrôleur de la page de plannification
+ * 
+ * Contient les différentes méthodes de gestion du planning
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since      09 Mars 2017
  */
 class Planning extends CI_Controller {
 
@@ -21,9 +20,7 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de planification générale
-     * \details    Permet d'afficher la vue de planification générale
-     * \param      Aucun
+     * Permet d'afficher la vue de planification générale
      */
     public function planifier() {
         $data['chemin'] = '/planning/V_planning_planifier';
@@ -31,25 +28,20 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la page de création de jeux de données
-     * \details    Permet d'afficher la page de création de jeux de données
-     * \param      Aucun
+     * Permet d'afficher la page de création de jeux de données
      */
     public function creerJeuxDeDonnees() {
         $data['chemin'] = '/planning/V_planning_creerDonnees';
         $this->load->view('/V_generale', $data);
     }
 
-    public function creerDonnees() {
-        
-    }
-
     /**
-     * \brief      Permet de récupérer la liste de toutes les ressources humaines ou matérielles
-     * \details    Permet de récupérer la liste de toutes les ressources humaines ou matérielles
-     *             Retourne la liste des ressources au format JSON :
-     *             {id: "1", title: "Soumaya Cheniour", type_ressource: "IDE obésité"}
-     * \param      Aucun
+     * Permet de récupérer la liste de toutes les ressources humaines ou 
+     * matérielles
+     * 
+     * Permet de récupérer la liste de toutes les ressources humaines ou 
+     * matérielles. Retourne la liste des ressources au format JSON :
+     * {id: "1", title: "Soumaya Cheniour", type_ressource: "IDE obésité"}
      */
     public function getRessources() {
 
@@ -60,9 +52,10 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer la liste de tous les événements à ajouter au planning
-     * \details    Permet de récupérer la liste de tous les événements à ajouter au planning
-     *             Retourne la liste des événements au format JSON :
+     * Permet de récupérer la liste de tous les événements à ajouter au planning
+     * 
+     * Permet de récupérer la liste de tous les événements à ajouter au 
+     * planning. Retourne la liste des événements au format JSON :
       {activiteId:"1",
       activite_precedente:"Début",
       color:"#FF1490",
@@ -74,7 +67,6 @@ class Planning extends CI_Controller {
       resourceId:"1",
       start:"2017-03-28 10:00:00",
       title:"Martin Simon - RDV paramédical - Obésité sévère – diagnostique}"
-     * \param      Aucun
      */
     public function getEvenement() {
 
@@ -85,17 +77,17 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de toutes les activités à planifier
-     * \details    Permet d'afficher la liste de toutes les activités à planifier pour une date donnée
-     *             Retourne la liste des activités au format JSON :
-     *             {activite_id:"1",
+     * Permet d'afficher la liste de toutes les activités à planifier
+     * 
+     * Permet d'afficher la liste de toutes les activités à planifier pour une 
+     * date donnée. Retourne la liste des activités au format JSON :
+     * {activite_id:"1",
       activite_precedente:"Début",
       duree:"0:20:0",
       necessite:"1 IDE obésité, 1 HDJ obésité",
       nom_activite:"pochet guillaume - RDV paramédical - Obésité sévère – diagnostique",
       parcours_id:"1",
       patient_id:"11"}
-     * \param      Aucun
      */
     public function getActiviteAPlanifier() {
 
@@ -108,9 +100,12 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de toutes les activités à planifier en recherchant un nom de patient
-     * \details    Permet d'afficher la liste de toutes les activités à planifier en recherchant un nom de patient pour une date donnée
-     *             Retourne la liste des activités au format JSON :
+     * Permet d'afficher la liste de toutes les activités à planifier en 
+     * recherchant un nom de patient
+     * 
+     * Permet d'afficher la liste de toutes les activités à planifier en 
+     * recherchant un nom de patient pour une date donnée. Retourne la liste 
+     * des activités au format JSON :
      *             {activite_id:"1",
       activite_precedente:"Début",
       duree:"0:20:0",
@@ -118,7 +113,6 @@ class Planning extends CI_Controller {
       nom_activite:"pochet guillaume - RDV paramédical - Obésité sévère – diagnostique",
       parcours_id:"1",
       patient_id:"11"}
-     * \param      Aucun
      */
     public function getActiviteAPlanifierRecherche() {
 
@@ -132,10 +126,10 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter un événement
-     * \details    Permet d'ajouter un événement
-     *             Récupére la liste des informations d'un événement et les ajoute en base de données
-     * \param      Aucun
+     * Permet d'ajouter un événement
+     * 
+     * Permet d'ajouter un événement. Récupére la liste des informations d'un 
+     * événement et les ajoute en base de données.
      */
     public function addEvent() {
 
@@ -157,9 +151,9 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de supprimer un événement
-     * \details    Permet de supprimer un événement de la base de données
-     * \param      Aucun
+     * Permet de supprimer un événement
+     * 
+     * Permet de supprimer un événement de la base de données
      */
     public function deleteEvent() {
         $this->load->model('M_Planning');
@@ -174,9 +168,10 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de vérifier les contraintes liées à la planification
-     * \details    Permet de vérifier les contraintes liées à la planification
-     *             Retourne la liste des contraintes au format JSON :
+     * Permet de vérifier les contraintes liées à la planification
+     * 
+     * Permet de vérifier les contraintes liées à la planification. Retourne 
+     * la liste des contraintes au format JSON :
      * 0:"Toutes les activités ne sont pas planifiées."
       1:"Un patient ne peut pas faire 2 activités à la fois. (Patient : Robert Garcia)"
      * 
@@ -197,7 +192,6 @@ class Planning extends CI_Controller {
      * 5 : gérer avec les contraintes
      * 6 : gérer avec fullCalendar
      * 7 : gérer avec les contraintes
-     * \param      Aucun
      */
     public function constraints() {
 
@@ -337,10 +331,10 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de mettre à jour un événement
-     * \details    Permet de mettre à jour un événement
-     *             Récupére la liste des informations d'un événement et les met à jour en base de données
-     * \param      Aucun
+     * Permet de mettre à jour un événement
+     * 
+     * Permet de mettre à jour un événement. Récupére la liste des informations 
+     * d'un événement et les met à jour en base de données
      */
     public function updateEvent() {
         $this->load->model('M_Planning');
@@ -360,9 +354,8 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de supprimer tous les événements liés à un patient pour une date donnée
-     * \details    Permet de supprimer tous les événements liés à un patient pour une date donnée
-     * \param      Aucun
+     * Permet de supprimer tous les événements liés à un patient pour une date 
+     * donnée
      */
     public function deleteEventsPatient() {
         $this->load->model('M_Planning');
@@ -376,9 +369,7 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de sauvegarder le planning
-     * \details    Permet de sauvegarder le planning
-     * \param      Aucun
+     * Permet de sauvegarder le planning
      */
     public function sauvegarder() {
         $this->load->model('M_Planning');
@@ -387,9 +378,7 @@ class Planning extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de restaurer (reprise de la dernière sauvegarde) le planning
-     * \details    Permet de restaurer (reprise de la dernière sauvegarde) le planning
-     * \param      Aucun
+     * Permet de restaurer (reprise de la dernière sauvegarde) le planning
      */
     public function restaurer() {
         $this->load->model('M_Planning');
@@ -397,6 +386,14 @@ class Planning extends CI_Controller {
         $this->planifier();
     }
 
+    
+    /**
+     * Fonction appelée lors du lancement d'une planification automatique.
+     * 
+     * Récupère la date en cours sur le calendrier et lance la fonction de 
+     * planification du fichier M_Planning. Renvoie un message "ok" en cas de 
+     * succès de la planification.
+     */
     public function planAuto(){
         $this->load->model('M_Planning');
         $date = new DateTime($this->input->post("date"));

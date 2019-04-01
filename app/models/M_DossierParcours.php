@@ -4,24 +4,26 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_DossierParcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées à la gestion des dossier parcours d'un patient
- *
- * \details   Ce fichier permet de définir les méthodes de gestion des dossiers parcours d'un patient
- *            Cette classe est nécessaire car on souhaite stoker les différentes informations sur les activités d'un patient dans son parcours
- *            Chaque dossier parcours est composé d'une liste d'onglets, eux même composer d'une liste de champs
+ * Définit les méthodes liées à la gestion des dossiers parcours d'un patient.
+ * 
+ * Ce fichier permet de définir les méthodes de gestion des dossiers parcours 
+ * d'un patient. Cette classe est nécessaire car on souhaite stocker les 
+ * différentes informations sur les activités d'un patient dans son parcours. 
+ * Chaque dossier parcours est composé d'une liste d'onglets, eux même composés
+ * d'une liste de champs.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
+ * 
  */
 class M_DossierParcours extends CI_Model {
 
     /**
-     * \brief      Récupérer les informations sur les dossiers parcours d'un patient
-     * \details    Récupérer les informations sur les dossiers parcours d'un patient
-     * \param      $idPatient : l'id du patient
-     *             $idOnglet : l'id de l'onglet du dossier parcours
-     *             $idDossierParcours : l'id du dossier parcours
+     * Récupérer les informations sur les dossiers parcours d'un patient.
+     * @param $idPatient : l'id du patient
+     * @param $idOnglet : l'id de l'onglet du dossier parcours
+     * @param $idDossierParcours : l'id du dossier parcours
      */
     public function getDossierByIdPatient($idPatient, $idOnglet, $idDossierParcours) {
 
@@ -124,11 +126,12 @@ class M_DossierParcours extends CI_Model {
     }
 
     /**
-     * \brief      Met à jour les informations sur les dossiers parcours d'un patient
-     * \details    Met à jour  les informations sur les dossiers parcours d'un patient
-     * \param      $inputInDossier : contient les nouvelles informations sur le dossier parcours
-     *             $idOnglet : l'id de l'onglet du dossier parcours
-     *             $idDossierParcours : l'id du ossier parcours
+     * Met à jour les informations sur les dossiers parcours d'un patient
+     *
+     * @param $idOnglet : l'id de l'onglet du dossier parcours
+     * @param $idDossierParcours : l'id du dossier parcours
+     * @param $inputInDossier : contient les nouvelles informations sur le 
+     * dossier parcours
      */
     public function majDossierByIdPatient($idOnglet, $idDossierParcours, $inputInDossier) {
         $this->db->trans_begin();
@@ -155,11 +158,12 @@ class M_DossierParcours extends CI_Model {
     }
 
     /**
-     * \brief      Ajoute un champ à un dossier parcours
-     * \details    Ajoute un champ à un dossier parcours
-     * \param      $idChamp : l'id du champ à ajouter dans l'onglet du dossier parcours
-     *             $idOnglet : l'id de l'onglet du dossier parcours
-     *             $idDossierParcours : l'id du ossier parcours
+     * Ajoute un champ à un dossier parcours
+     * 
+     * @param $idOnglet : l'id de l'onglet du dossier parcours
+     * @param $idDossierParcours : l'id du ossier parcours
+     * @param $idChamp : l'id du champ à ajouter dans l'onglet du dossier 
+     * parcours
      */
     public function addChampAtDossier($idOnglet, $idDossierParcours, $idChamp) {
         $sql = "INSERT INTO constituerdossier (id_champ, id_onglet, id_dossierparcours, txt_valeur) 
@@ -170,9 +174,7 @@ class M_DossierParcours extends CI_Model {
 
     
      /**
-     * \brief      Obtenir le maxid de le table dossierParcours
-     * \details    Obtenir le maxid de le table dossierParcours
-     * \param      Aucun
+     * Obtenir le maxid de le table dossierParcours
      */
     public function getMaxIdDossierParcours() {
         $txt_sql = "SELECT MAX(id_dossierparcours) as maxId FROM dossierparcours";
@@ -186,12 +188,11 @@ class M_DossierParcours extends CI_Model {
        
 
     /**
-     * \brief      Permet de créer un nouveau dossier parcours pour un patient
-     * \details    Permet de créer un nouveau dossier parcours pour un patient
-     * \param      $idPatient : id du patient
-     * \param      $idParcours : id du parcours
-     * \param      $dateDebut : la date début de RDV
-     *\param       $dateFin : la date fin de RDV
+     * Permet de créer un nouveau dossier parcours pour un patient
+     * @param      $idPatient : id du patient
+     * @param      $idParcours : id du parcours
+     * @param      $dateDebut : la date début de RDV
+     * @param      $dateFin : la date fin de RDV
      */
     public function nouvelleDossier($idPatient, $idParcours, $dateDebut, $dateFin) {
 
@@ -226,9 +227,10 @@ class M_DossierParcours extends CI_Model {
         }
     }
     
-    /*
-     * \BRIEF permet de suprimer un dossier parcours d'un patient
-     * \param $id_dossierParcours id de dossier parcours
+    /**
+     * Permet de suprimer un dossier parcours d'un patient
+     * 
+     * @param $id_dossierParcours id de dossier parcours
      */
     public function supprimerDossier($id_dossierParcours){
         $txt_sql = "DELETE FROM dossierparcours                   
@@ -236,12 +238,12 @@ class M_DossierParcours extends CI_Model {
         $query = $this->db->query($txt_sql);
     }
     
-    /*
-     * \brief permet de modifier un dossier parcours
-     * \param $idDossier l'id de dossier à mise à jour
-     * \param $idParcours l'id de parcours à mise à jour
-     * \param $dateDebut la date début de nouveau rdv
-     * \param $dateFin la date fin de nouveau rdv
+    /**
+     * Permet de modifier un dossier parcours
+     * @param $idDossier l'id de dossier à mise à jour
+     * @param $idParcours l'id de parcours à mise à jour
+     * @param $dateDebut la date début de nouveau rdv
+     * @param $dateFin la date fin de nouveau rdv
      */
     public function majDossier($idDossier,$idParcours, $dateDebut, $dateFin){
         //renouvler la  table dossiparcours
@@ -272,9 +274,9 @@ class M_DossierParcours extends CI_Model {
         }
     }
 
-    /*
-     * \brief permet de trouver l'id d'un patient selon l'id dossier de parcours
-     * \param $id_dossier id de dossier parcours pour trouver le patient
+    /**
+     * Permet de trouver l'id d'un patient selon l'id dossier de parcours
+     * @param $id_dossier id de dossier parcours pour trouver le patient
      */
     public function findPatientByIdDossier($id_dossier){
         $txt_sql = "SELECT id_patient FROM dossierparcours 

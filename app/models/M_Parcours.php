@@ -4,24 +4,22 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_Parcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux parcours patients
- *            (Suite d'activités médicales engendrant des ressources matérielles ou humaines)
+ * Définit les méthodes liées aux parcours patients (Suite d'activités 
+ * médicales engendrant des ressources matérielles ou humaines)
  *
- * \details   Ce fichier permet de définir les méthodes de gestion des parcours patients
+ * Ce fichier permet de définir les méthodes de gestion des parcours patients.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
+ * 
  */
 class M_Parcours extends CI_Model {
 
     /**
-     * \brief   Récupére les informations de tout les parcours
-     * \details    Récupére les informations de tout les parcours
+     * Récupère les informations de tous les parcours
      */
     public function getAllParcours() {
-       /* $txt_sql = "SELECT id_parcours, txt_nom, int_objectif, txt_code
-			FROM parcours";*/
         $txt_sql = "SELECT id_parcours, txt_nom, txt_code
 			FROM parcours";                
         
@@ -40,10 +38,9 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Récupére les informations d'un parcours
-     * \details   Récupére toutes les informations d'un parcours
-     *           (chaque activité du parcours ainsi que chaque précédence de chaque activité)
-     * \param     $id : id du parcours
+     * Récupère toutes les informations d'un parcours (chaque activité du 
+     * parcours ainsi que chaque précédence de chaque activité)
+     * @param $id : id du parcours
      */
     public function getParcoursById($id) {
         //	On récupère les infos liées au parcours dans la table Parcours
@@ -100,10 +97,9 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Récupére toutes les activités d'un parcours
-     * \details   Récupére toutes les activités d'un parcours
-     *            Retourne les données au format JSON
-     * \param     $id : id du parcours
+     * Récupère toutes les activités d'un parcours. Retourne les données au 
+     * format JSON
+     * @param $id : id du parcours
      */
     public function getActiviteParcoursByIdToJson($id) {
         // On récupère la liste des activités nécessaires pour le parcours
@@ -123,10 +119,9 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Récupére tout les liens de précécendes entre les activités d'un parcours
-     * \details   Récupére tout les liens de précécendes entre les activités d'un parcours
-     *            Retourne les données au format JSON
-     * \param     $id : id du parcours
+     * Récupère tous les liens de précédences entre les activités d'un parcours.
+     * Retourne les données au format JSON.
+     * @param $id : id du parcours
      */
     public function getDependencesActivitesToJson($id) {
         $res = array();
@@ -145,11 +140,10 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Récupére toutes les dépendances entre les activités d'un parcours
-     * \details   Récupére toutes les dépendances entre les activités d'un parcours (délai min et délai max)
-     *            Retourne les données au format JSON
-     * @param     $idActivite : id de l'activité
-     * @param     $idParcours : id du parcours
+     * Récupère toutes les dépendances entre les activités d'un parcours 
+     * (délai min et délai max). Retourne les données au format JSON.
+     * @param $idActivite : id de l'activité
+     * @param $idParcours : id du parcours
      */
     public function getDependancesActivites($idActivite, $idParcours) {
         $res = array();
@@ -170,9 +164,9 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Ajoute un parcours ainsi que toutes les activités liées à ce parcours
-     * \details   Ajoute un parcours ainsi que toutes les activités liées à ce parcours
-     * \param     $parcours : contient toutes les données du parcours (activité, précédences)
+     * Ajoute un parcours ainsi que toutes les activités liées à ce parcours
+     * @param $parcours : contient toutes les données du parcours 
+     * (activité, précédences)
      */
     public function ajouteParcours($parcours) {
         $this->load->model("M_Composer");
@@ -191,17 +185,11 @@ class M_Parcours extends CI_Model {
 
         //Ajout du plan parcours pour chaque jour
         $i = 1;
-        /*
         for ($i = 1; $i <= 5; $i++) {
-            $txt_sql = "INSERT INTO planparcours
-                   VALUES(" . $parcours['id'] . "," . $i . "," . $this->db->escape($parcours['objectif']) . ")";
-            $query = $this->db->query($txt_sql);
-        }*/
-         for ($i = 1; $i <= 5; $i++) {
-            $txt_sql = "INSERT INTO planparcours
-                   VALUES(" . $parcours['id'] . "," . $i . ", 5)";
-            $query = $this->db->query($txt_sql);
-         }
+           $txt_sql = "INSERT INTO planparcours
+                  VALUES(" . $parcours['id'] . "," . $i . ", 5)";
+           $query = $this->db->query($txt_sql);
+        }
 
 
         foreach ($parcours["precedences"] as $prec) {
@@ -213,9 +201,8 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Supprime un parcours
-     * \details   Supprime un parcours en fonction de son id
-     * \param     $id : id du parcours à supprimer
+     * Supprime un parcours en fonction de son id
+     * @param $id : id du parcours à supprimer
      */
     public function supprimerParcours($id) {
         $txt_sql = "DELETE FROM parcours
@@ -224,9 +211,8 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Permet de modifier un parcours
-     * \details   Permet de modifier un parcours
-     * \param     $parcours : contient toutes les nouvelles données du parcours
+     * Permet de modifier un parcours
+     * @param $parcours : contient toutes les nouvelles données du parcours
      */
     public function modifParcours($parcours) {
         $this->load->model("M_Composer");
@@ -249,9 +235,7 @@ class M_Parcours extends CI_Model {
     }
 
     /**
-     * \brief     Récupère l'id max des parcours
-     * \details   Récupère l'id max des parcours
-     * \param     Aucun
+     * Récupère l'id max des parcours
      */
     public function getMaxIdParcours() {
         $txt_sql = "SELECT MAX(id_parcours) as id

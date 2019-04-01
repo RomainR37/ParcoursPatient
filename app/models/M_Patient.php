@@ -5,20 +5,19 @@ if (!defined('BASEPATH')) {
 }
 
 /**
- * \file      M_Patient.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux patients
- *
- * \details   Ce fichier permet de définir les méthodes de gestion des patients (modification, suppression , ajout)
+ * Définit les méthodes liées aux patients
+ * 
+ * Ce fichier permet de définir les méthodes de gestion des patients 
+ * (modification, suppression , ajout)
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Patient extends CI_Model {
 
     /**
-     * \brief      Récupére l'id max des patients
-     * \details    Récupére l'id max des patients
-     * \param      Aucun
+     * Récupère l'id max des patients
      */
     public function getMaxIdPatient() {
         $txt_sql = "SELECT MAX(ID_PATIENT) as maxId FROM patient";
@@ -30,9 +29,7 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Récupére l'id max des comptes
-     * \details    Récupére l'id max des comptes
-     * \param      Aucun
+     * Récupére l'id max des comptes
      */
     public function getMaxIdCompte() {
         $txt_sql = "SELECT MAX(ID_COMPTE) as maxId FROM compte";
@@ -44,24 +41,23 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Méthode d'ajout d'un nouveau patient
-     * \details    Méthode d'ajout d'un nouveau patient et d'un compte à un patient
-     * \param      $uname : login du patient sous la forme (nom.prenom)
-     *             $password : mot de passe sous la forme (date de naissance)
-     *             $nom : nom du patient
-     *             $prenom : prenom du patient
-     *             $adressenum : numéro de rue du patient
-     *             $codePostale : code postal du patient
-     *             $ville : ville du patient
-     *             $apays : pays du patient
-     *             $mail : mail du patient
-     *             $telefix :  téléphone fixe du patient
-     *             $tele : téléphone portable
-     *             $numsecu : numéro de sécurité sociale du patient
-     *             $naissance : date de naissance du patient
-     *             $idParcours : parcours que le patient doit effectué
-     *             $dateDebut : date de début de dispo du patient
-     *             $dateFin : date de fin de dispo du patient
+     * Méthode d'ajout d'un nouveau patient et d'un compte à un patient
+     * @param $uname : login du patient sous la forme (nom.prenom)
+     * @param $password : mot de passe sous la forme (date de naissance)
+     * @param $nom : nom du patient
+     * @param $prenom : prenom du patient
+     * @param $adressenum : numéro de rue du patient
+     * @param $codePostale : code postal du patient
+     * @param $ville : ville du patient
+     * @param $apays : pays du patient
+     * @param $mail : mail du patient
+     * @param $telefix :  téléphone fixe du patient
+     * @param $tele : téléphone portable
+     * @param $numsecu : numéro de sécurité sociale du patient
+     * @param $naissance : date de naissance du patient
+     * @param $idParcours : parcours que le patient doit effectué
+     * @param $dateDebut : date de début de dispo du patient
+     * @param $dateFin : date de fin de dispo du patient
      */
     public function ajouterUnPatient($uname, $pwd, $nom, $prenom, $adressenum, $adresseure, $codepostale, $ville, $pays, $mail, $telefix, $tele, $numsecu, $naissance, $idParcours, $dateDebut, $dateFin) {
         $idCompte = $this->creerUnCompte($uname, $pwd);
@@ -74,19 +70,18 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Méthode de modification d'un patient
-     * \details    Méthode de modification d'un patient
-     * \param      $nom : nom du patient
-     *             $prenom : prenom du patient
-     *             $adressenum : numéro de rue du patient
-     *             $codePostale : code postal du patient
-     *             $ville : ville du patient
-     *             $apays : pays du patient
-     *             $mail : mail du patient
-     *             $telefix :  téléphone fixe du patient
-     *             $numsecu : numéro de sécurité sociale du patient
-     *             $naissance : date de naissance du patient
-     *             $idPatient : id du patient à modifié
+     * Méthode de modification d'un patient
+     * @param $nom : nom du patient
+     * @param $prenom : prenom du patient
+     * @param $adressenum : numéro de rue du patient
+     * @param $codePostale : code postal du patient
+     * @param $ville : ville du patient
+     * @param $apays : pays du patient
+     * @param $mail : mail du patient
+     * @param $telefix :  téléphone fixe du patient
+     * @param $numsecu : numéro de sécurité sociale du patient
+     * @param $naissance : date de naissance du patient
+     * @param $idPatient : id du patient à modifié
      */
     public function modifierUnPatient($idpatient, $nom, $prenom, $adressenum, $adresseure, $codepostale, $ville, $pays, $mail, $telefix, $tele, $numsecu, $naissance) {
         $txt_sql = "UPDATE patient SET TXT_NOM = " . $this->db->escape($nom) . ", TXT_PRENOM =" . $this->db->escape($prenom) . ", TXT_ADRESSENUM = " . $this->db->escape($adressenum) . ", TXT_ADRESSERUE = " . $this->db->escape($adresseure) .
@@ -97,9 +92,7 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Affiche la liste de tous les patients
-     * \details    Affiche la liste de tous les patients
-     * \param      Aucun
+     *  Affiche la liste de tous les patients
      */
     public function afficherTousPatient() {
         $txt_sql = "SELECT ID_PATIENT, ID_COMPTE,TXT_NOM, TXT_PRENOM, TXT_ADRESSENUM, TXT_ADRESSERUE, TXT_ADRESSECODEPOSTAL, TXT_ADRESSEVILLE, 
@@ -129,10 +122,9 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Méthode de création d'un compte
-     * \details    Méthode de création d'un compte
-     * \param      $uname : login
-     *             $pwd :  mot de passe
+     * Méthode de création d'un compte
+     * @param $uname : login
+     * @param $pwd :  mot de passe
      */
     public function creerUnCompte($uname, $pwd) {
         $maxId = $this->getMaxIdCompte();
@@ -145,10 +137,10 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Retourne le nombre de patient d'un parcours en fonction d'une date de début
-     * \details    Retourne le nombre de patient d'un parcours en fonction d'une date de début
-     * \param      $idParcours : l'id du parcours
-     *             $datedebut : date de début
+     * Retourne le nombre de patient d'un parcours en fonction d'une date de 
+     * début
+     * @param $idParcours : l'id du parcours
+     * @param $datedebut : date de début
      */
     public function nombreDePatientParcour($idparcours, $datedebut) {
         /** Nombre de parcours ordonnnancé * */
@@ -175,9 +167,9 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer toutes les activités effecutées (ou en cours) d'un patient
-     * \details    Permet de récupérer toutes les activités effecutées (ou en cours) d'un patient
-     * \param      $idPatient : l'id du patient
+     * Permet de récupérer toutes les activités effectuées (ou en cours) d'un 
+     * patient
+     * @param $idPatient : l'id du patient
      */
     public function getAllActivities($idPatient) {
         $txt_sql = "
@@ -192,12 +184,11 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Mettre à jour les disponibilités d'un patient
-     * \details    Mettre à jour les disponibilités d'un patient
-     * \param      $idPatient : l'id du patient
-     *             $idParcours : l'id du parcours
-     *             $dateDebut : date de début de dispo du patient
-     *             $dateFin :  dtae de fin de dispo du patient
+     * Mettre à jour les disponibilités d'un patient
+     * @param $idPatient : l'id du patient
+     * @param $idParcours : l'id du parcours
+     * @param $dateDebut : date de début de dispo du patient
+     * @param $dateFin : date de fin de dispo du patient
      */
     public function majDisponibilitePatient($idPatient, $idParcours, $dateDebut, $dateFin) {
         $txt_sql = "UPDATE patient SET ID_PARCOURS_SUP=" . $this->db->escape($idParcours) . " ,DATE_DISPONIBLE_DEBUT=" . $this->db->escape($dateDebut) . " ,DATE_DISPONIBLE_FIN=" . $this->db->escape($dateFin) . " WHERE ID_PATIENT = " . $this->db->escape($idPatient);
@@ -206,9 +197,8 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Recherche d'un patient par nom ou prenom
-     * \details    Recherche d'un patient par nom ou prenom
-     * \param      $recherche : chaine de recherche d'un patient
+     * Recherche d'un patient par nom ou prenom
+     * @param $recherche : chaine de recherche d'un patient
      */
     public function patientParNomOuPrenom($recherche) {
         $txt_sql = "SELECT ID_PATIENT, TXT_NOM, TXT_PRENOM, DATE_NAISSANCE, TXT_NUMSECU FROM patient 
@@ -231,9 +221,8 @@ class M_Patient extends CI_Model {
     }
 
     /**
-     * \brief      Retourne toutes les informations d'un patient en fonction de son id
-     * \details    Retourne toutes les informations d'un patient en fonction de son id
-     * \param      $id : id du patient
+     * Retourne toutes les informations d'un patient en fonction de son id
+     * @param $id : id du patient
      */
     public function getPatientById($id) {
         $txt_sql = "SELECT * FROM patient 
@@ -269,9 +258,8 @@ class M_Patient extends CI_Model {
     }
     
     /**
-     * \brief     Supprime un patient
-     * \details   Supprime un patient en fonction de son id
-     * \param     $id : id du patient à supprimer
+     * Supprime un patient en fonction de son id
+     * @param $id : id du patient à supprimer
      */
     public function supprimerPatient($id) {
         $txt_sql = "DELETE FROM patient                   

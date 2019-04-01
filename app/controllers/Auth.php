@@ -1,22 +1,24 @@
 <?php
 
 /**
- * \file      Auth.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller de gestion d'espace membre
- *
- * \details   Contient les différentes méthodes de gestion de l'espace de connexion
+ * Contrôleur de gestion d'espace membre
+ * 
+ * Contient les différentes méthodes de gestion de l'espace de connexion.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since      09 Mars 2017
  */
 class Auth extends CI_Controller {
 
     /**
-     * \brief      Permet à un utilisateur de se connecter
-     * \details    La méthode permet de charger le formulaire de connexion
-     *            si la personne n'est pas connecté sinon la page d'accuil en fonction de ses droits
-     *            On différencie 3 types d'utilisateur (patient, ressource, administrateur)
-     * \param      Aucun
+     * Permet à un utilisateur de se connecter
+     * 
+     * 
+     * La méthode permet de charger le formulaire de connexion si 
+     * la personne n'est pas connectée et la page d'accuil dans le cas contraire 
+     * en fonction de ses droits.
+     * On différencie 3 types d'utilisateur (patient, ressource, administrateur)
      */
     public function index() {
         if ($this->session->id == null) {                       // Si l'utilisateur n'est pas connecté
@@ -44,10 +46,10 @@ class Auth extends CI_Controller {
     }
 
     /**
-     * \brief      Permet à un utilisateur de se déconnecter
-     * \details    La méthode permet de se déconnecter
-     *            Détruit la session de l'utilisateur connecté
-     * \param      Aucun
+     * Permet à un utilisateur de se déconnecter
+     * 
+     * La méthode permet de se déconnecter et détruit la session 
+     * de l'utilisateur connecté
      */
     public function logout() {
         $this->session->sess_destroy();                       // On détruit la session

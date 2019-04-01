@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File app/controllers/Auth.php | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Activites.html">Activites</a></li>
+				<li><a href="class-AffichageSejour.html">AffichageSejour</a></li>
+				<li class="active"><a href="class-Auth.html">Auth</a></li>
+				<li><a href="class-DossierParcours.html">DossierParcours</a></li>
+				<li><a href="class-EtreIndispo.html">EtreIndispo</a></li>
+				<li><a href="class-M_Activite.html">M_Activite</a></li>
+				<li><a href="class-M_Auth.html">M_Auth</a></li>
+				<li><a href="class-M_Champ.html">M_Champ</a></li>
+				<li><a href="class-M_Composer.html">M_Composer</a></li>
+				<li><a href="class-M_Compte.html">M_Compte</a></li>
+				<li><a href="class-M_DossierParcours.html">M_DossierParcours</a></li>
+				<li><a href="class-M_EtreIndispo.html">M_EtreIndispo</a></li>
+				<li><a href="class-M_Necessiter.html">M_Necessiter</a></li>
+				<li><a href="class-M_Onglet.html">M_Onglet</a></li>
+				<li><a href="class-M_Parcours.html">M_Parcours</a></li>
+				<li><a href="class-M_Patient.html">M_Patient</a></li>
+				<li><a href="class-M_Personnel.html">M_Personnel</a></li>
+				<li><a href="class-M_Planning.html">M_Planning</a></li>
+				<li><a href="class-M_PlanParcours.html">M_PlanParcours</a></li>
+				<li><a href="class-M_Ressource.html">M_Ressource</a></li>
+				<li><a href="class-M_RessourcesMat.html">M_RessourcesMat</a></li>
+				<li><a href="class-M_TypeRessource.html">M_TypeRessource</a></li>
+				<li><a href="class-Parcours.html">Parcours</a></li>
+				<li><a href="class-Patient.html">Patient</a></li>
+				<li><a href="class-Personnels.html">Personnels</a></li>
+				<li><a href="class-Planning.html">Planning</a></li>
+				<li><a href="class-PlanParcours.html">PlanParcours</a></li>
+				<li><a href="class-Ressource.html">Ressource</a></li>
+				<li><a href="class-RessourcesMat.html">RessourcesMat</a></li>
+				<li><a href="class-TypeRessource.html">TypeRessource</a></li>
+				<li><a href="class-Welcome.html">Welcome</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-None.html" title="Summary of None"><span>Package</span></a>
+			</li>
+			<li>
+				<a href="class-Auth.html" title="Summary of Auth"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * Contrôleur de gestion d'espace membre
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * 
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * Contient les différentes méthodes de gestion de l'espace de connexion.
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> * 
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> * @author    Guillaume Pochet
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> * @version   1.0
+</span></span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment"> * @since      09 Mars 2017
+</span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> */</span>
+</span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-keyword1">class</span> <a id="Auth" href="#Auth">Auth</a> <span class="php-keyword1">extends</span> CI_Controller {
+</span><span id="13" class="l"><a class="l" href="#13">13: </a>
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>    <span class="php-comment">/**
+</span></span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-comment">     * Permet à un utilisateur de se connecter
+</span></span><span id="16" class="l"><a class="l" href="#16">16: </a><span class="php-comment">     * 
+</span></span><span id="17" class="l"><a class="l" href="#17">17: </a><span class="php-comment">     * 
+</span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment">     * La méthode permet de charger le formulaire de connexion si 
+</span></span><span id="19" class="l"><a class="l" href="#19">19: </a><span class="php-comment">     * la personne n'est pas connectée et la page d'accuil dans le cas contraire 
+</span></span><span id="20" class="l"><a class="l" href="#20">20: </a><span class="php-comment">     * en fonction de ses droits.
+</span></span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-comment">     * On différencie 3 types d'utilisateur (patient, ressource, administrateur)
+</span></span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="php-comment">     */</span>
+</span><span id="23" class="l"><a class="l" href="#23">23: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_index" href="#_index">index</a>() {
+</span><span id="24" class="l"><a class="l" href="#24">24: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;session-&gt;id == <span class="php-keyword1">null</span>) {                       <span class="php-comment">// Si l'utilisateur n'est pas connecté</span>
+</span><span id="25" class="l"><a class="l" href="#25">25: </a>            <span class="php-var">$this</span>-&gt;load-&gt;helper(<span class="php-keyword1">array</span>(<span class="php-quote">'form'</span>, <span class="php-quote">'url'</span>));
+</span><span id="26" class="l"><a class="l" href="#26">26: </a>
+</span><span id="27" class="l"><a class="l" href="#27">27: </a>            <span class="php-var">$this</span>-&gt;load-&gt;library(<span class="php-quote">'form_validation'</span>);
+</span><span id="28" class="l"><a class="l" href="#28">28: </a>
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>            <span class="php-var">$this</span>-&gt;form_validation-&gt;set_rules(<span class="php-quote">'username'</span>, <span class="php-quote">'Identifiant'</span>, <span class="php-quote">'required'</span>);            <span class="php-comment">// Le champ pseudo est OBLIGATOIRE</span>
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>            <span class="php-var">$this</span>-&gt;form_validation-&gt;set_rules(<span class="php-quote">'password'</span>, <span class="php-quote">'Mot de passe'</span>, <span class="php-quote">'required'</span>);            <span class="php-comment">// Le champ mot de passe est OBLIGATOIRE</span>
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;form_validation-&gt;run() == <span class="php-keyword1">FALSE</span>) {                    <span class="php-comment">// Si les entrées du formulaire ne respectent pas les règles</span>
+</span><span id="33" class="l"><a class="l" href="#33">33: </a>                <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'auth/V_login'</span>);                     <span class="php-comment">// On recharge la page</span>
+</span><span id="34" class="l"><a class="l" href="#34">34: </a>            } <span class="php-keyword1">else</span> {
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>                <span class="php-var">$this</span>-&gt;load-&gt;model(<span class="php-quote">'M_Auth'</span>);
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>                <span class="php-var">$data_session</span> = <span class="php-var">$this</span>-&gt;M_Auth-&gt;login(<span class="php-var">$this</span>-&gt;input-&gt;post(<span class="php-quote">'username'</span>), <span class="php-keyword2">crypt</span>(<span class="php-var">$this</span>-&gt;input-&gt;post(<span class="php-quote">'password'</span>), <span class="php-quote">'$2a$07fhferjfjrjfhjerfbfcreef$'</span>));    <span class="php-comment">// On créé les données de session</span>
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>                <span class="php-keyword1">if</span> (<span class="php-var">$data_session</span> != <span class="php-keyword1">null</span>) {                       <span class="php-comment">// On vérifie qu'il n'y a pas d'erreur</span>
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>                    <span class="php-var">$this</span>-&gt;session-&gt;set_userdata(<span class="php-var">$data_session</span>);                 <span class="php-comment">// On les ajoute à la session</span>
+</span><span id="39" class="l"><a class="l" href="#39">39: </a>                    redirect(<span class="php-quote">'/'</span>, <span class="php-quote">'refresh'</span>);
+</span><span id="40" class="l"><a class="l" href="#40">40: </a>                } <span class="php-keyword1">else</span>
+</span><span id="41" class="l"><a class="l" href="#41">41: </a>                    <span class="php-var">$this</span>-&gt;load-&gt;view(<span class="php-quote">'auth/V_login'</span>);                    <span class="php-comment">// Erreur, on recharge la vue                                 </span>
+</span><span id="42" class="l"><a class="l" href="#42">42: </a>            }
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>        }<span class="php-keyword1">else</span> {                             <span class="php-comment">// Sinon                    </span>
+</span><span id="44" class="l"><a class="l" href="#44">44: </a>            redirect(<span class="php-quote">'/'</span>, <span class="php-quote">'refresh'</span>);                         <span class="php-comment">// On redirige vers la page d'accueil</span>
+</span><span id="45" class="l"><a class="l" href="#45">45: </a>        }                              <span class="php-comment">// Fin SI</span>
+</span><span id="46" class="l"><a class="l" href="#46">46: </a>    }
+</span><span id="47" class="l"><a class="l" href="#47">47: </a>
+</span><span id="48" class="l"><a class="l" href="#48">48: </a>    <span class="php-comment">/**
+</span></span><span id="49" class="l"><a class="l" href="#49">49: </a><span class="php-comment">     * Permet à un utilisateur de se déconnecter
+</span></span><span id="50" class="l"><a class="l" href="#50">50: </a><span class="php-comment">     * 
+</span></span><span id="51" class="l"><a class="l" href="#51">51: </a><span class="php-comment">     * La méthode permet de se déconnecter et détruit la session 
+</span></span><span id="52" class="l"><a class="l" href="#52">52: </a><span class="php-comment">     * de l'utilisateur connecté
+</span></span><span id="53" class="l"><a class="l" href="#53">53: </a><span class="php-comment">     */</span>
+</span><span id="54" class="l"><a class="l" href="#54">54: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_logout" href="#_logout">logout</a>() {
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>        <span class="php-var">$this</span>-&gt;session-&gt;sess_destroy();                       <span class="php-comment">// On détruit la session</span>
+</span><span id="56" class="l"><a class="l" href="#56">56: </a>
+</span><span id="57" class="l"><a class="l" href="#57">57: </a>        <span class="php-var">$this</span>-&gt;index();
+</span><span id="58" class="l"><a class="l" href="#58">58: </a>    }
+</span><span id="59" class="l"><a class="l" href="#59">59: </a>
+</span><span id="60" class="l"><a class="l" href="#60">60: </a>}
+</span><span id="61" class="l"><a class="l" href="#61">61: </a></span></code></pre>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

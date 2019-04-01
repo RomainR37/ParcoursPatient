@@ -1,14 +1,14 @@
 <?php
 
 /**
- * \file      EtreinIndispo.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller de gestion des indiponibilité des ressources humaines
- *            
- *
- * \details   Contient les différentes méthodes de gestion des indiponibilité des ressources humaines
+ * Contrôleur de gestion des indiponibilités des ressources humaines
+ * 
+ * Contient les différentes méthodes de gestion des indiponibilité des 
+ * ressources humaines
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class EtreIndispo extends CI_Controller {
 
@@ -21,9 +21,12 @@ class EtreIndispo extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher les différentes indispo d'une ressource
-     * \details    Permet d'afficher les différentes indispo d'une ressource avec l'identifiant de la ressource en paramètre
-     * \param      $id :  identifiant de la ressource
+     * Permet d'afficher les différentes indisponibilités d'une ressource
+     * 
+     * Permet d'afficher les différentes indisponibilités d'une ressource 
+     * avec l'identifiant de la ressource en paramètre
+     * 
+     * @param $id : identifiant de la ressource
      */
     public function afficher($id) {
         $this->load->model('M_EtreIndispo');
@@ -39,9 +42,7 @@ class EtreIndispo extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de supprimer une indispo d'une ressource
-     * \details    Permet de supprimer une indispo d'une ressource
-     * \param      Aucun
+     * Permet de supprimer une indisponibilité d'une ressource
      */
     public function supprimerIndispo() {
         $this->load->model('M_EtreIndispo');
@@ -67,10 +68,11 @@ class EtreIndispo extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de formaliser les données sous forme de tableau
-     * \details    Permet de formaliser les données sous forme de tableau
-     *             (id_personnel : , date_début : , date_fin : )
-     * \param      $old : liste des indispos
+     * Permet de formaliser les données sous forme de tableau
+     * 
+     * Permet de formaliser les données sous forme de tableau 
+     * (id_personnel : , date_début : , date_fin : )
+     * @param $old : liste des indispos
      */
     public function formaliserData($old) {
         $res = array();
@@ -85,9 +87,7 @@ class EtreIndispo extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de sauvergarder les changements d'indisponibiltés
-     * \details    Permet de sauvergarder les changements d'indisponibiltés
-     * \param      Aucun
+     * Permet de sauvergarder les changements d'indisponibiltés
      */
     public function savechanges() {
         $this->load->model('M_EtreIndispo');

@@ -1,13 +1,13 @@
 <?php
 
 /**
- * \file      AffichageSejour.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Affichage le planning d'un patient
- *
- * \details   Permet d'afficher le planning d'un patient ou séjour
+ * La classe AffichageSejour gère l'affichage du planning d'un patient.
+ * 
+ * Ce fichier permet d'afficher le planning d'un patient ou séjour.
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class AffichageSejour extends CI_Controller {
 
@@ -18,11 +18,11 @@ class AffichageSejour extends CI_Controller {
     }
 
     /**
-     * \brief      Affichage la liste des différentes actvités
-     * \details    La méthode récupérer la liste des activités d'un patient
-     *                  et envoie ces données sur la page V_patient.
-     *             Cette page se charge d'afficher les données
-     * \param      Aucun
+     * Affichage de la liste des différentes actvités
+     * 
+     * La méthode récupère la liste des activités d'un patient
+     * et envoie ces données sur la page V_patient.
+     * Cette page se charge d'afficher les données.
      */
     public function index() {
         $data = array();

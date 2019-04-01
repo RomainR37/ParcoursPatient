@@ -1,14 +1,12 @@
 <?php
 
 /**
- * \file      RessourceMat.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'une ressource humaines
- *            
- *
- * \details   Contient les différentes méthodes de gestion des ressources matérielles
+ * Contrôleur d'une ressource matérielle
+ * 
+ * Contient les différentes méthodes de gestion des ressources matérielles
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class RessourcesMat extends CI_Controller {
 
@@ -21,10 +19,11 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher toutes les ressources matérielles
-     * \details    Méthode permettant la liaison entre la vue des ressources matérielles et le modèle ressourceMat
-     *             Récupére toutes les ressources matérielles et les envoie à la vue qui se charge de les afficher
-     * \param      Aucun
+     * Permet d'afficher toutes les ressources matérielles.
+     * 
+     * Méthode permettant la liaison entre la vue des ressources matérielles 
+     * et le modèle ressourceMat. Récupére toutes les ressources matérielles 
+     * et les envoie à la vue qui se charge de les afficher
      */
     public function index() {
         $this->load->model('M_RessourcesMat');
@@ -38,9 +37,10 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter une ressource matérielle
-     * \details    Fonction permettant d'afficher la vue d'ajout d'une nouvelle ressource matérielle
-     * \param      Aucun
+     * Permet d'ajouter une ressource matérielle
+     * 
+     * Fonction permettant d'afficher la vue d'ajout d'une nouvelle ressource 
+     * matérielle
      */
     public function ajout() {
         $data['chemin'] = '/ressource/v_addRessource';
@@ -54,9 +54,11 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de modification de la ressource matérielle
-     * \details    Permet d'afficher la vue de modification d'une personne avec les informations de la ressource matérielle
-     * \param      $id : identifiant de la ressource matérielle à modifier
+     * Permet d'afficher la vue de modification de la ressource matérielle
+     * 
+     * Permet d'afficher la vue de modification d'une personne avec les 
+     * informations de la ressource matérielle
+     * @param $id : identifiant de la ressource matérielle à modifier
      */
     public function modif($id) {
         $this->load->model('M_RessourcesMat');
@@ -72,10 +74,11 @@ class RessourcesMat extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter ou de modifier une ressource matérielle
-     * \details    Permet d'ajouter ou de modifier une ressource matérielle
-     *             Récupére la liste des informations une ressource matérielle (ajout ou modification) et les ajoute en base de données
-     * \param      Aucun
+     * Permet d'ajouter ou de modifier une ressource matérielle
+     * 
+     * Permet d'ajouter ou de modifier une ressource matérielle. 
+     * Récupère la liste des informations une ressource matérielle 
+     * (ajout ou modification) et les ajoute en base de données
      */
     public function confirmModif() {
         $this->load->model('M_RessourcesMat');
@@ -95,9 +98,11 @@ class RessourcesMat extends CI_Controller {
         $this->index();
     }
     /**
-     * \brief      Permet de supprimer uune ressource matérielle
-     * \details    Fonction permettant la suppression d'une ressource matérielle en fonction de son id
-     * \param      $id : id de la ressource matérielle à supprimer
+     * Permet de supprimer une ressource matérielle.
+     * 
+     * Fonction permettant la suppression d'une ressource matérielle en 
+     * fonction de son id.
+     * @param $id : id de la ressource matérielle à supprimer
      */
     public function suppr($id) {
         $this->load->model('M_RessourcesMat');
@@ -105,11 +110,13 @@ class RessourcesMat extends CI_Controller {
 
         $this->index();
     }
+    
     /**
-     * \brief      Permet de récupérer la liste de tous les types matérielles présents dans la base de données
-     * \details    Permet de récupérer la liste de tous les types matérielles présents dans la base de données
-     *             Retourne tout les types au format JSON
-     * \param      Aucun
+     * Permet de récupérer la liste de tous les types matérielles présents dans 
+     * la base de données.
+     * 
+     * Permet de récupérer la liste de tous les types matérielles présents en 
+     * base de données. Retourne tous les types au format JSON.
      */
     public function getTypes() {
         if (isset($_GET["term"])) {

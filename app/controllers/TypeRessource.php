@@ -1,14 +1,14 @@
 <?php
 
 /**
- * \file      TypeRessource.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller des types de ressources
- *            
- *
- * \details   Controller de gestion des types de ressources
+ * Contrôleur des types de ressources
+ * 
+ * Contrôleur de gestion des types de ressources
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
+ * 
  */
 class TypeRessource extends CI_Controller {
 
@@ -21,9 +21,7 @@ class TypeRessource extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la liste de tous les types ressources
-     * \details    Permet d'afficher la liste de tous les types ressources
-     * \param      Aucun
+     * Permet d'afficher la liste de tous les types ressources.
      */
     public function getAllTypes() {
         $this->load->model('M_TypeRessource');

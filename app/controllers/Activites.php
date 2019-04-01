@@ -1,14 +1,15 @@
 <?php
 
 /**
- * \file      Activites.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées aux activités
- *
- * \details   Ce fichier permet de définir les méthodes d'ajout, 
- *              de suppression et de modification lié aux activités
+ * La classe Activités définit les méthodes liées aux activités.
+ * 
+ * Ce fichier permet de définir les méthodes d'ajout, 
+ * de suppression et de modification liées aux activités.
+ * 
+ * @author    Guillaume Pochet
+ * @author    Romain Rousseau
+ * @version   3.0
+ * @since     09 Mars 2017
  */
 class Activites extends CI_Controller {
 
@@ -21,12 +22,11 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * Affichage la liste des différentes activités
+     * Affiche la liste des différentes activités
      * 
-     * La méthode récupérer la liste des activités
+     * La méthode récupére la liste des activités
      * et envoie ces données sur la page V_activite.
-     * Cette page se charge d'afficher les données
-     * \param      Aucun
+     * Cette page se charge ensuite d'afficher les données.
      */
     public function index() {
         $this->load->model('M_Activite');
@@ -37,11 +37,12 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Affichage d'un formulaire pour ajouter
-     * \details    La méthode affichage un formulaire vide
-     *             d'ajout d'activité
-     *             Cette page se charge d'afficher les données
-     * \param      Aucun
+     * Affichage d'un formulaire pour ajouter une activité
+     * 
+     * La méthode affiche un formulaire vide d'ajout d'activité
+     * avec les informations nécessaires (l'id de l'activité, le nom,
+     * la durée, les commentaires, le personnel associé et les ressources
+     * matérielles.
      */
     public function ajout() {
         $this->load->model('M_Activite');
@@ -57,12 +58,11 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Méthode permettant d'ajouter ou de modifier
-     *             une activité
-     * \details    Ajoute ou modifie en base de données les différentes
-     *             données d'une activité en base de données
-     *             (id, nom, duree, commentaire, idType)
-     * \param      Aucun
+     * Méthode permettant d'ajouter ou de modifier une activité.
+     * 
+     * Ajoute ou modifie en base de données les différentes
+     * caractéristiques d'une activité en base de données
+     * (id, nom, duree, commentaire, idType).
      */
     public function confirmModif() {
         $this->load->model('M_Activite');
@@ -98,12 +98,11 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Méthode permettant d'ajouter ou de modifier
-     *             une activité
-     * \details    Ajoute ou modifie en base de données les différentes
-     *             données d'une activité en base de données
-     *             (id, nom, duree, commentaire, idType)
-     * \param      Aucun
+     * Méthode permettant d'ajouter ou de modifier une activité.
+     * 
+     * Ajoute ou modifie en base de données les différentes
+     * données d'une activité en base de données
+     * (id, nom, duree, commentaire, idType)
      */
     public function confirmModifParcours() {
         $this->load->model('M_Activite');
@@ -137,12 +136,12 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Méthode permettant d'ajouter ou de modifier
-     *             une activité dans un parcours
-     * \details    Ajoute ou modifie en base de données les différentes
-     *             données d'une activité d'un parcours en base de données
-     *             (id, nom, duree, commentaire, idType)
-     * \param      Aucun
+     * Méthode permettant d'ajouter ou de modifier une activité 
+     * dans un parcours.
+     * 
+     * Ajoute ou modifie en base de données les différentes données 
+     * d'une activité d'un parcours en base de données
+     * (id, nom, duree, commentaire, idType)
      */
     public function ajoutActiviteParcours() {
         $this->load->model('M_Activite');
@@ -174,14 +173,15 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Affichage d'un formulaire pour modifier une acitvité
-     * \details    Formulaire de modiication d'une activité
-     * \param      $id de l'activité à modifier
+     * Affichage d'un formulaire pour modifier une activité.
+     * 
+     * Formulaire de modification d'une activité.
+     *
+     * @param $id de l'activité à modifier
      */
     public function modif($id) {
         $this->load->model('M_Activite');
         $data['chemin'] = '/activite/v_addActivite';
-
 
         $activite = $this->M_Activite->getActiviteById($id);
         $data["id"] = $id;
@@ -195,9 +195,12 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Supprimer une activité
-     * \details    Supprime une activité de la base de données
-     * \param      $id, id de l'acitivité
+     * Supprimer une activité
+     * 
+     * Supprime une activité de la base de données avec l'id 
+     * indiqué en paramètre.
+     * 
+     * @param  $id id de l'acitivité
      */
     public function suppr($id) {
         $this->load->model('M_Activite');
@@ -209,10 +212,10 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Récupére la liste des ressources humaines
-     * \details    Récupére la liste des ressources humaines depuis
-     *             la base de données
-     * \param      Aucun
+     * Récupère la liste des ressources humaines.
+     * 
+     * Récupère la liste des ressources humaines depuis la base de données
+     * 
      */
     public function getTypesPerso() {
         if (isset($_GET["term"])) {
@@ -222,10 +225,10 @@ class Activites extends CI_Controller {
     }
 
     /**
-     * \brief      Récupére la liste des ressources matérielles
-     * \details    Récupére la liste des ressources matérielles depuis
-     *             la base de données
-     * \param      Aucun
+     * Récupère la liste des ressources matérielles
+     * 
+     * Récupère la liste des ressources matérielles depuis
+     * la base de données.
      */
     public function getTypesRessourcesMat() {
         if (isset($_GET["term"])) {

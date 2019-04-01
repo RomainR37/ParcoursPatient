@@ -1,14 +1,14 @@
 <?php
 
 /**
- * \file      Parcours.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Controller d'un parcours patients
- *            
- *
- * \details   Contient les différentes méthodes de gestion des parcours patients
+ * Contrôleur d'un parcours patients
+ * 
+ * Contient les différentes méthodes de gestion des parcours patients
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
+ * 
  */
 class Parcours extends CI_Controller {
 
@@ -23,10 +23,13 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher les différentes parcours patients présents dans notre système
-     * \details    Méthode permettant la liaison entre la vue des parcours et le modèle parcours
-     *             Récupére tous les parcours et les envoie à la vue qui se charge de les afficher
-     * \param      Aucun
+     * Permet d'afficher les différents parcours patients présents dans 
+     * notre système
+     * 
+     * Méthode permettant la liaison entre la vue des parcours et le modèle 
+     * parcours
+     * Récupére tous les parcours et les envoie à la vue qui se charge de les 
+     * afficher
      */
     public function index() {
         $this->load->model('M_Parcours');
@@ -40,9 +43,9 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter un parcours 
-     * \details    Fonction permettant d'afficher la vue d'ajout d'un nouvueau parcours
-     * \param      Aucun
+     * Permet d'ajouter un parcours 
+     * 
+     * Fonction permettant d'afficher la vue d'ajout d'un nouvueau parcours
      */
     public function ajout() {
         $this->load->model('M_Parcours');
@@ -59,9 +62,9 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de supprimer un parcours
-     * \details    Fonction permettant la suppression d'un parcours en fonction de son id
-     * \param      $id : id du parcours à supprimer
+     * Permet de supprimer un parcours
+     * 
+     * Fonction permettant la suppression d'un parcours en fonction de son id
      */
     public function supprimer($id) {
         $this->load->model('M_Parcours');
@@ -70,9 +73,7 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet de récupérer toutes les activités liées à un parcours
-     * \details    Permet de récupérer toutes les activités liées à un parcours
-     * \param      Aucun
+     * Permet de récupérer toutes les activités liées à un parcours
      */
     public function getAllActivites() {
         if (isset($_GET["term"])) {
@@ -82,25 +83,18 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'ajouter ou de modifier un parcours patient
-     * \details    Permet d'ajouter ou de modifier un parcours patient
-     *             Récupére la liste des informations d'un parcours (ajout ou modification) et les ajoute en base de données
-     * \param      Aucun
+     * Permet d'ajouter ou de modifier un parcours patient
+     * 
+     * Permet d'ajouter ou de modifier un parcours patient
+     * Récupére la liste des informations d'un parcours (ajout ou modification)
+     * et les ajoute en base de données
      */
     public function confirmModif() {
         $this->load->model('M_Parcours');
         $parcours = array();
         $parcours['nom'] = "";
         $parcours['code'] = "";
-        //$parcours['objectif'] = "";
         $parcours['id'] = "";
-        /*
-        if (isset($_POST['nom']) && isset($_POST['code']) && isset($_POST['objectif']) && isset($_POST['id'])) {
-            $parcours['nom'] = $_POST['nom'];
-            $parcours['code'] = $_POST['code'];
-            $parcours['objectif'] = $_POST['objectif'];
-            $parcours['id'] = $_POST['id'];
-        }*/
         if (isset($_POST['nom']) && isset($_POST['code']) && isset($_POST['id'])) {
             $parcours['nom'] = $_POST['nom'];
             $parcours['code'] = $_POST['code'];
@@ -163,9 +157,8 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de modification d'un parcours
-     * \details    Permet d'afficher la vue de modification d'un parcours
-     * \param      $id : identifiant du parcours à modifier
+     * Permet d'afficher la vue de modification d'un parcours
+     * @param $id : identifiant du parcours à modifier
      */
     public function modif($id) {
         $this->load->model('M_Parcours');
@@ -185,9 +178,8 @@ class Parcours extends CI_Controller {
     }
 
     /**
-     * \brief      Permet d'afficher la vue de visualisation d'un parcours
-     * \details    Permet d'afficher la vue de visualisation d'un parcours
-     * \param      $id : identifiant du parcours à visualiser
+     * Permet d'afficher la vue de visualisation d'un parcours
+     * @param $id : identifiant du parcours à visualiser
      */
     public function visualiser($id) {
         $this->load->model('M_Parcours');

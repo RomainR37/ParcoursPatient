@@ -4,20 +4,19 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * \file      M_Necessiter.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liés aux différents besoin d'une activité
- *
- * \details   Ce fichier permet de définir les méthodes d'ajout ou de suppression de besoin d'une activité
+ * Définit les méthodes liées aux différents besoin d'une activité
+ * 
+ * Ce fichier permet de définir les méthodes d'ajout ou de suppression de besoin d'une activité
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since     09 Mars 2017
  */
 class M_Necessiter extends CI_Model {
 
     /**
-     * \brief      Supprime tout les besoins en type de ressource d'une activité
-     * \details    Supprime tout les besoins en type de ressource d'une activité
-     * \param      $idActivite : id de l'activité
+     * Supprime tous les besoins en type de ressource d'une activité
+     * @param $idActivite : id de l'activité
      */
     public function deleteAllBesoin($idActivite) {
         $txt_sql = "DELETE FROM necessiter
@@ -26,11 +25,11 @@ class M_Necessiter extends CI_Model {
     }
 
     /**
-     * \brief      Ajoute un besoin à une activité
-     * \details    Ajoute un besoin à une activité (id de l'activité, idTypeRessource, quantité
-     * \param      $idActivite : id de l'activité
-     *             $idTypeRes : id du type de la ressource
-     *             $qte : quantité nécessaire
+     * Ajoute un besoin à une activité (id de l'activité, idTypeRessource, 
+     * quantité)
+     * @param $idActivite : id de l'activité
+     * @param $idTypeRes : id du type de la ressource
+     * @param $qte : quantité nécessaire
      */
     public function addBesoin($idActivite, $idTypeRes, $qte) {
 

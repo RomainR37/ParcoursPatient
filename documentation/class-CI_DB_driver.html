@@ -1,0 +1,3511 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CI_DB_driver | framework</title>
+
+	<script type="text/javascript" src="resources/combined.js?3651191339"></script>
+	<script type="text/javascript" src="elementlist.js?1373542475"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li class="active"><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-CI_DB_cubrid_driver.html">CI_DB_cubrid_driver</a></li>
+				<li class="active"><a href="class-CI_DB_driver.html">CI_DB_driver</a></li>
+				<li><a href="class-CI_DB_ibase_driver.html">CI_DB_ibase_driver</a></li>
+				<li><a href="class-CI_DB_mssql_driver.html">CI_DB_mssql_driver</a></li>
+				<li><a href="class-CI_DB_mssql_forge.html">CI_DB_mssql_forge</a></li>
+				<li><a href="class-CI_DB_mssql_result.html">CI_DB_mssql_result</a></li>
+				<li><a href="class-CI_DB_mssql_utility.html">CI_DB_mssql_utility</a></li>
+				<li><a href="class-CI_DB_mysql_driver.html">CI_DB_mysql_driver</a></li>
+				<li><a href="class-CI_DB_mysqli_driver.html">CI_DB_mysqli_driver</a></li>
+				<li><a href="class-CI_DB_mysqli_forge.html">CI_DB_mysqli_forge</a></li>
+				<li><a href="class-CI_DB_mysqli_result.html">CI_DB_mysqli_result</a></li>
+				<li><a href="class-CI_DB_mysqli_utility.html">CI_DB_mysqli_utility</a></li>
+				<li><a href="class-CI_DB_odbc_driver.html">CI_DB_odbc_driver</a></li>
+				<li><a href="class-CI_DB_odbc_forge.html">CI_DB_odbc_forge</a></li>
+				<li><a href="class-CI_DB_odbc_result.html">CI_DB_odbc_result</a></li>
+				<li><a href="class-CI_DB_odbc_utility.html">CI_DB_odbc_utility</a></li>
+				<li><a href="class-CI_DB_pdo_4d_driver.html">CI_DB_pdo_4d_driver</a></li>
+				<li><a href="class-CI_DB_pdo_cubrid_driver.html">CI_DB_pdo_cubrid_driver</a></li>
+				<li><a href="class-CI_DB_pdo_dblib_driver.html">CI_DB_pdo_dblib_driver</a></li>
+				<li><a href="class-CI_DB_pdo_driver.html">CI_DB_pdo_driver</a></li>
+				<li><a href="class-CI_DB_pdo_firebird_driver.html">CI_DB_pdo_firebird_driver</a></li>
+				<li><a href="class-CI_DB_pdo_forge.html">CI_DB_pdo_forge</a></li>
+				<li><a href="class-CI_DB_pdo_ibm_driver.html">CI_DB_pdo_ibm_driver</a></li>
+				<li><a href="class-CI_DB_pdo_informix_driver.html">CI_DB_pdo_informix_driver</a></li>
+				<li><a href="class-CI_DB_pdo_mysql_driver.html">CI_DB_pdo_mysql_driver</a></li>
+				<li><a href="class-CI_DB_pdo_oci_driver.html">CI_DB_pdo_oci_driver</a></li>
+				<li><a href="class-CI_DB_pdo_odbc_driver.html">CI_DB_pdo_odbc_driver</a></li>
+				<li><a href="class-CI_DB_pdo_pgsql_driver.html">CI_DB_pdo_pgsql_driver</a></li>
+				<li><a href="class-CI_DB_pdo_result.html">CI_DB_pdo_result</a></li>
+				<li><a href="class-CI_DB_pdo_sqlite_driver.html">CI_DB_pdo_sqlite_driver</a></li>
+				<li><a href="class-CI_DB_pdo_sqlsrv_driver.html">CI_DB_pdo_sqlsrv_driver</a></li>
+				<li><a href="class-CI_DB_pdo_utility.html">CI_DB_pdo_utility</a></li>
+				<li><a href="class-CI_DB_postgre_driver.html">CI_DB_postgre_driver</a></li>
+				<li><a href="class-CI_DB_postgre_forge.html">CI_DB_postgre_forge</a></li>
+				<li><a href="class-CI_DB_postgre_result.html">CI_DB_postgre_result</a></li>
+				<li><a href="class-CI_DB_postgre_utility.html">CI_DB_postgre_utility</a></li>
+				<li><a href="class-CI_DB_query_builder.html">CI_DB_query_builder</a></li>
+				<li><a href="class-CI_DB_sqlite3_driver.html">CI_DB_sqlite3_driver</a></li>
+				<li><a href="class-CI_DB_sqlite_driver.html">CI_DB_sqlite_driver</a></li>
+				<li><a href="class-CI_DB_sqlsrv_driver.html">CI_DB_sqlsrv_driver</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-CodeIgniter.Drivers.html" title="Summary of CodeIgniter\Drivers"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CI_DB_driver</h1>
+
+
+	<div class="description">
+	
+<p>Database Driver Class</p>
+
+<p>This is the platform-independent base DB implementation class. This class
+will not be called directly. Rather, the adapter class for the specific database
+will extend and instantiate it.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-CI_DB_query_builder.html">CI_DB_query_builder</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-CodeIgniter.html">CodeIgniter</a>\<a href="package-CodeIgniter.Drivers.html">Drivers</a><br />
+
+				<b>Category:</b>
+				Database<br />
+				<b>Copyright:</b>
+				Copyright (c) 2008 - 2014, EllisLab, Inc. (<a
+href="http://ellislab.com/">http://ellislab.com/</a>)<br />
+				<b>Copyright:</b>
+				Copyright (c) 2014 - 2015, British Columbia Institute of Technology (<a
+href="http://bcit.ca/">http://bcit.ca/</a>)<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/MIT">MIT License</a><br />
+				<b>Author:</b>
+				EllisLab Dev Team<br />
+				<b>Link:</b>
+				<a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a><br />
+		<b>Located at</b> <a href="source-class-CI_DB_driver.html#40-1902" title="Go to source code">sys/database/DB_driver.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-CI_DB_driver.html#359-376" title="Go to source code">__construct</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-CI_DB_driver.html#380-445" title="Go to source code">initialize</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initialize Database Settings</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize Database Settings</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="db_connect" id="_db_connect">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_db_connect">#</a>
+		<code><a href="source-class-CI_DB_driver.html#449-459" title="Go to source code">db_connect</a>( )</code>
+
+		<div class="description short">
+			
+<p>DB connect</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>DB connect</p>
+
+<p>This is just a dummy method that all drivers will override.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="db_pconnect" id="_db_pconnect">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_db_pconnect">#</a>
+		<code><a href="source-class-CI_DB_driver.html#463-471" title="Go to source code">db_pconnect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Persistent database connection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Persistent database connection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reconnect" id="_reconnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reconnect">#</a>
+		<code><a href="source-class-CI_DB_driver.html#475-488" title="Go to source code">reconnect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Reconnect</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reconnect</p>
+
+<p>Keep / reestablish the db connection if no queries have been sent for a
+length of time exceeding the server's idle timeout.</p>
+
+<p>This is just a dummy method to allow drivers without such functionality to
+not declare it, while others will override it.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="db_select" id="_db_select">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_db_select">#</a>
+		<code><a href="source-class-CI_DB_driver.html#492-503" title="Go to source code">db_select</a>( )</code>
+
+		<div class="description short">
+			
+<p>Select database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Select database</p>
+
+<p>This is just a dummy method to allow drivers without such functionality to
+not declare it, while others will override it.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="db_set_charset" id="_db_set_charset">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_db_set_charset">#</a>
+		<code><a href="source-class-CI_DB_driver.html#507-528" title="Go to source code">db_set_charset</a>( <span>string <var>$charset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set client character set</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set client character set</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$charset</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="platform" id="_platform">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_platform">#</a>
+		<code><a href="source-class-CI_DB_driver.html#532-540" title="Go to source code">platform</a>( )</code>
+
+		<div class="description short">
+			
+<p>The name of the platform in use (mysql, mssql, etc...)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The name of the platform in use (mysql, mssql, etc...)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="version" id="_version">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_version">#</a>
+		<code><a href="source-class-CI_DB_driver.html#544-566" title="Go to source code">version</a>( )</code>
+
+		<div class="description short">
+			
+<p>Database version number</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Database version number</p>
+
+<p>Returns a string containing the version of the database being used. Most
+drivers will override this method.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_version" id="__version">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__version">#</a>
+		<code><a href="source-class-CI_DB_driver.html#570-578" title="Go to source code">_version</a>( )</code>
+
+		<div class="description short">
+			
+<p>Version number query string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Version number query string</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-CI_DB_driver.html#582-734" title="Go to source code">query</a>( <span>string <var>$sql</var></span>, <span>array <var>$binds</var> = <span class="php-keyword1">FALSE</span></span>, <span>boolean <var>$return_object</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute the query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the query</p>
+
+<p>Accepts an SQL string as input and returns a result object upon successful
+execution of a "read" type query. Returns boolean TRUE upon successful execution
+of a "write" type query. Returns boolean FALSE upon failure, and if the
+$db_debug variable is set to TRUE will raise an error.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>$sql</dd>
+					<dt><var>$binds</var></dt>
+					<dd><code>array</code><br>$binds = FALSE An array of binding data</dd>
+					<dt><var>$return_object</var></dt>
+					<dd><code>boolean</code><br>$return_object = NULL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_rdriver" id="_load_rdriver">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_rdriver">#</a>
+		<code><a href="source-class-CI_DB_driver.html#738-754" title="Go to source code">load_rdriver</a>( )</code>
+
+		<div class="description short">
+			
+<p>Load the result drivers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load the result drivers</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the name of the result class<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="simple_query" id="_simple_query">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_simple_query">#</a>
+		<code><a href="source-class-CI_DB_driver.html#758-775" title="Go to source code">simple_query</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Simple Query This is a simplified version of the query() function. Internally
+we only use it when running transaction commands since they do not require all
+the features of the main query() function.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Simple Query This is a simplified version of the query() function. Internally
+we only use it when running transaction commands since they do not require all
+the features of the main query() function.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>the sql query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_off" id="_trans_off">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trans_off">#</a>
+		<code><a href="source-class-CI_DB_driver.html#779-788" title="Go to source code">trans_off</a>( )</code>
+
+		<div class="description short">
+			
+<p>Disable Transactions This permits transactions to be disabled at
+run-time.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disable Transactions This permits transactions to be disabled at
+run-time.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_strict" id="_trans_strict">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trans_strict">#</a>
+		<code><a href="source-class-CI_DB_driver.html#792-805" title="Go to source code">trans_strict</a>( <span>boolean <var>$mode</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Enable/disable Transaction Strict Mode When strict mode is enabled, if you
+are running multiple groups of transactions, if one group fails all groups will
+be rolled back. If strict mode is disabled, each group is treated autonomously,
+meaning a failure of one group will not affect any others</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enable/disable Transaction Strict Mode When strict mode is enabled, if you
+are running multiple groups of transactions, if one group fails all groups will
+be rolled back. If strict mode is disabled, each group is treated autonomously,
+meaning a failure of one group will not affect any others</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mode</var></dt>
+					<dd><code>boolean</code><br>$mode = TRUE</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_start" id="_trans_start">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trans_start">#</a>
+		<code><a href="source-class-CI_DB_driver.html#809-831" title="Go to source code">trans_start</a>( <span>boolean <var>$test_mode</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Start Transaction</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Start Transaction</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$test_mode</var></dt>
+					<dd><code>boolean</code><br>$test_mode = FALSE</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_complete" id="_trans_complete">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trans_complete">#</a>
+		<code><a href="source-class-CI_DB_driver.html#835-877" title="Go to source code">trans_complete</a>( )</code>
+
+		<div class="description short">
+			
+<p>Complete Transaction</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Complete Transaction</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_status" id="_trans_status">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trans_status">#</a>
+		<code><a href="source-class-CI_DB_driver.html#881-889" title="Go to source code">trans_status</a>( )</code>
+
+		<div class="description short">
+			
+<p>Lets you retrieve the transaction flag to determine if it has failed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Lets you retrieve the transaction flag to determine if it has failed</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compile_binds" id="_compile_binds">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile_binds">#</a>
+		<code><a href="source-class-CI_DB_driver.html#893-954" title="Go to source code">compile_binds</a>( <span>string <var>$sql</var></span>, <span>array <var>$binds</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compile Bindings</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compile Bindings</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>the sql statement</dd>
+					<dt><var>$binds</var></dt>
+					<dd><code>array</code><br>an array of bind data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_write_type" id="_is_write_type">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_write_type">#</a>
+		<code><a href="source-class-CI_DB_driver.html#958-967" title="Go to source code">is_write_type</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines if a query is a "write" type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines if a query is a "write" type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>An SQL query string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="elapsed_time" id="_elapsed_time">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_elapsed_time">#</a>
+		<code><a href="source-class-CI_DB_driver.html#971-980" title="Go to source code">elapsed_time</a>( <span>integer <var>$decimals</var> = <span class="php-num">6</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Calculate the aggregate query elapsed time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calculate the aggregate query elapsed time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$decimals</var></dt>
+					<dd><code>integer</code><br>The number of decimal places</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="total_queries" id="_total_queries">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_total_queries">#</a>
+		<code><a href="source-class-CI_DB_driver.html#984-992" title="Go to source code">total_queries</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the total number of queries</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the total number of queries</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_query" id="_last_query">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_last_query">#</a>
+		<code><a href="source-class-CI_DB_driver.html#996-1004" title="Go to source code">last_query</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the last query that was executed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the last query that was executed</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape" id="_escape">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1008-1038" title="Go to source code">escape</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>"Smart" Escape String</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>"Smart" Escape String</p>
+
+<p>Escapes data based on type Sets boolean and null types</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape_str" id="_escape_str">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape_str">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1042-1074" title="Go to source code">escape_str</a>( <span>string|string[] <var>$str</var></span>, <span>boolean <var>$like</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Escape String</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escape String</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string|string[]</code><br>$str Input string</dd>
+					<dt><var>$like</var></dt>
+					<dd><code>boolean</code><br>$like Whether or not the string will be used in a LIKE condition</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape_like_str" id="_escape_like_str">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape_like_str">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1078-1090" title="Go to source code">escape_like_str</a>( <span>string|string[] <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escape LIKE String</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escape LIKE String</p>
+
+<p>Calls the individual driver for platform specific escaping for LIKE
+conditions</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string|string[]</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_escape_str" id="__escape_str">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__escape_str">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1094-1103" title="Go to source code">_escape_str</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Platform-dependant string escape</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Platform-dependant string escape</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="primary" id="_primary">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_primary">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1107-1120" title="Go to source code">primary</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Primary</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Primary</p>
+
+<p>Retrieves the primary key. It assumes that the row in the first position is
+the primary key</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>$table Table name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count_all" id="_count_all">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count_all">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1124-1149" title="Go to source code">count_all</a>( <span>string <var>$table</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>"Count All" query</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>"Count All" query</p>
+
+<p>Generates a platform-specific query string that counts all records in the
+specified database</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="list_tables" id="_list_tables">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_list_tables">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1153-1204" title="Go to source code">list_tables</a>( <span>string <var>$constrain_by_prefix</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array of table names</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array of table names</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$constrain_by_prefix</var></dt>
+					<dd><code>string</code><br>$constrain_by_prefix = FALSE</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table_exists" id="_table_exists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table_exists">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1208-1217" title="Go to source code">table_exists</a>( <span>string <var>$table_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if a particular table exists</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if a particular table exists</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code><br>$table_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="list_fields" id="_list_fields">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_list_fields">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1221-1267" title="Go to source code">list_fields</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetch Field Names</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetch Field Names</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>$table Table name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="field_exists" id="_field_exists">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_field_exists">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1271-1281" title="Go to source code">field_exists</a>( <span>string <var>$field_name</var></span>, <span>string <var>$table_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine if a particular field exists</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if a particular field exists</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field_name</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="field_data" id="_field_data">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_field_data">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1285-1295" title="Go to source code">field_data</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an object with field data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an object with field data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>$table the table name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape_identifiers" id="_escape_identifiers">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape_identifiers">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1299-1357" title="Go to source code">escape_identifiers</a>( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escape the SQL Identifiers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escape the SQL Identifiers</p>
+
+<p>This function escapes column and table names</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd><code>mixed</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert_string" id="_insert_string">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert_string">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1361-1379" title="Go to source code">insert_string</a>( <span>string <var>$table</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate an insert string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate an insert string</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>the table upon which the query will be performed</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>array</code><br>an associative array data of key/values</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_insert" id="__insert">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__insert">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1383-1396" title="Go to source code">_insert</a>( <span>string <var>$table</var></span>, <span>array <var>$keys</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Insert statement</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Insert statement</p>
+
+<p>Generates a platform-specific insert string from the supplied data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>the table name</dd>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>the insert keys</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>array</code><br>the insert values</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update_string" id="_update_string">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update_string">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1400-1426" title="Go to source code">update_string</a>( <span>string <var>$table</var></span>, <span>array <var>$data</var></span>, <span>mixed <var>$where</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate an update string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate an update string</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>the table upon which the query will be performed</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>array</code><br>an associative array data of key/values</dd>
+					<dt><var>$where</var></dt>
+					<dd><code>mixed</code><br>the "where" statement</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_update" id="__update">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__update">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1430-1450" title="Go to source code">_update</a>( <span>string <var>$table</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Update statement</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Update statement</p>
+
+<p>Generates a platform-specific update string from the supplied data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>the table name</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>array</code><br>the update data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_has_operator" id="__has_operator">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__has_operator">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1454-1463" title="Go to source code">_has_operator</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Tests whether the string has an SQL operator</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Tests whether the string has an SQL operator</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_operator" id="__get_operator">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_operator">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1467-1501" title="Go to source code">_get_operator</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the SQL string operator</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the SQL string operator</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="call_function" id="_call_function">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_call_function">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1505-1528" title="Go to source code">call_function</a>( <span>string <var>$function</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables a native PHP function to be run, using a platform agnostic
+wrapper.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables a native PHP function to be run, using a platform agnostic
+wrapper.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd><code>string</code><br>$function Function name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_set_path" id="_cache_set_path">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_set_path">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1532-1541" title="Go to source code">cache_set_path</a>( <span>string <var>$path</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Cache Directory Path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Cache Directory Path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>the path to the cache directory</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_on" id="_cache_on">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_on">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1545-1553" title="Go to source code">cache_on</a>( )</code>
+
+		<div class="description short">
+			
+<p>Enable Query Caching</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enable Query Caching</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>cache_on value<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_off" id="_cache_off">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_off">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1557-1565" title="Go to source code">cache_off</a>( )</code>
+
+		<div class="description short">
+			
+<p>Disable Query Caching</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disable Query Caching</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>cache_on value<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_delete" id="_cache_delete">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_delete">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1569-1581" title="Go to source code">cache_delete</a>( <span>string <var>$segment_one</var> = <span class="php-quote">''</span></span>, <span>string <var>$segment_two</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete the cache files associated with a particular URI</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete the cache files associated with a particular URI</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$segment_one</var></dt>
+					<dd><code>string</code><br>$segment_one = ''</dd>
+					<dt><var>$segment_two</var></dt>
+					<dd><code>string</code><br>$segment_two = ''</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_delete_all" id="_cache_delete_all">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_delete_all">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1585-1595" title="Go to source code">cache_delete_all</a>( )</code>
+
+		<div class="description short">
+			
+<p>Delete All cache files</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete All cache files</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_cache_init" id="__cache_init">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__cache_init">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1599-1617" title="Go to source code">_cache_init</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initialize the Cache Class</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize the Cache Class</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1621-1633" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Close DB Connection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Close DB Connection</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_close" id="__close">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__close">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1637-1647" title="Go to source code">_close</a>( )</code>
+
+		<div class="description short">
+			
+<p>Close DB Connection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Close DB Connection</p>
+
+<p>This method would be overridden by most of the drivers.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_error" id="_display_error">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display_error">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1651-1702" title="Go to source code">display_error</a>( <span>string <var>$error</var> = <span class="php-quote">''</span></span>, <span>string <var>$swap</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$native</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Display an error message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Display an error message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$error</var></dt>
+					<dd><code>string</code><br>the error message</dd>
+					<dt><var>$swap</var></dt>
+					<dd><code>string</code><br>any "swap" values</dd>
+					<dt><var>$native</var></dt>
+					<dd><code>boolean</code><br>whether to localize the message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>sends the application/views/errors/error_db.php template<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="protect_identifiers" id="_protect_identifiers">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_protect_identifiers">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1706-1888" title="Go to source code">protect_identifiers</a>( <span>string <var>$item</var></span>, <span>boolean <var>$prefix_single</var> = <span class="php-keyword1">FALSE</span></span>, <span>mixed <var>$protect_identifiers</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean <var>$field_exists</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Protect Identifiers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Protect Identifiers</p>
+
+<p>This function is used extensively by the Query Builder class, and by a couple
+functions in this class. It takes a column or table name (optionally with an
+alias) and inserts the table prefix onto it. Some logic is necessary in order to
+deal with column names that include the path. Consider a query like this:</p>
+
+<p>SELECT * FROM hostname.database.table.column AS c FROM
+hostname.database.table</p>
+
+<p>Or a query with aliasing:</p>
+
+<p>SELECT m.member_id, m.member_name FROM members AS m</p>
+
+<p>Since the column name can include up to four segments (host, DB, table,
+column) or also have an alias prefix, we need to do a bit of work to figure this
+out and insert the table prefix (if it exists) in the proper position, and
+escape only the correct identifiers.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$prefix_single</var></dt>
+					<dd><code>boolean</code></dd>
+					<dt><var>$protect_identifiers</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$field_exists</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_reset_select" id="__reset_select">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__reset_select">#</a>
+		<code><a href="source-class-CI_DB_driver.html#1892-1900" title="Go to source code">_reset_select</a>( )</code>
+
+		<div class="description short">
+			
+<p>Dummy method that allows Query Builder class to be disabled and keep
+count_all() working.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dummy method that allows Query Builder class to be disabled and keep
+count_all() working.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="dsn" id="$dsn">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#55-60" title="Go to source code"><var>$dsn</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$dsn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Data Source Name / Connect string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Data Source Name / Connect string</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="username" id="$username">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#62-67" title="Go to source code"><var>$username</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$username" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Username</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Username</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="password" id="$password">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#69-74" title="Go to source code"><var>$password</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$password" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Password</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Password</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="hostname" id="$hostname">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#76-81" title="Go to source code"><var>$hostname</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$hostname" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Hostname</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Hostname</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="database" id="$database">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#83-88" title="Go to source code"><var>$database</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$database" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Database name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Database name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbdriver" id="$dbdriver">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#90-95" title="Go to source code"><var>$dbdriver</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'mysqli'</span></code></td>
+		<td class="description"><div>
+			<a href="#$dbdriver" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Database driver</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Database driver</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="subdriver" id="$subdriver">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#97-103" title="Go to source code"><var>$subdriver</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$subdriver" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Sub-driver</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sub-driver</p>
+
+
+					<h4>Used-by</h4>
+					<div class="list">
+							CI_DB_pdo_driver<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbprefix" id="$dbprefix">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#105-110" title="Go to source code"><var>$dbprefix</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$dbprefix" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Table prefix</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Table prefix</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="char_set" id="$char_set">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#112-117" title="Go to source code"><var>$char_set</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'utf8'</span></code></td>
+		<td class="description"><div>
+			<a href="#$char_set" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Character set</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Character set</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbcollat" id="$dbcollat">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#119-124" title="Go to source code"><var>$dbcollat</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'utf8_general_ci'</span></code></td>
+		<td class="description"><div>
+			<a href="#$dbcollat" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Collation</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Collation</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="encrypt" id="$encrypt">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#126-131" title="Go to source code"><var>$encrypt</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$encrypt" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Encryption flag/data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Encryption flag/data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="swap_pre" id="$swap_pre">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#133-138" title="Go to source code"><var>$swap_pre</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$swap_pre" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Swap Prefix</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Swap Prefix</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="port" id="$port">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#140-145" title="Go to source code"><var>$port</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$port" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Database port</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Database port</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="pconnect" id="$pconnect">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#147-152" title="Go to source code"><var>$pconnect</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$pconnect" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Persistent connection flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Persistent connection flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="conn_id" id="$conn_id">
+		<td class="attributes"><code>
+			public  
+			object|resource
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#154-159" title="Go to source code"><var>$conn_id</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$conn_id" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Connection ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Connection ID</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="result_id" id="$result_id">
+		<td class="attributes"><code>
+			public  
+			object|resource
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#161-166" title="Go to source code"><var>$result_id</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$result_id" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Result ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Result ID</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="db_debug" id="$db_debug">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#168-175" title="Go to source code"><var>$db_debug</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$db_debug" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Debug flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Debug flag</p>
+
+<p>Whether to display error messages.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="benchmark" id="$benchmark">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#177-182" title="Go to source code"><var>$benchmark</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$benchmark" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Benchmark time</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Benchmark time</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="query_count" id="$query_count">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#184-189" title="Go to source code"><var>$query_count</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$query_count" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Executed queries count</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Executed queries count</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bind_marker" id="$bind_marker">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#191-198" title="Go to source code"><var>$bind_marker</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'?'</span></code></td>
+		<td class="description"><div>
+			<a href="#$bind_marker" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Bind marker</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Bind marker</p>
+
+<p>Character used to identify values in a prepared statement.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="save_queries" id="$save_queries">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#200-207" title="Go to source code"><var>$save_queries</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$save_queries" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Save queries flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Save queries flag</p>
+
+<p>Whether to keep an in-memory history of queries for debugging purposes.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="queries" id="$queries">
+		<td class="attributes"><code>
+			public  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#209-215" title="Go to source code"><var>$queries</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$queries" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Queries list</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Queries list</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-CI_DB_driver.html#$save_queries">CI_DB_driver::<var>$save_queries</var></a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="query_times" id="$query_times">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#217-224" title="Go to source code"><var>$query_times</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$query_times" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Query times</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Query times</p>
+
+<p>A list of times that queries took to execute.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="data_cache" id="$data_cache">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#226-233" title="Go to source code"><var>$data_cache</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$data_cache" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Data cache</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Data cache</p>
+
+<p>An internal generic value cache.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_enabled" id="$trans_enabled">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#235-240" title="Go to source code"><var>$trans_enabled</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$trans_enabled" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Transaction enabled flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Transaction enabled flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="trans_strict" id="$trans_strict">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#242-247" title="Go to source code"><var>$trans_strict</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$trans_strict" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Strict transaction mode flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Strict transaction mode flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_trans_depth" id="$_trans_depth">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#249-254" title="Go to source code"><var>$_trans_depth</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$_trans_depth" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Transaction depth level</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Transaction depth level</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_trans_status" id="$_trans_status">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#256-263" title="Go to source code"><var>$_trans_status</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_trans_status" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Transaction status flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Transaction status flag</p>
+
+<p>Used with transactions to determine if a rollback should occur.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_trans_failure" id="$_trans_failure">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#265-272" title="Go to source code"><var>$_trans_failure</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_trans_failure" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Transaction failure flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Transaction failure flag</p>
+
+<p>Used with transactions to determine if a transaction has failed.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_on" id="$cache_on">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#274-279" title="Go to source code"><var>$cache_on</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$cache_on" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache On flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache On flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cachedir" id="$cachedir">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#281-286" title="Go to source code"><var>$cachedir</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$cachedir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache directory path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache directory path</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_autodel" id="$cache_autodel">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#288-293" title="Go to source code"><var>$cache_autodel</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">FALSE</span></code></td>
+		<td class="description"><div>
+			<a href="#$cache_autodel" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache auto-delete flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache auto-delete flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CACHE" id="$CACHE">
+		<td class="attributes"><code>
+			public  
+			object
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#295-301" title="Go to source code"><var>$CACHE</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$CACHE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>DB Cache object</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>DB Cache object</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							CI_DB_cache<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_protect_identifiers" id="$_protect_identifiers">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#303-308" title="Go to source code"><var>$_protect_identifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">TRUE</span></code></td>
+		<td class="description"><div>
+			<a href="#$_protect_identifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Protect identifiers flag</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Protect identifiers flag</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_reserved_identifiers" id="$_reserved_identifiers">
+		<td class="attributes"><code>
+			protected  
+			string[]
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#310-317" title="Go to source code"><var>$_reserved_identifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'*'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$_reserved_identifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of reserved identifiers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of reserved identifiers</p>
+
+<p>Identifiers that must NOT be escaped.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_escape_char" id="$_escape_char">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#319-324" title="Go to source code"><var>$_escape_char</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'&quot;'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_escape_char" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Identifier escape character</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Identifier escape character</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_like_escape_str" id="$_like_escape_str">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#326-331" title="Go to source code"><var>$_like_escape_str</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">&quot; ESCAPE '%s' &quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#$_like_escape_str" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>ESCAPE statement string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>ESCAPE statement string</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_like_escape_chr" id="$_like_escape_chr">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#333-338" title="Go to source code"><var>$_like_escape_chr</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'!'</span></code></td>
+		<td class="description"><div>
+			<a href="#$_like_escape_chr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>ESCAPE character</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>ESCAPE character</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_random_keyword" id="$_random_keyword">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#340-345" title="Go to source code"><var>$_random_keyword</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'RAND()'</span>, <span class="php-quote">'RAND(%d)'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$_random_keyword" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>ORDER BY random keyword</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>ORDER BY random keyword</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_count_string" id="$_count_string">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-CI_DB_driver.html#347-355" title="Go to source code"><var>$_count_string</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'SELECT COUNT(*) AS '</span></code></td>
+		<td class="description"><div>
+			<a href="#$_count_string" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>COUNT string</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>COUNT string</p>
+
+
+					<h4>Used-by</h4>
+					<div class="list">
+							CI_DB_driver::count_all()<br />
+							CI_DB_query_builder::count_all_results()<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		framework API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

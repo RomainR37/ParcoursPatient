@@ -3,20 +3,22 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * \file      M_Champ.php
- * \author    Guillaume Pochet
- * \version   1.0
- * \date      09 Mars 2017
- * \brief     Définit les méthodes liées à la gestion des champs nécessaires à la construction d'un dossier parcours patient
- *
- * \details   Ce fichier permet de définir la méthode de gestion des champs (récupération, ajout)
+ * Définit les méthodes liées à la gestion des champs nécessaires à la 
+ * construction d'un dossier parcours patient
+ * 
+ * Ce fichier permet de définir la méthode de gestion des champs 
+ * (récupération, ajout)
+ * 
+ * @author    Guillaume Pochet
+ * @version   1.0
+ * @since      09 Mars 2017
+ * 
  */
 class M_Champ extends CI_Model {
 
     /**
-     * \brief      Permet de récupérer la liste de tout les types champs
-     * \details    Permet de récupérer la liste de tout les types champs (date, texte, texte multiligne, numérique)
-     * \param      Aucun
+     * Permet de récupérer la liste de tous les types champs (date, texte, 
+     * texte multiligne, numérique)
      */
     public function getAllTypeChamp() {
         $txt_sql = "SELECT id_typechamp, txt_libelle
@@ -34,9 +36,10 @@ class M_Champ extends CI_Model {
     }
 
     /**
-     * \brief      Permet de récupérer la liste de tout les types champs avec une recherche par type
-     * \details    Permet de récupérer la liste de tout les types champs  avec une recherche par type (date, texte, texte multiligne, numérique)
-     * \param      $q : nom du champ à rechercher
+     * Permet de récupérer la liste de tous les types champs avec une recherche 
+     * par type (date, texte, texte multiligne, numérique)
+     * 
+     * @param $q : nom du champ à rechercher
      */
     public function getAllChampWith($q) {
         $txt_sql = "SELECT id_champ, txt_nom, id_typechamp
@@ -59,9 +62,11 @@ class M_Champ extends CI_Model {
     }
 
     /**
-     * \brief      Ajout d'un nouveau champ
-     * \details    Ajout d'un nouveau champ dans la base de données
-     * \param      $idTypeChamp : type du champ, $nomChamp : nom du champ
+     * Ajout d'un nouveau champ
+     * 
+     * Ajout d'un nouveau champ dans la base de données
+     * @param $idTypeChamp : type du champ 
+     * @param string $nomChamp : nom du champ
      */
     public function addNewChamp($idTypeChamp, $nomChamp) {
 
