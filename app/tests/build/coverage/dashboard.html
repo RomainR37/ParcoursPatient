@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\wamp\www\subway\app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">C:\wamp\www\subway\app</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="models/M_DossierParcours.php.html#20">M_DossierParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#17">M_EtreIndispo</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Compte.php.html#14">M_Compte</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Composer.php.html#16">M_Composer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Auth.php.html#15">M_Auth</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#17">M_Champ</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Necessiter.php.html#15">M_Necessiter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#17">M_Parcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#17">M_RessourcesMat</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#15">M_TypeRessource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#16">M_Ressource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#15">M_PlanParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#15">M_Personnel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#14">Activites</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#18">M_Activite</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#13">EtreIndispo</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#13">Parcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#13">DossierParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Auth.php.html#12">Auth</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/AffichageSejour.php.html#12">AffichageSejour</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Welcome.php.html#13">Welcome</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#13">Patient</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#11">RessourcesMat</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/TypeRessource.php.html#13">TypeRessource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#13">Ressource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#12">Planning</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#12">PlanParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#12">Personnels</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#17">M_Patient</a></td><td class="text-right">23%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#14">M_Planning</a></td><td class="text-right">51%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Planning.php.html#12">Planning</a></td><td class="text-right">2550</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#14">M_Planning</a></td><td class="text-right">1260</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#14">Activites</a></td><td class="text-right">870</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#13">Patient</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#13">Parcours</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#13">EtreIndispo</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#17">M_Parcours</a></td><td class="text-right">420</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#20">M_DossierParcours</a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#18">M_Activite</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#15">M_PlanParcours</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#12">PlanParcours</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#13">DossierParcours</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#15">M_Personnel</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#17">M_RessourcesMat</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#15">M_TypeRessource</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#17">M_Patient</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#11">RessourcesMat</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#12">Personnels</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#17">M_EtreIndispo</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#16">M_Ressource</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#13">Ressource</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="controllers/Auth.php.html#12">Auth</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#17">M_Champ</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="controllers/Welcome.php.html#13">Welcome</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/TypeRessource.php.html#13">TypeRessource</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/M_Auth.php.html#15">M_Auth</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/M_Composer.php.html#16">M_Composer</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/AffichageSejour.php.html#12">AffichageSejour</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="models/M_Necessiter.php.html#34"><abbr title="M_Necessiter::addBesoin">addBesoin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#22"><abbr title="M_Parcours::getAllParcours">getAllParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#45"><abbr title="M_Parcours::getParcoursById">getParcoursById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#104"><abbr title="M_Parcours::getActiviteParcoursByIdToJson">getActiviteParcoursByIdToJson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Necessiter.php.html#21"><abbr title="M_Necessiter::deleteAllBesoin">deleteAllBesoin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#107"><abbr title="M_EtreIndispo::getMaxIDIndispo">getMaxIDIndispo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#44"><abbr title="M_EtreIndispo::getNomPersonnel">getNomPersonnel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#63"><abbr title="M_EtreIndispo::supprimerIndispoById">supprimerIndispoById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#76"><abbr title="M_EtreIndispo::modifierIndispo">modifierIndispo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#92"><abbr title="M_EtreIndispo::ajoutIndispo">ajoutIndispo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#126"><abbr title="M_Parcours::getDependencesActivitesToJson">getDependencesActivitesToJson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#148"><abbr title="M_Parcours::getDependancesActivites">getDependancesActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#62"><abbr title="M_Patient::ajouterUnPatient">ajouterUnPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#86"><abbr title="M_Patient::modifierUnPatient">modifierUnPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#97"><abbr title="M_Patient::afficherTousPatient">afficherTousPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#129"><abbr title="M_Patient::creerUnCompte">creerUnCompte</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#34"><abbr title="M_Patient::getMaxIdCompte">getMaxIdCompte</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#22"><abbr title="M_Patient::getMaxIdPatient">getMaxIdPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#171"><abbr title="M_Parcours::ajouteParcours">ajouteParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#207"><abbr title="M_Parcours::supprimerParcours">supprimerParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#217"><abbr title="M_Parcours::modifParcours">modifParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#240"><abbr title="M_Parcours::getMaxIdParcours">getMaxIdParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#23"><abbr title="M_EtreIndispo::getIndispoByIdRessource">getIndispoByIdRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#281"><abbr title="M_DossierParcours::findPatientByIdDossier">findPatientByIdDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#241"><abbr title="M_Activite::getMaxIdActivite">getMaxIdActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Auth.php.html#26"><abbr title="M_Auth::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#23"><abbr title="M_Champ::getAllTypeChamp">getAllTypeChamp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#44"><abbr title="M_Champ::getAllChampWith">getAllChampWith</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#212"><abbr title="M_Activite::ajouteActivite">ajouteActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#189"><abbr title="M_Activite::modifActivite">modifActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#16"><abbr title="Activites::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#86"><abbr title="M_Activite::getListeActivites">getListeActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#113"><abbr title="M_Activite::supprActivite">supprActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#128"><abbr title="M_Activite::getActiviteById">getActiviteById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#71"><abbr title="M_Champ::addNewChamp">addNewChamp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Composer.php.html#22"><abbr title="M_Composer::deleteAllCompo">deleteAllCompo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#179"><abbr title="M_DossierParcours::getMaxIdDossierParcours">getMaxIdDossierParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#197"><abbr title="M_DossierParcours::nouvelleDossier">nouvelleDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#235"><abbr title="M_DossierParcours::supprimerDossier">supprimerDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#248"><abbr title="M_DossierParcours::majDossier">majDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#168"><abbr title="M_DossierParcours::addChampAtDossier">addChampAtDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#136"><abbr title="M_DossierParcours::majDossierByIdPatient">majDossierByIdPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Composer.php.html#35"><abbr title="M_Composer::addCompo">addCompo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Compte.php.html#20"><abbr title="M_Compte::getMaxIDCompte">getMaxIDCompte</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Compte.php.html#35"><abbr title="M_Compte::insererCompte">insererCompte</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#28"><abbr title="M_DossierParcours::getDossierByIdPatient">getDossierByIdPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#145"><abbr title="M_Patient::nombreDePatientParcour">nombreDePatientParcour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#174"><abbr title="M_Patient::getAllActivities">getAllActivities</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#78"><abbr title="M_Ressource::getMaxIDRessource">getMaxIDRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#91"><abbr title="M_Ressource::getNameByIdRessource">getNameByIdRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#102"><abbr title="M_Ressource::insererRessource">insererRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#22"><abbr title="M_RessourcesMat::getAllRessourcesMat">getAllRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#37"><abbr title="M_Ressource::getWeekByIdRessource">getWeekByIdRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#22"><abbr title="M_Ressource::random_color">random_color</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#751"><abbr title="M_Planning::getRessourcePossiblePourUneActivite">getRessourcePossiblePourUneActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#775"><abbr title="M_Planning::getActiviteAplanifierRecherche">getActiviteAplanifierRecherche</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#889"><abbr title="M_Planning::deleteAllEventPatient">deleteAllEventPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#913"><abbr title="M_Planning::sauvegarderPlanning">sauvegarderPlanning</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#44"><abbr title="M_RessourcesMat::getAllTypeRessourcesMat">getAllTypeRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#67"><abbr title="M_RessourcesMat::getRessourcesMatById">getRessourcesMatById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#88"><abbr title="M_TypeRessource::getTypesPersonnelsActivite">getTypesPersonnelsActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#109"><abbr title="M_TypeRessource::getTypesRessourcesMatActivite">getTypesRessourcesMatActivite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#129"><abbr title="M_TypeRessource::insererType">insererType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#139"><abbr title="M_TypeRessource::getMaxID">getMaxID</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#63"><abbr title="M_TypeRessource::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#38"><abbr title="M_TypeRessource::getTypesPersonnels">getTypesPersonnels</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#82"><abbr title="M_RessourcesMat::supprRessourcesMat">supprRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#116"><abbr title="M_RessourcesMat::ModifRessourcesMat">ModifRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#139"><abbr title="M_RessourcesMat::ajouteRessourcesMat">ajouteRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#21"><abbr title="M_TypeRessource::getIdType">getIdType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#642"><abbr title="M_Planning::getRessourceByType">getRessourceByType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#524"><abbr title="M_Planning::updateEvent">updateEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#100"><abbr title="M_Personnel::getPersonneById">getPersonneById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#118"><abbr title="M_Personnel::ModifPersonne">ModifPersonne</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#141"><abbr title="M_Personnel::ajoutePersonne">ajoutePersonne</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#20"><abbr title="M_PlanParcours::getAllPlanParcours">getAllPlanParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#67"><abbr title="M_Personnel::supprPersonne">supprPersonne</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#44"><abbr title="M_Personnel::getAllTypePersonnes">getAllTypePersonnes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#193"><abbr title="M_Patient::majDisponibilitePatient">majDisponibilitePatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#203"><abbr title="M_Patient::patientParNomOuPrenom">patientParNomOuPrenom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#264"><abbr title="M_Patient::supprimerPatient">supprimerPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#20"><abbr title="M_Personnel::getAllPersonnes">getAllPersonnes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#44"><abbr title="M_PlanParcours::getNomParcours">getNomParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#65"><abbr title="M_PlanParcours::getPlanParcoursById">getPlanParcoursById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#376"><abbr title="M_Planning::getParcoursByDateAndPatient">getParcoursByDateAndPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#402"><abbr title="M_Planning::getParcoursByDate">getParcoursByDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#428"><abbr title="M_Planning::getDetailEvenement">getDetailEvenement</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#509"><abbr title="M_Planning::deleteEvent">deleteEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#156"><abbr title="M_Planning::addEvenement">addEvenement</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#19"><abbr title="M_Planning::getAllRessource">getAllRessource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#88"><abbr title="M_PlanParcours::getNomParcoursById">getNomParcoursById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#105"><abbr title="M_PlanParcours::modifierplanparcours">modifierplanparcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#121"><abbr title="M_PlanParcours::modifierallplanparcours">modifierallplanparcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#137"><abbr title="M_PlanParcours::getIdJourByJour">getIdJourByJour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Welcome.php.html#27"><abbr title="Welcome::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#25"><abbr title="M_Activite::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#163"><abbr title="Parcours::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#184"><abbr title="Parcours::visualiser">visualiser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#15"><abbr title="Patient::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#33"><abbr title="Patient::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#92"><abbr title="Parcours::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#78"><abbr title="Parcours::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#15"><abbr title="Parcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#34"><abbr title="Parcours::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#50"><abbr title="Parcours::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#69"><abbr title="Parcours::supprimer">supprimer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#46"><abbr title="Patient::afficherSejour">afficherSejour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#61"><abbr title="Patient::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#168"><abbr title="Patient::majDisponibilite">majDisponibilite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#184"><abbr title="Patient::majPatient">majPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#212"><abbr title="Patient::majDossier">majDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Welcome.php.html#15"><abbr title="Welcome::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#158"><abbr title="Patient::getNbByDay">getNbByDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#143"><abbr title="Patient::jour">jour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#75"><abbr title="Patient::rechercher">rechercher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#83"><abbr title="Patient::faireRecherche">faireRecherche</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#96"><abbr title="Patient::afficherPatient">afficherPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#128"><abbr title="Patient::creation">creation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#92"><abbr title="EtreIndispo::savechanges">savechanges</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#77"><abbr title="EtreIndispo::formaliserData">formaliserData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#205"><abbr title="Activites::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#220"><abbr title="Activites::getTypesPerso">getTypesPerso</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#233"><abbr title="Activites::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/AffichageSejour.php.html#14"><abbr title="AffichageSejour::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#182"><abbr title="Activites::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#146"><abbr title="Activites::ajoutActiviteParcours">ajoutActiviteParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#31"><abbr title="Activites::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#47"><abbr title="Activites::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#67"><abbr title="Activites::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#107"><abbr title="Activites::confirmModifParcours">confirmModifParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/AffichageSejour.php.html#27"><abbr title="AffichageSejour::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Auth.php.html#23"><abbr title="Auth::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#94"><abbr title="DossierParcours::ajoutChampDossier">ajoutChampDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#15"><abbr title="EtreIndispo::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#31"><abbr title="EtreIndispo::afficher">afficher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#47"><abbr title="EtreIndispo::supprimerIndispo">supprimerIndispo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#80"><abbr title="DossierParcours::getChamp">getChamp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#64"><abbr title="DossierParcours::modifierValeurs">modifierValeurs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Auth.php.html#54"><abbr title="Auth::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#15"><abbr title="DossierParcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#31"><abbr title="DossierParcours::dossier">dossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#50"><abbr title="DossierParcours::loadOngletAndDossier">loadOngletAndDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#247"><abbr title="Patient::ajoutPatient">ajoutPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#229"><abbr title="Patient::ajoutDossier">ajoutDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#374"><abbr title="Planning::sauvegarder">sauvegarder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#360"><abbr title="Planning::deleteEventsPatient">deleteEventsPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#383"><abbr title="Planning::restaurer">restaurer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#397"><abbr title="Planning::planAuto">planAuto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#15"><abbr title="Ressource::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#339"><abbr title="Planning::updateEvent">updateEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#196"><abbr title="Planning::constraints">constraints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#92"><abbr title="Planning::getActiviteAPlanifier">getActiviteAPlanifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#117"><abbr title="Planning::getActiviteAPlanifierRecherche">getActiviteAPlanifierRecherche</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#134"><abbr title="Planning::addEvent">addEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#158"><abbr title="Planning::deleteEvent">deleteEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#30"><abbr title="Ressource::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#43"><abbr title="Ressource::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#107"><abbr title="RessourcesMat::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#121"><abbr title="RessourcesMat::getTypes">getTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/TypeRessource.php.html#15"><abbr title="TypeRessource::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/TypeRessource.php.html#26"><abbr title="TypeRessource::getAllTypes">getAllTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#83"><abbr title="RessourcesMat::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#63"><abbr title="RessourcesMat::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#60"><abbr title="Ressource::solo">solo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#13"><abbr title="RessourcesMat::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#28"><abbr title="RessourcesMat::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#45"><abbr title="RessourcesMat::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#71"><abbr title="Planning::getEvenement">getEvenement</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#46"><abbr title="Planning::getRessources">getRessources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#30"><abbr title="Personnels::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#14"><abbr title="Personnels::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#45"><abbr title="Personnels::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#64"><abbr title="Personnels::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#90"><abbr title="Personnels::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#420"><abbr title="Patient::gererRDV">gererRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#408"><abbr title="Patient::supprimerRDV">supprimerRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#342"><abbr title="Patient::_dateRegex">_dateRegex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#359"><abbr title="Patient::supprimer">supprimer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#368"><abbr title="Patient::ajouterRDV">ajouterRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#389"><abbr title="Patient::modifierRDV">modifierRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#111"><abbr title="Personnels::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#125"><abbr title="Personnels::getTypes">getTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#14"><abbr title="Planning::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#25"><abbr title="Planning::planifier">planifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#33"><abbr title="Planning::creerJeuxDeDonnees">creerJeuxDeDonnees</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#308"><abbr title="Patient::modifierPatient">modifierPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#90"><abbr title="PlanParcours::savechanges">savechanges</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#14"><abbr title="PlanParcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#28"><abbr title="PlanParcours::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#44"><abbr title="PlanParcours::afficheParcours">afficheParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#70"><abbr title="M_Planning::getActiviteAplanifier">getActiviteAplanifier</abbr></a></td><td class="text-right">63%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#453"><abbr title="M_Planning::getAllEvenementByDate">getAllEvenementByDate</abbr></a></td><td class="text-right">65%</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#323"><abbr title="M_Planning::getAllEvenement">getAllEvenement</abbr></a></td><td class="text-right">65%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Planning.php.html#196"><abbr title="Planning::constraints">constraints</abbr></a></td><td class="text-right">1190</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#92"><abbr title="Parcours::confirmModif">confirmModif</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#92"><abbr title="EtreIndispo::savechanges">savechanges</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#156"><abbr title="M_Planning::addEvenement">addEvenement</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#775"><abbr title="M_Planning::getActiviteAplanifierRecherche">getActiviteAplanifierRecherche</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#28"><abbr title="M_DossierParcours::getDossierByIdPatient">getDossierByIdPatient</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#67"><abbr title="Activites::confirmModif">confirmModif</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#107"><abbr title="Activites::confirmModifParcours">confirmModifParcours</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#44"><abbr title="PlanParcours::afficheParcours">afficheParcours</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#524"><abbr title="M_Planning::updateEvent">updateEvent</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#90"><abbr title="PlanParcours::savechanges">savechanges</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#146"><abbr title="Activites::ajoutActiviteParcours">ajoutActiviteParcours</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#25"><abbr title="M_Activite::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#642"><abbr title="M_Planning::getRessourceByType">getRessourceByType</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/Auth.php.html#23"><abbr title="Auth::index">index</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#47"><abbr title="EtreIndispo::supprimerIndispo">supprimerIndispo</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/M_Auth.php.html#26"><abbr title="M_Auth::login">login</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#50"><abbr title="DossierParcours::loadOngletAndDossier">loadOngletAndDossier</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#13"><abbr title="RessourcesMat::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#15"><abbr title="Ressource::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Ressource.php.html#60"><abbr title="Ressource::solo">solo</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#16"><abbr title="Activites::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#45"><abbr title="M_Parcours::getParcoursById">getParcoursById</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#128"><abbr title="M_Activite::getActiviteById">getActiviteById</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#19"><abbr title="M_Planning::getAllRessource">getAllRessource</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#136"><abbr title="M_DossierParcours::majDossierByIdPatient">majDossierByIdPatient</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Composer.php.html#35"><abbr title="M_Composer::addCompo">addCompo</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Welcome.php.html#15"><abbr title="Welcome::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/TypeRessource.php.html#15"><abbr title="TypeRessource::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/PlanParcours.php.html#14"><abbr title="PlanParcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Planning.php.html#14"><abbr title="Planning::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#171"><abbr title="M_Parcours::ajouteParcours">ajouteParcours</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#217"><abbr title="M_Parcours::modifParcours">modifParcours</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#15"><abbr title="EtreIndispo::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#67"><abbr title="M_Personnel::supprPersonne">supprPersonne</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#15"><abbr title="DossierParcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#15"><abbr title="Patient::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#15"><abbr title="Parcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#14"><abbr title="Personnels::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#37"><abbr title="M_Ressource::getWeekByIdRessource">getWeekByIdRessource</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#82"><abbr title="M_RessourcesMat::supprRessourcesMat">supprRessourcesMat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#70"><abbr title="M_Planning::getActiviteAplanifier">getActiviteAplanifier</abbr></a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#118"><abbr title="M_Personnel::ModifPersonne">ModifPersonne</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#323"><abbr title="M_Planning::getAllEvenement">getAllEvenement</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#20"><abbr title="M_PlanParcours::getAllPlanParcours">getAllPlanParcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#141"><abbr title="M_Personnel::ajoutePersonne">ajoutePersonne</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#44"><abbr title="M_PlanParcours::getNomParcours">getNomParcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#65"><abbr title="M_PlanParcours::getPlanParcoursById">getPlanParcoursById</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#105"><abbr title="M_PlanParcours::modifierplanparcours">modifierplanparcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#137"><abbr title="M_PlanParcours::getIdJourByJour">getIdJourByJour</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_PlanParcours.php.html#121"><abbr title="M_PlanParcours::modifierallplanparcours">modifierallplanparcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Ressource.php.html#22"><abbr title="M_Ressource::random_color">random_color</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#21"><abbr title="M_TypeRessource::getIdType">getIdType</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#139"><abbr title="M_RessourcesMat::ajouteRessourcesMat">ajouteRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#38"><abbr title="M_TypeRessource::getTypesPersonnels">getTypesPersonnels</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#63"><abbr title="M_TypeRessource::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#109"><abbr title="M_TypeRessource::getTypesRessourcesMatActivite">getTypesRessourcesMatActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_TypeRessource.php.html#88"><abbr title="M_TypeRessource::getTypesPersonnelsActivite">getTypesPersonnelsActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#116"><abbr title="M_RessourcesMat::ModifRessourcesMat">ModifRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#44"><abbr title="M_RessourcesMat::getAllTypeRessourcesMat">getAllTypeRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#428"><abbr title="M_Planning::getDetailEvenement">getDetailEvenement</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#402"><abbr title="M_Planning::getParcoursByDate">getParcoursByDate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#453"><abbr title="M_Planning::getAllEvenementByDate">getAllEvenementByDate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#751"><abbr title="M_Planning::getRessourcePossiblePourUneActivite">getRessourcePossiblePourUneActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_RessourcesMat.php.html#22"><abbr title="M_RessourcesMat::getAllRessourcesMat">getAllRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#44"><abbr title="M_Personnel::getAllTypePersonnes">getAllTypePersonnes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Planning.php.html#376"><abbr title="M_Planning::getParcoursByDateAndPatient">getParcoursByDateAndPatient</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#248"><abbr title="M_DossierParcours::majDossier">majDossier</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#125"><abbr title="Personnels::getTypes">getTypes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Personnels.php.html#64"><abbr title="Personnels::confirmModif">confirmModif</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#342"><abbr title="Patient::_dateRegex">_dateRegex</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#83"><abbr title="RessourcesMat::confirmModif">confirmModif</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/RessourcesMat.php.html#121"><abbr title="RessourcesMat::getTypes">getTypes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#189"><abbr title="M_Activite::modifActivite">modifActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#86"><abbr title="M_Activite::getListeActivites">getListeActivites</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Patient.php.html#247"><abbr title="Patient::ajoutPatient">ajoutPatient</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Parcours.php.html#78"><abbr title="Parcours::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#233"><abbr title="Activites::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Activites.php.html#220"><abbr title="Activites::getTypesPerso">getTypesPerso</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/AffichageSejour.php.html#14"><abbr title="AffichageSejour::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#80"><abbr title="DossierParcours::getChamp">getChamp</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/EtreIndispo.php.html#77"><abbr title="EtreIndispo::formaliserData">formaliserData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/DossierParcours.php.html#94"><abbr title="DossierParcours::ajoutChampDossier">ajoutChampDossier</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#212"><abbr title="M_Activite::ajouteActivite">ajouteActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Activite.php.html#241"><abbr title="M_Activite::getMaxIdActivite">getMaxIdActivite</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#148"><abbr title="M_Parcours::getDependancesActivites">getDependancesActivites</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#126"><abbr title="M_Parcours::getDependencesActivitesToJson">getDependencesActivitesToJson</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#104"><abbr title="M_Parcours::getActiviteParcoursByIdToJson">getActiviteParcoursByIdToJson</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#240"><abbr title="M_Parcours::getMaxIdParcours">getMaxIdParcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#97"><abbr title="M_Patient::afficherTousPatient">afficherTousPatient</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#203"><abbr title="M_Patient::patientParNomOuPrenom">patientParNomOuPrenom</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Patient.php.html#145"><abbr title="M_Patient::nombreDePatientParcour">nombreDePatientParcour</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Parcours.php.html#22"><abbr title="M_Parcours::getAllParcours">getAllParcours</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#107"><abbr title="M_EtreIndispo::getMaxIDIndispo">getMaxIDIndispo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#44"><abbr title="M_Champ::getAllChampWith">getAllChampWith</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Champ.php.html#23"><abbr title="M_Champ::getAllTypeChamp">getAllTypeChamp</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_DossierParcours.php.html#197"><abbr title="M_DossierParcours::nouvelleDossier">nouvelleDossier</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#23"><abbr title="M_EtreIndispo::getIndispoByIdRessource">getIndispoByIdRessource</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#92"><abbr title="M_EtreIndispo::ajoutIndispo">ajoutIndispo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_EtreIndispo.php.html#76"><abbr title="M_EtreIndispo::modifierIndispo">modifierIndispo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/M_Personnel.php.html#20"><abbr title="M_Personnel::getAllPersonnes">getAllPersonnes</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.4</a> using <a href="https://secure.php.net/" target="_top">PHP 5.5.12</a> and <a href="https://phpunit.de/">PHPUnit 4.8.36</a> at Tue Apr 9 23:52:08 CEST 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.min.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([28,0,0,1,0,0,1,0,0,0,0,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([190,0,0,0,0,0,0,3,0,0,1,11], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,29,"<a href=\"controllers\/Activites.php.html#14\">Activites<\/a>"],[0,3,"<a href=\"controllers\/AffichageSejour.php.html#12\">AffichageSejour<\/a>"],[0,5,"<a href=\"controllers\/Auth.php.html#12\">Auth<\/a>"],[0,13,"<a href=\"controllers\/DossierParcours.php.html#13\">DossierParcours<\/a>"],[0,22,"<a href=\"controllers\/EtreIndispo.php.html#13\">EtreIndispo<\/a>"],[0,25,"<a href=\"controllers\/Parcours.php.html#13\">Parcours<\/a>"],[0,26,"<a href=\"controllers\/Patient.php.html#13\">Patient<\/a>"],[0,11,"<a href=\"controllers\/Personnels.php.html#12\">Personnels<\/a>"],[0,13,"<a href=\"controllers\/PlanParcours.php.html#12\">PlanParcours<\/a>"],[0,50,"<a href=\"controllers\/Planning.php.html#12\">Planning<\/a>"],[0,8,"<a href=\"controllers\/Ressource.php.html#13\">Ressource<\/a>"],[0,11,"<a href=\"controllers\/RessourcesMat.php.html#11\">RessourcesMat<\/a>"],[0,4,"<a href=\"controllers\/TypeRessource.php.html#13\">TypeRessource<\/a>"],[0,4,"<a href=\"controllers\/Welcome.php.html#13\">Welcome<\/a>"],[0,16,"<a href=\"models\/M_Activite.php.html#18\">M_Activite<\/a>"],[0,4,"<a href=\"models\/M_Auth.php.html#15\">M_Auth<\/a>"],[0,5,"<a href=\"models\/M_Champ.php.html#17\">M_Champ<\/a>"],[0,4,"<a href=\"models\/M_Composer.php.html#16\">M_Composer<\/a>"],[0,2,"<a href=\"models\/M_Compte.php.html#14\">M_Compte<\/a>"],[0,19,"<a href=\"models\/M_DossierParcours.php.html#20\">M_DossierParcours<\/a>"],[0,10,"<a href=\"models\/M_EtreIndispo.php.html#17\">M_EtreIndispo<\/a>"],[0,2,"<a href=\"models\/M_Necessiter.php.html#15\">M_Necessiter<\/a>"],[100,0,"<a href=\"models\/M_Onglet.php.html#13\">M_Onglet<\/a>"],[0,20,"<a href=\"models\/M_Parcours.php.html#17\">M_Parcours<\/a>"],[23.148148148148,16,"<a href=\"models\/M_Patient.php.html#17\">M_Patient<\/a>"],[0,12,"<a href=\"models\/M_Personnel.php.html#15\">M_Personnel<\/a>"],[0,13,"<a href=\"models\/M_PlanParcours.php.html#15\">M_PlanParcours<\/a>"],[51.219512195122,100,"<a href=\"models\/M_Planning.php.html#14\">M_Planning<\/a>"],[0,8,"<a href=\"models\/M_Ressource.php.html#16\">M_Ressource<\/a>"],[0,12,"<a href=\"models\/M_RessourcesMat.php.html#17\">M_RessourcesMat<\/a>"],[0,12,"<a href=\"models\/M_TypeRessource.php.html#15\">M_TypeRessource<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"controllers\/Activites.php.html#16\">Activites::__construct<\/a>"],[0,1,"<a href=\"controllers\/Activites.php.html#31\">Activites::index<\/a>"],[0,1,"<a href=\"controllers\/Activites.php.html#47\">Activites::ajout<\/a>"],[0,7,"<a href=\"controllers\/Activites.php.html#67\">Activites::confirmModif<\/a>"],[0,7,"<a href=\"controllers\/Activites.php.html#107\">Activites::confirmModifParcours<\/a>"],[0,4,"<a href=\"controllers\/Activites.php.html#146\">Activites::ajoutActiviteParcours<\/a>"],[0,1,"<a href=\"controllers\/Activites.php.html#182\">Activites::modif<\/a>"],[0,1,"<a href=\"controllers\/Activites.php.html#205\">Activites::suppr<\/a>"],[0,2,"<a href=\"controllers\/Activites.php.html#220\">Activites::getTypesPerso<\/a>"],[0,2,"<a href=\"controllers\/Activites.php.html#233\">Activites::getTypesRessourcesMat<\/a>"],[0,2,"<a href=\"controllers\/AffichageSejour.php.html#14\">AffichageSejour::__construct<\/a>"],[0,1,"<a href=\"controllers\/AffichageSejour.php.html#27\">AffichageSejour::index<\/a>"],[0,4,"<a href=\"controllers\/Auth.php.html#23\">Auth::index<\/a>"],[0,1,"<a href=\"controllers\/Auth.php.html#54\">Auth::logout<\/a>"],[0,3,"<a href=\"controllers\/DossierParcours.php.html#15\">DossierParcours::__construct<\/a>"],[0,1,"<a href=\"controllers\/DossierParcours.php.html#31\">DossierParcours::dossier<\/a>"],[0,4,"<a href=\"controllers\/DossierParcours.php.html#50\">DossierParcours::loadOngletAndDossier<\/a>"],[0,1,"<a href=\"controllers\/DossierParcours.php.html#64\">DossierParcours::modifierValeurs<\/a>"],[0,2,"<a href=\"controllers\/DossierParcours.php.html#80\">DossierParcours::getChamp<\/a>"],[0,2,"<a href=\"controllers\/DossierParcours.php.html#94\">DossierParcours::ajoutChampDossier<\/a>"],[0,3,"<a href=\"controllers\/EtreIndispo.php.html#15\">EtreIndispo::__construct<\/a>"],[0,1,"<a href=\"controllers\/EtreIndispo.php.html#31\">EtreIndispo::afficher<\/a>"],[0,4,"<a href=\"controllers\/EtreIndispo.php.html#47\">EtreIndispo::supprimerIndispo<\/a>"],[0,2,"<a href=\"controllers\/EtreIndispo.php.html#77\">EtreIndispo::formaliserData<\/a>"],[0,12,"<a href=\"controllers\/EtreIndispo.php.html#92\">EtreIndispo::savechanges<\/a>"],[0,3,"<a href=\"controllers\/Parcours.php.html#15\">Parcours::__construct<\/a>"],[0,1,"<a href=\"controllers\/Parcours.php.html#34\">Parcours::index<\/a>"],[0,1,"<a href=\"controllers\/Parcours.php.html#50\">Parcours::ajout<\/a>"],[0,1,"<a href=\"controllers\/Parcours.php.html#69\">Parcours::supprimer<\/a>"],[0,2,"<a href=\"controllers\/Parcours.php.html#78\">Parcours::getAllActivites<\/a>"],[0,15,"<a href=\"controllers\/Parcours.php.html#92\">Parcours::confirmModif<\/a>"],[0,1,"<a href=\"controllers\/Parcours.php.html#163\">Parcours::modif<\/a>"],[0,1,"<a href=\"controllers\/Parcours.php.html#184\">Parcours::visualiser<\/a>"],[0,3,"<a href=\"controllers\/Patient.php.html#15\">Patient::__construct<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#33\">Patient::index<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#46\">Patient::afficherSejour<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#61\">Patient::getAllActivites<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#75\">Patient::rechercher<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#83\">Patient::faireRecherche<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#96\">Patient::afficherPatient<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#128\">Patient::creation<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#143\">Patient::jour<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#158\">Patient::getNbByDay<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#168\">Patient::majDisponibilite<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#184\">Patient::majPatient<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#212\">Patient::majDossier<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#229\">Patient::ajoutDossier<\/a>"],[0,2,"<a href=\"controllers\/Patient.php.html#247\">Patient::ajoutPatient<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#308\">Patient::modifierPatient<\/a>"],[0,2,"<a href=\"controllers\/Patient.php.html#342\">Patient::_dateRegex<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#359\">Patient::supprimer<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#368\">Patient::ajouterRDV<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#389\">Patient::modifierRDV<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#408\">Patient::supprimerRDV<\/a>"],[0,1,"<a href=\"controllers\/Patient.php.html#420\">Patient::gererRDV<\/a>"],[0,3,"<a href=\"controllers\/Personnels.php.html#14\">Personnels::__construct<\/a>"],[0,1,"<a href=\"controllers\/Personnels.php.html#30\">Personnels::index<\/a>"],[0,1,"<a href=\"controllers\/Personnels.php.html#45\">Personnels::ajout<\/a>"],[0,2,"<a href=\"controllers\/Personnels.php.html#64\">Personnels::confirmModif<\/a>"],[0,1,"<a href=\"controllers\/Personnels.php.html#90\">Personnels::modif<\/a>"],[0,1,"<a href=\"controllers\/Personnels.php.html#111\">Personnels::suppr<\/a>"],[0,2,"<a href=\"controllers\/Personnels.php.html#125\">Personnels::getTypes<\/a>"],[0,3,"<a href=\"controllers\/PlanParcours.php.html#14\">PlanParcours::__construct<\/a>"],[0,1,"<a href=\"controllers\/PlanParcours.php.html#28\">PlanParcours::index<\/a>"],[0,5,"<a href=\"controllers\/PlanParcours.php.html#44\">PlanParcours::afficheParcours<\/a>"],[0,4,"<a href=\"controllers\/PlanParcours.php.html#90\">PlanParcours::savechanges<\/a>"],[0,3,"<a href=\"controllers\/Planning.php.html#14\">Planning::__construct<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#25\">Planning::planifier<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#33\">Planning::creerJeuxDeDonnees<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#46\">Planning::getRessources<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#71\">Planning::getEvenement<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#92\">Planning::getActiviteAPlanifier<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#117\">Planning::getActiviteAPlanifierRecherche<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#134\">Planning::addEvent<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#158\">Planning::deleteEvent<\/a>"],[0,34,"<a href=\"controllers\/Planning.php.html#196\">Planning::constraints<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#339\">Planning::updateEvent<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#360\">Planning::deleteEventsPatient<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#374\">Planning::sauvegarder<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#383\">Planning::restaurer<\/a>"],[0,1,"<a href=\"controllers\/Planning.php.html#397\">Planning::planAuto<\/a>"],[0,3,"<a href=\"controllers\/Ressource.php.html#15\">Ressource::__construct<\/a>"],[0,1,"<a href=\"controllers\/Ressource.php.html#30\">Ressource::index<\/a>"],[0,1,"<a href=\"controllers\/Ressource.php.html#43\">Ressource::ajout<\/a>"],[0,3,"<a href=\"controllers\/Ressource.php.html#60\">Ressource::solo<\/a>"],[0,3,"<a href=\"controllers\/RessourcesMat.php.html#13\">RessourcesMat::__construct<\/a>"],[0,1,"<a href=\"controllers\/RessourcesMat.php.html#28\">RessourcesMat::index<\/a>"],[0,1,"<a href=\"controllers\/RessourcesMat.php.html#45\">RessourcesMat::ajout<\/a>"],[0,1,"<a href=\"controllers\/RessourcesMat.php.html#63\">RessourcesMat::modif<\/a>"],[0,2,"<a href=\"controllers\/RessourcesMat.php.html#83\">RessourcesMat::confirmModif<\/a>"],[0,1,"<a href=\"controllers\/RessourcesMat.php.html#107\">RessourcesMat::suppr<\/a>"],[0,2,"<a href=\"controllers\/RessourcesMat.php.html#121\">RessourcesMat::getTypes<\/a>"],[0,3,"<a href=\"controllers\/TypeRessource.php.html#15\">TypeRessource::__construct<\/a>"],[0,1,"<a href=\"controllers\/TypeRessource.php.html#26\">TypeRessource::getAllTypes<\/a>"],[0,3,"<a href=\"controllers\/Welcome.php.html#15\">Welcome::__construct<\/a>"],[0,1,"<a href=\"controllers\/Welcome.php.html#27\">Welcome::index<\/a>"],[0,4,"<a href=\"models\/M_Activite.php.html#25\">M_Activite::getAllActivites<\/a>"],[0,2,"<a href=\"models\/M_Activite.php.html#86\">M_Activite::getListeActivites<\/a>"],[0,1,"<a href=\"models\/M_Activite.php.html#113\">M_Activite::supprActivite<\/a>"],[0,3,"<a href=\"models\/M_Activite.php.html#128\">M_Activite::getActiviteById<\/a>"],[0,2,"<a href=\"models\/M_Activite.php.html#189\">M_Activite::modifActivite<\/a>"],[0,2,"<a href=\"models\/M_Activite.php.html#212\">M_Activite::ajouteActivite<\/a>"],[0,2,"<a href=\"models\/M_Activite.php.html#241\">M_Activite::getMaxIdActivite<\/a>"],[0,4,"<a href=\"models\/M_Auth.php.html#26\">M_Auth::login<\/a>"],[0,2,"<a href=\"models\/M_Champ.php.html#23\">M_Champ::getAllTypeChamp<\/a>"],[0,2,"<a href=\"models\/M_Champ.php.html#44\">M_Champ::getAllChampWith<\/a>"],[0,1,"<a href=\"models\/M_Champ.php.html#71\">M_Champ::addNewChamp<\/a>"],[0,1,"<a href=\"models\/M_Composer.php.html#22\">M_Composer::deleteAllCompo<\/a>"],[0,3,"<a href=\"models\/M_Composer.php.html#35\">M_Composer::addCompo<\/a>"],[0,1,"<a href=\"models\/M_Compte.php.html#20\">M_Compte::getMaxIDCompte<\/a>"],[0,1,"<a href=\"models\/M_Compte.php.html#35\">M_Compte::insererCompte<\/a>"],[0,8,"<a href=\"models\/M_DossierParcours.php.html#28\">M_DossierParcours::getDossierByIdPatient<\/a>"],[0,3,"<a href=\"models\/M_DossierParcours.php.html#136\">M_DossierParcours::majDossierByIdPatient<\/a>"],[0,1,"<a href=\"models\/M_DossierParcours.php.html#168\">M_DossierParcours::addChampAtDossier<\/a>"],[0,1,"<a href=\"models\/M_DossierParcours.php.html#179\">M_DossierParcours::getMaxIdDossierParcours<\/a>"],[0,2,"<a href=\"models\/M_DossierParcours.php.html#197\">M_DossierParcours::nouvelleDossier<\/a>"],[0,1,"<a href=\"models\/M_DossierParcours.php.html#235\">M_DossierParcours::supprimerDossier<\/a>"],[0,2,"<a href=\"models\/M_DossierParcours.php.html#248\">M_DossierParcours::majDossier<\/a>"],[0,1,"<a href=\"models\/M_DossierParcours.php.html#281\">M_DossierParcours::findPatientByIdDossier<\/a>"],[0,2,"<a href=\"models\/M_EtreIndispo.php.html#23\">M_EtreIndispo::getIndispoByIdRessource<\/a>"],[0,1,"<a href=\"models\/M_EtreIndispo.php.html#44\">M_EtreIndispo::getNomPersonnel<\/a>"],[0,1,"<a href=\"models\/M_EtreIndispo.php.html#63\">M_EtreIndispo::supprimerIndispoById<\/a>"],[0,2,"<a href=\"models\/M_EtreIndispo.php.html#76\">M_EtreIndispo::modifierIndispo<\/a>"],[0,2,"<a href=\"models\/M_EtreIndispo.php.html#92\">M_EtreIndispo::ajoutIndispo<\/a>"],[0,2,"<a href=\"models\/M_EtreIndispo.php.html#107\">M_EtreIndispo::getMaxIDIndispo<\/a>"],[0,1,"<a href=\"models\/M_Necessiter.php.html#21\">M_Necessiter::deleteAllBesoin<\/a>"],[0,1,"<a href=\"models\/M_Necessiter.php.html#34\">M_Necessiter::addBesoin<\/a>"],[0,2,"<a href=\"models\/M_Parcours.php.html#22\">M_Parcours::getAllParcours<\/a>"],[0,3,"<a href=\"models\/M_Parcours.php.html#45\">M_Parcours::getParcoursById<\/a>"],[0,2,"<a href=\"models\/M_Parcours.php.html#104\">M_Parcours::getActiviteParcoursByIdToJson<\/a>"],[0,2,"<a href=\"models\/M_Parcours.php.html#126\">M_Parcours::getDependencesActivitesToJson<\/a>"],[0,2,"<a href=\"models\/M_Parcours.php.html#148\">M_Parcours::getDependancesActivites<\/a>"],[0,3,"<a href=\"models\/M_Parcours.php.html#171\">M_Parcours::ajouteParcours<\/a>"],[0,1,"<a href=\"models\/M_Parcours.php.html#207\">M_Parcours::supprimerParcours<\/a>"],[0,3,"<a href=\"models\/M_Parcours.php.html#217\">M_Parcours::modifParcours<\/a>"],[0,2,"<a href=\"models\/M_Parcours.php.html#240\">M_Parcours::getMaxIdParcours<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#22\">M_Patient::getMaxIdPatient<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#34\">M_Patient::getMaxIdCompte<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#62\">M_Patient::ajouterUnPatient<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#86\">M_Patient::modifierUnPatient<\/a>"],[0,2,"<a href=\"models\/M_Patient.php.html#97\">M_Patient::afficherTousPatient<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#129\">M_Patient::creerUnCompte<\/a>"],[0,2,"<a href=\"models\/M_Patient.php.html#145\">M_Patient::nombreDePatientParcour<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#174\">M_Patient::getAllActivities<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#193\">M_Patient::majDisponibilitePatient<\/a>"],[0,2,"<a href=\"models\/M_Patient.php.html#203\">M_Patient::patientParNomOuPrenom<\/a>"],[100,2,"<a href=\"models\/M_Patient.php.html#227\">M_Patient::getPatientById<\/a>"],[0,1,"<a href=\"models\/M_Patient.php.html#264\">M_Patient::supprimerPatient<\/a>"],[0,2,"<a href=\"models\/M_Personnel.php.html#20\">M_Personnel::getAllPersonnes<\/a>"],[0,2,"<a href=\"models\/M_Personnel.php.html#44\">M_Personnel::getAllTypePersonnes<\/a>"],[0,3,"<a href=\"models\/M_Personnel.php.html#67\">M_Personnel::supprPersonne<\/a>"],[0,1,"<a href=\"models\/M_Personnel.php.html#100\">M_Personnel::getPersonneById<\/a>"],[0,2,"<a href=\"models\/M_Personnel.php.html#118\">M_Personnel::ModifPersonne<\/a>"],[0,2,"<a href=\"models\/M_Personnel.php.html#141\">M_Personnel::ajoutePersonne<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#20\">M_PlanParcours::getAllPlanParcours<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#44\">M_PlanParcours::getNomParcours<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#65\">M_PlanParcours::getPlanParcoursById<\/a>"],[0,1,"<a href=\"models\/M_PlanParcours.php.html#88\">M_PlanParcours::getNomParcoursById<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#105\">M_PlanParcours::modifierplanparcours<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#121\">M_PlanParcours::modifierallplanparcours<\/a>"],[0,2,"<a href=\"models\/M_PlanParcours.php.html#137\">M_PlanParcours::getIdJourByJour<\/a>"],[0,3,"<a href=\"models\/M_Planning.php.html#19\">M_Planning::getAllRessource<\/a>"],[63.829787234043,8,"<a href=\"models\/M_Planning.php.html#70\">M_Planning::getActiviteAplanifier<\/a>"],[0,10,"<a href=\"models\/M_Planning.php.html#156\">M_Planning::addEvenement<\/a>"],[93.75,8,"<a href=\"models\/M_Planning.php.html#234\">M_Planning::addEvenementAuto<\/a>"],[100,1,"<a href=\"models\/M_Planning.php.html#306\">M_Planning::insertEventBDD<\/a>"],[65.789473684211,5,"<a href=\"models\/M_Planning.php.html#323\">M_Planning::getAllEvenement<\/a>"],[0,2,"<a href=\"models\/M_Planning.php.html#376\">M_Planning::getParcoursByDateAndPatient<\/a>"],[0,2,"<a href=\"models\/M_Planning.php.html#402\">M_Planning::getParcoursByDate<\/a>"],[0,2,"<a href=\"models\/M_Planning.php.html#428\">M_Planning::getDetailEvenement<\/a>"],[65.789473684211,5,"<a href=\"models\/M_Planning.php.html#453\">M_Planning::getAllEvenementByDate<\/a>"],[0,1,"<a href=\"models\/M_Planning.php.html#509\">M_Planning::deleteEvent<\/a>"],[0,5,"<a href=\"models\/M_Planning.php.html#524\">M_Planning::updateEvent<\/a>"],[100,3,"<a href=\"models\/M_Planning.php.html#556\">M_Planning::necessite<\/a>"],[100,3,"<a href=\"models\/M_Planning.php.html#585\">M_Planning::precedence<\/a>"],[100,2,"<a href=\"models\/M_Planning.php.html#616\">M_Planning::precedenceId<\/a>"],[0,4,"<a href=\"models\/M_Planning.php.html#642\">M_Planning::getRessourceByType<\/a>"],[100,4,"<a href=\"models\/M_Planning.php.html#689\">M_Planning::getRessourceAvailable<\/a>"],[0,2,"<a href=\"models\/M_Planning.php.html#751\">M_Planning::getRessourcePossiblePourUneActivite<\/a>"],[0,9,"<a href=\"models\/M_Planning.php.html#775\">M_Planning::getActiviteAplanifierRecherche<\/a>"],[100,1,"<a href=\"models\/M_Planning.php.html#855\">M_Planning::couleur_aleatoire<\/a>"],[0,1,"<a href=\"models\/M_Planning.php.html#889\">M_Planning::deleteAllEventPatient<\/a>"],[100,1,"<a href=\"models\/M_Planning.php.html#898\">M_Planning::getCouleurEventPatient<\/a>"],[0,1,"<a href=\"models\/M_Planning.php.html#913\">M_Planning::sauvegarderPlanning<\/a>"],[100,1,"<a href=\"models\/M_Planning.php.html#927\">M_Planning::restaurerPlanning<\/a>"],[100,8,"<a href=\"models\/M_Planning.php.html#943\">M_Planning::planAuto<\/a>"],[100,8,"<a href=\"models\/M_Planning.php.html#1016\">M_Planning::getDisponibiliteRessource<\/a>"],[0,2,"<a href=\"models\/M_Ressource.php.html#22\">M_Ressource::random_color<\/a>"],[0,3,"<a href=\"models\/M_Ressource.php.html#37\">M_Ressource::getWeekByIdRessource<\/a>"],[0,1,"<a href=\"models\/M_Ressource.php.html#78\">M_Ressource::getMaxIDRessource<\/a>"],[0,1,"<a href=\"models\/M_Ressource.php.html#91\">M_Ressource::getNameByIdRessource<\/a>"],[0,1,"<a href=\"models\/M_Ressource.php.html#102\">M_Ressource::insererRessource<\/a>"],[0,2,"<a href=\"models\/M_RessourcesMat.php.html#22\">M_RessourcesMat::getAllRessourcesMat<\/a>"],[0,2,"<a href=\"models\/M_RessourcesMat.php.html#44\">M_RessourcesMat::getAllTypeRessourcesMat<\/a>"],[0,1,"<a href=\"models\/M_RessourcesMat.php.html#67\">M_RessourcesMat::getRessourcesMatById<\/a>"],[0,3,"<a href=\"models\/M_RessourcesMat.php.html#82\">M_RessourcesMat::supprRessourcesMat<\/a>"],[0,2,"<a href=\"models\/M_RessourcesMat.php.html#116\">M_RessourcesMat::ModifRessourcesMat<\/a>"],[0,2,"<a href=\"models\/M_RessourcesMat.php.html#139\">M_RessourcesMat::ajouteRessourcesMat<\/a>"],[0,2,"<a href=\"models\/M_TypeRessource.php.html#21\">M_TypeRessource::getIdType<\/a>"],[0,2,"<a href=\"models\/M_TypeRessource.php.html#38\">M_TypeRessource::getTypesPersonnels<\/a>"],[0,2,"<a href=\"models\/M_TypeRessource.php.html#63\">M_TypeRessource::getTypesRessourcesMat<\/a>"],[0,2,"<a href=\"models\/M_TypeRessource.php.html#88\">M_TypeRessource::getTypesPersonnelsActivite<\/a>"],[0,2,"<a href=\"models\/M_TypeRessource.php.html#109\">M_TypeRessource::getTypesRessourcesMatActivite<\/a>"],[0,1,"<a href=\"models\/M_TypeRessource.php.html#129\">M_TypeRessource::insererType<\/a>"],[0,1,"<a href=\"models\/M_TypeRessource.php.html#139\">M_TypeRessource::getMaxID<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

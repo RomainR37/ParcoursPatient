@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\wamp\www\subway\app/controllers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">C:\wamp\www\subway\app</a></li>
+        <li><a href="index.html">controllers</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Planning.php.html#12">Planning</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PlanParcours.php.html#12">PlanParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Ressource.php.html#13">Ressource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#11">RessourcesMat</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Welcome.php.html#13">Welcome</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypeRessource.php.html#13">TypeRessource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#12">Personnels</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#13">Patient</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Auth.php.html#12">Auth</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AffichageSejour.php.html#12">AffichageSejour</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#13">DossierParcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#13">EtreIndispo</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#13">Parcours</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#14">Activites</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Planning.php.html#12">Planning</a></td><td class="text-right">2550</td></tr>
+       <tr><td><a href="Activites.php.html#14">Activites</a></td><td class="text-right">870</td></tr>
+       <tr><td><a href="Patient.php.html#13">Patient</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="Parcours.php.html#13">Parcours</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#13">EtreIndispo</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="DossierParcours.php.html#13">DossierParcours</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="PlanParcours.php.html#12">PlanParcours</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#11">RessourcesMat</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Personnels.php.html#12">Personnels</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Ressource.php.html#13">Ressource</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Auth.php.html#12">Auth</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Welcome.php.html#13">Welcome</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="TypeRessource.php.html#13">TypeRessource</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="AffichageSejour.php.html#12">AffichageSejour</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="PlanParcours.php.html#44"><abbr title="PlanParcours::afficheParcours">afficheParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PlanParcours.php.html#90"><abbr title="PlanParcours::savechanges">savechanges</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PlanParcours.php.html#28"><abbr title="PlanParcours::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PlanParcours.php.html#14"><abbr title="PlanParcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#125"><abbr title="Personnels::getTypes">getTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#14"><abbr title="Planning::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#25"><abbr title="Planning::planifier">planifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#92"><abbr title="Planning::getActiviteAPlanifier">getActiviteAPlanifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#71"><abbr title="Planning::getEvenement">getEvenement</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#46"><abbr title="Planning::getRessources">getRessources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#33"><abbr title="Planning::creerJeuxDeDonnees">creerJeuxDeDonnees</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#111"><abbr title="Personnels::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#90"><abbr title="Personnels::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#389"><abbr title="Patient::modifierRDV">modifierRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#368"><abbr title="Patient::ajouterRDV">ajouterRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#359"><abbr title="Patient::supprimer">supprimer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#342"><abbr title="Patient::_dateRegex">_dateRegex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#408"><abbr title="Patient::supprimerRDV">supprimerRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#420"><abbr title="Patient::gererRDV">gererRDV</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#64"><abbr title="Personnels::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#45"><abbr title="Personnels::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#30"><abbr title="Personnels::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Personnels.php.html#14"><abbr title="Personnels::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#117"><abbr title="Planning::getActiviteAPlanifierRecherche">getActiviteAPlanifierRecherche</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#134"><abbr title="Planning::addEvent">addEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#83"><abbr title="RessourcesMat::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#63"><abbr title="RessourcesMat::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#45"><abbr title="RessourcesMat::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#28"><abbr title="RessourcesMat::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#107"><abbr title="RessourcesMat::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#121"><abbr title="RessourcesMat::getTypes">getTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Welcome.php.html#27"><abbr title="Welcome::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Welcome.php.html#15"><abbr title="Welcome::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypeRessource.php.html#26"><abbr title="TypeRessource::getAllTypes">getAllTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypeRessource.php.html#15"><abbr title="TypeRessource::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#13"><abbr title="RessourcesMat::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Ressource.php.html#60"><abbr title="Ressource::solo">solo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#360"><abbr title="Planning::deleteEventsPatient">deleteEventsPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#339"><abbr title="Planning::updateEvent">updateEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#196"><abbr title="Planning::constraints">constraints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#158"><abbr title="Planning::deleteEvent">deleteEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#374"><abbr title="Planning::sauvegarder">sauvegarder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#383"><abbr title="Planning::restaurer">restaurer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Ressource.php.html#43"><abbr title="Ressource::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Ressource.php.html#30"><abbr title="Ressource::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Ressource.php.html#15"><abbr title="Ressource::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Planning.php.html#397"><abbr title="Planning::planAuto">planAuto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#308"><abbr title="Patient::modifierPatient">modifierPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#247"><abbr title="Patient::ajoutPatient">ajoutPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#50"><abbr title="DossierParcours::loadOngletAndDossier">loadOngletAndDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#31"><abbr title="DossierParcours::dossier">dossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#15"><abbr title="DossierParcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Auth.php.html#54"><abbr title="Auth::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#64"><abbr title="DossierParcours::modifierValeurs">modifierValeurs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#80"><abbr title="DossierParcours::getChamp">getChamp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#47"><abbr title="EtreIndispo::supprimerIndispo">supprimerIndispo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#31"><abbr title="EtreIndispo::afficher">afficher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#15"><abbr title="EtreIndispo::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DossierParcours.php.html#94"><abbr title="DossierParcours::ajoutChampDossier">ajoutChampDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Auth.php.html#23"><abbr title="Auth::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AffichageSejour.php.html#27"><abbr title="AffichageSejour::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#107"><abbr title="Activites::confirmModifParcours">confirmModifParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#67"><abbr title="Activites::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#47"><abbr title="Activites::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#31"><abbr title="Activites::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#146"><abbr title="Activites::ajoutActiviteParcours">ajoutActiviteParcours</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#182"><abbr title="Activites::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AffichageSejour.php.html#14"><abbr title="AffichageSejour::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#233"><abbr title="Activites::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#220"><abbr title="Activites::getTypesPerso">getTypesPerso</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#205"><abbr title="Activites::suppr">suppr</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#77"><abbr title="EtreIndispo::formaliserData">formaliserData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#92"><abbr title="EtreIndispo::savechanges">savechanges</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#128"><abbr title="Patient::creation">creation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#96"><abbr title="Patient::afficherPatient">afficherPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#83"><abbr title="Patient::faireRecherche">faireRecherche</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#75"><abbr title="Patient::rechercher">rechercher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#143"><abbr title="Patient::jour">jour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#158"><abbr title="Patient::getNbByDay">getNbByDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#229"><abbr title="Patient::ajoutDossier">ajoutDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#212"><abbr title="Patient::majDossier">majDossier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#184"><abbr title="Patient::majPatient">majPatient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#168"><abbr title="Patient::majDisponibilite">majDisponibilite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#61"><abbr title="Patient::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#46"><abbr title="Patient::afficherSejour">afficherSejour</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#69"><abbr title="Parcours::supprimer">supprimer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#50"><abbr title="Parcours::ajout">ajout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#34"><abbr title="Parcours::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#15"><abbr title="Parcours::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#78"><abbr title="Parcours::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#92"><abbr title="Parcours::confirmModif">confirmModif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#33"><abbr title="Patient::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Patient.php.html#15"><abbr title="Patient::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#184"><abbr title="Parcours::visualiser">visualiser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parcours.php.html#163"><abbr title="Parcours::modif">modif</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Activites.php.html#16"><abbr title="Activites::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Planning.php.html#196"><abbr title="Planning::constraints">constraints</abbr></a></td><td class="text-right">1190</td></tr>
+       <tr><td><a href="Parcours.php.html#92"><abbr title="Parcours::confirmModif">confirmModif</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#92"><abbr title="EtreIndispo::savechanges">savechanges</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Activites.php.html#107"><abbr title="Activites::confirmModifParcours">confirmModifParcours</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Activites.php.html#67"><abbr title="Activites::confirmModif">confirmModif</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="PlanParcours.php.html#44"><abbr title="PlanParcours::afficheParcours">afficheParcours</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="DossierParcours.php.html#50"><abbr title="DossierParcours::loadOngletAndDossier">loadOngletAndDossier</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="PlanParcours.php.html#90"><abbr title="PlanParcours::savechanges">savechanges</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Auth.php.html#23"><abbr title="Auth::index">index</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#47"><abbr title="EtreIndispo::supprimerIndispo">supprimerIndispo</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Activites.php.html#146"><abbr title="Activites::ajoutActiviteParcours">ajoutActiviteParcours</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="PlanParcours.php.html#14"><abbr title="PlanParcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Personnels.php.html#14"><abbr title="Personnels::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Ressource.php.html#15"><abbr title="Ressource::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Welcome.php.html#15"><abbr title="Welcome::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TypeRessource.php.html#15"><abbr title="TypeRessource::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#13"><abbr title="RessourcesMat::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Ressource.php.html#60"><abbr title="Ressource::solo">solo</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Planning.php.html#14"><abbr title="Planning::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Patient.php.html#15"><abbr title="Patient::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DossierParcours.php.html#15"><abbr title="DossierParcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Parcours.php.html#15"><abbr title="Parcours::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#15"><abbr title="EtreIndispo::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Activites.php.html#16"><abbr title="Activites::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#83"><abbr title="RessourcesMat::confirmModif">confirmModif</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AffichageSejour.php.html#14"><abbr title="AffichageSejour::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="RessourcesMat.php.html#121"><abbr title="RessourcesMat::getTypes">getTypes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Patient.php.html#342"><abbr title="Patient::_dateRegex">_dateRegex</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Activites.php.html#233"><abbr title="Activites::getTypesRessourcesMat">getTypesRessourcesMat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Activites.php.html#220"><abbr title="Activites::getTypesPerso">getTypesPerso</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DossierParcours.php.html#94"><abbr title="DossierParcours::ajoutChampDossier">ajoutChampDossier</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Parcours.php.html#78"><abbr title="Parcours::getAllActivites">getAllActivites</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Personnels.php.html#125"><abbr title="Personnels::getTypes">getTypes</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="EtreIndispo.php.html#77"><abbr title="EtreIndispo::formaliserData">formaliserData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Patient.php.html#247"><abbr title="Patient::ajoutPatient">ajoutPatient</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Personnels.php.html#64"><abbr title="Personnels::confirmModif">confirmModif</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DossierParcours.php.html#80"><abbr title="DossierParcours::getChamp">getChamp</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.4</a> using <a href="https://secure.php.net/" target="_top">PHP 5.5.12</a> and <a href="https://phpunit.de/">PHPUnit 4.8.36</a> at Tue Apr 9 23:52:08 CEST 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([14,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([96,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,29,"<a href=\"Activites.php.html#14\">Activites<\/a>"],[0,3,"<a href=\"AffichageSejour.php.html#12\">AffichageSejour<\/a>"],[0,5,"<a href=\"Auth.php.html#12\">Auth<\/a>"],[0,13,"<a href=\"DossierParcours.php.html#13\">DossierParcours<\/a>"],[0,22,"<a href=\"EtreIndispo.php.html#13\">EtreIndispo<\/a>"],[0,25,"<a href=\"Parcours.php.html#13\">Parcours<\/a>"],[0,26,"<a href=\"Patient.php.html#13\">Patient<\/a>"],[0,11,"<a href=\"Personnels.php.html#12\">Personnels<\/a>"],[0,13,"<a href=\"PlanParcours.php.html#12\">PlanParcours<\/a>"],[0,50,"<a href=\"Planning.php.html#12\">Planning<\/a>"],[0,8,"<a href=\"Ressource.php.html#13\">Ressource<\/a>"],[0,11,"<a href=\"RessourcesMat.php.html#11\">RessourcesMat<\/a>"],[0,4,"<a href=\"TypeRessource.php.html#13\">TypeRessource<\/a>"],[0,4,"<a href=\"Welcome.php.html#13\">Welcome<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"Activites.php.html#16\">Activites::__construct<\/a>"],[0,1,"<a href=\"Activites.php.html#31\">Activites::index<\/a>"],[0,1,"<a href=\"Activites.php.html#47\">Activites::ajout<\/a>"],[0,7,"<a href=\"Activites.php.html#67\">Activites::confirmModif<\/a>"],[0,7,"<a href=\"Activites.php.html#107\">Activites::confirmModifParcours<\/a>"],[0,4,"<a href=\"Activites.php.html#146\">Activites::ajoutActiviteParcours<\/a>"],[0,1,"<a href=\"Activites.php.html#182\">Activites::modif<\/a>"],[0,1,"<a href=\"Activites.php.html#205\">Activites::suppr<\/a>"],[0,2,"<a href=\"Activites.php.html#220\">Activites::getTypesPerso<\/a>"],[0,2,"<a href=\"Activites.php.html#233\">Activites::getTypesRessourcesMat<\/a>"],[0,2,"<a href=\"AffichageSejour.php.html#14\">AffichageSejour::__construct<\/a>"],[0,1,"<a href=\"AffichageSejour.php.html#27\">AffichageSejour::index<\/a>"],[0,4,"<a href=\"Auth.php.html#23\">Auth::index<\/a>"],[0,1,"<a href=\"Auth.php.html#54\">Auth::logout<\/a>"],[0,3,"<a href=\"DossierParcours.php.html#15\">DossierParcours::__construct<\/a>"],[0,1,"<a href=\"DossierParcours.php.html#31\">DossierParcours::dossier<\/a>"],[0,4,"<a href=\"DossierParcours.php.html#50\">DossierParcours::loadOngletAndDossier<\/a>"],[0,1,"<a href=\"DossierParcours.php.html#64\">DossierParcours::modifierValeurs<\/a>"],[0,2,"<a href=\"DossierParcours.php.html#80\">DossierParcours::getChamp<\/a>"],[0,2,"<a href=\"DossierParcours.php.html#94\">DossierParcours::ajoutChampDossier<\/a>"],[0,3,"<a href=\"EtreIndispo.php.html#15\">EtreIndispo::__construct<\/a>"],[0,1,"<a href=\"EtreIndispo.php.html#31\">EtreIndispo::afficher<\/a>"],[0,4,"<a href=\"EtreIndispo.php.html#47\">EtreIndispo::supprimerIndispo<\/a>"],[0,2,"<a href=\"EtreIndispo.php.html#77\">EtreIndispo::formaliserData<\/a>"],[0,12,"<a href=\"EtreIndispo.php.html#92\">EtreIndispo::savechanges<\/a>"],[0,3,"<a href=\"Parcours.php.html#15\">Parcours::__construct<\/a>"],[0,1,"<a href=\"Parcours.php.html#34\">Parcours::index<\/a>"],[0,1,"<a href=\"Parcours.php.html#50\">Parcours::ajout<\/a>"],[0,1,"<a href=\"Parcours.php.html#69\">Parcours::supprimer<\/a>"],[0,2,"<a href=\"Parcours.php.html#78\">Parcours::getAllActivites<\/a>"],[0,15,"<a href=\"Parcours.php.html#92\">Parcours::confirmModif<\/a>"],[0,1,"<a href=\"Parcours.php.html#163\">Parcours::modif<\/a>"],[0,1,"<a href=\"Parcours.php.html#184\">Parcours::visualiser<\/a>"],[0,3,"<a href=\"Patient.php.html#15\">Patient::__construct<\/a>"],[0,1,"<a href=\"Patient.php.html#33\">Patient::index<\/a>"],[0,1,"<a href=\"Patient.php.html#46\">Patient::afficherSejour<\/a>"],[0,1,"<a href=\"Patient.php.html#61\">Patient::getAllActivites<\/a>"],[0,1,"<a href=\"Patient.php.html#75\">Patient::rechercher<\/a>"],[0,1,"<a href=\"Patient.php.html#83\">Patient::faireRecherche<\/a>"],[0,1,"<a href=\"Patient.php.html#96\">Patient::afficherPatient<\/a>"],[0,1,"<a href=\"Patient.php.html#128\">Patient::creation<\/a>"],[0,1,"<a href=\"Patient.php.html#143\">Patient::jour<\/a>"],[0,1,"<a href=\"Patient.php.html#158\">Patient::getNbByDay<\/a>"],[0,1,"<a href=\"Patient.php.html#168\">Patient::majDisponibilite<\/a>"],[0,1,"<a href=\"Patient.php.html#184\">Patient::majPatient<\/a>"],[0,1,"<a href=\"Patient.php.html#212\">Patient::majDossier<\/a>"],[0,1,"<a href=\"Patient.php.html#229\">Patient::ajoutDossier<\/a>"],[0,2,"<a href=\"Patient.php.html#247\">Patient::ajoutPatient<\/a>"],[0,1,"<a href=\"Patient.php.html#308\">Patient::modifierPatient<\/a>"],[0,2,"<a href=\"Patient.php.html#342\">Patient::_dateRegex<\/a>"],[0,1,"<a href=\"Patient.php.html#359\">Patient::supprimer<\/a>"],[0,1,"<a href=\"Patient.php.html#368\">Patient::ajouterRDV<\/a>"],[0,1,"<a href=\"Patient.php.html#389\">Patient::modifierRDV<\/a>"],[0,1,"<a href=\"Patient.php.html#408\">Patient::supprimerRDV<\/a>"],[0,1,"<a href=\"Patient.php.html#420\">Patient::gererRDV<\/a>"],[0,3,"<a href=\"Personnels.php.html#14\">Personnels::__construct<\/a>"],[0,1,"<a href=\"Personnels.php.html#30\">Personnels::index<\/a>"],[0,1,"<a href=\"Personnels.php.html#45\">Personnels::ajout<\/a>"],[0,2,"<a href=\"Personnels.php.html#64\">Personnels::confirmModif<\/a>"],[0,1,"<a href=\"Personnels.php.html#90\">Personnels::modif<\/a>"],[0,1,"<a href=\"Personnels.php.html#111\">Personnels::suppr<\/a>"],[0,2,"<a href=\"Personnels.php.html#125\">Personnels::getTypes<\/a>"],[0,3,"<a href=\"PlanParcours.php.html#14\">PlanParcours::__construct<\/a>"],[0,1,"<a href=\"PlanParcours.php.html#28\">PlanParcours::index<\/a>"],[0,5,"<a href=\"PlanParcours.php.html#44\">PlanParcours::afficheParcours<\/a>"],[0,4,"<a href=\"PlanParcours.php.html#90\">PlanParcours::savechanges<\/a>"],[0,3,"<a href=\"Planning.php.html#14\">Planning::__construct<\/a>"],[0,1,"<a href=\"Planning.php.html#25\">Planning::planifier<\/a>"],[0,1,"<a href=\"Planning.php.html#33\">Planning::creerJeuxDeDonnees<\/a>"],[0,1,"<a href=\"Planning.php.html#46\">Planning::getRessources<\/a>"],[0,1,"<a href=\"Planning.php.html#71\">Planning::getEvenement<\/a>"],[0,1,"<a href=\"Planning.php.html#92\">Planning::getActiviteAPlanifier<\/a>"],[0,1,"<a href=\"Planning.php.html#117\">Planning::getActiviteAPlanifierRecherche<\/a>"],[0,1,"<a href=\"Planning.php.html#134\">Planning::addEvent<\/a>"],[0,1,"<a href=\"Planning.php.html#158\">Planning::deleteEvent<\/a>"],[0,34,"<a href=\"Planning.php.html#196\">Planning::constraints<\/a>"],[0,1,"<a href=\"Planning.php.html#339\">Planning::updateEvent<\/a>"],[0,1,"<a href=\"Planning.php.html#360\">Planning::deleteEventsPatient<\/a>"],[0,1,"<a href=\"Planning.php.html#374\">Planning::sauvegarder<\/a>"],[0,1,"<a href=\"Planning.php.html#383\">Planning::restaurer<\/a>"],[0,1,"<a href=\"Planning.php.html#397\">Planning::planAuto<\/a>"],[0,3,"<a href=\"Ressource.php.html#15\">Ressource::__construct<\/a>"],[0,1,"<a href=\"Ressource.php.html#30\">Ressource::index<\/a>"],[0,1,"<a href=\"Ressource.php.html#43\">Ressource::ajout<\/a>"],[0,3,"<a href=\"Ressource.php.html#60\">Ressource::solo<\/a>"],[0,3,"<a href=\"RessourcesMat.php.html#13\">RessourcesMat::__construct<\/a>"],[0,1,"<a href=\"RessourcesMat.php.html#28\">RessourcesMat::index<\/a>"],[0,1,"<a href=\"RessourcesMat.php.html#45\">RessourcesMat::ajout<\/a>"],[0,1,"<a href=\"RessourcesMat.php.html#63\">RessourcesMat::modif<\/a>"],[0,2,"<a href=\"RessourcesMat.php.html#83\">RessourcesMat::confirmModif<\/a>"],[0,1,"<a href=\"RessourcesMat.php.html#107\">RessourcesMat::suppr<\/a>"],[0,2,"<a href=\"RessourcesMat.php.html#121\">RessourcesMat::getTypes<\/a>"],[0,3,"<a href=\"TypeRessource.php.html#15\">TypeRessource::__construct<\/a>"],[0,1,"<a href=\"TypeRessource.php.html#26\">TypeRessource::getAllTypes<\/a>"],[0,3,"<a href=\"Welcome.php.html#15\">Welcome::__construct<\/a>"],[0,1,"<a href=\"Welcome.php.html#27\">Welcome::index<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

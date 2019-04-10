@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="8" failures="0" errors="0" time="30.336132">
+    <testsuite name="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" tests="5" assertions="8" failures="0" errors="0" time="30.336132">
+      <testcase name="test_getCouleurEventPatient" class="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" line="36" assertions="1" time="5.933150"/>
+      <testcase name="test_planautoCreationEvenement" class="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" line="56" assertions="1" time="17.353450"/>
+      <testcase name="test_planautoAjoutPatient" class="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" line="77" assertions="1" time="5.393270"/>
+      <testcase name="test_addEvenementAuto" class="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" line="95" assertions="1" time="0.910545"/>
+      <testcase name="test_getDisponibiliteRessource" class="M_PlanningTest" file="C:\wamp\www\subway\app\tests\models\M_PlanningTest.php" line="113" assertions="4" time="0.745717"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
